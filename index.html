@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="AI Harness、AI PDE、AI Infra、GPU 物理集群、HPN、NVLink、NVL72 企业级完整学习方案"><title>AI Native / AI Harness / AI PDE / AI Infra / 智算集群企业级完整学习方案</title>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="AI Harness、AI PDE、AI Infra、GPU 物理集群、HPN、NVLink、NVL72、智算集群 v3.3 企业级完整学习方案"><title>AI Native / AI Harness / AI PDE / AI Infra / 智算集群企业级完整学习方案</title>
 <style>
 :root { --bg:#f5f7fb; --panel:#fff; --panel2:#eef3f8; --ink:#17212b; --muted:#607080; --line:#d8e0e8; --accent:#0b5fa5; --accent2:#0b7a75; --code:#f3f5f8; --shadow:0 14px 38px rgba(24,52,82,.09); --radius:16px; --sidebar:310px; }
 html[data-theme="dark"] { --bg:#0f141b; --panel:#151d26; --panel2:#1d2834; --ink:#e9f0f6; --muted:#9caaba; --line:#2b3948; --accent:#65b9ef; --accent2:#57d2c8; --code:#101820; --shadow:0 18px 44px rgba(0,0,0,.35); }
@@ -11,7 +11,7 @@ html[data-theme="dark"] { --bg:#0f141b; --panel:#151d26; --panel2:#1d2834; --ink
 .doc-content h1,.doc-content h2,.doc-content h3,.doc-content h4{scroll-margin-top:88px;line-height:1.32} .doc-content h1{font-size:28px;border-bottom:1px solid var(--line);padding-bottom:8px;margin-top:34px} .doc-content h2{font-size:23px;border-bottom:1px solid var(--line);padding-bottom:7px;margin-top:30px} .doc-content h3{font-size:18px;margin-top:24px} .doc-content h4{font-size:15px;margin-top:18px} .doc-content p{margin:10px 0} .doc-content ul,.doc-content ol{padding-left:26px} .doc-content li{margin:5px 0} .doc-content blockquote{margin:14px 0;padding:12px 16px;border-left:4px solid var(--accent);background:var(--panel2);border-radius:0 12px 12px 0;color:var(--ink)} .doc-content code{background:var(--code);padding:2px 5px;border-radius:5px;font-family:Consolas,"Courier New",monospace;font-size:.9em} .doc-content pre{position:relative;background:var(--code);border:1px solid var(--line);border-radius:12px;padding:14px 52px 14px 14px;overflow:auto;line-height:1.55} .doc-content pre code{background:none;padding:0;font-size:12.5px;white-space:pre} .copy-btn{position:absolute;right:8px;top:8px;font-size:11px;padding:5px 7px;border-radius:7px;border:1px solid var(--line);background:var(--panel);color:var(--muted);cursor:pointer} .doc-content table{width:100%;border-collapse:collapse;display:block;overflow:auto;margin:14px 0;font-size:13px} .doc-content th,.doc-content td{border:1px solid var(--line);padding:8px 10px;vertical-align:top} .doc-content th{background:var(--panel2)} .doc-content img{max-width:100%;height:auto;border-radius:12px}
 .architecture-figure{margin:18px 0;padding:12px;border:1px solid var(--line);border-radius:16px;background:var(--panel2);text-align:center} .architecture-figure img{width:min(100%,860px);display:block;margin:0 auto;box-shadow:0 10px 24px rgba(24,52,82,.12)} .architecture-figure figcaption{margin-top:10px;color:var(--muted);font-size:12px} .doc-toc{margin:14px 0;padding:10px 14px;border:1px solid var(--line);border-radius:12px;background:var(--panel2)} .doc-toc summary{cursor:pointer;font-weight:700} .doc-toc ul{margin:8px 0 2px;padding-left:20px} .backtop{position:fixed;right:20px;bottom:20px;width:42px;height:42px;border-radius:50%;border:1px solid var(--line);background:var(--panel);color:var(--ink);box-shadow:var(--shadow);cursor:pointer;display:none} .hidden{display:none!important}
 @media (max-width:1000px){.layout{grid-template-columns:1fr;padding:14px}.sidebar{position:relative;top:0;height:auto;max-height:390px}.search{min-width:0;flex:1}.brand{display:none}.topbar-inner{padding:10px 14px}} @media print{.topbar,.sidebar,.backtop,#progress{display:none!important}.layout{display:block;padding:0}.doc{box-shadow:none;border:0;break-before:page}}
-</style></head><body><div id="progress"></div><header class="topbar"><div class="topbar-inner"><div class="brand">AI <span>Harness / PDE / Infra</span></div><div class="search"><input id="searchInput" type="search" placeholder="搜索知识点、命令、GPU、NVL72、RAG、MCP..." aria-label="搜索全文"></div><button class="btn" id="themeBtn">主题</button><button class="btn" onclick="window.print()">导出 PDF</button></div></header><div class="layout"><aside class="sidebar"><div class="side-title">学习方案目录</div><a class="nav-link" href="#doc-00" data-target="doc-00"><span class="nav-num">01</span><span>总览</span></a><a class="nav-link" href="#doc-01" data-target="doc-01"><span class="nav-num">02</span><span>36 周视频教程与逐周操作手册</span></a><a class="nav-link" href="#doc-02" data-target="doc-02"><span class="nav-num">03</span><span>AI Harness 企业落地教程</span></a><a class="nav-link" href="#doc-03" data-target="doc-03"><span class="nav-num">04</span><span>AI PDE 产品工程落地教程</span></a><a class="nav-link" href="#doc-04" data-target="doc-04"><span class="nav-num">05</span><span>AI Infra 企业平台教程</span></a><a class="nav-link" href="#doc-05" data-target="doc-05"><span class="nav-num">06</span><span>GPU 物理集群建设、选型、部署与调优</span></a><a class="nav-link" href="#doc-06" data-target="doc-06"><span class="nav-num">07</span><span>GPU 集群监控、调试、故障处理与验收</span></a><a class="nav-link" href="#doc-07" data-target="doc-07"><span class="nav-num">08</span><span>HPN 高性能算力网络与 RDMA 组网</span></a><a class="nav-link" href="#doc-08" data-target="doc-08"><span class="nav-num">09</span><span>NVLink 8 卡全连接与 HGX 拓扑</span></a><a class="nav-link" href="#doc-09" data-target="doc-09"><span class="nav-num">10</span><span>NVL72 机架级 72 GPU 组网与部署</span></a><a class="nav-link" href="#doc-10" data-target="doc-10"><span class="nav-num">11</span><span>智算集群建设方案：GLM-5.3、存储、网络与骨干环网</span></a><a class="nav-link" href="#doc-11" data-target="doc-11"><span class="nav-num">12</span><span>AI Native 研发范式与企业 Agent 基础设施</span></a><a class="nav-link" href="#doc-12" data-target="doc-12"><span class="nav-num">13</span><span>企业落地常见坑与注意事项</span></a><a class="nav-link" href="#doc-13" data-target="doc-13"><span class="nav-num">14</span><span>国产 GPU 与千卡集群规划实施指南</span></a><a class="nav-link" href="#doc-14" data-target="doc-14"><span class="nav-num">15</span><span>公有云 GPU 选型与实施要点</span></a><a class="nav-link" href="#doc-15" data-target="doc-15"><span class="nav-num">16</span><span>32 周完整学习路线</span></a><a class="nav-link" href="#doc-16" data-target="doc-16"><span class="nav-num">17</span><span>毕业项目 SOP 与验收</span></a><a class="nav-link" href="#doc-17" data-target="doc-17"><span class="nav-num">18</span><span>最新资料与来源索引</span></a></aside><main class="main"><section class="hero"><h1>AI Harness / AI PDE / AI Infra<br>企业级完整学习方案</h1><p>从 AI Native 研发范式、Agent Harness、RAG、vLLM 与 Kubernetes，到 GPU 物理集群、HPN/RDMA、NVLink、HGX、NVL72、智算集群、国产 GPU、千卡集群和公有云 GPU。</p><p>每个模块包含视频参考、官方资料、操作步骤、企业落地避坑和验收产物。本页面适配桌面与手机，可从浏览器直接打印为 PDF。</p><div class="pills"><span class="pill">36 周路线</span><span class="pill">70+ 视频入口</span><span class="pill">HPN v1.0</span><span class="pill">NVLink / HGX / NVL72</span><span class="pill">千卡与国产 GPU</span><span class="pill">智算集群</span><span class="pill">AI Native</span><span class="pill">企业上线清单</span></div></section><section class="doc" id="doc-00" data-title="总览"><header class="doc-head"><div class="doc-kicker">DOC 01</div><h2>总览</h2><div class="doc-source">来源：README.md</div></header><details class="doc-toc"><summary>本篇目录</summary><div class="toc">
+</style></head><body><div id="progress"></div><header class="topbar"><div class="topbar-inner"><div class="brand">AI <span>Harness / PDE / Infra</span></div><div class="search"><input id="searchInput" type="search" placeholder="搜索知识点、命令、GPU、NVL72、RAG、MCP..." aria-label="搜索全文"></div><button class="btn" id="themeBtn">主题</button><button class="btn" onclick="window.print()">导出 PDF</button></div></header><div class="layout"><aside class="sidebar"><div class="side-title">学习方案目录</div><a class="nav-link" href="#doc-00" data-target="doc-00"><span class="nav-num">01</span><span>总览</span></a><a class="nav-link" href="#doc-01" data-target="doc-01"><span class="nav-num">02</span><span>36 周视频教程与逐周操作手册</span></a><a class="nav-link" href="#doc-02" data-target="doc-02"><span class="nav-num">03</span><span>AI Harness 企业落地教程</span></a><a class="nav-link" href="#doc-03" data-target="doc-03"><span class="nav-num">04</span><span>AI PDE 产品工程落地教程</span></a><a class="nav-link" href="#doc-04" data-target="doc-04"><span class="nav-num">05</span><span>AI Infra 企业平台教程</span></a><a class="nav-link" href="#doc-05" data-target="doc-05"><span class="nav-num">06</span><span>GPU 物理集群建设、选型、部署与调优</span></a><a class="nav-link" href="#doc-06" data-target="doc-06"><span class="nav-num">07</span><span>GPU 集群监控、调试、故障处理与验收</span></a><a class="nav-link" href="#doc-07" data-target="doc-07"><span class="nav-num">08</span><span>HPN 高性能算力网络与 RDMA 组网</span></a><a class="nav-link" href="#doc-08" data-target="doc-08"><span class="nav-num">09</span><span>NVLink 8 卡全连接与 HGX 拓扑</span></a><a class="nav-link" href="#doc-09" data-target="doc-09"><span class="nav-num">10</span><span>NVL72 机架级 72 GPU 组网与部署</span></a><a class="nav-link" href="#doc-10" data-target="doc-10"><span class="nav-num">11</span><span>智算集群建设方案 v3.3：GLM-5.3、存储、网络、骨干环网与异构算力</span></a><a class="nav-link" href="#doc-11" data-target="doc-11"><span class="nav-num">12</span><span>AI Native 研发范式与企业 Agent 基础设施</span></a><a class="nav-link" href="#doc-12" data-target="doc-12"><span class="nav-num">13</span><span>企业落地常见坑与注意事项</span></a><a class="nav-link" href="#doc-13" data-target="doc-13"><span class="nav-num">14</span><span>国产 GPU 与千卡集群规划实施指南</span></a><a class="nav-link" href="#doc-14" data-target="doc-14"><span class="nav-num">15</span><span>公有云 GPU 选型与实施要点</span></a><a class="nav-link" href="#doc-15" data-target="doc-15"><span class="nav-num">16</span><span>32 周完整学习路线</span></a><a class="nav-link" href="#doc-16" data-target="doc-16"><span class="nav-num">17</span><span>毕业项目 SOP 与验收</span></a><a class="nav-link" href="#doc-17" data-target="doc-17"><span class="nav-num">18</span><span>最新资料与来源索引</span></a></aside><main class="main"><section class="hero"><h1>AI Harness / AI PDE / AI Infra<br>企业级完整学习方案</h1><p>从 AI Native 研发范式、Agent Harness、RAG、vLLM 与 Kubernetes，到 GPU 物理集群、HPN/RDMA、NVLink、HGX、NVL72、智算集群 v3.3（千卡→5000→10240 卡）、国产 GPU、千卡集群和公有云 GPU。</p><p>每个模块包含视频参考、官方资料、操作步骤、企业落地避坑和验收产物。本页面适配桌面与手机，可从浏览器直接打印为 PDF。</p><div class="pills"><span class="pill">36 周路线</span><span class="pill">70+ 视频入口</span><span class="pill">HPN v1.0</span><span class="pill">NVLink / HGX / NVL72</span><span class="pill">千卡与国产 GPU</span><span class="pill">智算集群 v3.3</span><span class="pill">异构算力</span><span class="pill">EP=32 + 机内 TP8</span><span class="pill">AI Native</span><span class="pill">企业上线清单</span></div></section><section class="doc" id="doc-00" data-title="总览"><header class="doc-head"><div class="doc-kicker">DOC 01</div><h2>总览</h2><div class="doc-source">来源：README.md</div></header><details class="doc-toc"><summary>本篇目录</summary><div class="toc">
 <ul>
 <li><a href="#doc-00-_1">这个包解决什么问题</a></li>
 <li><a href="#doc-00-pde">PDE 术语说明</a></li>
@@ -6313,52 +6313,195 @@ NVL72 rear fiber routing
 <li>[ ] NVSwitch 托盘、背板、液冷和 NIC 故障演练完成。</li>
 <li>[ ] 软件、固件、驱动、CUDA、NCCL 和文件系统版本锁定。</li>
 <li>[ ] 原厂维护、备件、培训和升级路径明确。</li>
-</ul></div></section><section class="doc" id="doc-10" data-title="智算集群建设方案：GLM-5.3、存储、网络与骨干环网"><header class="doc-head"><div class="doc-kicker">DOC 11</div><h2>智算集群建设方案：GLM-5.3、存储、网络与骨干环网</h2><div class="doc-source">来源：17_智算集群建设方案_统一整合版.md</div></header><details class="doc-toc"><summary>本篇目录</summary><div class="toc">
+</ul></div></section><section class="doc" id="doc-10" data-title="智算集群建设方案 v3.3：GLM-5.3、存储、网络、骨干环网与异构算力"><header class="doc-head"><div class="doc-kicker">DOC 11</div><h2>智算集群建设方案 v3.3：GLM-5.3、存储、网络、骨干环网与异构算力</h2><div class="doc-source">来源：17_智算集群建设方案_统一整合版.md</div></header><details class="doc-toc"><summary>本篇目录</summary><div class="toc">
 <ul>
-<li><a href="#doc-10-1">1. 建设目标与业务边界</a></li>
-<li><a href="#doc-10-2-glm-53-bf16">2. GLM-5.3 BF16 模型基线</a></li>
+<li><a href="#doc-10-0-v33">0. v3.3 关键变化与已作废结论</a></li>
+<li><a href="#doc-10-1-a">1. 建设目标与业务边界（已确认：分支 A）</a></li>
+<li><a href="#doc-10-2-v33">2. 模型基线与参数化方法（v3.3 去模型绑定）</a><ul>
+<li><a href="#doc-10-21-glm-53-bf16">2.1 GLM-5.3 BF16 基准算例</a></li>
+<li><a href="#doc-10-22">2.2 换模型第一个要确认的参数：注意力结构</a></li>
+<li><a href="#doc-10-23">2.3 模型适配矩阵（不同模型 → 部署档位 → 资源池）</a></li>
+</ul>
+</li>
 <li><a href="#doc-10-3-5000">3. 千卡到 5000 卡演进路线</a></li>
-<li><a href="#doc-10-4">4. 业务边界与并行策略</a><ul>
-<li><a href="#doc-10-41">4.1 正确并行原则</a></li>
-<li><a href="#doc-10-42">4.2 评审修正</a></li>
+<li><a href="#doc-10-4">4. 算力与并行设计</a><ul>
+<li><a href="#doc-10-41">4.1 硬约束：模型放不进单节点</a></li>
+<li><a href="#doc-10-42-ep-tp">4.2 并行方案：EP 为主 + 机内 TP</a></li>
+<li><a href="#doc-10-43">4.3 并行承载约定（全文一致）</a></li>
+<li><a href="#doc-10-44-decode">4.4 Decode 显存带宽模型</a></li>
 </ul>
 </li>
 <li><a href="#doc-10-5">5. 网络架构</a><ul>
 <li><a href="#doc-10-51-10240">5.1 目标态 10240 卡</a></li>
-<li><a href="#doc-10-52-leaf">5.2 统一 Leaf 模型</a></li>
-<li><a href="#doc-10-53">5.3 三条逻辑网络</a></li>
+<li><a href="#doc-10-52-leaf-48-16-31">5.2 统一 Leaf 模型（48 下 / 16 上，严格 3:1）</a></li>
+<li><a href="#doc-10-53-qos">5.3 三条逻辑网络与 QoS</a></li>
+<li><a href="#doc-10-54">5.4 管理网与集团双归</a></li>
+<li><a href="#doc-10-55">5.5 扩展性</a></li>
 </ul>
 </li>
 <li><a href="#doc-10-6">6. 存储架构</a><ul>
-<li><a href="#doc-10-61">6.1 热层、温层、冷层</a></li>
-<li><a href="#doc-10-62">6.2 参考规模</a></li>
-<li><a href="#doc-10-63-lustre">6.3 Lustre 关键点</a></li>
+<li><a href="#doc-10-61">6.1 分层架构</a></li>
+<li><a href="#doc-10-62-a">6.2 容量测算（分支 A）</a></li>
+<li><a href="#doc-10-63">6.3 带宽测算（平均 / 峰值双口径）</a></li>
+<li><a href="#doc-10-64">6.4 并行文件系统选型</a></li>
+<li><a href="#doc-10-65-lustre">6.5 Lustre 配置要点</a></li>
+<li><a href="#doc-10-66">6.6 扩展路径</a></li>
 </ul>
 </li>
 <li><a href="#doc-10-7">7. 骨干环网</a><ul>
-<li><a href="#doc-10-71">7.1 定位</a></li>
+<li><a href="#doc-10-71">7.1 定位与拓扑</a></li>
 <li><a href="#doc-10-72">7.2 关键指标</a></li>
-<li><a href="#doc-10-73">7.3 六条硬约束</a></li>
+<li><a href="#doc-10-73-pod">7.3 ρ 敏感性（跨 POD 流量占比）</a></li>
+<li><a href="#doc-10-74">7.4 六条硬约束</a></li>
+<li><a href="#doc-10-75-vs-clos">7.5 环网 vs CLOS</a></li>
 </ul>
 </li>
 <li><a href="#doc-10-8">8. 华为超节点与千卡算存</a></li>
-<li><a href="#doc-10-9">9. 评审修订与执行顺序</a><ul>
-<li><a href="#doc-10-91-p0">9.1 P0 定案</a></li>
-<li><a href="#doc-10-92-p1">9.2 P1 修正</a></li>
-<li><a href="#doc-10-93-p2">9.3 P2 补齐</a></li>
+<li><a href="#doc-10-9-tco">9. 能效与 TCO</a></li>
+<li><a href="#doc-10-10-v33-16">10. 异构算力支持（v3.3 新增第 16 章）</a><ul>
+<li><a href="#doc-10-101">10.1 三条铁律（违反即性能崩塌）</a></li>
+<li><a href="#doc-10-102">10.2 资源池划分</a></li>
+<li><a href="#doc-10-103-dp">10.3 调度策略与异构 DP 负载均衡</a></li>
+<li><a href="#doc-10-104">10.4 结论与验收</a></li>
 </ul>
 </li>
-<li><a href="#doc-10-10-poc">10. 立项 POC 与验收</a></li>
-<li><a href="#doc-10-11">11. 图表与源文件</a></li>
-<li><a href="#doc-10-12">12. 统一验收清单</a></li>
+<li><a href="#doc-10-11">11. 分期建设、安全与故障演练</a></li>
+<li><a href="#doc-10-12-poc">12. 验收基线与 POC</a></li>
+<li><a href="#doc-10-13">13. 口径基线与已知错值</a></li>
+<li><a href="#doc-10-14">14. 图表与源文件</a></li>
+<li><a href="#doc-10-15">15. 统一验收清单</a></li>
 </ul>
 </div>
 </details><div class="doc-content"><blockquote>
-<p>本文整合用户提供的《智算集群建设方案 v3.2》《GLM-5.3 千卡到 5000 卡智算集群建设方案》《存储与网络架构方案》《骨干环网架构方案》《华为超节点-千卡算存架构方案》和《方案完整评审报告 v3.0》。</p>
-<p><strong>版本原则</strong>：以 v3.2 和 2026-10-10 评审修订后的数据为准；旧版 <code>TP=16 跨机</code>、旧网络投资、旧存储带宽和旧能效公式不再作为结论。</p>
+<p>本章以《智算集群建设方案 <strong>v3.3</strong>》（唯一交付文档）为准，整合《存储与网络架构方案 v3.3》《骨干环网架构方案 v3.3》《华为超节点-千卡算存架构方案 v3.3》与《完整审计报告 v3.3》。v3.3 取代此前全部分册，历史分册与本文冲突时以本文为准。</p>
+<p><strong>版本原则（v3.3）</strong>：①<strong>去模型绑定</strong> —— 方案改为模型无关的参数化设计，GLM-5.3 只是基准算例而非设计前提；②<strong>新增第 16 章「异构算力支持」</strong>；③按《方案完整评审报告 v3.0》与《完整审计报告 v3.3》全量修复。旧版 <code>TP=16 跨机</code>、<code>32 下/32 上</code>、<code>网络省 20%</code>、<code>热层 30/50 TB</code>、<code>5000 卡 ≥3 TB/s</code>、<code>10240 卡 3.5 MW</code> 等结论一律作废。</p>
 </blockquote>
-<h2 id="doc-10-1">1. 建设目标与业务边界</h2>
-<p>建议把建设方案拆成三条业务线：</p>
+<h2 id="doc-10-0-v33">0. v3.3 关键变化与已作废结论</h2>
+<table>
+<thead>
+<tr>
+<th>项目</th>
+<th>旧值（v3.0 及更早）</th>
+<th><strong>v3.3 正确值</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>并行方案</td>
+<td>TP=16 跨机</td>
+<td><strong>EP=32（跨 4 节点）+ 机内 TP=8</strong></td>
+</tr>
+<tr>
+<td>单副本规模</td>
+<td>16 卡</td>
+<td><strong>32 卡</strong></td>
+</tr>
+<tr>
+<td>单卡权重</td>
+<td>87.7 GiB/卡</td>
+<td><strong>50.2 GB/卡</strong></td>
+</tr>
+<tr>
+<td>单卡可用 KV</td>
+<td>—</td>
+<td><strong>69.8 GB</strong></td>
+</tr>
+<tr>
+<td>8K 并发</td>
+<td>549 路</td>
+<td><strong>≈3035 路</strong></td>
+</tr>
+<tr>
+<td>副本 KV 池</td>
+<td>376 GiB</td>
+<td><strong>≈2234 GB</strong></td>
+</tr>
+<tr>
+<td>Leaf 端口模型</td>
+<td>32 下 / 32 上</td>
+<td><strong>48 下 / 16 上（严格 3:1）</strong></td>
+</tr>
+<tr>
+<td>一期 Leaf</td>
+<td>32 台</td>
+<td><strong>21 台</strong></td>
+</tr>
+<tr>
+<td>二期 Leaf / Spine</td>
+<td>94 / 9</td>
+<td><strong>63 / 8</strong></td>
+</tr>
+<tr>
+<td>三期 Leaf</td>
+<td>157 台</td>
+<td><strong>105 台</strong></td>
+</tr>
+<tr>
+<td>1000 卡 3:1 投资</td>
+<td>¥21.14M（↓19.5%）</td>
+<td><strong>¥16.71M（↓36.4%）</strong></td>
+</tr>
+<tr>
+<td>5000 卡 3:1 投资</td>
+<td>¥103.74M（↓20.1%）</td>
+<td><strong>¥82.83M（↓36.2%）</strong></td>
+</tr>
+<tr>
+<td>5000 卡 3:1 光模块</td>
+<td>13454</td>
+<td><strong>13360</strong></td>
+</tr>
+<tr>
+<td>网络节省口径</td>
+<td>20.2%</td>
+<td><strong>36.2%</strong></td>
+</tr>
+<tr>
+<td>热层容量</td>
+<td>30 / 50 TB（训练口径）</td>
+<td><strong>17 TB</strong>（分支 A）</td>
+</tr>
+<tr>
+<td>一期骨干环段容量</td>
+<td>6.4 Tbps（无推导链）</td>
+<td><strong>6.4 Tbps</strong>（补：由存储流量 k=1 决定）</td>
+</tr>
+<tr>
+<td>t_step / TPS_mem</td>
+<td>1.608 ms / 622</td>
+<td><strong>15.7 ms / 63.7</strong></td>
+</tr>
+<tr>
+<td>10240 卡总功率</td>
+<td>3.5 MW</td>
+<td><strong>≈7.16 MW（PUE 1.2）</strong></td>
+</tr>
+<tr>
+<td>10240 卡机柜数</td>
+<td>40 柜</td>
+<td><strong>320 柜</strong></td>
+</tr>
+<tr>
+<td>模型分发体积</td>
+<td>1.503 TB/版本</td>
+<td><strong>1.507 TB/版本</strong></td>
+</tr>
+<tr>
+<td>FP8 权重</td>
+<td>753.33 GB</td>
+<td><strong>755.63 GB（703.76 GiB）</strong></td>
+</tr>
+<tr>
+<td>反推总参数</td>
+<td>743.3 B</td>
+<td><strong>753.94 B</strong></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>根因复盘：<strong>图形资产未随文档版本化</strong>。审计发现 5 张图中 2 张严重过期（08:31 生成、早于 v3.1/v3.3 修订）。结论：图、xlsx、文档必须纳入同一版本号体系，每次修订后强制复核图文一致性。</p>
+</blockquote>
+<h2 id="doc-10-1-a">1. 建设目标与业务边界（已确认：分支 A）</h2>
 <table>
 <thead>
 <tr>
@@ -6369,25 +6512,34 @@ NVL72 rear fiber routing
 </thead>
 <tbody>
 <tr>
-<td>推理服务</td>
+<td>在线推理</td>
 <td>高吞吐、低延迟、成本可控</td>
 <td>3:1 收敛、PD 分离、W8A8、Prefix Cache</td>
 </tr>
 <tr>
-<td>LoRA / 轻量微调</td>
+<td>LoRA 微调</td>
 <td>参数高效、任务快速闭环</td>
 <td>机内 TP8、跨机 EP/DP/PP、Checkpoint 快照</td>
 </tr>
 <tr>
 <td>全参预训练/重微调</td>
-<td>高带宽、低时延、稳定扩展</td>
+<td><strong>本方案不含</strong>（仅作超节点形态参考）</td>
 <td>1:1 无阻塞、超节点 UB、8-rail RoCEv2、独立存储面</td>
 </tr>
 </tbody>
 </table>
-<p><strong>必须先拍板业务边界</strong>：推理为主和全参预训练对网络收敛比、存储带宽、GPU/NPU 选型和投资的影响完全不同。</p>
-<h2 id="doc-10-2-glm-53-bf16">2. GLM-5.3 BF16 模型基线</h2>
-<p>按原始模型配置和权重体积实测，参考口径如下：</p>
+<p><strong>业务边界（已确认）</strong>：分支 A = <strong>在线推理 + LoRA 微调，不含全参训练/预训练</strong>。这一个判断直接决定三件事：</p>
+<ol>
+<li>网络可用 <strong>3:1 收敛</strong>（而非预训练级 1:1 无阻塞）；</li>
+<li>存储按 <strong>模型仓 + LoRA Checkpoint + KV 卸载</strong> 收敛，<strong>删除全参 Checkpoint（10.5 TB/次）口径</strong>；</li>
+<li><strong>不引入训练级超节点</strong>（TP 在机内完成，跨机走 EP all-to-all）。</li>
+</ol>
+<blockquote>
+<p>若边界改为"含全参训练"，则需重构训练池网络（1:1）、PB 级存储与超节点工程，本方案相应结论作废。</p>
+</blockquote>
+<h2 id="doc-10-2-v33">2. 模型基线与参数化方法（v3.3 去模型绑定）</h2>
+<p><strong>本方案是模型无关的参数化设计。</strong> 所有公式以"模型参数"为自变量，<strong>GLM-5.3 只是基准算例</strong>。换模型只替换 10 个驱动参数并重跑公式；<strong>架构结论（三层拓扑、3:1、EP 为主、Lustre）不随模型变化</strong>，变的只是容量与带宽数值。</p>
+<h3 id="doc-10-21-glm-53-bf16">2.1 GLM-5.3 BF16 基准算例</h3>
 <table>
 <thead>
 <tr>
@@ -6398,133 +6550,265 @@ NVL72 rear fiber routing
 <tbody>
 <tr>
 <td>总参数</td>
-<td style="text-align: right;">753.33 B</td>
+<td style="text-align: right;">753,329,959,936（753.33 B）</td>
 </tr>
 <tr>
 <td>激活参数</td>
 <td style="text-align: right;">41.16 B</td>
 </tr>
 <tr>
-<td>MoE 专家数</td>
-<td style="text-align: right;">256</td>
+<td>层数 / 专家 / Top-K</td>
+<td style="text-align: right;">78 / 256+1 / 8</td>
 </tr>
 <tr>
-<td>每 token Top-K</td>
-<td style="text-align: right;">8</td>
+<td>BF16 权重</td>
+<td style="text-align: right;">1506.66 GB = 1403.19 GiB = <strong>1.507 TB</strong></td>
 </tr>
 <tr>
-<td>BF16 权重体积</td>
-<td style="text-align: right;">1506.66 GB（约 1403.19 GiB）</td>
+<td>FP8 权重（实测）</td>
+<td style="text-align: right;"><strong>755.63 GB = 703.76 GiB</strong></td>
 </tr>
 <tr>
-<td>KV / token</td>
-<td style="text-align: right;">87.75 KiB</td>
+<td>KV / token（MLA）</td>
+<td style="text-align: right;"><strong>87.75 KiB</strong></td>
 </tr>
 <tr>
 <td>单副本规模</td>
-<td style="text-align: right;">16 卡</td>
+<td style="text-align: right;"><strong>32 卡（EP=32）</strong></td>
 </tr>
 <tr>
-<td>单卡权重</td>
-<td style="text-align: right;">约 50.2 GB（按 v3.2 重算口径）</td>
+<td>单卡权重 / 可用 KV</td>
+<td style="text-align: right;"><strong>50.2 GB / 69.8 GB</strong></td>
 </tr>
 <tr>
-<td>单卡可用 KV</td>
-<td style="text-align: right;">约 69.8 GB</td>
+<td>副本 KV 池</td>
+<td style="text-align: right;">≈2234 GB（<strong>按 32 卡分片</strong>，见 §6.2）</td>
 </tr>
 <tr>
-<td>8K 并发</td>
-<td style="text-align: right;">约 3035 路</td>
+<td>8K / 32K / 128K 并发</td>
+<td style="text-align: right;"><strong>≈3035 / 759 / 190 路</strong></td>
 </tr>
 </tbody>
 </table>
 <blockquote>
-<p>以上数据用于容量和方案对比，不是对所有业务负载的承诺。上线前必须用实际模型版本、Tokenizer、并行策略、Batch 和 SLO 重新测算。</p>
+<p>⚠️ 两条已回滚的易错点：①<strong>FP8 体积不是 753.33 GB</strong>（差额 2.30 GB 来自 embedding/lm_head/归一化仍以 BF16 存储）；②<strong>反推总参数不是 743.3 B</strong>（漏计输出头 0.952 B 与 MTP 层 9.70 B）。</p>
+</blockquote>
+<h3 id="doc-10-22">2.2 换模型第一个要确认的参数：注意力结构</h3>
+<p><strong>注意力结构（MLA / GQA / MHA）决定 KV 容量，不同结构可差 3–30 倍</strong>，是换模型时第一优先确认项：</p>
+<table>
+<thead>
+<tr>
+<th>结构</th>
+<th style="text-align: right;">KV / token</th>
+<th>相对量级</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>MLA（GLM-5.3 用）</td>
+<td style="text-align: right;">87.75 KiB</td>
+<td>1×</td>
+</tr>
+<tr>
+<td>GQA</td>
+<td style="text-align: right;">≈320 KiB</td>
+<td>≈3.6×</td>
+</tr>
+<tr>
+<td>MHA</td>
+<td style="text-align: right;">≈2.5 MiB</td>
+<td>≈29×</td>
+</tr>
+</tbody>
+</table>
+<h3 id="doc-10-23">2.3 模型适配矩阵（不同模型 → 部署档位 → 资源池）</h3>
+<p>按 BF16 权重与 128 GB 卡（可用 119.21 GiB）推算，工程取值含 KV 余量：</p>
+<table>
+<thead>
+<tr>
+<th>模型档位</th>
+<th>参数量</th>
+<th>BF16 权重</th>
+<th>F1a 最小卡数</th>
+<th><strong>工程部署</strong></th>
+<th>并行</th>
+<th>资源池</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>超大 MoE</td>
+<td>600–800 B</td>
+<td>1.2–1.5 TB</td>
+<td>12</td>
+<td><strong>32 卡/副本</strong></td>
+<td>EP=32 + 机内 TP8</td>
+<td>A</td>
+</tr>
+<tr>
+<td>大 MoE</td>
+<td>200–500 B</td>
+<td>0.4–0.94 TB</td>
+<td>4–8</td>
+<td><strong>16–32 卡</strong></td>
+<td>EP=16/32</td>
+<td>A</td>
+</tr>
+<tr>
+<td>稠密大模型</td>
+<td>65–72 B</td>
+<td>130–144 GB</td>
+<td>2</td>
+<td><strong>8 卡单节点</strong></td>
+<td>TP=8（全机内）</td>
+<td>A / B</td>
+</tr>
+<tr>
+<td>中型</td>
+<td>13–32 B</td>
+<td>26–64 GB</td>
+<td>1</td>
+<td>单卡 / TP=2，多实例</td>
+<td>—</td>
+<td>B / C</td>
+</tr>
+<tr>
+<td>小模型</td>
+<td>≤ 8 B</td>
+<td>≤ 16 GB</td>
+<td>1</td>
+<td>单卡多实例</td>
+<td>—</td>
+<td>C</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>换算到任意模型</strong>：只要 <code>W = N_total × b/8 &lt; M_card</code>，单卡即可容纳；<code>G_min ≤ 8</code> 则可单节点部署、<strong>TP 全机内、无需跨机 all-reduce</strong>。</p>
 </blockquote>
 <h2 id="doc-10-3-5000">3. 千卡到 5000 卡演进路线</h2>
+<p><img alt="千卡到 5000 卡演进路线图" src="assets/compute-1000-to-5000-roadmap.png" /></p>
 <table>
 <thead>
 <tr>
 <th>阶段</th>
 <th>时间</th>
-<th style="text-align: right;">规模</th>
-<th>核心目标</th>
-<th>关键交付</th>
+<th style="text-align: right;">总卡数</th>
+<th>POD 组成</th>
+<th style="text-align: right;">骨干环节点/段</th>
+<th>段容量</th>
+<th>网络设备</th>
+<th>交付</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>一期</td>
-<td>0～3 月</td>
-<td style="text-align: right;">1000 卡</td>
-<td>能力验证</td>
-<td>单副本跑通、基线指标、存储和网络最小闭环</td>
+<td><strong>一期</strong></td>
+<td>0–3 月</td>
+<td style="text-align: right;">1000</td>
+<td>POD-1（1000/1250）</td>
+<td style="text-align: right;">2 / 2</td>
+<td><strong>6.4 Tbps</strong>（8×800G）</td>
+<td>Leaf 21 / Spine 3</td>
+<td>可用的推理服务 + 基线指标</td>
 </tr>
 <tr>
-<td>二期</td>
-<td>3～9 月</td>
-<td style="text-align: right;">3000 卡</td>
-<td>规模与混部</td>
-<td>训练/推理混部、配额、优先级、Checkpoint</td>
+<td><strong>二期</strong></td>
+<td>3–9 月</td>
+<td style="text-align: right;">3000</td>
+<td>POD-1、2 满 + POD-3（500）</td>
+<td style="text-align: right;">4 / 4</td>
+<td><strong>19.2 Tbps</strong>（24×800G）</td>
+<td>Leaf 63 / Spine 8</td>
+<td>训推混部能力 + 微调闭环</td>
 </tr>
 <tr>
-<td>三期</td>
-<td>9～12 月</td>
-<td style="text-align: right;">5000 卡</td>
-<td>全量生产</td>
-<td>SLA、多租户、成本、慢卡检测、备件和容灾</td>
+<td><strong>三期</strong></td>
+<td>9–12 月</td>
+<td style="text-align: right;">5000</td>
+<td>POD-1~4 满（4×1250）</td>
+<td style="text-align: right;">6 / 6</td>
+<td><strong>28.8 Tbps</strong>（36×800G）</td>
+<td>Leaf 105 / Spine 14</td>
+<td>5000 卡统一算存平台</td>
 </tr>
 <tr>
-<td>目标态</td>
+<td>终态</td>
 <td>后续</td>
-<td style="text-align: right;">10240 卡</td>
-<td>统一算存平台</td>
-<td>多 POD、统一调度、存储多文件系统和统一命名空间</td>
+<td style="text-align: right;">10240</td>
+<td>POD-1~8（8×1250）+ 剩余 240 卡</td>
+<td style="text-align: right;">按需</td>
+<td>按需</td>
+<td>Leaf 214 / Spine 27</td>
+<td>多 POD、统一调度、多文件系统</td>
 </tr>
 </tbody>
 </table>
-<p><img alt="千卡到 5000 卡演进路线图" src="assets/compute-1000-to-5000-roadmap.png" /></p>
-<p>建设原则：</p>
-<ul>
-<li>一次规划，分期建设；</li>
-<li>机位、桥架、光纤、电力、制冷按终态预留；</li>
-<li>POD、VLAN、VXLAN、IP、AS、轨道编号一次规划到位；</li>
-<li>优先在线扩容，避免阶段性返工；</li>
-<li>每一步都有 POC、压测、故障演练和回滚条件。</li>
-</ul>
-<h2 id="doc-10-4">4. 业务边界与并行策略</h2>
-<h3 id="doc-10-41">4.1 正确并行原则</h3>
-<p><strong>TP 不跨机走 RoCE；注意力层 TP 在机内或超节点 UB 域内完成。</strong></p>
-<p>推荐：</p>
-<pre><code class="language-text">注意力层：机内 TP8 或 UB 域内 TP
-专家层：EP=32 跨 4 节点，all-to-all 走 RoCE
-数据并行：DP 跨节点
-流水线并行：PP 跨节点
-每卡：1 × 400G 承载 EP / DP / PP
+<p><strong>建设原则</strong>：一次规划、分期建设；机位、桥架、光纤、电力、制冷按终态预留；POD、VLAN、VXLAN、IP、AS、轨道编号一次规划到位；优先在线扩容；每一步都有 POC、压测、故障演练与回滚条件。</p>
+<h2 id="doc-10-4">4. 算力与并行设计</h2>
+<h3 id="doc-10-41">4.1 硬约束：模型放不进单节点</h3>
+<pre><code class="language-text">BF16 权重 = 1403.19 GiB
+单节点 8 卡 × 119.21 GiB = 953.7 GiB  &lt;  1403.19 GiB   ✗
 </code></pre>
-<p>不适合的做法：</p>
-<ul>
-<li>把 TP 做成跨机 RoCE；</li>
-<li>用单机 8 卡强行装下 1403 GiB 的 BF16 权重；</li>
-<li>把 MoE 专家并行和拓扑不感知的调度混在一起；</li>
-<li>让所有并行通信都走同一条参数面。</li>
-</ul>
-<h3 id="doc-10-42">4.2 评审修正</h3>
-<p>评审指出“TP 跨 RoCE 自相矛盾”成立。最初建议“单机 8 卡、TP 上限 8”对 GLM-5.3 BF16 不可行，因为：</p>
-<pre><code class="language-text">单节点显存：8 × 128 GB = 1024 GB ≈ 953.7 GiB
-BF16 权重：约 1403.19 GiB
-模型无法放入单节点
+<p>BF16 必须跨节点；最小可行 12 卡，工程取 16 卡以上。</p>
+<blockquote>
+<p><strong>第二条路径（FP8）</strong>：FP8 权重 <strong>703.76 GiB &lt; 单节点 953.7 GiB</strong>，<strong>可容纳于单节点 8 卡</strong>。改用 FP8 后注意力层 TP 可完全在机内完成（TP=8），无需跨机 EP —— 与 BF16 的 EP=32 路径并列，是显存吃紧时的备选方案（精度以实测为准）。</p>
+</blockquote>
+<h3 id="doc-10-42-ep-tp">4.2 并行方案：EP 为主 + 机内 TP</h3>
+<blockquote>
+<p>单位说明：本节权重按<strong>十进制 GB</strong>（10⁹ B）计；卡容量 128 GB = 119.21 GiB。切勿把 §4.1 的 GiB 与本节 GB 直接相减。</p>
+</blockquote>
+<pre><code class="language-text">专家层（EP=32，跨 4 节点）：W_expert/卡 = 727.72e9 × 2 B / 32 = 45.49 GB
+注意力层（机内 TP=8）    ：W_attn/卡   = 12.872e9 × 2 B / 8  =  3.22 GB
+其他（Dense / 索引器 / 嵌入 / MTP）                         ≈  1.52 GB
+────────────────────────────────────────────────────────────────────
+单卡权重合计                                                ≈ 50.2 GB
+单卡可用 KV = 128 − 50.2 − 8                                ≈ 69.8 GB
+副本规模 = EP32 = 32 卡（4 节点）；KV 池 ≈ 2234 GB
+8K 并发 ≈ 3035 路 ｜ 32K ≈ 759 ｜ 128K ≈ 190
 </code></pre>
-<p>正确修复是：</p>
-<pre><code class="language-text">注意力层 TP=8 在机内或 UB 域内
-专家层 EP=32 跨 4 节点
-all-to-all 走 RoCE
-TP 不跨机走 RoCE
+<h3 id="doc-10-43">4.3 并行承载约定（全文一致）</h3>
+<table>
+<thead>
+<tr>
+<th>并行维度</th>
+<th>承载位置</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>注意力层 TP（≤8）</td>
+<td><strong>机内 / UB 域</strong></td>
+<td>高频小包 all-reduce，<strong>不跨机走 RoCE</strong></td>
+</tr>
+<tr>
+<td>专家层 EP（=32）</td>
+<td>跨机 RoCE 参数面</td>
+<td>MoE all-to-all，行业标准</td>
+</tr>
+<tr>
+<td>DP / PP</td>
+<td>跨机 RoCE 参数面</td>
+<td>周期性大传输</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>⚠️ <strong>关于为何不用跨机 TP（澄清一处历史误述）</strong>：TP=16 在<strong>显存上是可行的</strong>（1403.19 GiB ÷ 16 = 87.70 GiB/卡 &lt; 单卡可用 119.21 GiB）。真正的理由是<strong>性能</strong>：TP 的每层 all-reduce 是<strong>高频小包</strong>（78 层 × 每步 2 次），对时延极敏感，跨机经 RoCE 会严重拖慢 decode；而 EP 的 all-to-all 是<strong>周期性、可预测的粗粒度传输</strong>，天然适配跨机网络。此外 EP=32 的 KV 池（2234 GB）远优于 TP=16 的 376 GB。</p>
+</blockquote>
+<h3 id="doc-10-44-decode">4.4 Decode 显存带宽模型</h3>
+<pre><code class="language-text">F10  t_step  = W_gpu / BW_hbm
+     W_gpu   = 专家 45.49（EP=32 切分）+ 注意力 3.22（机内 TP=8）+ 其他 1.52 = 50.2 GB
+     t_step  = 50.2 GB / 3.2 TB/s = 15.7 ms
+F11  TPS_mem = 1 / t_step = 63.7 token/s（单序列，专家饱和口径）
 </code></pre>
-<p><img alt="评审修订优先级路线图" src="assets/compute-review-roadmap.png" /></p>
+<blockquote>
+<p>⚠️ <strong>常见错误写法</strong>：<code>t_step = (N_active × b/8) / (BW_hbm × P)</code>。以 P=32 代入得 0.804 ms，<strong>偏快约 19 倍</strong>。该式隐含"激活权重在 P 张卡上均匀切分"，仅在注意力也按 TP=P 切分时成立；本方案注意力仅机内 TP=8（跨 EP 组复制），故每卡足迹 50.2 GB 远大于均分假设。实测 GLM-5.3 单流 115 token/s（批量小时仅触达 8/256 专家），批量达 B* ≈ 732 后进入算力受限区，聚合封顶 TPS_compute = 46,650 token/s。</p>
+</blockquote>
 <h2 id="doc-10-5">5. 网络架构</h2>
+<p><img alt="存储与网络架构方案" src="assets/compute-storage-network.png" /></p>
 <h3 id="doc-10-51-10240">5.1 目标态 10240 卡</h3>
-<p>参考《存储与网络架构方案》：</p>
 <table>
 <thead>
 <tr>
@@ -6539,7 +6823,7 @@ TP 不跨机走 RoCE
 </tr>
 <tr>
 <td>物理网络</td>
-<td>2 张：RoCEv2 + 管理</td>
+<td>2 张：RoCEv2 + 管理（GE）</td>
 </tr>
 <tr>
 <td>逻辑网络</td>
@@ -6547,11 +6831,11 @@ TP 不跨机走 RoCE
 </tr>
 <tr>
 <td>收敛比</td>
-<td>3:1</td>
+<td>3:1（实测 2.99:1）</td>
 </tr>
 <tr>
 <td>Leaf</td>
-<td>214 台 × 64 × 400G，48 下行 : 16 上行</td>
+<td>214 台 × 64 × 400G，48 下行 : 16 上行，6 节点/Leaf</td>
 </tr>
 <tr>
 <td>Spine</td>
@@ -6566,132 +6850,389 @@ TP 不跨机走 RoCE
 <td>4096 / 1369.6 Tbps</td>
 </tr>
 <tr>
-<td>实测收敛比</td>
-<td>2.99:1</td>
-</tr>
-<tr>
 <td>集团上行</td>
-<td>2 路 × 1.6 Tbps，eBGP + BFD 双活</td>
+<td>2 路 × 1.6 Tbps（4×400G），eBGP + BFD 双活</td>
 </tr>
 </tbody>
 </table>
 <blockquote>
-<p>27 台 Spine 端口利用率约 99.1%，几乎无余量。建议按 32 台建设或预留机位、光纤和电口，目标利用率约 83.6%。</p>
+<p>⚠️ 27 台 Spine 端口利用率 99.1%，几乎无余量。建议按 <strong>32 台建设或预留 32 台机位</strong>，目标利用率降至 83.6%。</p>
 </blockquote>
-<h3 id="doc-10-52-leaf">5.2 统一 Leaf 模型</h3>
-<p>评审后统一采用 <strong>48 下行 : 16 上行</strong>：</p>
+<h3 id="doc-10-52-leaf-48-16-31">5.2 统一 Leaf 模型（48 下 / 16 上，严格 3:1）</h3>
+<pre><code class="language-text">F24 每 Leaf 覆盖节点 = 48 / 8 = 6      F25 Leaf 数   = ⌈N_node / 6⌉
+F26 Spine 数 = ⌈Leaf × 16 / 128⌉        F27 光模块    = 卡数 × 2 + Leaf × 16 × 2
+</code></pre>
 <table>
 <thead>
 <tr>
 <th>规模</th>
-<th style="text-align: right;">Leaf / Spine</th>
+<th style="text-align: right;">节点</th>
+<th style="text-align: right;">Leaf</th>
+<th style="text-align: right;">Spine</th>
+<th style="text-align: right;">上行端口</th>
+<th style="text-align: right;">400G 光模块</th>
+<th style="text-align: right;">网络投资</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>1000 卡</td>
-<td style="text-align: right;">21 / 3</td>
+<td style="text-align: right;">125</td>
+<td style="text-align: right;"><strong>21</strong></td>
+<td style="text-align: right;"><strong>3</strong></td>
+<td style="text-align: right;">336</td>
+<td style="text-align: right;"><strong>2672</strong></td>
+<td style="text-align: right;"><strong>¥16.71M</strong></td>
 </tr>
 <tr>
 <td>3000 卡</td>
-<td style="text-align: right;">63 / 8</td>
+<td style="text-align: right;">375</td>
+<td style="text-align: right;"><strong>63</strong></td>
+<td style="text-align: right;"><strong>8</strong></td>
+<td style="text-align: right;">1008</td>
+<td style="text-align: right;"><strong>8016</strong></td>
+<td style="text-align: right;"><strong>¥49.42M</strong></td>
+</tr>
+<tr>
+<td>4096 卡</td>
+<td style="text-align: right;">512</td>
+<td style="text-align: right;"><strong>86</strong></td>
+<td style="text-align: right;"><strong>11</strong></td>
+<td style="text-align: right;">1376</td>
+<td style="text-align: right;"><strong>10944</strong></td>
+<td style="text-align: right;"><strong>¥67.52M</strong></td>
 </tr>
 <tr>
 <td>5000 卡</td>
-<td style="text-align: right;">105 / 14</td>
-</tr>
-</tbody>
-</table>
-<p>这比旧版 <code>32:32</code> 更符合标准 Leaf 端口模型，并降低网络投资和端口浪费。</p>
-<h3 id="doc-10-53">5.3 三条逻辑网络</h3>
-<ul>
-<li><strong>计算网</strong>：GPU/NPU 集合通信、参数同步；高优先级；带宽保障 ≥60%；PFC 仅 POD 内。</li>
-<li><strong>存储网</strong>：并行文件系统、NVMe-oF、Checkpoint；独立 VXLAN；跨 POD 禁 PFC，使用 ECN + DCQCN。</li>
-<li><strong>业务网</strong>：推理接入、数据加载、管理 API；普通 VLAN/VXLAN，尽力而为。</li>
-<li>物理管理网：iBMC、Redfish、SNMP、Syslog，独立布线，与生产网隔离。</li>
-</ul>
-<h2 id="doc-10-6">6. 存储架构</h2>
-<p><img alt="存储与网络架构方案" src="assets/compute-storage-network.png" /></p>
-<h3 id="doc-10-61">6.1 热层、温层、冷层</h3>
-<ul>
-<li>热层：并行文件系统、全闪 NVMe，承载参数、Checkpoint 和训练中间数据；</li>
-<li>温层：大容量全闪或对象存储，承载数据集、模型版本和近期历史；</li>
-<li>冷层：对象存储，承载归档、审计和历史快照。</li>
-</ul>
-<h3 id="doc-10-62">6.2 参考规模</h3>
-<table>
-<thead>
-<tr>
-<th style="text-align: right;">规模</th>
-<th style="text-align: right;">节点</th>
-<th style="text-align: right;">热层有效容量</th>
-<th style="text-align: right;">读 / 写带宽</th>
-<th>并行 FS</th>
-<th style="text-align: right;">温层 / 冷层</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: right;">4096 卡</td>
-<td style="text-align: right;">512</td>
-<td style="text-align: right;">1.5 PB</td>
-<td style="text-align: right;">1.0 / 0.5 TB/s</td>
-<td>MDS4 / OSS36 / OST432</td>
-<td style="text-align: right;">3 PB / 5 PB</td>
+<td style="text-align: right;">625</td>
+<td style="text-align: right;"><strong>105</strong></td>
+<td style="text-align: right;"><strong>14</strong></td>
+<td style="text-align: right;">1680</td>
+<td style="text-align: right;"><strong>13360</strong></td>
+<td style="text-align: right;"><strong>¥82.83M</strong></td>
 </tr>
 <tr>
-<td style="text-align: right;">10240 卡</td>
+<td>10240 卡</td>
 <td style="text-align: right;">1280</td>
-<td style="text-align: right;">3.5 PB</td>
-<td style="text-align: right;">2.5 / 1.2 TB/s</td>
-<td>MDS8 / OSS96 / OST1152</td>
-<td style="text-align: right;">8 PB / 15 PB</td>
-</tr>
-<tr>
-<td style="text-align: right;">20480 卡</td>
-<td style="text-align: right;">2592</td>
-<td style="text-align: right;">7 PB</td>
-<td style="text-align: right;">约 5 TB/s</td>
-<td>MDS16 级</td>
-<td style="text-align: right;">按比例扩展</td>
-</tr>
-<tr>
-<td style="text-align: right;">41472 卡</td>
-<td style="text-align: right;">5184</td>
-<td style="text-align: right;">14 PB</td>
-<td style="text-align: right;">约 10 TB/s</td>
-<td>MDS32 级</td>
-<td style="text-align: right;">按比例扩展</td>
+<td style="text-align: right;"><strong>214</strong></td>
+<td style="text-align: right;"><strong>27</strong></td>
+<td style="text-align: right;">3424</td>
+<td style="text-align: right;"><strong>27328</strong></td>
+<td style="text-align: right;"><strong>¥168.01M</strong></td>
 </tr>
 </tbody>
 </table>
 <blockquote>
-<p>存储带宽按单卡 0.2 GB/s 再乘 1.3 安全系数作为工程假设。最终阈值必须以实际数据加载、Checkpoint、重排和混部负载校准。</p>
+<p><strong>1:1 专用配置（仅训练池，32 下/32 上）</strong>：1000 卡 Leaf 32 / Spine 8；5000 卡 Leaf 157 / Spine 40。
+<strong>不得同时宣称"3:1 省 36%"与"为 1:1 预留"</strong> —— 二者互斥；按 3:1 建设时空置上行口的成本须计入预算，或改为<strong>预留机位而非端口</strong>（本方案选择后者）。</p>
 </blockquote>
-<h3 id="doc-10-63-lustre">6.3 Lustre 关键点</h3>
-<ul>
-<li>MDT：NVMe RAID1，双 MDS 主备，DNE 分命名空间；</li>
-<li>OST：每块 NVMe 一个 OST，禁用 RAID5/6；</li>
-<li>LNet：<code>o2ib</code> 绑定 RoCE 网口，多网口多轨；</li>
-<li>服务端：<code>brw_size=16M</code>，<code>ost_io threads_max=512</code>；</li>
-<li>Checkpoint：<code>lfs setstripe -c 32 -S 4M</code>；</li>
-<li>数据集：PFL 分层条带；</li>
-<li>小文件：DoM，目录 <code>lfs mkdir -c 8</code>；</li>
-<li>客户端：<code>max_rpcs_in_flight=64</code>，<code>max_dirty_mb=1024</code>；</li>
-<li>直通加速：<code>mount -o gds</code>，使用 GPUDirect 或 NPU Direct Storage。</li>
-</ul>
-<p>单文件系统不建议无限制扩展。超过数千 OST、数百 MDT 或 5000 客户端后，采用 <strong>多文件系统 + 统一命名空间</strong>。</p>
+<h3 id="doc-10-53-qos">5.3 三条逻辑网络与 QoS</h3>
+<table>
+<thead>
+<tr>
+<th>逻辑网</th>
+<th>承载</th>
+<th>隔离</th>
+<th>带宽保障</th>
+<th>无损要求</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>计算网</td>
+<td>EP all-to-all、DP/PP</td>
+<td>VXLAN + DSCP 高优先</td>
+<td>≥60%</td>
+<td>PFC（<strong>仅 POD 内</strong>）</td>
+</tr>
+<tr>
+<td>存储网</td>
+<td>并行 FS、NVMe-oF、Ckpt</td>
+<td>独立 VXLAN + 独立队列</td>
+<td>≥30%</td>
+<td>ECN + DCQCN（跨 POD 禁 PFC）</td>
+</tr>
+<tr>
+<td>业务网</td>
+<td>推理接入、数据加载</td>
+<td>普通 VLAN</td>
+<td>尽力而为</td>
+<td>无</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>物理关系澄清</strong>：三张逻辑网<strong>共享同一套 RoCEv2 物理网络</strong>（复用每卡 1×400G），靠 VLAN/VXLAN + DSCP + 队列隔离，<strong>不设独立存储物理网</strong>；管理网（GE）独立布线。</p>
+</blockquote>
+<h3 id="doc-10-54">5.4 管理网与集团双归</h3>
+<table>
+<thead>
+<tr>
+<th>项目</th>
+<th>设计</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>管理网</td>
+<td>GE 独立物理网，约 2600 端口，SNMP / Redfish / Syslog，与生产网物理隔离</td>
+</tr>
+<tr>
+<td>集团上行</td>
+<td><strong>2 路 × 1.6 Tbps</strong>（4×400G），可扩至 2 × 3.2 Tbps</td>
+</tr>
+<tr>
+<td>协议</td>
+<td>eBGP + BFD，双归两台骨干路由器，故障收敛 &lt; 1 s</td>
+</tr>
+<tr>
+<td>物理</td>
+<td>不同管道 / 楼层 / 独立供电</td>
+</tr>
+</tbody>
+</table>
+<h3 id="doc-10-55">5.5 扩展性</h3>
+<pre><code class="language-text">卡数上限 = Spine 台数 × 384
+Spine 27 → 10,368 卡 ｜ 54 → 20,736 ｜ 81 → 31,104 ｜ 108 → 41,472（单平面极限）
+</code></pre>
+<p>超过 4 万卡：①加平面（每卡多网口，×2/×4）；②链路升速 400G → 800G/1.6T（×2/×4）。</p>
+<h2 id="doc-10-6">6. 存储架构</h2>
+<h3 id="doc-10-61">6.1 分层架构</h3>
+<table>
+<thead>
+<tr>
+<th>层</th>
+<th>介质</th>
+<th>协议</th>
+<th>承载</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>热层（并行 FS）</td>
+<td>NVMe 全闪</td>
+<td>Lustre / GPFS / WekaFS</td>
+<td>模型仓、Checkpoint、KV 卸载</td>
+</tr>
+<tr>
+<td>温层</td>
+<td>大容量全闪 / HDD</td>
+<td>并行 FS 或对象</td>
+<td>数据集全量</td>
+</tr>
+<tr>
+<td>冷层（对象）</td>
+<td>HDD</td>
+<td>S3 / OBS</td>
+<td>原始语料、归档、备份</td>
+</tr>
+</tbody>
+</table>
+<h3 id="doc-10-62-a">6.2 容量测算（分支 A）</h3>
+<pre><code class="language-text">F35 C_hot = C_model + C_ckpt + C_kv + C_reserve
+    C_model = 版本数 × 1.507 TB（不冗余，可从源重建）
+    C_ckpt  = 并发微调任务数 × 9 GB × 1.5（LoRA）
+    C_kv    = 并发 × KV_seq × 卸载率 × 1.5
+    C_reserve = 上述之和 × 20%
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>分项</th>
+<th>净需求</th>
+<th>冗余</th>
+<th>规划</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>模型仓（7 版本 × 1.507 TB）</td>
+<td>10.5 TB</td>
+<td>1.0</td>
+<td>10.5 TB</td>
+</tr>
+<tr>
+<td>LoRA Checkpoint（200 任务 × 9 GB）</td>
+<td>1.8 TB</td>
+<td>1.5</td>
+<td>2.7 TB</td>
+</tr>
+<tr>
+<td>KV 卸载（8K/3035 并发 × 0.736 GB × 30%）</td>
+<td>0.67 TB</td>
+<td>1.5</td>
+<td>1.0 TB</td>
+</tr>
+<tr>
+<td>余量 20%</td>
+<td>—</td>
+<td>—</td>
+<td>2.8 TB</td>
+</tr>
+<tr>
+<td><strong>高性能层（热层）</strong></td>
+<td>—</td>
+<td>—</td>
+<td><strong>≈ 17 TB</strong></td>
+</tr>
+<tr>
+<td>原始语料 + 归档（温冷层）</td>
+<td>100 TB</td>
+<td>2.0</td>
+<td>200 TB</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>KV 分片假设（重要，须 POC 验证）</strong>：KV 池 2234 GB 的前提是 <strong>KV 缓存按 EP 组 32 卡分片存储</strong>。若实际实现为"注意力层 TP=8，KV 在组内 8 卡复制、跨 4 个节点组再复制"，则有效 KV 池降至 2234 ÷ 4 ≈ <strong>559 GB</strong>，8K 并发降至 ≈ <strong>759 路</strong>。该假设已列入 POC 验证清单。
+<strong>实配说明</strong>：热层 OST 数量由<strong>带宽</strong>而非容量决定（1000 卡规模：12 OSS × 12 OST = 144 OST × 7.68 TB ≈ <strong>1.1 PB 裸</strong>），远超 17 TB 需求 —— 分支 A 下容量侧无需为训练数据单独规划。全参 Checkpoint（10.5 TB/次）口径<strong>已标注不适用</strong>。</p>
+</blockquote>
+<h3 id="doc-10-63">6.3 带宽测算（平均 / 峰值双口径）</h3>
+<pre><code class="language-text">F17a 平均读带宽 BW_avg  = N_card × 0.2 GB/s × 1.3     （稳态设计值）
+F17b 峰值能力   BW_peak = N_OSS × 40 GB/s             （设备能力，余量校验）
+F17c OSS 数量   N_OSS   = ⌈BW_avg / 30 GB/s⌉，再向上取整到 12 的倍数
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>规模</th>
+<th style="text-align: right;">平均设计值</th>
+<th style="text-align: right;"><strong>OSS 数（F17c）</strong></th>
+<th style="text-align: right;">峰值能力（F17b）</th>
+<th style="text-align: right;">写带宽</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1000 卡</td>
+<td style="text-align: right;">0.26 TB/s</td>
+<td style="text-align: right;"><strong>12</strong></td>
+<td style="text-align: right;">0.48 TB/s</td>
+<td style="text-align: right;">0.15 TB/s</td>
+</tr>
+<tr>
+<td>3000 卡</td>
+<td style="text-align: right;">0.78 TB/s</td>
+<td style="text-align: right;"><strong>36</strong></td>
+<td style="text-align: right;">1.44 TB/s</td>
+<td style="text-align: right;">0.45 TB/s</td>
+</tr>
+<tr>
+<td>4096 卡</td>
+<td style="text-align: right;">1.07 TB/s</td>
+<td style="text-align: right;"><strong>36</strong></td>
+<td style="text-align: right;">1.44 TB/s</td>
+<td style="text-align: right;">0.50 TB/s</td>
+</tr>
+<tr>
+<td>5000 卡</td>
+<td style="text-align: right;">1.30 TB/s</td>
+<td style="text-align: right;"><strong>48</strong></td>
+<td style="text-align: right;">1.92 TB/s</td>
+<td style="text-align: right;">0.60 TB/s</td>
+</tr>
+<tr>
+<td>10240 卡</td>
+<td style="text-align: right;">2.66 TB/s</td>
+<td style="text-align: right;"><strong>96</strong></td>
+<td style="text-align: right;">3.84 TB/s</td>
+<td style="text-align: right;">1.20 TB/s</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>⚠️ <strong>OSS 口径统一</strong>：OSS 数量<strong>由平均带宽决定</strong>（F17c），峰值能力仅作余量校验。历史上"5000 卡 ≥75 台 OSS"是把峰值目标误作选型依据；"5000 卡 ≥3 TB/s"是把峰值目标写成稳态要求 —— 均已废弃。两套口径随规模单调递增，<strong>不存在倒挂</strong>。</p>
+</blockquote>
+<h3 id="doc-10-64">6.4 并行文件系统选型</h3>
+<table>
+<thead>
+<tr>
+<th>产品</th>
+<th>类型 / 来源</th>
+<th>成熟度</th>
+<th>结论</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Lustre 2.15 LTS / 2.17</strong></td>
+<td>开源 + DDN EXAScaler</td>
+<td>★★★★★ TOP500 主力</td>
+<td><strong>首选</strong></td>
+</tr>
+<tr>
+<td>IBM Storage Scale（GPFS）</td>
+<td>IBM 商业</td>
+<td>★★★★★</td>
+<td>强一致 / ILM 分层</td>
+</tr>
+<tr>
+<td>WekaFS</td>
+<td>Weka 商业</td>
+<td>★★★★☆</td>
+<td>全闪、开箱即用</td>
+</tr>
+<tr>
+<td>VAST Data</td>
+<td>VAST 商业</td>
+<td>★★★★☆</td>
+<td>NFS+S3 双协议</td>
+</tr>
+<tr>
+<td>DAOS</td>
+<td>Intel / 开源</td>
+<td>★★★★☆</td>
+<td>时延最低，运维门槛高</td>
+</tr>
+<tr>
+<td>BeeGFS</td>
+<td>ThinkParQ / 开源</td>
+<td>★★★★☆</td>
+<td>轻量，中小规模</td>
+</tr>
+<tr>
+<td>OceanStor Pacific / OceanFS</td>
+<td>华为</td>
+<td>★★★★☆</td>
+<td>昇腾生态配套</td>
+</tr>
+<tr>
+<td>Dell PowerScale（OneFS）</td>
+<td>Dell</td>
+<td>★★★★☆</td>
+<td>NFS/SMB/S3 通用</td>
+</tr>
+</tbody>
+</table>
+<h3 id="doc-10-65-lustre">6.5 Lustre 配置要点</h3>
+<pre><code class="language-bash"># 服务端（MDS：NVMe RAID1，双机主备；DNE 分命名空间）
+mkfs.lustre --fsname=ai --mgs --mdt --index=0 --reformat /dev/md0
+mkfs.lustre --fsname=ai --mdt --index=1 --mgsnode=10.10.0.1@o2ib --reformat /dev/md0
+# OSS：每块 NVMe 一个 OST（禁用 RAID5/6）
+mkfs.lustre --fsname=ai --ost --index=0 --mgsnode=10.10.0.1@o2ib --reformat /dev/nvme0n1
+lctl set_param obdfilter.*.brw_size=16
+
+# LNet over RoCE
+lnetctl lnet configure &amp;&amp; lnetctl net add --net o2ib --if enp1s0f0
+
+# 文件布局（性能关键）
+lfs setstripe -c 32 -S 4M /mnt/lustre/checkpoints          # 大文件宽条带
+lfs setstripe -E 1M -c1 -E 64M -c4 -E -1 -c16 .../dataset  # PFL 渐进式
+lfs setstripe -E 1M -L mdt -E -1 -c8 /mnt/lustre/code      # DoM 小文件
+lfs mkdir -c 8 /mnt/lustre/experiments                     # DNE 目录条带
+
+# 客户端
+max_rpcs_in_flight=64 ｜ max_dirty_mb=1024 ｜ mount -o gds（GDS / NPU Direct）
+</code></pre>
+<h3 id="doc-10-66">6.6 扩展路径</h3>
+<pre><code class="language-text">卡数上限 = Spine 台数 × 384
+11 → 4244 ｜ 27 → 10368 ｜ 54 → 20736 ｜ 81 → 31104 ｜ 108 → 41472
+</code></pre>
+<p>单文件系统不建议无限制扩展。超过数千 OST、数百 MDT 或 5000 客户端后，采用<strong>多文件系统 + 统一命名空间</strong>。</p>
 <h2 id="doc-10-7">7. 骨干环网</h2>
 <p><img alt="骨干环网架构方案" src="assets/compute-backbone-ring.png" /></p>
-<h3 id="doc-10-71">7.1 定位</h3>
-<p>骨干环位于 POD CLOS 之上、集团算力网之下，连接：</p>
-<ul>
-<li>4 个 POD；</li>
-<li>存储中心；</li>
-<li>算力网出口；</li>
-<li>后续跨园区环。</li>
-</ul>
-<p>参考拓扑：6 节点 A/B 双平面环形骨干，每节点双归两台骨干路由器。</p>
+<h3 id="doc-10-71">7.1 定位与拓扑</h3>
+<p>骨干环位于 POD CLOS 之上、集团算力网之下，连接 4 个 POD、存储中心、算力网出口及后续跨园区环。参考拓扑：<strong>6 节点 A/B 双平面环形骨干</strong>，每节点双归两台骨干路由器，单链路故障反向绕行。</p>
 <h3 id="doc-10-72">7.2 关键指标</h3>
 <table>
 <thead>
@@ -6702,51 +7243,193 @@ TP 不跨机走 RoCE
 </thead>
 <tbody>
 <tr>
-<td>链路速率</td>
-<td>园区 400G / 800G；跨园区 400G ZR+</td>
+<td>接入链路速率</td>
+<td>400G（POD ↔ 环，园区内）</td>
 </tr>
 <tr>
-<td>段容量</td>
-<td>28.8 Tbps（36 × 800G / 段）</td>
+<td>环段链路速率</td>
+<td>800G（终态）/ 400G ZR+（跨园区相干）</td>
+</tr>
+<tr>
+<td>环段容量（三期）</td>
+<td><strong>28.8 Tbps = 36 × 800G</strong></td>
 </tr>
 <tr>
 <td>环总容量</td>
-<td>172.8 Tbps</td>
+<td><strong>172.8 Tbps</strong></td>
+</tr>
+<tr>
+<td>POD 环接入</td>
+<td>一期 <strong>2 × 8 Tbps</strong>；二/三期 <strong>2 × 20 Tbps</strong></td>
 </tr>
 <tr>
 <td>保护倒换</td>
-<td>&lt; 50 ms，TI-LFA FRR + BFD</td>
+<td><strong>&lt; 50 ms</strong>（TI-LFA FRR + BFD）</td>
 </tr>
 <tr>
-<td>路由</td>
-<td>IS-IS SRv6 或 eBGP + EVPN</td>
+<td>路由协议</td>
+<td>IS-IS + SRv6（或 eBGP + EVPN）</td>
 </tr>
 <tr>
 <td>单跳时延</td>
-<td>约 28 μs（设备 + 5 km 光纤）</td>
+<td>≈28 μs（3 μs 设备 + 5 km × 5 μs/km）</td>
 </tr>
 <tr>
 <td>正常 / 故障端到端</td>
-<td>约 84 μs / 约 140 μs</td>
+<td><strong>84 μs / 140 μs</strong></td>
 </tr>
 <tr>
-<td>5000 卡 800G 光模块</td>
-<td>432 个</td>
+<td>800G 光模块</td>
+<td><strong>432 个</strong>（每段 36 × 2 × 6 段）</td>
 </tr>
 </tbody>
 </table>
-<h3 id="doc-10-73">7.3 六条硬约束</h3>
+<p><strong>分期推导链（ρ = 8%）</strong>：</p>
+<table>
+<thead>
+<tr>
+<th>阶段</th>
+<th style="text-align: right;">环节点</th>
+<th style="text-align: right;">T_param</th>
+<th style="text-align: right;">L_param</th>
+<th style="text-align: right;">T_stg</th>
+<th style="text-align: right;">L_stg</th>
+<th style="text-align: right;"><strong>C_seg</strong></th>
+<th>段链路</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>一期</strong></td>
+<td style="text-align: right;">2（POD-1 + STG）</td>
+<td style="text-align: right;">0（无跨 POD）</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">3.84</td>
+<td style="text-align: right;"><strong>3.84</strong>（k=1）</td>
+<td style="text-align: right;"><strong>6.4 Tbps</strong></td>
+<td>8 × 800G</td>
+</tr>
+<tr>
+<td><strong>二期</strong></td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">32.0</td>
+<td style="text-align: right;"><strong>16.0</strong></td>
+<td style="text-align: right;">11.52</td>
+<td style="text-align: right;">5.76</td>
+<td style="text-align: right;"><strong>19.2 Tbps</strong></td>
+<td>24 × 800G</td>
+</tr>
+<tr>
+<td><strong>三期</strong></td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">53.3</td>
+<td style="text-align: right;"><strong>26.7</strong></td>
+<td style="text-align: right;">15.36</td>
+<td style="text-align: right;">7.68</td>
+<td style="text-align: right;"><strong>28.8 Tbps</strong></td>
+<td>36 × 800G</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>一期由「存储流量」决定</strong>（无跨 POD 参数流量，2 节点环 k=1）；<strong>二/三期由「参数流量」决定</strong>。段容量取 <code>max(L_param, L_stg)</code> 而非两者之和 —— 依据业务确认"<strong>故障时不需要保持满带宽</strong>"；若改为"故障时存储亦须满带宽"，三期段容量将由 28.8 → 35.2 Tbps、光模块 432 → 528 个，投资增加约 20%。</p>
+</blockquote>
+<h3 id="doc-10-73-pod">7.3 ρ 敏感性（跨 POD 流量占比）</h3>
+<table>
+<thead>
+<tr>
+<th>ρ</th>
+<th style="text-align: right;">跨 POD 流量</th>
+<th style="text-align: right;">段容量需求</th>
+<th>每段链路</th>
+<th style="text-align: right;">光模块/段</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>4%</td>
+<td style="text-align: right;">26.7 Tbps</td>
+<td style="text-align: right;">13.3 Tbps</td>
+<td>18 × 800G</td>
+<td style="text-align: right;">36</td>
+</tr>
+<tr>
+<td><strong>8%</strong></td>
+<td style="text-align: right;"><strong>53.3 Tbps</strong></td>
+<td style="text-align: right;"><strong>26.7 Tbps</strong></td>
+<td><strong>36 × 800G</strong></td>
+<td style="text-align: right;"><strong>72</strong></td>
+</tr>
+<tr>
+<td>15%</td>
+<td style="text-align: right;">100.0 Tbps</td>
+<td style="text-align: right;">50.0 Tbps</td>
+<td>64 × 800G</td>
+<td style="text-align: right;">128</td>
+</tr>
+<tr>
+<td>25%</td>
+<td style="text-align: right;">166.7 Tbps</td>
+<td style="text-align: right;">83.3 Tbps</td>
+<td>108 × 800G</td>
+<td style="text-align: right;">216</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>推理为主场景 ρ 建议取 <strong>5%–10%</strong>；扩容前按实测流量矩阵校准。</p>
+</blockquote>
+<h3 id="doc-10-74">7.4 六条硬约束</h3>
 <ol>
-<li>PFC 不跨 POD；骨干用 ECN + DCQCN + 大缓存；</li>
-<li>A/B 平面物理隔离，避免共因故障；</li>
-<li>按故障态设计容量，单链路故障绕行最坏段负载翻倍；</li>
-<li>故障绕行时延必须进入 SLA 预算；</li>
-<li>参数面、存储面、业务面、管理面隔离；</li>
-<li>节点数 &gt; 8 或 ρ 升高时，转为“环 + 平面”混合骨干。</li>
+<li><strong>PFC 绝不跨出 POD</strong> —— 长距/环网上会引发 HOL 阻塞与 PFC 风暴；骨干用 ECN + DCQCN + 大缓存；</li>
+<li><strong>双平面物理隔离</strong> —— 不同管道 / 楼层 / 供电，避免共因故障；</li>
+<li><strong>按故障态容量设计</strong> —— 段容量按 <code>T_ring/2</code>，不是 <code>T_ring/4</code>；</li>
+<li><strong>故障态允许存储降级</strong> —— 优先保障参数流量，段容量取 <code>max()</code>；</li>
+<li><strong>绕行时延入预算</strong> —— 故障时端到端时延接近翻倍；</li>
+<li><strong>环节点 &gt; 8 或 ρ 升高</strong> → 转为"环 + 平面"混合骨干。</li>
 </ol>
+<h3 id="doc-10-75-vs-clos">7.5 环网 vs CLOS</h3>
+<table>
+<thead>
+<tr>
+<th>维度</th>
+<th>骨干环网</th>
+<th>CLOS 骨干</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>链路数</td>
+<td>O(N)，省光纤</td>
+<td>O(N²/4)，贵</td>
+</tr>
+<tr>
+<td>故障保护</td>
+<td>反向绕行，容量减半</td>
+<td>ECMP 多路径</td>
+</tr>
+<tr>
+<td>时延</td>
+<td>跳数多（N/2）</td>
+<td>固定 2–3 跳</td>
+</tr>
+<tr>
+<td>扩展</td>
+<td>插入节点即可</td>
+<td>需加平面</td>
+</tr>
+<tr>
+<td><strong>适用</strong></td>
+<td><strong>POD ≤ 8 个</strong></td>
+<td>POD 多 / 流量大</td>
+</tr>
+</tbody>
+</table>
 <h2 id="doc-10-8">8. 华为超节点与千卡算存</h2>
 <p><img alt="华为超节点-千卡算存架构方案" src="assets/compute-huawei-supernode.png" /></p>
-<p>参考配置：</p>
+<blockquote>
+<p><strong>场景定位</strong>：本章为 <strong>1:1 无阻塞</strong>的训练向基线形态。本业务（分支 A）仅用其<strong>机内 UB 域承载 TP</strong> 的部分，<strong>不建设训练向的全无阻塞环网</strong>。</p>
+</blockquote>
 <table>
 <thead>
 <tr>
@@ -6765,15 +7448,15 @@ TP 不跨机走 RoCE
 </tr>
 <tr>
 <td>超节点互联</td>
-<td>灵衢 UnifiedBus，全光，392 GB/s / 卡</td>
+<td>灵衢 UnifiedBus，全光，392 GB/s / 卡，内存语义统一编址</td>
 </tr>
 <tr>
 <td>计算域</td>
-<td>8 个超节点，每个 128 卡 / 16 节点</td>
+<td>8 个超节点，每个 128 卡 / 16 节点（灵衢 2.0 可扩展至 2048/4096 卡 POD 域）</td>
 </tr>
 <tr>
 <td>参数面</td>
-<td>RoCEv2 400G，8 轨道，Leaf 32 / Spine 8，1:1 无阻塞</td>
+<td>RoCEv2 400G，8 轨道，Leaf 32 × 64×400G / Spine 8 × 128×400G，1:1 无阻塞</td>
 </tr>
 <tr>
 <td>存储面</td>
@@ -6793,90 +7476,432 @@ TP 不跨机走 RoCE
 </tr>
 </tbody>
 </table>
-<p>与 5000 卡集群映射：</p>
-<pre><code class="language-text">4 个超节点 × 1024 卡 = 4096 卡（微调/训练）
-+ 1 个推理池约 900 卡（3:1 收敛）
-+ 备用卡
-≈ 5000 卡
+<p><strong>收敛比差异说明（"矛盾"澄清）</strong>：</p>
+<table>
+<thead>
+<tr>
+<th>场景</th>
+<th>收敛比</th>
+<th>Spine</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>全参预训练 / 重微调（本章基线）</td>
+<td><strong>1:1</strong></td>
+<td>8 台</td>
+</tr>
+<tr>
+<td><strong>本业务（推理 + LoRA，分支 A）</strong></td>
+<td><strong>3:1</strong></td>
+<td>3 台（1000 卡口径）</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>二者<strong>不是矛盾，是场景不同</strong>。本业务不采用 1:1，也<strong>不引入超节点工程</strong>（TP 在单机 UB 域内完成即可）。</p>
+</blockquote>
+<p><strong>与 5000 卡集群的关系</strong>：1024 卡超节点是 5000 卡集群的<strong>组成单元</strong> —— 4 个超节点（4096 卡，微调）+ 1 个推理池（约 900 卡，3:1 收敛）+ 备用卡 ≈ 5000 卡。</p>
+<h2 id="doc-10-9-tco">9. 能效与 TCO</h2>
+<pre><code class="language-text">F13 P_it    = N_card × TDP/1000 × 1.35 + N_node × 0.3 kW + 存储 50 kW
+F14 P_total = P_it × PUE（取 1.2）
 </code></pre>
-<p>并行原则：</p>
-<ul>
-<li>Attention TP 在 UB 域内完成；</li>
-<li>专家层 EP all-to-all 跨节点走 RoCE；</li>
-<li>DP / PP 走参数面；</li>
-<li>TP 不跨机走 RoCE。</li>
-</ul>
-<h2 id="doc-10-9">9. 评审修订与执行顺序</h2>
-<h3 id="doc-10-91-p0">9.1 P0 定案</h3>
-<ul>
-<li>P0-1 业务边界拍板；</li>
-<li>P0-2 统一 Leaf 48 下行 : 16 上行；</li>
-<li>P0-3 改为 EP 为主，TP 不跨机走 RoCE。</li>
-</ul>
-<h3 id="doc-10-92-p1">9.2 P1 修正</h3>
-<ul>
-<li>存储带宽口径；</li>
-<li>能效公式统一：<code>N_node × 0.3 + 50 kW</code>；</li>
-<li>910C 算力统一标注为 400 / 800 并列；</li>
-<li>存储容量口径；</li>
-<li>存储网与计算网关系澄清。</li>
-</ul>
-<h3 id="doc-10-93-p2">9.3 P2 补齐</h3>
-<ul>
-<li>xlsx 可复算；</li>
-<li>舍入统一；</li>
-<li>工程清单；</li>
-<li>立项 POC；</li>
-<li>可靠、安全、运维；</li>
-<li>TCO 和成本结论。</li>
-</ul>
-<p>建议执行顺序：</p>
-<pre><code class="language-text">P0 业务边界
-→ P0 统一 Leaf 48/16
-→ P0 改 EP 为主并行
-→ P1 全部数字重跑
-→ P2 补齐与规范化
+<table>
+<thead>
+<tr>
+<th>规模</th>
+<th style="text-align: right;">NPU</th>
+<th style="text-align: right;">服务器开销</th>
+<th style="text-align: right;">网络+存储</th>
+<th style="text-align: right;">IT 功率</th>
+<th style="text-align: right;">总功率（PUE 1.2）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1000 卡</td>
+<td style="text-align: right;">400 kW</td>
+<td style="text-align: right;">140 kW</td>
+<td style="text-align: right;">87.5 kW</td>
+<td style="text-align: right;"><strong>627.5 kW</strong></td>
+<td style="text-align: right;"><strong>753.0 kW</strong></td>
+</tr>
+<tr>
+<td>5000 卡</td>
+<td style="text-align: right;">2000 kW</td>
+<td style="text-align: right;">700 kW</td>
+<td style="text-align: right;">237.5 kW</td>
+<td style="text-align: right;"><strong>2937.5 kW</strong></td>
+<td style="text-align: right;"><strong>3525.0 kW</strong></td>
+</tr>
+<tr>
+<td>10240 卡</td>
+<td style="text-align: right;">4096 kW</td>
+<td style="text-align: right;">1433.6 kW</td>
+<td style="text-align: right;">434 kW</td>
+<td style="text-align: right;"><strong>5963.6 kW</strong></td>
+<td style="text-align: right;"><strong>7156.3 kW</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>年电费（¥0.6/kWh）</strong>：1000 卡 ¥3.96M ｜ 5000 卡 ¥18.53M ｜ 10240 卡 ¥37.61M。</p>
+<p><strong>单位 token 成本（暂定口径：5 年折旧、运维 = 电费 × 30%、利用率 60%、单卡含服务器 ¥10 万、存储 ¥1.0 亿）</strong>：</p>
+<table>
+<thead>
+<tr>
+<th>规模</th>
+<th style="text-align: right;">硬件 CapEx</th>
+<th style="text-align: right;">年折旧</th>
+<th style="text-align: right;">年化 TCO</th>
+<th style="text-align: right;">年 token 产量</th>
+<th style="text-align: right;"><strong>单位 token 成本</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>5000 卡</td>
+<td style="text-align: right;">¥6.83 亿</td>
+<td style="text-align: right;">¥1.366 亿</td>
+<td style="text-align: right;">¥1.607 亿</td>
+<td style="text-align: right;">3.10 × 10¹³</td>
+<td style="text-align: right;"><strong>≈ ¥5.2 / 百万 token</strong></td>
+</tr>
+<tr>
+<td>10240 卡</td>
+<td style="text-align: right;">¥14.0 亿</td>
+<td style="text-align: right;">¥2.80 亿</td>
+<td style="text-align: right;">¥3.29 亿</td>
+<td style="text-align: right;">6.35 × 10¹³</td>
+<td style="text-align: right;"><strong>≈ ¥5.2 / 百万 token</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>工程量（按 10240 卡一次预留）</strong>：</p>
+<table>
+<thead>
+<tr>
+<th>项目</th>
+<th style="text-align: right;">一期 1000 卡</th>
+<th style="text-align: right;">5000 卡</th>
+<th style="text-align: right;">10240 卡（终态）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>机柜数（液冷 32 卡/柜）</td>
+<td style="text-align: right;">32 柜</td>
+<td style="text-align: right;">157 柜</td>
+<td style="text-align: right;"><strong>320 柜</strong></td>
+</tr>
+<tr>
+<td>UPS 容量（N+1）</td>
+<td style="text-align: right;">2 × 800 kVA</td>
+<td style="text-align: right;">2 × 3.5 MVA</td>
+<td style="text-align: right;">2 × 7.0 MVA</td>
+</tr>
+<tr>
+<td>柴发（N+1）</td>
+<td style="text-align: right;">2 × 1.25 MVA</td>
+<td style="text-align: right;">2 × 5.0 MVA</td>
+<td style="text-align: right;">2 × 10.0 MVA</td>
+</tr>
+<tr>
+<td>液冷 CDU（80% 热负荷，N+1）</td>
+<td style="text-align: right;">2 × 400 kW</td>
+<td style="text-align: right;">2 × 1.5 MW</td>
+<td style="text-align: right;">2 × 3.0 MW</td>
+</tr>
+<tr>
+<td>光纤桥架 / ODF</td>
+<td style="text-align: right;">芯数预留 ≥40%，主干 ODF ≥2 组</td>
+<td style="text-align: right;">同左</td>
+<td style="text-align: right;">主配线架 ≥4 组，预敷不预接</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>UPS / 柴发 / CDU 为<strong>按功率估算值</strong>，落地前须由电气与暖通专业按实际负荷曲线、同时系数与冗余等级复核。</p>
+</blockquote>
+<h2 id="doc-10-10-v33-16">10. 异构算力支持（v3.3 新增第 16 章）</h2>
+<blockquote>
+<p><strong>前置说明</strong>：本章与"卡型统一优先"<strong>不矛盾</strong> —— 统一是<strong>默认策略</strong>，异构是<strong>受控例外</strong>。</p>
+</blockquote>
+<p><strong>异构的三种来源</strong>：规格分档（910C 128GB / 910B 64GB）、存量复用（集团既有 A100/910B）、供货风险分散。</p>
+<h3 id="doc-10-101">10.1 三条铁律（违反即性能崩塌）</h3>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>铁律</th>
+<th>原因</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>1</strong></td>
+<td><strong>同一并行组必须同构</strong> —— TP/EP 组内卡型、显存、互联带宽完全一致</td>
+<td>all-reduce / all-to-all 要求对称，异构组导致同步等待</td>
+</tr>
+<tr>
+<td><strong>2</strong></td>
+<td><strong>同一 Leaf 下不混型号</strong></td>
+<td>不同卡型接入速率不同（400/200/100G），混挂使收敛比失真、流量倾斜</td>
+</tr>
+<tr>
+<td><strong>3</strong></td>
+<td><strong>同一 EP 组不跨型号</strong></td>
+<td>专家并行对带宽对称性最敏感，异构 EP 组被最慢链路支配</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>推论：<strong>异构只能体现在 DP（数据并行）维度</strong> —— 不同卡型各跑一个同构副本，副本间做 DP。</p>
+</blockquote>
+<h3 id="doc-10-102">10.2 资源池划分</h3>
+<table>
+<thead>
+<tr>
+<th>池</th>
+<th>卡型</th>
+<th style="text-align: right;">单卡显存</th>
+<th style="text-align: right;">卡数（示例）</th>
+<th>承载</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>A 池</strong></td>
+<td>昇腾 910C</td>
+<td style="text-align: right;">128 GB</td>
+<td style="text-align: right;">4096</td>
+<td>GLM-5.3 <strong>BF16</strong>，EP=32/副本</td>
+</tr>
+<tr>
+<td><strong>B 池</strong></td>
+<td>昇腾 910B</td>
+<td style="text-align: right;">64 GB</td>
+<td style="text-align: right;">804</td>
+<td>GLM-5.3 <strong>FP8</strong>（12–16 卡/副本）或 70B 级模型</td>
+</tr>
+<tr>
+<td><strong>C 池</strong></td>
+<td>存量混合卡</td>
+<td style="text-align: right;">24–32 GB</td>
+<td style="text-align: right;">100</td>
+<td>离线批处理、数据预处理、小模型推理</td>
+</tr>
+</tbody>
+</table>
+<pre><code class="language-text">G_min = ⌈ W / M_card ⌉      W = N_total × b/8      M_card = 单卡可用显存
+【GLM-5.3 算例】A 池 BF16：1403.19 ÷ 119.21 = 11.8 → 取 32 卡（EP=32）        ✓
+              B 池 BF16：1403.19 ÷  59.60 = 23.5 → KV 仅 ≈9 GiB/卡（不经济）
+              B 池 FP8 ： 703.76 ÷  59.60 = 11.8 → 取 12–16 卡，KV ≈13–24 GiB ✓ 推荐
+              C 池     ： 703.76 ÷  29.80 = 23.6 → 需 ≥24 卡，仅承载 ≤13B 模型
 </code></pre>
-<h2 id="doc-10-10-poc">10. 立项 POC 与验收</h2>
-<p>POC 必须验证：</p>
+<h3 id="doc-10-103-dp">10.3 调度策略与异构 DP 负载均衡</h3>
+<p><strong>节点标签（必须由带外采集自动注入，不接受人工填写）</strong>：<code>accel.vendor</code> / <code>accel.model</code> / <code>accel.mem</code> / <code>accel.interconnect</code> / <code>accel.pool</code>。</p>
+<p><strong>调度约束</strong>：同作业同型号（混合请求直接拒绝）；同型号同节点优先；不同型号不混节点；每型号池预留 ≥1 个最小完整并行组；按卡型分别部署 device plugin（如 <code>huawei.com/ascend-910c</code>）。</p>
+<pre><code class="language-text">F38  B_i = B_total × (F_i × η_i) / Σ_j (F_j × η_j)
+     B_i = 第 i 类卡分到的 micro-batch；F_i = 单卡算力；η_i = 实测 MFU
+</code></pre>
+<blockquote>
+<p>实测例：910C 与 910B 算力比约 2:1，若均分 batch，整体吞吐降到慢卡的 2/3；按 F38 加权后可达理论最优的 90%+。<strong>但异构 DP 效率仍低于同构 DP</strong> —— 仅用于长尾/离线任务。</p>
+</blockquote>
+<h3 id="doc-10-104">10.4 结论与验收</h3>
+<p>主力卡型收敛到 <strong>≤2 种</strong>；异构池<strong>物理隔离</strong>（独立 Leaf / 机柜）；异构仅用于<strong>长尾、离线、存量复用</strong>，<strong>不用于在线主链路</strong>。验收：调度器"同作业同型号"校验生效；异构 DP 加权分配实测加速比 ≥ 同构的 85%；FP8 版精度对齐；多格式模型仓转换流水线跑通。</p>
+<h2 id="doc-10-11">11. 分期建设、安全与故障演练</h2>
+<p><strong>LoRA 微调作业调度规则</strong>：优先级 在线推理 &gt; 微调 &gt; 离线批处理；执行窗口 <strong>22:00–次日 08:00</strong>（推理低谷）；微调<strong>可被推理抢占</strong>（保存 Checkpoint 后释放）；微调池 ≤ 推理池空闲卡的 <strong>80%</strong>；超窗口作业进低优先级队列。</p>
+<p><strong>安全与合规</strong>：等保 2.0 三级；多租户 VPC / 网络切片完全隔离（VXLAN VNI + ACL）；控制面 TLS 1.3，数据面 RDMA 加密（IPsec/MACsec 按需）；审计日志 ≥6 个月；权重加密存储 + 权限分级 + 下载审计；统一 IAM、最小权限、双因子。</p>
+<p><strong>故障演练</strong>：</p>
+<table>
+<thead>
+<tr>
+<th>场景</th>
+<th>频率</th>
+<th>成功率要求</th>
+<th>时间要求</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>单卡故障（慢卡/掉卡）</td>
+<td>每季度</td>
+<td>≥99%</td>
+<td>自动隔离 &lt;5 min</td>
+</tr>
+<tr>
+<td>单 OSS 宕机</td>
+<td>每季度</td>
+<td>≥99%</td>
+<td>业务无感</td>
+</tr>
+<tr>
+<td>单链路中断 / 骨干环倒换</td>
+<td>每季度</td>
+<td>≥99.99%</td>
+<td>倒换 &lt;50 ms</td>
+</tr>
+<tr>
+<td>存储双活切换</td>
+<td>每半年</td>
+<td>100%</td>
+<td>RTO &lt;5 min</td>
+</tr>
+<tr>
+<td>单 Spine 故障</td>
+<td>每季度</td>
+<td>≥99%</td>
+<td>路由收敛 &lt;1 s</td>
+</tr>
+</tbody>
+</table>
+<p><strong>RPO / RTO</strong>：核心数据 RPO = 0（同步副本），RTO ≤ 15 min。</p>
+<h2 id="doc-10-12-poc">12. 验收基线与 POC</h2>
+<table>
+<thead>
+<tr>
+<th>系统</th>
+<th>指标</th>
+<th>阈值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>网络</td>
+<td>路由收敛 / 环倒换 / 丢包率 / 时延抖动</td>
+<td>&lt;1 s / <strong>&lt;50 ms</strong> / &lt;0.001% / &lt;10 μs</td>
+</tr>
+<tr>
+<td>存储</td>
+<td>顺序读 / 顺序写 / 元数据时延(P99) / 可靠性</td>
+<td>≥设计值（1.1 / 2.7 TB/s）/ ≥设计值 / ≤10 ms / ≥99.9999%</td>
+</tr>
+<tr>
+<td>推理</td>
+<td>TTFT(8K) / 单流 TPS / 可用性 / 前缀缓存命中率</td>
+<td>≤0.5 s / ≥100 token/s / ≥99.99% / ≥60%</td>
+</tr>
+</tbody>
+</table>
+<p><strong>POC 验证清单（一期 1000 卡内完成）</strong>：</p>
 <ul>
-<li>GLM-5.3 是否能按目标并行策略加载；</li>
-<li>TP / EP / DP / PP 的真实通信路径；</li>
-<li>RoCEv2 + PFC / ECN / DCQCN 稳定性；</li>
-<li>存储读带宽、Checkpoint 写入和恢复；</li>
-<li>参数面 / 存储面 / 业务面隔离；</li>
-<li>断点续训、慢卡、链路故障和节点故障；</li>
-<li>能效、功率、液冷、PUE；</li>
-<li>网络投资、存储投资、GPU/NPU 投资和 TCO；</li>
-<li>推理 TTFT、TPS、并发和单位 token 成本。</li>
+<li>[ ] vLLM-Ascend / SGLang 对 GLM-5.3 的加载与 <strong>DSA + MLA 算子正确性</strong>；</li>
+<li>[ ] FP8 / W8A8 量化精度与速度；</li>
+<li>[ ] PD 分离与前缀缓存命中率；</li>
+<li>[ ] <strong>EP=32 all-to-all 实测</strong>（验证第 4 章并行方案）；</li>
+<li>[ ] <strong>KV 缓存分片方式实测</strong>：确认 KV 是否按 EP 组 32 卡分片；若为 8 卡复制，KV 池修正为 ≈559 GB、8K 并发 ≈759 路；</li>
+<li>[ ] 以实测替换工程假设值（单 OSS 30/40 GB/s、单卡 0.2 GB/s、η_e2e）。</li>
 </ul>
-<h2 id="doc-10-11">11. 图表与源文件</h2>
+<h2 id="doc-10-13">13. 口径基线与已知错值</h2>
+<p><strong>唯一校准源</strong>：任何数值变更先改<strong>附录 C 口径基线表</strong>，再同步全部文档；禁止在分册中单独修改。</p>
+<table>
+<thead>
+<tr>
+<th>错值（出现即视为错误）</th>
+<th>正确值</th>
+<th>出处</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>FP8 = 753.33 GB / 701.65 GiB</td>
+<td><strong>755.63 GB / 703.76 GiB</strong></td>
+<td>误按 N×1 B 推算</td>
+</tr>
+<tr>
+<td>反推总参数 = 743.3 B</td>
+<td><strong>753.94 B</strong></td>
+<td>漏计 lm_head + MTP</td>
+</tr>
+<tr>
+<td>TP=16 跨机</td>
+<td><strong>EP=32 + 机内 TP=8</strong></td>
+<td>TP 每层 all-reduce 高频小包，跨机 RoCE 时延不可接受（<strong>非</strong>显存原因）</td>
+</tr>
+<tr>
+<td>5000 卡存储 ≥3 TB/s</td>
+<td><strong>平均 1.3 TB/s</strong>（峰值能力另计）</td>
+<td>倒挂</td>
+</tr>
+<tr>
+<td>Leaf 32 下/32 上 且称 3:1</td>
+<td><strong>48 下/16 上</strong></td>
+<td>实际 2.91:1</td>
+</tr>
+<tr>
+<td>POD 上行 3.2 Tbps</td>
+<td><strong>16 Tbps</strong></td>
+<td>容量级矛盾</td>
+</tr>
+<tr>
+<td>热层 50 TB（含数据集热副本）</td>
+<td><strong>17 TB</strong>（分支 A）</td>
+<td>业务边界变更</td>
+</tr>
+<tr>
+<td>1280/32 = 40 柜</td>
+<td><strong>320 柜</strong></td>
+<td>节点数误除卡/柜</td>
+</tr>
+<tr>
+<td>10240 卡电力 3.5 MW</td>
+<td><strong>≈7.16 MW</strong></td>
+<td>误抄 5000 卡值</td>
+</tr>
+<tr>
+<td>KV 并发基数 549 路</td>
+<td><strong>3035 路（单副本 8K 满上下文）</strong></td>
+<td>549 为已废弃的 TP=16 口径</td>
+</tr>
+<tr>
+<td>副本并行度 P = 16</td>
+<td><strong>32</strong></td>
+<td>EP=32 副本含 32 卡；TP=8 是机内子维</td>
+</tr>
+<tr>
+<td>t_step / TPS_mem 1.608 ms / 622</td>
+<td><strong>15.7 ms / 63.7</strong></td>
+<td>原式隐含"均匀切分"</td>
+</tr>
+<tr>
+<td>网络节省 20.2%</td>
+<td><strong>36.2%</strong></td>
+<td>旧值沿用 32下/32上 的 Leaf 157</td>
+</tr>
+</tbody>
+</table>
+<p><strong>待决事项</strong>：Spine 是否一次性建 32 台 ｜ 910C 算力口径（400 vs 800 TFLOPS，待厂商确认）｜ 单 OSS 30/40 GB/s、单卡 0.2 GB/s（待 POC 实测）｜ 折旧年限/运维人力口径 ｜ 园区电力与制冷余量 ｜ 业务在线并发数 ｜ KV 缓存分片方式。</p>
+<h2 id="doc-10-14">14. 图表与源文件</h2>
 <ul>
-<li><code>评审修订优先级路线图.png</code></li>
-<li><code>千卡到5000卡演进路线图.png</code></li>
-<li><code>存储与网络架构方案.png</code></li>
-<li><code>骨干环网架构方案.png</code></li>
-<li><code>华为超节点-千卡算存架构方案.png</code></li>
-<li><code>智算集群建设方案_v3.2.pdf</code></li>
-<li><code>GLM-5.3千卡到5000卡智算集群建设方案.pdf</code></li>
-<li><code>智算集群方案-名词术语手册.pdf</code></li>
-<li><code>智算集群测算模型_GLM53_BF16.xlsx</code></li>
-<li><code>方案完整评审报告_v3.0.pdf</code></li>
+<li><code>智算集群建设方案_v3.3.pdf</code> / <code>.md</code>（唯一交付文档，16 章 + 4 附录）</li>
+<li><code>智算集群测算模型_v3.3.xlsx</code>（9 Sheet，可复算）</li>
+<li><code>完整审计报告_v3.3.pdf</code> / <code>.md</code></li>
+<li><code>千卡到5000卡演进路线图_v3.3.png</code></li>
+<li><code>存储与网络架构方案_v3.3.html</code> / <code>.png</code></li>
+<li><code>骨干环网架构方案_v3.3.html</code> / <code>.png</code></li>
+<li><code>华为超节点-千卡算存架构方案_v3.3.html</code> / <code>.png</code></li>
+<li>历史参考（已归档）：《智算集群方案-名词术语手册》《方案完整评审报告 v3.0》《GLM-5.3 千卡到 5000 卡智算集群建设方案》</li>
 </ul>
-<h2 id="doc-10-12">12. 统一验收清单</h2>
+<blockquote>
+<p>审计教训：批量正则替换必须限定作用域并复核产物尺寸（本轮曾因误用正则把海报 CSS 全部 <code>height:Npx</code> 替换为 3021px，导致渲染崩塌，已还原）。<strong>图与 xlsx 必须纳入同一版本号体系</strong>。</p>
+</blockquote>
+<h2 id="doc-10-15">15. 统一验收清单</h2>
 <ul>
-<li>[ ] 业务边界、推理/微调/训练比例已经确认。</li>
-<li>[ ] GLM-5.3 模型版本、Tokenizer、并行策略和显存口径已锁定。</li>
-<li>[ ] TP 不跨机走 RoCE。</li>
-<li>[ ] EP、DP、PP 的通信路径和带宽已压测。</li>
-<li>[ ] Leaf 统一 48:16，网络收敛比和投资已重算。</li>
-<li>[ ] 27 Spine 端口利用率风险已处理，预留 32 台机位或替代方案。</li>
-<li>[ ] 存储热/温/冷三层的容量、带宽、IOPS 和 Checkpoint 已验收。</li>
-<li>[ ] 骨干环 A/B 平面隔离、50 ms 保护和时延预算通过。</li>
-<li>[ ] 超节点 UB、RoCEv2、NVMe-oF、管理网四张网络已隔离。</li>
-<li>[ ] PFC / ECN / DCQCN、多轨、慢节点和故障演练通过。</li>
-<li>[ ] 能效、电力、制冷、液冷和 PUE 已实测。</li>
-<li>[ ] TCO、单位 token 成本、POC、安全、运维和备件结论完整。</li>
+<li>[ ] 业务边界（推理 / 微调 / 训练比例）已确认 —— 分支 A：不含全参训练；</li>
+<li>[ ] GLM-5.3 模型版本、Tokenizer、并行策略与显存口径已锁定；</li>
+<li>[ ] <strong>TP 不跨机走 RoCE</strong>（注意力 TP 机内/UB，专家 EP 跨机 RoCE）；</li>
+<li>[ ] EP、DP、PP 的通信路径与带宽已压测（EP=32 all-to-all）；</li>
+<li>[ ] Leaf 统一 <strong>48:16</strong>，网络收敛比与投资已按 v3.3 重算（36.2% / 36.4%）；</li>
+<li>[ ] 27 Spine 端口利用率 99.1% 风险已处理 —— 预留 32 台机位或替代方案；</li>
+<li>[ ] 存储热/温/冷三层的容量、带宽、IOPS 与 Checkpoint 已验收（热层 17 TB、平均 1.3/2.7 TB/s）；</li>
+<li>[ ] KV 缓存分片方式已 POC 验证（2234 GB vs 559 GB）；</li>
+<li>[ ] 骨干环 A/B 平面隔离、&lt;50 ms 保护、84/140 μs 时延预算通过；</li>
+<li>[ ] 超节点 UB、RoCEv2、NVMe-oF、管理网四张网络已隔离；</li>
+<li>[ ] 异构算力三条铁律已落地，主力卡型 ≤2 种、异构池物理隔离；</li>
+<li>[ ] PFC / ECN / DCQCN、多轨、慢节点与故障演练通过；</li>
+<li>[ ] 能效（10240 卡 ≈7.16 MW）、电力、制冷、液冷与 PUE 已实测；</li>
+<li>[ ] TCO、单位 token 成本（≈¥5.2/百万 token）、POC、安全、运维与备件结论完整；</li>
+<li>[ ] 全部数字与<strong>附录 C 口径基线表</strong>一致，图文版本一致性已复核。</li>
 </ul></div></section><section class="doc" id="doc-11" data-title="AI Native 研发范式与企业 Agent 基础设施"><header class="doc-head"><div class="doc-kicker">DOC 12</div><h2>AI Native 研发范式与企业 Agent 基础设施</h2><div class="doc-source">来源：18_AI_Native研发范式与企业Agent基础设施.md</div></header><details class="doc-toc"><summary>本篇目录</summary><div class="toc">
 <ul>
 <li><a href="#doc-11-1-ai-native">1. AI Native 的核心判断</a></li>
