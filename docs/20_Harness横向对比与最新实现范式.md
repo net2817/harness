@@ -1,6 +1,6 @@
 # Harness 横向对比与最新实现范式（Pi / Aider · 2026）
 
-> **本章素材**：InfoQ 原文《人人都能整个"自己的 DeepSeek Harness"，那我们为啥还在给 Claude Code 们充会员？》（2026-08-31，作者 Tina；受访者：TiDB 唐刘、腾讯研究院茹炳晟、Floatboat 架构师 Remy、字节 Trae 天猪）+ Pi / Aider 官方仓库实测数据（截至 2026-10-11）。
+> **本章素材**：InfoQ 原文《人人都能整个"自己的 DeepSeek Harness"，那我们为啥还在给 Claude Code 们充会员？》（2026-08-31，作者 Tina；受访者：TiDB 唐刘、腾讯研究院茹炳晟、Floatboat 架构师 Remy、字节 Trae 天猪）+ Pi / Aider 官方仓库实测数据（截至 2026-10-11）。原文链接：<https://mp.weixin.qq.com/s/eJQATXv6DF2gqLiYpP2ioQ>；**本章引用的全部链接见文末 §9 参考链接与引用来源**。
 > **本章回答三个问题**：① 这篇文章到底说了什么？② Pi 和 Aider 这类 Harness 怎么比、怎么选？③ 「按最新方式实现一个 Harness」到底该长什么样？
 
 ## 1. 文章讲了什么（核心论点）
@@ -51,7 +51,7 @@ Retry is dangerous. Fail fast is underrated. —— TiDB 唐刘
 
 | 项目 | **Pi** | **Aider** |
 |---|---|---|
-| 仓库 | `earendil-works/pi`（原 `badlogic/pi-mono`） | `Aider-AI/aider` |
+| 仓库 | [`earendil-works/pi`](https://github.com/earendil-works/pi)（原 `badlogic/pi-mono`） | [`Aider-AI/aider`](https://github.com/Aider-AI/aider) |
 | 发起人 | Mario Zechner（奥地利）个人发起 | Paul Gauthier（加拿大）一人发起 |
 | 首次发布 | 2025-08-09 | 2023-05-09 |
 | 语言 / 许可 | TypeScript / MIT | Python / Apache-2.0 |
@@ -85,15 +85,16 @@ Retry is dangerous. Fail fast is underrated. —— TiDB 唐刘
 
 | 项目 | 定位 | 关键特征 |
 |---|---|---|
-| **Claude Code**（Anthropic） | 产品化 Harness | Dynamic Workflows：给目标，自己拆任务、调度数百子 Agent 搜索/编码/验证/汇总 |
-| **Codex**（OpenAI） | 产品化 Harness | 与 ChatGPT Work **共享同一套 Harness**，只是调用的工具不同 |
-| **OpenCode** | 开源 Coding Agent | TiDB 团队最初使用的 Agent Core |
-| **Cline / Cursor / Windsurf** | 2022–2023 期产物 | 4000 Token 上下文时代，用工具调用 / MCP / RAG 管理上下文的产物 |
-| **Reasonix** | 面向 DeepSeek 优化 | 游戏引擎开发者 YHH 个人发起，后发展为数万 Star 社区项目 |
-| **Amp**（Thorsten Ball） | 极简 Agent | 315 行 Go 实现终端读/搜/改文件 |
-| **Gas Town**（Steve Yegge） | 多 Agent 编排 | 一人持续管理 20–30 个并发 Coding Agent（本地单机） |
+| [**DeepSeek Harness**](https://github.com/deepseek-ai/deepseek-harness)（DeepSeek 官方） | 官方 Harness（本章背景） | "Everything is a Plugin"，插件化架构；文章发布时正在招募内测 |
+| [**Claude Code**](https://github.com/anthropics/claude-code)（Anthropic） | 产品化 Harness | Dynamic Workflows：给目标，自己拆任务、调度数百子 Agent 搜索/编码/验证/汇总 |
+| [**Codex**](https://github.com/openai/codex)（OpenAI） | 产品化 Harness | 与 ChatGPT Work **共享同一套 Harness**，只是调用的工具不同 |
+| [**OpenCode**](https://github.com/sst/opencode) | 开源 Coding Agent | TiDB 团队最初使用的 Agent Core |
+| [**Cline**](https://github.com/cline/cline) / Cursor / Windsurf | 2022–2023 期产物 | 4000 Token 上下文时代，用工具调用 / MCP / RAG 管理上下文的产物 |
+| [**Reasonix**](https://github.com/esengine/DeepSeek-Reasonix) | 面向 DeepSeek 优化 | 游戏引擎开发者 YHH 个人发起，后发展为数万 Star 社区项目 |
+| [**Amp**](https://ampcode.com)（Thorsten Ball） | 极简 Agent | 315 行 Go 实现终端读/搜/改文件 |
+| [**Gas Town**](https://github.com/gastownhall/gastown)（Steve Yegge） | 多 Agent 编排 | 一人持续管理 20–30 个并发 Coding Agent（本地单机） |
 | **Floatboat** | 通用工作 Agent | 全栈自研 Runtime / Agent Loop / Tools / Infra + 自进化系统 FloatSail；原生文件协议、GUI-Agent 双向协议 |
-| **Pi / Aider** | 个人起家 → 社区 | 见第 3 节 |
+| [**Pi**](https://github.com/earendil-works/pi) / [**Aider**](https://github.com/Aider-AI/aider) | 个人起家 → 社区 | 见第 3 节 |
 
 ## 5. 「最新的实现方式」：八条铁律
 
@@ -300,3 +301,59 @@ Demo 5：受控自进化门禁
 | 企业落地常见坑 | 第 10 章 |
 
 > **一句话总结本章**：模型会持续被替换，Harness 也会持续趋同；能穿越这两次替换的，只有你**自己掌握的那层 Control Plane** —— 状态、权限、副作用边界和恢复能力。
+
+## 9. 参考链接与引用来源
+
+> 以下链接均于 **2026-10-11** 实测可访问（HTTP 200）。第三方文章与社区项目仅用于观点和生态参考，技术结论请以官方文档与源码为准。
+
+### 9.1 本章主素材
+
+| 来源 | 说明 | 链接 |
+|---|---|---|
+| InfoQ《人人都能整个"自己的 DeepSeek Harness"，那我们为啥还在给 Claude Code 们充会员？》 | 本章第 1、4、5 节的主要观点来源；作者 Tina，2026-08-31 | <https://mp.weixin.qq.com/s/eJQATXv6DF2gqLiYpP2ioQ> |
+| InfoQ《自研 Runtime、Agent Loop、Infra：一家通用 Agent 公司的全栈赌注》 | 第 4 节 Floatboat 全栈自研与「长程任务 Harness 多贡献 23%」的延伸阅读（原文内链） | <https://mp.weixin.qq.com/s?__biz=MjM5MDE0Mjc4MA==&mid=2651291797&idx=2&sn=a8d68cc1390fee7c5fc0db035d24c06a&scene=21#wechat_redirect> |
+
+### 9.2 Pi
+
+| 项目 | 链接 |
+|---|---|
+| 主仓库（原 `badlogic/pi-mono`，现 `earendil-works/pi`） | <https://github.com/earendil-works/pi> |
+| 官网 / 文档 | <https://pi.dev> |
+| CLI 安装包（npm） | <https://www.npmjs.com/package/@earendil-works/pi-coding-agent> |
+| 扩展生态 pi-skills（Skills for pi coding agent） | <https://github.com/badlogic/pi-skills> |
+| 长线程耐久性基准 durable-bench | <https://github.com/badlogic/durable-bench> |
+| OpenClaw（Pi 的真实集成案例，Pi README 引用） | <https://github.com/OpenClaw/OpenClaw> |
+
+### 9.3 Aider
+
+| 项目 | 链接 |
+|---|---|
+| 主仓库 | <https://github.com/Aider-AI/aider> |
+| 官网 / 文档 | <https://aider.chat> |
+
+### 9.4 第 4 节版图中的其他项目
+
+| 项目 | 链接 |
+|---|---|
+| DeepSeek Harness（DeepSeek 官方，本章背景） | <https://github.com/deepseek-ai/deepseek-harness> |
+| Reasonix（面向 DeepSeek 优化的 Coding Harness） | <https://github.com/esengine/DeepSeek-Reasonix> |
+| Gas Town（Steve Yegge 的多 Agent 编排） | <https://github.com/gastownhall/gastown> |
+| OpenCode | <https://github.com/sst/opencode> |
+| Cline | <https://github.com/cline/cline> |
+| Amp | <https://ampcode.com> |
+| Claude Code（Anthropic） | <https://github.com/anthropics/claude-code> |
+| Codex（OpenAI） | <https://github.com/openai/codex> |
+| Floatboat | 见 §9.1 延伸阅读（InfoQ 专访） |
+
+> **说明**：Cursor、Windsurf、Antigravity 等为闭源商业产品，官网即可检索，本章不再单列；Steve Yegge 早期关于"Agent 的 Kubernetes"的原始表述见 §9.1 原文所述。
+
+### 9.5 星标数据口径
+
+Pi / Aider 的星标、许可、语言、创建时间与最近提交时间，均取自 **GitHub REST API**，查询时间 **2026-10-11**：
+
+| 仓库 | 星标 | 许可 | 语言 | 创建 | 最近提交 |
+|---|---:|---|---|---|---|
+| `earendil-works/pi` | ≈114.2k | MIT | TypeScript | 2025-08-09 | 2026-10-11 |
+| `Aider-AI/aider` | ≈49.5k | Apache-2.0 | Python | 2023-05-09 | 2026-05-22 |
+
+> 星标数为快照值，会随时间变化；引用时请注明查询日期。

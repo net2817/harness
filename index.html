@@ -15,7 +15,7 @@ html[data-theme="dark"] { --bg:#0f141b; --panel:#151d26; --panel2:#1d2834; --ink
 .nav-sub{padding:2px 0 6px 6px;margin:0 0 6px 24px;border-left:1px solid var(--line)} .nav-sub ul{list-style:none;margin:0;padding:0} .nav-sub ul ul{margin-left:12px} .nav-sub li{margin:1px 0} .nav-sub a{display:block;font-size:12px;line-height:1.45;color:var(--muted);padding:3px 7px;border-radius:7px} .nav-sub a:hover{color:var(--accent);background:var(--panel2);text-decoration:none} .nav-sub .nav-jump{font-weight:600;color:var(--accent2);margin-bottom:2px}
 .doc-toc{margin:0 0 18px;border:1px solid var(--line);border-radius:12px;background:var(--panel2);padding:10px 14px} .doc-toc>summary{cursor:pointer;font-weight:700;font-size:14px} .doc-toc .toc>ul{list-style:none;margin:8px 0 0;padding:0;columns:2;column-gap:26px} @media (max-width:1000px){.doc-toc .toc>ul{columns:1}} .doc-toc .toc ul ul{list-style:none;margin:0 0 0 14px;padding:0} .doc-toc .toc li{margin:2px 0;font-size:13px} .doc-toc .toc a{color:var(--muted)} .doc-toc .toc a:hover{color:var(--accent)}
 .doc-content h1,.doc-content h2,.doc-content h3,.doc-content h4{position:relative} .hlink{position:absolute;left:-1.05em;top:0;opacity:0;color:var(--muted);font-weight:400;text-decoration:none;transition:opacity .15s} .doc-content h1:hover>.hlink,.doc-content h2:hover>.hlink,.doc-content h3:hover>.hlink,.doc-content h4:hover>.hlink{opacity:1}
-.hero .updated{font-size:13px} a.pill{text-decoration:none;color:inherit} a.pill:hover{border-color:var(--accent);color:var(--accent);text-decoration:none}</style></head><body><div id="progress"></div><header class="topbar"><div class="topbar-inner"><div class="brand">AI <span>Harness / PDE / Infra</span></div><div class="search"><input id="searchInput" type="search" placeholder="搜索知识点、命令、GPU、NVL72、RAG、MCP..." aria-label="搜索全文"></div><button class="btn" id="themeBtn">主题</button><button class="btn" onclick="window.print()">导出 PDF</button></div></header><div class="layout"><aside class="sidebar"><div class="side-title">学习方案目录</div><details class="nav-group"><summary class="nav-link" data-target="doc-00"><span class="nav-num">01</span><span class="nav-title">总览</span></summary><div class="nav-sub"><a class="nav-jump" href="#doc-00">↑ 跳到本章开头</a><div class="toc">
+.doc-content a[target="_blank"]::after{content:"↗";font-size:.78em;opacity:.55;margin-left:.12em} .hero .updated{font-size:13px} a.pill{text-decoration:none;color:inherit} a.pill:hover{border-color:var(--accent);color:var(--accent);text-decoration:none}</style></head><body><div id="progress"></div><header class="topbar"><div class="topbar-inner"><div class="brand">AI <span>Harness / PDE / Infra</span></div><div class="search"><input id="searchInput" type="search" placeholder="搜索知识点、命令、GPU、NVL72、RAG、MCP..." aria-label="搜索全文"></div><button class="btn" id="themeBtn">主题</button><button class="btn" onclick="window.print()">导出 PDF</button></div></header><div class="layout"><aside class="sidebar"><div class="side-title">学习方案目录</div><details class="nav-group"><summary class="nav-link" data-target="doc-00"><span class="nav-num">01</span><span class="nav-title">总览</span></summary><div class="nav-sub"><a class="nav-jump" href="#doc-00">↑ 跳到本章开头</a><div class="toc">
 <ul>
 <li><a href="#doc-00-_1">这个包解决什么问题</a></li>
 <li><a href="#doc-00-pde">PDE 术语说明</a></li>
@@ -792,6 +792,14 @@ html[data-theme="dark"] { --bg:#0f141b; --panel:#151d26; --panel2:#1d2834; --ink
 </li>
 <li><a href="#doc-13-7_1">7. 落地清单</a></li>
 <li><a href="#doc-13-8_1">8. 与既有章节的衔接</a></li>
+<li><a href="#doc-13-9">9. 参考链接与引用来源</a><ul>
+<li><a href="#doc-13-91">9.1 本章主素材</a></li>
+<li><a href="#doc-13-92-pi">9.2 Pi</a></li>
+<li><a href="#doc-13-93-aider">9.3 Aider</a></li>
+<li><a href="#doc-13-94-4">9.4 第 4 节版图中的其他项目</a></li>
+<li><a href="#doc-13-95">9.5 星标数据口径</a></li>
+</ul>
+</li>
 </ul>
 </div>
 </div></details><details class="nav-group"><summary class="nav-link" data-target="doc-14"><span class="nav-num">15</span><span class="nav-title">企业落地常见坑与注意事项</span></summary><div class="nav-sub"><a class="nav-jump" href="#doc-14">↑ 跳到本章开头</a><div class="toc">
@@ -1495,10 +1503,10 @@ html[data-theme="dark"] { --bg:#0f141b; --panel:#151d26; --panel2:#1d2834; --ink
 <h2 id="doc-01-1-pythongithttpjsonsse"><a class="hlink" href="#doc-01-1-pythongithttpjsonsse" title="本节链接">#</a>第 1 周：Python、Git、HTTP/JSON/SSE</h2>
 <h3 id="doc-01-_1"><a class="hlink" href="#doc-01-_1" title="本节链接">#</a>视频</h3>
 <ul>
-<li>主视频：<a href="https://www.bilibili.com/video/BV1Jgf6YvE8e/">3 小时超快速入门 Python</a></li>
-<li>补充：<a href="https://www.bilibili.com/video/BV1ySLc6QEcB/">Git + GitHub 核心概念全攻略</a></li>
-<li>补充：<a href="https://www.bilibili.com/video/BV165411A7ef/">1 小时全面入门 HTTP 协议</a></li>
-<li>官方：<a href="https://docs.python.org/3/">Python Docs</a>、<a href="https://git-scm.com/book/zh/v2">Git Book</a>、<a href="https://developer.mozilla.org/zh-CN/docs/Web/HTTP">MDN HTTP</a></li>
+<li>主视频：<a href="https://www.bilibili.com/video/BV1Jgf6YvE8e/" target="_blank" rel="noopener noreferrer">3 小时超快速入门 Python</a></li>
+<li>补充：<a href="https://www.bilibili.com/video/BV1ySLc6QEcB/" target="_blank" rel="noopener noreferrer">Git + GitHub 核心概念全攻略</a></li>
+<li>补充：<a href="https://www.bilibili.com/video/BV165411A7ef/" target="_blank" rel="noopener noreferrer">1 小时全面入门 HTTP 协议</a></li>
+<li>官方：<a href="https://docs.python.org/3/" target="_blank" rel="noopener noreferrer">Python Docs</a>、<a href="https://git-scm.com/book/zh/v2" target="_blank" rel="noopener noreferrer">Git Book</a>、<a href="https://developer.mozilla.org/zh-CN/docs/Web/HTTP" target="_blank" rel="noopener noreferrer">MDN HTTP</a></li>
 </ul>
 <h3 id="doc-01-_2"><a class="hlink" href="#doc-01-_2" title="本节链接">#</a>操作步骤</h3>
 <ol>
@@ -1520,10 +1528,10 @@ html[data-theme="dark"] { --bg:#0f141b; --panel:#151d26; --panel2:#1d2834; --ink
 <h2 id="doc-01-2-llm-tokenpromptcontext"><a class="hlink" href="#doc-01-2-llm-tokenpromptcontext" title="本节链接">#</a>第 2 周：LLM 基础、Token、Prompt、Context</h2>
 <h3 id="doc-01-_4"><a class="hlink" href="#doc-01-_4" title="本节链接">#</a>视频</h3>
 <ul>
-<li>主视频：<a href="https://www.bilibili.com/video/BV1GsY76dEqW/">一次性搞懂 Agent 到底怎么用</a></li>
-<li>补充：<a href="https://www.youtube.com/watch?v=xlUIiTSaFKI">LLM Context Engineering Bootcamp Lecture 1</a></li>
-<li>官方：<a href="https://platform.openai.com/docs/guides/prompt-engineering">OpenAI Prompting Guide</a></li>
-<li>官方：<a href="https://platform.openai.com/docs/guides/text">OpenAI Text Generation</a></li>
+<li>主视频：<a href="https://www.bilibili.com/video/BV1GsY76dEqW/" target="_blank" rel="noopener noreferrer">一次性搞懂 Agent 到底怎么用</a></li>
+<li>补充：<a href="https://www.youtube.com/watch?v=xlUIiTSaFKI" target="_blank" rel="noopener noreferrer">LLM Context Engineering Bootcamp Lecture 1</a></li>
+<li>官方：<a href="https://platform.openai.com/docs/guides/prompt-engineering" target="_blank" rel="noopener noreferrer">OpenAI Prompting Guide</a></li>
+<li>官方：<a href="https://platform.openai.com/docs/guides/text" target="_blank" rel="noopener noreferrer">OpenAI Text Generation</a></li>
 </ul>
 <h3 id="doc-01-_5"><a class="hlink" href="#doc-01-_5" title="本节链接">#</a>操作步骤</h3>
 <ol>
@@ -1543,10 +1551,10 @@ html[data-theme="dark"] { --bg:#0f141b; --panel:#151d26; --panel2:#1d2834; --ink
 <h2 id="doc-01-3-fastapipydanticdocker"><a class="hlink" href="#doc-01-3-fastapipydanticdocker" title="本节链接">#</a>第 3 周：FastAPI、Pydantic、Docker</h2>
 <h3 id="doc-01-_7"><a class="hlink" href="#doc-01-_7" title="本节链接">#</a>视频</h3>
 <ul>
-<li>主视频：<a href="https://www.bilibili.com/video/BV1zV2QBtE39/">FastAPI 从入门到实战</a></li>
-<li>补充：<a href="https://www.bilibili.com/video/BV1JKmeY9ED2/">Pydantic 数据结构与验证</a></li>
-<li>补充：<a href="https://www.bilibili.com/video/BV1THKyzBER6/">40 分钟 Docker 实战攻略</a></li>
-<li>官方：<a href="https://fastapi.tiangolo.com/">FastAPI</a>、<a href="https://docs.pydantic.dev/">Pydantic</a>、<a href="https://docs.docker.com/">Docker</a></li>
+<li>主视频：<a href="https://www.bilibili.com/video/BV1zV2QBtE39/" target="_blank" rel="noopener noreferrer">FastAPI 从入门到实战</a></li>
+<li>补充：<a href="https://www.bilibili.com/video/BV1JKmeY9ED2/" target="_blank" rel="noopener noreferrer">Pydantic 数据结构与验证</a></li>
+<li>补充：<a href="https://www.bilibili.com/video/BV1THKyzBER6/" target="_blank" rel="noopener noreferrer">40 分钟 Docker 实战攻略</a></li>
+<li>官方：<a href="https://fastapi.tiangolo.com/" target="_blank" rel="noopener noreferrer">FastAPI</a>、<a href="https://docs.pydantic.dev/" target="_blank" rel="noopener noreferrer">Pydantic</a>、<a href="https://docs.docker.com/" target="_blank" rel="noopener noreferrer">Docker</a></li>
 </ul>
 <h3 id="doc-01-_8"><a class="hlink" href="#doc-01-_8" title="本节链接">#</a>操作步骤</h3>
 <ol>
@@ -1567,9 +1575,9 @@ html[data-theme="dark"] { --bg:#0f141b; --panel:#151d26; --panel2:#1d2834; --ink
 <h2 id="doc-01-4-postgresredis"><a class="hlink" href="#doc-01-4-postgresredis" title="本节链接">#</a>第 4 周：Postgres、Redis、状态恢复、基础观测</h2>
 <h3 id="doc-01-_10"><a class="hlink" href="#doc-01-_10" title="本节链接">#</a>视频</h3>
 <ul>
-<li>主视频：<a href="https://www.bilibili.com/video/BV1QPYDztEtW/">Prometheus + Grafana 可观测性实战</a></li>
-<li>补充：<a href="https://www.bilibili.com/video/BV1ccH2eLEDe/">10 分钟了解 MLOps 与 CI/CD</a></li>
-<li>官方：<a href="https://www.postgresql.org/docs/">PostgreSQL Docs</a>、<a href="https://redis.io/docs/latest/">Redis Docs</a>、<a href="https://opentelemetry.io/docs/">OpenTelemetry</a></li>
+<li>主视频：<a href="https://www.bilibili.com/video/BV1QPYDztEtW/" target="_blank" rel="noopener noreferrer">Prometheus + Grafana 可观测性实战</a></li>
+<li>补充：<a href="https://www.bilibili.com/video/BV1ccH2eLEDe/" target="_blank" rel="noopener noreferrer">10 分钟了解 MLOps 与 CI/CD</a></li>
+<li>官方：<a href="https://www.postgresql.org/docs/" target="_blank" rel="noopener noreferrer">PostgreSQL Docs</a>、<a href="https://redis.io/docs/latest/" target="_blank" rel="noopener noreferrer">Redis Docs</a>、<a href="https://opentelemetry.io/docs/" target="_blank" rel="noopener noreferrer">OpenTelemetry</a></li>
 </ul>
 <h3 id="doc-01-_11"><a class="hlink" href="#doc-01-_11" title="本节链接">#</a>操作步骤</h3>
 <ol>
@@ -1592,10 +1600,10 @@ html[data-theme="dark"] { --bg:#0f141b; --panel:#151d26; --panel2:#1d2834; --ink
 <h2 id="doc-01-5-harnessagent-loop"><a class="hlink" href="#doc-01-5-harnessagent-loop" title="本节链接">#</a>第 5 周：Harness、Agent Loop、预算与停止条件</h2>
 <h3 id="doc-01-_13"><a class="hlink" href="#doc-01-_13" title="本节链接">#</a>视频</h3>
 <ul>
-<li>主视频：<a href="https://www.youtube.com/watch?v=Lu1UWqVTbQg">Let's build a Coding Agent Harness from Scratch</a></li>
-<li>补充：<a href="https://www.anthropic.com/engineering/building-effective-agents">Building Effective Agents</a></li>
-<li>官方：<a href="https://learn.microsoft.com/en-us/agent-framework/concepts/harness">Microsoft Agent Harness</a></li>
-<li>官方：<a href="https://platform.openai.com/docs/guides/agents">OpenAI Agents API</a></li>
+<li>主视频：<a href="https://www.youtube.com/watch?v=Lu1UWqVTbQg" target="_blank" rel="noopener noreferrer">Let's build a Coding Agent Harness from Scratch</a></li>
+<li>补充：<a href="https://www.anthropic.com/engineering/building-effective-agents" target="_blank" rel="noopener noreferrer">Building Effective Agents</a></li>
+<li>官方：<a href="https://learn.microsoft.com/en-us/agent-framework/concepts/harness" target="_blank" rel="noopener noreferrer">Microsoft Agent Harness</a></li>
+<li>官方：<a href="https://platform.openai.com/docs/guides/agents" target="_blank" rel="noopener noreferrer">OpenAI Agents API</a></li>
 </ul>
 <h3 id="doc-01-_14"><a class="hlink" href="#doc-01-_14" title="本节链接">#</a>操作步骤</h3>
 <ol>
@@ -1615,9 +1623,9 @@ html[data-theme="dark"] { --bg:#0f141b; --panel:#151d26; --panel2:#1d2834; --ink
 <h2 id="doc-01-6-context-engineering"><a class="hlink" href="#doc-01-6-context-engineering" title="本节链接">#</a>第 6 周：Context Engineering 与压缩</h2>
 <h3 id="doc-01-_16"><a class="hlink" href="#doc-01-_16" title="本节链接">#</a>视频</h3>
 <ul>
-<li>主视频：<a href="https://www.youtube.com/watch?v=biO6qPn3xVs">LLM Context Engineering Series Part 1</a></li>
-<li>补充：<a href="https://www.youtube.com/watch?v=HvBCcmzS_vs">Context Engineering Lecture 2: System Prompts</a></li>
-<li>官方：<a href="https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents">Anthropic Context Engineering</a></li>
+<li>主视频：<a href="https://www.youtube.com/watch?v=biO6qPn3xVs" target="_blank" rel="noopener noreferrer">LLM Context Engineering Series Part 1</a></li>
+<li>补充：<a href="https://www.youtube.com/watch?v=HvBCcmzS_vs" target="_blank" rel="noopener noreferrer">Context Engineering Lecture 2: System Prompts</a></li>
+<li>官方：<a href="https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents" target="_blank" rel="noopener noreferrer">Anthropic Context Engineering</a></li>
 </ul>
 <h3 id="doc-01-_17"><a class="hlink" href="#doc-01-_17" title="本节链接">#</a>操作步骤</h3>
 <ol>
@@ -1637,9 +1645,9 @@ html[data-theme="dark"] { --bg:#0f141b; --panel:#151d26; --panel2:#1d2834; --ink
 <h2 id="doc-01-7-memoryragembedding"><a class="hlink" href="#doc-01-7-memoryragembedding" title="本节链接">#</a>第 7 周：Memory、RAG、Embedding、向量数据库</h2>
 <h3 id="doc-01-_19"><a class="hlink" href="#doc-01-_19" title="本节链接">#</a>视频</h3>
 <ul>
-<li>主视频：<a href="https://www.bilibili.com/video/BV1hj5DzyE5d/">RAG 新手完整入门</a></li>
-<li>补充：<a href="https://www.bilibili.com/video/BV1F1Yf6pE6v/">Embedding 与向量数据库</a></li>
-<li>官方：<a href="https://github.com/pgvector/pgvector">pgvector</a>、<a href="https://milvus.io/docs">Milvus Docs</a></li>
+<li>主视频：<a href="https://www.bilibili.com/video/BV1hj5DzyE5d/" target="_blank" rel="noopener noreferrer">RAG 新手完整入门</a></li>
+<li>补充：<a href="https://www.bilibili.com/video/BV1F1Yf6pE6v/" target="_blank" rel="noopener noreferrer">Embedding 与向量数据库</a></li>
+<li>官方：<a href="https://github.com/pgvector/pgvector" target="_blank" rel="noopener noreferrer">pgvector</a>、<a href="https://milvus.io/docs" target="_blank" rel="noopener noreferrer">Milvus Docs</a></li>
 </ul>
 <h3 id="doc-01-_20"><a class="hlink" href="#doc-01-_20" title="本节链接">#</a>操作步骤</h3>
 <ol>
@@ -1660,10 +1668,10 @@ html[data-theme="dark"] { --bg:#0f141b; --panel:#151d26; --panel2:#1d2834; --ink
 <h2 id="doc-01-8-function-callingmcp"><a class="hlink" href="#doc-01-8-function-callingmcp" title="本节链接">#</a>第 8 周：Function Calling、MCP、工具调用</h2>
 <h3 id="doc-01-_22"><a class="hlink" href="#doc-01-_22" title="本节链接">#</a>视频</h3>
 <ul>
-<li>主视频：<a href="https://www.bilibili.com/video/BV1SJm8YtETd/">Function Calling 技术详解</a></li>
-<li>补充：<a href="https://www.bilibili.com/video/BV1uronYREWR/">MCP 终极指南：从原理到实战</a></li>
-<li>补充：<a href="https://www.bilibili.com/video/BV1pJY56aEsG/">MCP 保姆级原理与实战</a></li>
-<li>官方：<a href="https://modelcontextprotocol.io/docs/getting-started/intro">Model Context Protocol</a></li>
+<li>主视频：<a href="https://www.bilibili.com/video/BV1SJm8YtETd/" target="_blank" rel="noopener noreferrer">Function Calling 技术详解</a></li>
+<li>补充：<a href="https://www.bilibili.com/video/BV1uronYREWR/" target="_blank" rel="noopener noreferrer">MCP 终极指南：从原理到实战</a></li>
+<li>补充：<a href="https://www.bilibili.com/video/BV1pJY56aEsG/" target="_blank" rel="noopener noreferrer">MCP 保姆级原理与实战</a></li>
+<li>官方：<a href="https://modelcontextprotocol.io/docs/getting-started/intro" target="_blank" rel="noopener noreferrer">Model Context Protocol</a></li>
 </ul>
 <h3 id="doc-01-_23"><a class="hlink" href="#doc-01-_23" title="本节链接">#</a>操作步骤</h3>
 <ol>
@@ -1683,9 +1691,9 @@ html[data-theme="dark"] { --bg:#0f141b; --panel:#151d26; --panel2:#1d2834; --ink
 <h2 id="doc-01-9"><a class="hlink" href="#doc-01-9" title="本节链接">#</a>第 9 周：工具设计、幂等、权限与审计</h2>
 <h3 id="doc-01-_25"><a class="hlink" href="#doc-01-_25" title="本节链接">#</a>视频</h3>
 <ul>
-<li>主视频：<a href="https://www.anthropic.com/engineering/writing-tools-for-agents">Writing effective tools for agents</a></li>
-<li>补充：<a href="https://www.bilibili.com/video/BV1uronYREWR/">MCP 从原理到实战</a></li>
-<li>官方：<a href="https://platform.openai.com/docs/guides/function-calling">OpenAI Function Calling</a></li>
+<li>主视频：<a href="https://www.anthropic.com/engineering/writing-tools-for-agents" target="_blank" rel="noopener noreferrer">Writing effective tools for agents</a></li>
+<li>补充：<a href="https://www.bilibili.com/video/BV1uronYREWR/" target="_blank" rel="noopener noreferrer">MCP 从原理到实战</a></li>
+<li>官方：<a href="https://platform.openai.com/docs/guides/function-calling" target="_blank" rel="noopener noreferrer">OpenAI Function Calling</a></li>
 </ul>
 <h3 id="doc-01-_26"><a class="hlink" href="#doc-01-_26" title="本节链接">#</a>操作步骤</h3>
 <ol>
@@ -1705,9 +1713,9 @@ html[data-theme="dark"] { --bg:#0f141b; --panel:#151d26; --panel2:#1d2834; --ink
 <h2 id="doc-01-10-sandboxhuman-in-the-loop"><a class="hlink" href="#doc-01-10-sandboxhuman-in-the-loop" title="本节链接">#</a>第 10 周：Sandbox、Human-in-the-Loop、审批</h2>
 <h3 id="doc-01-_28"><a class="hlink" href="#doc-01-_28" title="本节链接">#</a>视频</h3>
 <ul>
-<li>主视频：<a href="https://www.youtube.com/watch?v=TsYDazwHJ6U">3 reasons sandboxing won't secure your AI agent</a></li>
-<li>补充：<a href="https://www.youtube.com/watch?v=Lu1UWqVTbQg">Agent Harness 相关安全实践</a></li>
-<li>官方：<a href="https://genai.owasp.org/llm-top-10/">OWASP LLM Top 10</a></li>
+<li>主视频：<a href="https://www.youtube.com/watch?v=TsYDazwHJ6U" target="_blank" rel="noopener noreferrer">3 reasons sandboxing won't secure your AI agent</a></li>
+<li>补充：<a href="https://www.youtube.com/watch?v=Lu1UWqVTbQg" target="_blank" rel="noopener noreferrer">Agent Harness 相关安全实践</a></li>
+<li>官方：<a href="https://genai.owasp.org/llm-top-10/" target="_blank" rel="noopener noreferrer">OWASP LLM Top 10</a></li>
 </ul>
 <h3 id="doc-01-_29"><a class="hlink" href="#doc-01-_29" title="本节链接">#</a>操作步骤</h3>
 <ol>
@@ -1728,9 +1736,9 @@ html[data-theme="dark"] { --bg:#0f141b; --panel:#151d26; --panel2:#1d2834; --ink
 <h2 id="doc-01-11-verificationcriticagent"><a class="hlink" href="#doc-01-11-verificationcriticagent" title="本节链接">#</a>第 11 周：Verification、Critic、Agent 评测</h2>
 <h3 id="doc-01-_31"><a class="hlink" href="#doc-01-_31" title="本节链接">#</a>视频</h3>
 <ul>
-<li>主视频：<a href="https://www.youtube.com/watch?v=WZZLtwnZ4w0">The agent evaluation revolution</a></li>
-<li>补充：<a href="https://www.youtube.com/watch?v=trfUBIDeI1Y">LLM as a Judge: Scaling AI Evaluation</a></li>
-<li>官方：<a href="https://platform.openai.com/docs/guides/evals">OpenAI Evals</a>、<a href="https://www.promptfoo.dev/docs/">promptfoo</a></li>
+<li>主视频：<a href="https://www.youtube.com/watch?v=WZZLtwnZ4w0" target="_blank" rel="noopener noreferrer">The agent evaluation revolution</a></li>
+<li>补充：<a href="https://www.youtube.com/watch?v=trfUBIDeI1Y" target="_blank" rel="noopener noreferrer">LLM as a Judge: Scaling AI Evaluation</a></li>
+<li>官方：<a href="https://platform.openai.com/docs/guides/evals" target="_blank" rel="noopener noreferrer">OpenAI Evals</a>、<a href="https://www.promptfoo.dev/docs/" target="_blank" rel="noopener noreferrer">promptfoo</a></li>
 </ul>
 <h3 id="doc-01-_32"><a class="hlink" href="#doc-01-_32" title="本节链接">#</a>操作步骤</h3>
 <ol>
@@ -1750,9 +1758,9 @@ html[data-theme="dark"] { --bg:#0f141b; --panel:#151d26; --panel2:#1d2834; --ink
 <h2 id="doc-01-12-session-agent"><a class="hlink" href="#doc-01-12-session-agent" title="本节链接">#</a>第 12 周：长任务、跨 Session 恢复与多 Agent</h2>
 <h3 id="doc-01-_34"><a class="hlink" href="#doc-01-_34" title="本节链接">#</a>视频</h3>
 <ul>
-<li>主视频：<a href="https://www.youtube.com/watch?v=5H-QTtD991A">Effective harnesses for long-running agents</a></li>
-<li>补充：<a href="https://www.youtube.com/watch?v=0P-ACuHyu-0">Agent Memory Explained</a></li>
-<li>官方：<a href="https://www.anthropic.com/engineering/effective-harnesses-for-long-running-agents">Anthropic Long-running Agents</a></li>
+<li>主视频：<a href="https://www.youtube.com/watch?v=5H-QTtD991A" target="_blank" rel="noopener noreferrer">Effective harnesses for long-running agents</a></li>
+<li>补充：<a href="https://www.youtube.com/watch?v=0P-ACuHyu-0" target="_blank" rel="noopener noreferrer">Agent Memory Explained</a></li>
+<li>官方：<a href="https://www.anthropic.com/engineering/effective-harnesses-for-long-running-agents" target="_blank" rel="noopener noreferrer">Anthropic Long-running Agents</a></li>
 </ul>
 <h3 id="doc-01-_35"><a class="hlink" href="#doc-01-_35" title="本节链接">#</a>操作步骤</h3>
 <ol>
@@ -1774,9 +1782,9 @@ html[data-theme="dark"] { --bg:#0f141b; --panel:#151d26; --panel2:#1d2834; --ink
 <h2 id="doc-01-13-jtbd"><a class="hlink" href="#doc-01-13-jtbd" title="本节链接">#</a>第 13 周：用户研究、JTBD、产品指标</h2>
 <h3 id="doc-01-_37"><a class="hlink" href="#doc-01-_37" title="本节链接">#</a>视频</h3>
 <ul>
-<li>主视频：<a href="https://www.youtube.com/watch?v=-FbvCA6bg14">The ultimate guide to JTBD</a></li>
-<li>补充：<a href="https://www.youtube.com/watch?v=5O4ST-R5ZVw">One-Hour Product Analytics Tutorial</a></li>
-<li>官方：<a href="https://pair.withgoogle.com/guidebook/">Google PAIR Guidebook</a></li>
+<li>主视频：<a href="https://www.youtube.com/watch?v=-FbvCA6bg14" target="_blank" rel="noopener noreferrer">The ultimate guide to JTBD</a></li>
+<li>补充：<a href="https://www.youtube.com/watch?v=5O4ST-R5ZVw" target="_blank" rel="noopener noreferrer">One-Hour Product Analytics Tutorial</a></li>
+<li>官方：<a href="https://pair.withgoogle.com/guidebook/" target="_blank" rel="noopener noreferrer">Google PAIR Guidebook</a></li>
 </ul>
 <h3 id="doc-01-_38"><a class="hlink" href="#doc-01-_38" title="本节链接">#</a>操作步骤</h3>
 <ol>
@@ -1795,9 +1803,9 @@ html[data-theme="dark"] { --bg:#0f141b; --panel:#151d26; --panel2:#1d2834; --ink
 <h2 id="doc-01-14-ai-prdapi"><a class="hlink" href="#doc-01-14-ai-prdapi" title="本节链接">#</a>第 14 周：AI PRD、状态机、API 契约</h2>
 <h3 id="doc-01-_40"><a class="hlink" href="#doc-01-_40" title="本节链接">#</a>视频</h3>
 <ul>
-<li>主视频：<a href="https://www.youtube.com/watch?v=JJzODsXsCt0">How to Write a Product Requirements Document</a></li>
-<li>补充：<a href="https://www.youtube.com/watch?v=yYtLHiB71KM">How to write a great PRD</a></li>
-<li>官方：<a href="https://www.nngroup.com/articles/ai-chat-ux/">Nielsen Norman Group AI Chat UX</a></li>
+<li>主视频：<a href="https://www.youtube.com/watch?v=JJzODsXsCt0" target="_blank" rel="noopener noreferrer">How to Write a Product Requirements Document</a></li>
+<li>补充：<a href="https://www.youtube.com/watch?v=yYtLHiB71KM" target="_blank" rel="noopener noreferrer">How to write a great PRD</a></li>
+<li>官方：<a href="https://www.nngroup.com/articles/ai-chat-ux/" target="_blank" rel="noopener noreferrer">Nielsen Norman Group AI Chat UX</a></li>
 </ul>
 <h3 id="doc-01-_41"><a class="hlink" href="#doc-01-_41" title="本节链接">#</a>操作步骤</h3>
 <ol>
@@ -1816,9 +1824,9 @@ html[data-theme="dark"] { --bg:#0f141b; --panel:#151d26; --panel2:#1d2834; --ink
 <h2 id="doc-01-15"><a class="hlink" href="#doc-01-15" title="本节链接">#</a>第 15 周：前端、流式交互、可访问性</h2>
 <h3 id="doc-01-_43"><a class="hlink" href="#doc-01-_43" title="本节链接">#</a>视频</h3>
 <ul>
-<li>主视频：<a href="https://www.youtube.com/watch?v=DLX62G4lc44">Learn React JS Full Tutorial</a></li>
-<li>补充：<a href="https://www.youtube.com/watch?v=e2nkq3h1P68">Learn Accessibility Full a11y Tutorial</a></li>
-<li>官方：<a href="https://react.dev/">React</a>、<a href="https://nextjs.org/docs">Next.js</a></li>
+<li>主视频：<a href="https://www.youtube.com/watch?v=DLX62G4lc44" target="_blank" rel="noopener noreferrer">Learn React JS Full Tutorial</a></li>
+<li>补充：<a href="https://www.youtube.com/watch?v=e2nkq3h1P68" target="_blank" rel="noopener noreferrer">Learn Accessibility Full a11y Tutorial</a></li>
+<li>官方：<a href="https://react.dev/" target="_blank" rel="noopener noreferrer">React</a>、<a href="https://nextjs.org/docs" target="_blank" rel="noopener noreferrer">Next.js</a></li>
 </ul>
 <h3 id="doc-01-_44"><a class="hlink" href="#doc-01-_44" title="本节链接">#</a>操作步骤</h3>
 <ol>
@@ -1838,9 +1846,9 @@ html[data-theme="dark"] { --bg:#0f141b; --panel:#151d26; --panel2:#1d2834; --ink
 <h2 id="doc-01-16"><a class="hlink" href="#doc-01-16" title="本节链接">#</a>第 16 周：评测、灰度、上线、复盘</h2>
 <h3 id="doc-01-_46"><a class="hlink" href="#doc-01-_46" title="本节链接">#</a>视频</h3>
 <ul>
-<li>主视频：<a href="https://www.youtube.com/watch?v=5O4ST-R5ZVw">Product Analytics Tutorial</a></li>
-<li>补充：<a href="https://www.youtube.com/watch?v=jEpwNaHjD68">How To A/B Test a Product</a></li>
-<li>官方：<a href="https://opentelemetry.io/docs/">OpenTelemetry</a>、<a href="https://langfuse.com/docs">Langfuse</a></li>
+<li>主视频：<a href="https://www.youtube.com/watch?v=5O4ST-R5ZVw" target="_blank" rel="noopener noreferrer">Product Analytics Tutorial</a></li>
+<li>补充：<a href="https://www.youtube.com/watch?v=jEpwNaHjD68" target="_blank" rel="noopener noreferrer">How To A/B Test a Product</a></li>
+<li>官方：<a href="https://opentelemetry.io/docs/" target="_blank" rel="noopener noreferrer">OpenTelemetry</a>、<a href="https://langfuse.com/docs" target="_blank" rel="noopener noreferrer">Langfuse</a></li>
 </ul>
 <h3 id="doc-01-_47"><a class="hlink" href="#doc-01-_47" title="本节链接">#</a>操作步骤</h3>
 <ol>
@@ -1862,10 +1870,10 @@ html[data-theme="dark"] { --bg:#0f141b; --panel:#151d26; --panel2:#1d2834; --ink
 <h2 id="doc-01-17-gpucudavllm"><a class="hlink" href="#doc-01-17-gpucudavllm" title="本节链接">#</a>第 17 周：GPU、CUDA、vLLM 单机部署</h2>
 <h3 id="doc-01-_49"><a class="hlink" href="#doc-01-_49" title="本节链接">#</a>视频</h3>
 <ul>
-<li>主视频：<a href="https://www.bilibili.com/video/BV1sM4y1x7of/">CUDA 编程基础入门系列</a></li>
-<li>补充：<a href="https://www.youtube.com/watch?v=qdPkA5mxLhg">Understanding vLLM with a Hands-On Demo</a></li>
-<li>补充：<a href="https://www.bilibili.com/video/BV1pjwFzbE6i/">vLLM 快速入门</a></li>
-<li>官方：<a href="https://docs.vllm.ai/">vLLM Docs</a>、<a href="https://docs.nvidia.com/cuda/">CUDA Toolkit Docs</a></li>
+<li>主视频：<a href="https://www.bilibili.com/video/BV1sM4y1x7of/" target="_blank" rel="noopener noreferrer">CUDA 编程基础入门系列</a></li>
+<li>补充：<a href="https://www.youtube.com/watch?v=qdPkA5mxLhg" target="_blank" rel="noopener noreferrer">Understanding vLLM with a Hands-On Demo</a></li>
+<li>补充：<a href="https://www.bilibili.com/video/BV1pjwFzbE6i/" target="_blank" rel="noopener noreferrer">vLLM 快速入门</a></li>
+<li>官方：<a href="https://docs.vllm.ai/" target="_blank" rel="noopener noreferrer">vLLM Docs</a>、<a href="https://docs.nvidia.com/cuda/" target="_blank" rel="noopener noreferrer">CUDA Toolkit Docs</a></li>
 </ul>
 <h3 id="doc-01-_50"><a class="hlink" href="#doc-01-_50" title="本节链接">#</a>操作步骤</h3>
 <ol>
@@ -1885,10 +1893,10 @@ html[data-theme="dark"] { --bg:#0f141b; --panel:#151d26; --panel2:#1d2834; --ink
 <h2 id="doc-01-18-kv-cachepagedattentioncontinuous-batching"><a class="hlink" href="#doc-01-18-kv-cachepagedattentioncontinuous-batching" title="本节链接">#</a>第 18 周：KV Cache、PagedAttention、Continuous Batching</h2>
 <h3 id="doc-01-_52"><a class="hlink" href="#doc-01-_52" title="本节链接">#</a>视频</h3>
 <ul>
-<li>主视频：<a href="https://www.bilibili.com/video/BV1ECY36EEFX/">PagedAttention：KV Cache 与 Agent 工程</a></li>
-<li>补充：<a href="https://www.bilibili.com/video/BV1dUPuzLEu7/">保姆级 KV Cache 教程</a></li>
-<li>补充：<a href="https://www.youtube.com/watch?v=6uPnLkCiy5g">PagedAttention: Behind vLLM's Insane Speed</a></li>
-<li>官方：<a href="https://docs.vllm.ai/en/latest/design/paged_attention.html">vLLM Paged Attention Design</a></li>
+<li>主视频：<a href="https://www.bilibili.com/video/BV1ECY36EEFX/" target="_blank" rel="noopener noreferrer">PagedAttention：KV Cache 与 Agent 工程</a></li>
+<li>补充：<a href="https://www.bilibili.com/video/BV1dUPuzLEu7/" target="_blank" rel="noopener noreferrer">保姆级 KV Cache 教程</a></li>
+<li>补充：<a href="https://www.youtube.com/watch?v=6uPnLkCiy5g" target="_blank" rel="noopener noreferrer">PagedAttention: Behind vLLM's Insane Speed</a></li>
+<li>官方：<a href="https://docs.vllm.ai/en/latest/design/paged_attention.html" target="_blank" rel="noopener noreferrer">vLLM Paged Attention Design</a></li>
 </ul>
 <h3 id="doc-01-_53"><a class="hlink" href="#doc-01-_53" title="本节链接">#</a>操作步骤</h3>
 <ol>
@@ -1908,10 +1916,10 @@ html[data-theme="dark"] { --bg:#0f141b; --panel:#151d26; --panel2:#1d2834; --ink
 <h2 id="doc-01-19-prefix-cache"><a class="hlink" href="#doc-01-19-prefix-cache" title="本节链接">#</a>第 19 周：量化、Prefix Cache、推测解码</h2>
 <h3 id="doc-01-_55"><a class="hlink" href="#doc-01-_55" title="本节链接">#</a>视频</h3>
 <ul>
-<li>主视频：<a href="https://www.youtube.com/watch?v=37g8S71LfmQ">LLM Quantization Explained</a></li>
-<li>补充：<a href="https://www.youtube.com/watch?v=HbEumldh3Js">vLLM Prefix Caching Tutorial</a></li>
-<li>补充：<a href="https://www.youtube.com/watch?v=VkWlLSTdHs8">Faster LLMs: Speculative Decoding</a></li>
-<li>官方：<a href="https://docs.vllm.ai/en/latest/configuration/optimization.html">vLLM Optimization</a></li>
+<li>主视频：<a href="https://www.youtube.com/watch?v=37g8S71LfmQ" target="_blank" rel="noopener noreferrer">LLM Quantization Explained</a></li>
+<li>补充：<a href="https://www.youtube.com/watch?v=HbEumldh3Js" target="_blank" rel="noopener noreferrer">vLLM Prefix Caching Tutorial</a></li>
+<li>补充：<a href="https://www.youtube.com/watch?v=VkWlLSTdHs8" target="_blank" rel="noopener noreferrer">Faster LLMs: Speculative Decoding</a></li>
+<li>官方：<a href="https://docs.vllm.ai/en/latest/configuration/optimization.html" target="_blank" rel="noopener noreferrer">vLLM Optimization</a></li>
 </ul>
 <h3 id="doc-01-_56"><a class="hlink" href="#doc-01-_56" title="本节链接">#</a>操作步骤</h3>
 <ol>
@@ -1930,9 +1938,9 @@ html[data-theme="dark"] { --bg:#0f141b; --panel:#151d26; --panel2:#1d2834; --ink
 <h2 id="doc-01-20-kubernetesgpu-operator"><a class="hlink" href="#doc-01-20-kubernetesgpu-operator" title="本节链接">#</a>第 20 周：Kubernetes、GPU Operator、模型网关、自动扩缩容</h2>
 <h3 id="doc-01-_58"><a class="hlink" href="#doc-01-_58" title="本节链接">#</a>视频</h3>
 <ul>
-<li>主视频：<a href="https://www.youtube.com/watch?v=f-FKoMHqRoI">NVIDIA GPU Operator 架构与部署</a></li>
-<li>补充：<a href="https://www.youtube.com/watch?v=t0iJGEG0IXk">vLLM on Kubernetes in Production</a></li>
-<li>官方：<a href="https://docs.nvidia.com/datacenter/cloud-native/gpu-operator/latest/">GPU Operator</a></li>
+<li>主视频：<a href="https://www.youtube.com/watch?v=f-FKoMHqRoI" target="_blank" rel="noopener noreferrer">NVIDIA GPU Operator 架构与部署</a></li>
+<li>补充：<a href="https://www.youtube.com/watch?v=t0iJGEG0IXk" target="_blank" rel="noopener noreferrer">vLLM on Kubernetes in Production</a></li>
+<li>官方：<a href="https://docs.nvidia.com/datacenter/cloud-native/gpu-operator/latest/" target="_blank" rel="noopener noreferrer">GPU Operator</a></li>
 </ul>
 <h3 id="doc-01-_59"><a class="hlink" href="#doc-01-_59" title="本节链接">#</a>操作步骤</h3>
 <ol>
@@ -1954,9 +1962,9 @@ html[data-theme="dark"] { --bg:#0f141b; --panel:#151d26; --panel2:#1d2834; --ink
 <h2 id="doc-01-21-kueueraykserve"><a class="hlink" href="#doc-01-21-kueueraykserve" title="本节链接">#</a>第 21 周：Kueue、Ray、KServe</h2>
 <h3 id="doc-01-_61"><a class="hlink" href="#doc-01-_61" title="本节链接">#</a>视频</h3>
 <ul>
-<li>主视频：<a href="https://www.youtube.com/watch?v=HWTNCTaKZ_o">Intro to Kueue</a></li>
-<li>补充：<a href="https://www.youtube.com/watch?v=2Db_SgqweoI">Fast LLM Inference by vLLM and KServe</a></li>
-<li>官方：<a href="https://docs.ray.io/en/latest/serve/llm/index.html">Ray Serve LLM</a>、<a href="https://kueue.sigs.k8s.io/">Kueue</a>、<a href="https://kserve.github.io/website/">KServe</a></li>
+<li>主视频：<a href="https://www.youtube.com/watch?v=HWTNCTaKZ_o" target="_blank" rel="noopener noreferrer">Intro to Kueue</a></li>
+<li>补充：<a href="https://www.youtube.com/watch?v=2Db_SgqweoI" target="_blank" rel="noopener noreferrer">Fast LLM Inference by vLLM and KServe</a></li>
+<li>官方：<a href="https://docs.ray.io/en/latest/serve/llm/index.html" target="_blank" rel="noopener noreferrer">Ray Serve LLM</a>、<a href="https://kueue.sigs.k8s.io/" target="_blank" rel="noopener noreferrer">Kueue</a>、<a href="https://kserve.github.io/website/" target="_blank" rel="noopener noreferrer">KServe</a></li>
 </ul>
 <h3 id="doc-01-_62"><a class="hlink" href="#doc-01-_62" title="本节链接">#</a>操作步骤</h3>
 <ol>
@@ -1975,10 +1983,10 @@ html[data-theme="dark"] { --bg:#0f141b; --panel:#151d26; --panel2:#1d2834; --ink
 <h2 id="doc-01-22-tpppdpnccl"><a class="hlink" href="#doc-01-22-tpppdpnccl" title="本节链接">#</a>第 22 周：TP、PP、DP、NCCL</h2>
 <h3 id="doc-01-_64"><a class="hlink" href="#doc-01-_64" title="本节链接">#</a>视频</h3>
 <ul>
-<li>主视频：<a href="https://www.bilibili.com/video/BV1zkWseXEaq/">分布式训练：张量并行、流水线并行原理</a></li>
-<li>补充：<a href="https://www.bilibili.com/video/BV1wZhF6pE7U/">千张显卡的高效协同：TP、PP 与 3D 并行</a></li>
-<li>补充：<a href="https://www.bilibili.com/video/BV1SWpXe2Epa/">NCCL 通信库入门</a></li>
-<li>官方：<a href="https://docs.vllm.ai/en/latest/serving/parallelism_scaling.html">vLLM Parallelism and Scaling</a></li>
+<li>主视频：<a href="https://www.bilibili.com/video/BV1zkWseXEaq/" target="_blank" rel="noopener noreferrer">分布式训练：张量并行、流水线并行原理</a></li>
+<li>补充：<a href="https://www.bilibili.com/video/BV1wZhF6pE7U/" target="_blank" rel="noopener noreferrer">千张显卡的高效协同：TP、PP 与 3D 并行</a></li>
+<li>补充：<a href="https://www.bilibili.com/video/BV1SWpXe2Epa/" target="_blank" rel="noopener noreferrer">NCCL 通信库入门</a></li>
+<li>官方：<a href="https://docs.vllm.ai/en/latest/serving/parallelism_scaling.html" target="_blank" rel="noopener noreferrer">vLLM Parallelism and Scaling</a></li>
 </ul>
 <h3 id="doc-01-_65"><a class="hlink" href="#doc-01-_65" title="本节链接">#</a>操作步骤</h3>
 <ol>
@@ -1998,10 +2006,10 @@ html[data-theme="dark"] { --bg:#0f141b; --panel:#151d26; --panel2:#1d2834; --ink
 <h2 id="doc-01-23-dynamollm-dprefill-decode"><a class="hlink" href="#doc-01-23-dynamollm-dprefill-decode" title="本节链接">#</a>第 23 周：Dynamo、llm-d、Prefill / Decode 分离</h2>
 <h3 id="doc-01-_67"><a class="hlink" href="#doc-01-_67" title="本节链接">#</a>视频</h3>
 <ul>
-<li>主视频：<a href="https://www.youtube.com/watch?v=1bRmskFCnqY">Distributed Inference 101: Getting Started with NVIDIA Dynamo</a></li>
-<li>补充：<a href="https://www.youtube.com/watch?v=CNKGgOphAPM">LLM-D Explained</a></li>
-<li>补充：<a href="https://www.youtube.com/watch?v=qszZi2k9DE8">Why splitting prefill and decode doubles throughput</a></li>
-<li>官方：<a href="https://docs.nvidia.com/dynamo/latest/">NVIDIA Dynamo</a>、<a href="https://llm-d.ai/">llm-d</a></li>
+<li>主视频：<a href="https://www.youtube.com/watch?v=1bRmskFCnqY" target="_blank" rel="noopener noreferrer">Distributed Inference 101: Getting Started with NVIDIA Dynamo</a></li>
+<li>补充：<a href="https://www.youtube.com/watch?v=CNKGgOphAPM" target="_blank" rel="noopener noreferrer">LLM-D Explained</a></li>
+<li>补充：<a href="https://www.youtube.com/watch?v=qszZi2k9DE8" target="_blank" rel="noopener noreferrer">Why splitting prefill and decode doubles throughput</a></li>
+<li>官方：<a href="https://docs.nvidia.com/dynamo/latest/" target="_blank" rel="noopener noreferrer">NVIDIA Dynamo</a>、<a href="https://llm-d.ai/" target="_blank" rel="noopener noreferrer">llm-d</a></li>
 </ul>
 <h3 id="doc-01-_68"><a class="hlink" href="#doc-01-_68" title="本节链接">#</a>操作步骤</h3>
 <ol>
@@ -2020,9 +2028,9 @@ html[data-theme="dark"] { --bg:#0f141b; --panel:#151d26; --panel2:#1d2834; --ink
 <h2 id="doc-01-24-slo"><a class="hlink" href="#doc-01-24-slo" title="本节链接">#</a>第 24 周：压测、容量、SLO 与成本</h2>
 <h3 id="doc-01-_70"><a class="hlink" href="#doc-01-_70" title="本节链接">#</a>视频</h3>
 <ul>
-<li>主视频：<a href="https://www.bilibili.com/video/BV1NwddYLEw1/">vLLM 并发压测与监控实战</a></li>
-<li>补充：<a href="https://www.youtube.com/watch?v=U8V3IOV2uds">GPU Monitoring with DCGM, Prometheus and Grafana</a></li>
-<li>官方：<a href="https://docs.vllm.ai/en/latest/benchmarking/index.html">vLLM Benchmarking</a></li>
+<li>主视频：<a href="https://www.bilibili.com/video/BV1NwddYLEw1/" target="_blank" rel="noopener noreferrer">vLLM 并发压测与监控实战</a></li>
+<li>补充：<a href="https://www.youtube.com/watch?v=U8V3IOV2uds" target="_blank" rel="noopener noreferrer">GPU Monitoring with DCGM, Prometheus and Grafana</a></li>
+<li>官方：<a href="https://docs.vllm.ai/en/latest/benchmarking/index.html" target="_blank" rel="noopener noreferrer">vLLM Benchmarking</a></li>
 </ul>
 <h3 id="doc-01-_71"><a class="hlink" href="#doc-01-_71" title="本节链接">#</a>操作步骤</h3>
 <ol>
@@ -2043,9 +2051,9 @@ html[data-theme="dark"] { --bg:#0f141b; --panel:#151d26; --panel2:#1d2834; --ink
 <h2 id="doc-01-25-opentelemetrylangfusemlflow"><a class="hlink" href="#doc-01-25-opentelemetrylangfusemlflow" title="本节链接">#</a>第 25 周：OpenTelemetry、Langfuse、MLflow、监控</h2>
 <h3 id="doc-01-_73"><a class="hlink" href="#doc-01-_73" title="本节链接">#</a>视频</h3>
 <ul>
-<li>主视频：<a href="https://www.youtube.com/watch?v=crEyMDJ4Bp0">LLM Observability with OpenTelemetry</a></li>
-<li>补充：<a href="https://www.youtube.com/watch?v=3Jiduh4VIrU">MLflow Model Tracking and Registry</a></li>
-<li>官方：<a href="https://opentelemetry.io/docs/specs/semconv/gen-ai/">OTel GenAI</a>、<a href="https://langfuse.com/docs">Langfuse</a>、<a href="https://mlflow.org/docs/latest/genai/">MLflow GenAI</a></li>
+<li>主视频：<a href="https://www.youtube.com/watch?v=crEyMDJ4Bp0" target="_blank" rel="noopener noreferrer">LLM Observability with OpenTelemetry</a></li>
+<li>补充：<a href="https://www.youtube.com/watch?v=3Jiduh4VIrU" target="_blank" rel="noopener noreferrer">MLflow Model Tracking and Registry</a></li>
+<li>官方：<a href="https://opentelemetry.io/docs/specs/semconv/gen-ai/" target="_blank" rel="noopener noreferrer">OTel GenAI</a>、<a href="https://langfuse.com/docs" target="_blank" rel="noopener noreferrer">Langfuse</a>、<a href="https://mlflow.org/docs/latest/genai/" target="_blank" rel="noopener noreferrer">MLflow GenAI</a></li>
 </ul>
 <h3 id="doc-01-_74"><a class="hlink" href="#doc-01-_74" title="本节链接">#</a>操作步骤</h3>
 <ol>
@@ -2064,9 +2072,9 @@ html[data-theme="dark"] { --bg:#0f141b; --panel:#151d26; --panel2:#1d2834; --ink
 <h2 id="doc-01-26-ragagent"><a class="hlink" href="#doc-01-26-ragagent" title="本节链接">#</a>第 26 周：RAG、Agent、安全评测</h2>
 <h3 id="doc-01-_76"><a class="hlink" href="#doc-01-_76" title="本节链接">#</a>视频</h3>
 <ul>
-<li>主视频：<a href="https://www.youtube.com/watch?v=WC3t4pMKaVQ">Key Metrics and Evaluation Methods for RAG</a></li>
-<li>补充：<a href="https://www.youtube.com/watch?v=WZZLtwnZ4w0">The agent evaluation revolution</a></li>
-<li>官方：<a href="https://docs.ragas.io/">Ragas</a>、<a href="https://www.promptfoo.dev/docs/">promptfoo</a>、<a href="https://github.com/confident-ai/deepeval">DeepEval</a></li>
+<li>主视频：<a href="https://www.youtube.com/watch?v=WC3t4pMKaVQ" target="_blank" rel="noopener noreferrer">Key Metrics and Evaluation Methods for RAG</a></li>
+<li>补充：<a href="https://www.youtube.com/watch?v=WZZLtwnZ4w0" target="_blank" rel="noopener noreferrer">The agent evaluation revolution</a></li>
+<li>官方：<a href="https://docs.ragas.io/" target="_blank" rel="noopener noreferrer">Ragas</a>、<a href="https://www.promptfoo.dev/docs/" target="_blank" rel="noopener noreferrer">promptfoo</a>、<a href="https://github.com/confident-ai/deepeval" target="_blank" rel="noopener noreferrer">DeepEval</a></li>
 </ul>
 <h3 id="doc-01-_77"><a class="hlink" href="#doc-01-_77" title="本节链接">#</a>操作步骤</h3>
 <ol>
@@ -2085,9 +2093,9 @@ html[data-theme="dark"] { --bg:#0f141b; --panel:#151d26; --panel2:#1d2834; --ink
 <h2 id="doc-01-27-owaspnist"><a class="hlink" href="#doc-01-27-owaspnist" title="本节链接">#</a>第 27 周：OWASP、NIST、安全与合规</h2>
 <h3 id="doc-01-_79"><a class="hlink" href="#doc-01-_79" title="本节链接">#</a>视频</h3>
 <ul>
-<li>主视频：<a href="https://www.youtube.com/results?search_query=OWASP+Top+10+LLM+Applications">OWASP Top 10 for LLM Applications</a></li>
-<li>补充：<a href="https://www.nist.gov/itl/ai-risk-management-framework">NIST AI RMF</a></li>
-<li>官方：<a href="https://genai.owasp.org/llm-top-10/">OWASP LLM Top 10</a>、<a href="https://www.nist.gov/itl/ai-risk-management-framework">NIST AI RMF</a></li>
+<li>主视频：<a href="https://www.youtube.com/results?search_query=OWASP+Top+10+LLM+Applications" target="_blank" rel="noopener noreferrer">OWASP Top 10 for LLM Applications</a></li>
+<li>补充：<a href="https://www.nist.gov/itl/ai-risk-management-framework" target="_blank" rel="noopener noreferrer">NIST AI RMF</a></li>
+<li>官方：<a href="https://genai.owasp.org/llm-top-10/" target="_blank" rel="noopener noreferrer">OWASP LLM Top 10</a>、<a href="https://www.nist.gov/itl/ai-risk-management-framework" target="_blank" rel="noopener noreferrer">NIST AI RMF</a></li>
 </ul>
 <h3 id="doc-01-_80"><a class="hlink" href="#doc-01-_80" title="本节链接">#</a>操作步骤</h3>
 <ol>
@@ -2106,9 +2114,9 @@ html[data-theme="dark"] { --bg:#0f141b; --panel:#151d26; --panel2:#1d2834; --ink
 <h2 id="doc-01-28"><a class="hlink" href="#doc-01-28" title="本节链接">#</a>第 28 周：可靠性、混沌、成本和事故复盘</h2>
 <h3 id="doc-01-_82"><a class="hlink" href="#doc-01-_82" title="本节链接">#</a>视频</h3>
 <ul>
-<li>主视频：<a href="https://www.youtube.com/watch?v=9NGIZU2a3E4">GPU Monitoring That Actually Helps</a></li>
-<li>补充：<a href="https://www.youtube.com/watch?v=crEyMDJ4Bp0">LLM Observability</a></li>
-<li>官方：<a href="https://prometheus.io/docs/">Prometheus</a>、<a href="https://grafana.com/docs/grafana/latest/">Grafana</a></li>
+<li>主视频：<a href="https://www.youtube.com/watch?v=9NGIZU2a3E4" target="_blank" rel="noopener noreferrer">GPU Monitoring That Actually Helps</a></li>
+<li>补充：<a href="https://www.youtube.com/watch?v=crEyMDJ4Bp0" target="_blank" rel="noopener noreferrer">LLM Observability</a></li>
+<li>官方：<a href="https://prometheus.io/docs/" target="_blank" rel="noopener noreferrer">Prometheus</a>、<a href="https://grafana.com/docs/grafana/latest/" target="_blank" rel="noopener noreferrer">Grafana</a></li>
 </ul>
 <h3 id="doc-01-_83"><a class="hlink" href="#doc-01-_83" title="本节链接">#</a>操作步骤</h3>
 <ol>
@@ -2129,8 +2137,8 @@ html[data-theme="dark"] { --bg:#0f141b; --panel:#151d26; --panel2:#1d2834; --ink
 <h2 id="doc-01-29"><a class="hlink" href="#doc-01-29" title="本节链接">#</a>第 29 周：选题、范围、评测基线</h2>
 <h3 id="doc-01-_85"><a class="hlink" href="#doc-01-_85" title="本节链接">#</a>视频</h3>
 <ul>
-<li>主视频：<a href="https://www.youtube.com/watch?v=KjYCEiBTHFo">AI Product Management Complete Course</a></li>
-<li>补充：<a href="https://www.youtube.com/watch?v=JJzODsXsCt0">How to Write a PRD</a></li>
+<li>主视频：<a href="https://www.youtube.com/watch?v=KjYCEiBTHFo" target="_blank" rel="noopener noreferrer">AI Product Management Complete Course</a></li>
+<li>补充：<a href="https://www.youtube.com/watch?v=JJzODsXsCt0" target="_blank" rel="noopener noreferrer">How to Write a PRD</a></li>
 </ul>
 <h3 id="doc-01-_86"><a class="hlink" href="#doc-01-_86" title="本节链接">#</a>操作步骤</h3>
 <ol>
@@ -2149,8 +2157,8 @@ html[data-theme="dark"] { --bg:#0f141b; --panel:#151d26; --panel2:#1d2834; --ink
 <h2 id="doc-01-30"><a class="hlink" href="#doc-01-30" title="本节链接">#</a>第 30 周：端到端开发</h2>
 <h3 id="doc-01-_88"><a class="hlink" href="#doc-01-_88" title="本节链接">#</a>视频</h3>
 <ul>
-<li>主视频：<a href="https://www.youtube.com/watch?v=gFcAfU3V1Zo">OpenAI Agents SDK Full Series</a></li>
-<li>补充：<a href="https://www.youtube.com/watch?v=jGg_1h0qzaM">LangGraph Complete Course</a></li>
+<li>主视频：<a href="https://www.youtube.com/watch?v=gFcAfU3V1Zo" target="_blank" rel="noopener noreferrer">OpenAI Agents SDK Full Series</a></li>
+<li>补充：<a href="https://www.youtube.com/watch?v=jGg_1h0qzaM" target="_blank" rel="noopener noreferrer">LangGraph Complete Course</a></li>
 </ul>
 <h3 id="doc-01-_89"><a class="hlink" href="#doc-01-_89" title="本节链接">#</a>操作步骤</h3>
 <ol>
@@ -2169,8 +2177,8 @@ html[data-theme="dark"] { --bg:#0f141b; --panel:#151d26; --panel2:#1d2834; --ink
 <h2 id="doc-01-31"><a class="hlink" href="#doc-01-31" title="本节链接">#</a>第 31 周：压测、调优、安全、故障演练</h2>
 <h3 id="doc-01-_91"><a class="hlink" href="#doc-01-_91" title="本节链接">#</a>视频</h3>
 <ul>
-<li>主视频：<a href="https://www.youtube.com/watch?v=lxjWiVuK5cA">Optimize LLM inference with vLLM</a></li>
-<li>补充：<a href="https://www.youtube.com/watch?v=U8V3IOV2uds">GPU Monitoring with DCGM</a></li>
+<li>主视频：<a href="https://www.youtube.com/watch?v=lxjWiVuK5cA" target="_blank" rel="noopener noreferrer">Optimize LLM inference with vLLM</a></li>
+<li>补充：<a href="https://www.youtube.com/watch?v=U8V3IOV2uds" target="_blank" rel="noopener noreferrer">GPU Monitoring with DCGM</a></li>
 </ul>
 <h3 id="doc-01-_92"><a class="hlink" href="#doc-01-_92" title="本节链接">#</a>操作步骤</h3>
 <ol>
@@ -2189,8 +2197,8 @@ html[data-theme="dark"] { --bg:#0f141b; --panel:#151d26; --panel2:#1d2834; --ink
 <h2 id="doc-01-32-readme"><a class="hlink" href="#doc-01-32-readme" title="本节链接">#</a>第 32 周：答辩、README、演示和复盘</h2>
 <h3 id="doc-01-_94"><a class="hlink" href="#doc-01-_94" title="本节链接">#</a>视频</h3>
 <ul>
-<li>主视频：<a href="https://fde.academy/blog/ai-product-engineer">AI Product Engineer Role</a></li>
-<li>补充：<a href="https://www.youtube.com/watch?v=KjYCEiBTHFo">AI Product Management Course</a></li>
+<li>主视频：<a href="https://fde.academy/blog/ai-product-engineer" target="_blank" rel="noopener noreferrer">AI Product Engineer Role</a></li>
+<li>补充：<a href="https://www.youtube.com/watch?v=KjYCEiBTHFo" target="_blank" rel="noopener noreferrer">AI Product Management Course</a></li>
 </ul>
 <h3 id="doc-01-_95"><a class="hlink" href="#doc-01-_95" title="本节链接">#</a>操作步骤</h3>
 <ol>
@@ -2211,10 +2219,10 @@ html[data-theme="dark"] { --bg:#0f141b; --panel:#151d26; --panel2:#1d2834; --ink
 <h2 id="doc-01-33-gpu"><a class="hlink" href="#doc-01-33-gpu" title="本节链接">#</a>第 33 周：GPU 服务器选型、机柜、供电、散热</h2>
 <h3 id="doc-01-_97"><a class="hlink" href="#doc-01-_97" title="本节链接">#</a>视频</h3>
 <ul>
-<li>主视频：<a href="https://www.youtube.com/watch?v=0WjfKQdfeMU">NVIDIA Certified Associate AI Infrastructure and Operations</a></li>
-<li>补充：<a href="https://www.youtube.com/watch?v=jQ-ZCvg4ZFU">NVIDIA DGX SuperPOD 架构</a></li>
-<li>补充：<a href="https://www.youtube.com/watch?v=vnE5WMwebnE">Liquid Cooling in AI Data Center</a></li>
-<li>官方：<a href="https://docs.nvidia.com/dgx-superpod/">NVIDIA DGX SuperPOD Docs</a></li>
+<li>主视频：<a href="https://www.youtube.com/watch?v=0WjfKQdfeMU" target="_blank" rel="noopener noreferrer">NVIDIA Certified Associate AI Infrastructure and Operations</a></li>
+<li>补充：<a href="https://www.youtube.com/watch?v=jQ-ZCvg4ZFU" target="_blank" rel="noopener noreferrer">NVIDIA DGX SuperPOD 架构</a></li>
+<li>补充：<a href="https://www.youtube.com/watch?v=vnE5WMwebnE" target="_blank" rel="noopener noreferrer">Liquid Cooling in AI Data Center</a></li>
+<li>官方：<a href="https://docs.nvidia.com/dgx-superpod/" target="_blank" rel="noopener noreferrer">NVIDIA DGX SuperPOD Docs</a></li>
 </ul>
 <h3 id="doc-01-_98"><a class="hlink" href="#doc-01-_98" title="本节链接">#</a>操作步骤</h3>
 <ol>
@@ -2235,11 +2243,11 @@ html[data-theme="dark"] { --bg:#0f141b; --panel:#151d26; --panel2:#1d2834; --ink
 <h2 id="doc-01-34-bmc"><a class="hlink" href="#doc-01-34-bmc" title="本节链接">#</a>第 34 周：BMC、网络、存储、裸机初始化</h2>
 <h3 id="doc-01-_100"><a class="hlink" href="#doc-01-_100" title="本节链接">#</a>视频</h3>
 <ul>
-<li>主视频：<a href="https://www.youtube.com/watch?v=LvG9XQ3AqNM">Redfish School</a></li>
-<li>补充：<a href="https://www.youtube.com/watch?v=tAiua7CJ9es">OpenBMC Overview</a></li>
-<li>补充：<a href="https://www.youtube.com/watch?v=xjc7WLBb-nI">Spine and Leaf Architecture</a></li>
-<li>补充：<a href="https://www.youtube.com/watch?v=eGoP2wPoaEM">InfiniBand 与 RoCE：AI Data Center</a></li>
-<li>官方：<a href="https://www.openbmc.org/">OpenBMC</a>、<a href="https://maas.io/docs">MAAS</a>、<a href="https://tinkerbell.org/">Tinkerbell</a></li>
+<li>主视频：<a href="https://www.youtube.com/watch?v=LvG9XQ3AqNM" target="_blank" rel="noopener noreferrer">Redfish School</a></li>
+<li>补充：<a href="https://www.youtube.com/watch?v=tAiua7CJ9es" target="_blank" rel="noopener noreferrer">OpenBMC Overview</a></li>
+<li>补充：<a href="https://www.youtube.com/watch?v=xjc7WLBb-nI" target="_blank" rel="noopener noreferrer">Spine and Leaf Architecture</a></li>
+<li>补充：<a href="https://www.youtube.com/watch?v=eGoP2wPoaEM" target="_blank" rel="noopener noreferrer">InfiniBand 与 RoCE：AI Data Center</a></li>
+<li>官方：<a href="https://www.openbmc.org/" target="_blank" rel="noopener noreferrer">OpenBMC</a>、<a href="https://maas.io/docs" target="_blank" rel="noopener noreferrer">MAAS</a>、<a href="https://tinkerbell.org/" target="_blank" rel="noopener noreferrer">Tinkerbell</a></li>
 </ul>
 <h3 id="doc-01-_101"><a class="hlink" href="#doc-01-_101" title="本节链接">#</a>操作步骤</h3>
 <ol>
@@ -2261,10 +2269,10 @@ html[data-theme="dark"] { --bg:#0f141b; --panel:#151d26; --panel2:#1d2834; --ink
 <h2 id="doc-01-35-cudancclk8s-slurmdcgm"><a class="hlink" href="#doc-01-35-cudancclk8s-slurmdcgm" title="本节链接">#</a>第 35 周：驱动、CUDA、NCCL、K8s / Slurm、DCGM</h2>
 <h3 id="doc-01-_103"><a class="hlink" href="#doc-01-_103" title="本节链接">#</a>视频</h3>
 <ul>
-<li>主视频：<a href="https://www.youtube.com/watch?v=f-FKoMHqRoI">NVIDIA GPU Operator Architecture</a></li>
-<li>补充：<a href="https://www.youtube.com/watch?v=9NGIZU2a3E4">DCGM, Prometheus, Grafana GPU Monitoring</a></li>
-<li>补充：<a href="https://www.youtube.com/watch?v=Jz9E1_pNBS8">NCCL Explained</a></li>
-<li>官方：<a href="https://docs.nvidia.com/datacenter/cloud-native/gpu-operator/latest/">GPU Operator</a>、<a href="https://docs.nvidia.com/datacenter/dcgm/latest/">DCGM</a>、<a href="https://docs.nvidia.com/deeplearning/nccl/user-guide/docs/">NCCL</a></li>
+<li>主视频：<a href="https://www.youtube.com/watch?v=f-FKoMHqRoI" target="_blank" rel="noopener noreferrer">NVIDIA GPU Operator Architecture</a></li>
+<li>补充：<a href="https://www.youtube.com/watch?v=9NGIZU2a3E4" target="_blank" rel="noopener noreferrer">DCGM, Prometheus, Grafana GPU Monitoring</a></li>
+<li>补充：<a href="https://www.youtube.com/watch?v=Jz9E1_pNBS8" target="_blank" rel="noopener noreferrer">NCCL Explained</a></li>
+<li>官方：<a href="https://docs.nvidia.com/datacenter/cloud-native/gpu-operator/latest/" target="_blank" rel="noopener noreferrer">GPU Operator</a>、<a href="https://docs.nvidia.com/datacenter/dcgm/latest/" target="_blank" rel="noopener noreferrer">DCGM</a>、<a href="https://docs.nvidia.com/deeplearning/nccl/user-guide/docs/" target="_blank" rel="noopener noreferrer">NCCL</a></li>
 </ul>
 <h3 id="doc-01-_104"><a class="hlink" href="#doc-01-_104" title="本节链接">#</a>操作步骤</h3>
 <ol>
@@ -2285,9 +2293,9 @@ html[data-theme="dark"] { --bg:#0f141b; --panel:#151d26; --panel2:#1d2834; --ink
 <h2 id="doc-01-36-burn-in"><a class="hlink" href="#doc-01-36-burn-in" title="本节链接">#</a>第 36 周：Burn-in、故障演练、验收和调优</h2>
 <h3 id="doc-01-_106"><a class="hlink" href="#doc-01-_106" title="本节链接">#</a>视频</h3>
 <ul>
-<li>主视频：<a href="https://www.bilibili.com/video/BV1wu4m1N7ET/">A100 GPU 服务器 Burn-in</a></li>
-<li>补充：<a href="https://www.youtube.com/watch?v=0WjfKQdfeMU">NVIDIA NCA AI Infrastructure and Operations</a></li>
-<li>官方：<a href="https://docs.nvidia.com/deploy/xid-errors/index.html">NVIDIA XID Errors</a>、<a href="https://docs.nvidia.com/deploy/gpu-debug-guidelines/index.html">GPU Debug Guidelines</a></li>
+<li>主视频：<a href="https://www.bilibili.com/video/BV1wu4m1N7ET/" target="_blank" rel="noopener noreferrer">A100 GPU 服务器 Burn-in</a></li>
+<li>补充：<a href="https://www.youtube.com/watch?v=0WjfKQdfeMU" target="_blank" rel="noopener noreferrer">NVIDIA NCA AI Infrastructure and Operations</a></li>
+<li>官方：<a href="https://docs.nvidia.com/deploy/xid-errors/index.html" target="_blank" rel="noopener noreferrer">NVIDIA XID Errors</a>、<a href="https://docs.nvidia.com/deploy/gpu-debug-guidelines/index.html" target="_blank" rel="noopener noreferrer">GPU Debug Guidelines</a></li>
 </ul>
 <h3 id="doc-01-_107"><a class="hlink" href="#doc-01-_107" title="本节链接">#</a>操作步骤</h3>
 <ol>
@@ -3750,7 +3758,7 @@ vllm serve Qwen/Qwen2.5-7B-Instruct \
 <p>推荐工具：</p>
 <ul>
 <li><code>vllm bench serve</code>；</li>
-<li><a href="https://github.com/vllm-project/guidellm">GuideLLM</a>；</li>
+<li><a href="https://github.com/vllm-project/guidellm" target="_blank" rel="noopener noreferrer">GuideLLM</a>；</li>
 <li>自建 asyncio 压测脚本。</li>
 </ul>
 <p>至少测试：</p>
@@ -3841,8 +3849,8 @@ docker run --rm --gpus all \
 </ul>
 <p>可选：</p>
 <ul>
-<li><a href="https://docs.litellm.ai/">LiteLLM</a>；</li>
-<li><a href="https://gateway-api-inference-extension.sigs.k8s.io/">Gateway API Inference Extension</a>；</li>
+<li><a href="https://docs.litellm.ai/" target="_blank" rel="noopener noreferrer">LiteLLM</a>；</li>
+<li><a href="https://gateway-api-inference-extension.sigs.k8s.io/" target="_blank" rel="noopener noreferrer">Gateway API Inference Extension</a>；</li>
 <li>企业 API Gateway + 自研适配层。</li>
 </ul>
 <p><strong>验收</strong>：替换后端模型或切到另一个副本，不需要修改业务代码。</p>
@@ -4045,9 +4053,9 @@ spec:
 </ul>
 <p>参考：</p>
 <ul>
-<li><a href="https://docs.nvidia.com/dynamo/latest/">NVIDIA Dynamo</a>；</li>
-<li><a href="https://llm-d.ai/">llm-d</a>；</li>
-<li><a href="https://github.com/vllm-project/production-stack">vLLM Production Stack</a>。</li>
+<li><a href="https://docs.nvidia.com/dynamo/latest/" target="_blank" rel="noopener noreferrer">NVIDIA Dynamo</a>；</li>
+<li><a href="https://llm-d.ai/" target="_blank" rel="noopener noreferrer">llm-d</a>；</li>
+<li><a href="https://github.com/vllm-project/production-stack" target="_blank" rel="noopener noreferrer">vLLM Production Stack</a>。</li>
 </ul>
 <p><strong>验收</strong>：能解释为什么路由不能只按 Round Robin；KV Cache 命中率和成本之间的关系是什么。</p>
 <hr />
@@ -6113,12 +6121,12 @@ Checkpoint 写入
 <h2 id="doc-07-12"><a class="hlink" href="#doc-07-12" title="本节链接">#</a>12. 参考资料</h2>
 <ul>
 <li>用户提供的《网易集团 GPU 算力集群组网方案 HPN v1.0》文本。</li>
-<li><a href="https://docs.nvidia.com/deeplearning/nccl/user-guide/docs/">NVIDIA NCCL Documentation</a></li>
-<li><a href="https://docs.nvidia.com/dgx-superpod/">NVIDIA DGX SuperPOD Architecture</a></li>
-<li><a href="https://docs.nvidia.com/datacenter/cloud-native/gpu-operator/latest/gpu-operator-rdma.html">NVIDIA GPU Operator RDMA</a></li>
-<li><a href="https://github.com/Mellanox/network-operator">NVIDIA Network Operator</a></li>
-<li><a href="https://kueue.sigs.k8s.io/">Kueue</a></li>
-<li><a href="https://slurm.schedmd.com/documentation.html">Slurm</a></li>
+<li><a href="https://docs.nvidia.com/deeplearning/nccl/user-guide/docs/" target="_blank" rel="noopener noreferrer">NVIDIA NCCL Documentation</a></li>
+<li><a href="https://docs.nvidia.com/dgx-superpod/" target="_blank" rel="noopener noreferrer">NVIDIA DGX SuperPOD Architecture</a></li>
+<li><a href="https://docs.nvidia.com/datacenter/cloud-native/gpu-operator/latest/gpu-operator-rdma.html" target="_blank" rel="noopener noreferrer">NVIDIA GPU Operator RDMA</a></li>
+<li><a href="https://github.com/Mellanox/network-operator" target="_blank" rel="noopener noreferrer">NVIDIA Network Operator</a></li>
+<li><a href="https://kueue.sigs.k8s.io/" target="_blank" rel="noopener noreferrer">Kueue</a></li>
+<li><a href="https://slurm.schedmd.com/documentation.html" target="_blank" rel="noopener noreferrer">Slurm</a></li>
 </ul></div></section><section class="doc" id="doc-08" data-title="NVLink 8 卡全连接与 HGX 拓扑"><header class="doc-head"><div class="doc-kicker">DOC 09</div><h2>NVLink 8 卡全连接与 HGX 拓扑</h2><div class="doc-source">来源：14_NVLink八卡全连接与HGX拓扑指南.md</div></header><details class="doc-toc"><summary>本篇目录</summary><div class="toc">
 <ul>
 <li><a href="#doc-08-1">1. 两种架构的本质区别</a><ul>
@@ -6579,20 +6587,20 @@ InfiniBand / RoCE = 跨节点和跨机架扩展
 </code></pre>
 <h2 id="doc-08-9"><a class="hlink" href="#doc-08-9" title="本节链接">#</a>9. 视频参考</h2>
 <ul>
-<li><a href="https://www.bilibili.com/video/BV1sCSPBVEmL/">浪潮 V100 8 卡 NVLink 服务器安装与避坑</a></li>
-<li><a href="https://www.bilibili.com/video/BV1zYHW6WERy/">双 V100 NVLink 模型服务器</a></li>
-<li><a href="https://www.bilibili.com/video/BV1NPqQYXEi7/">拆解 NVIDIA HGX H200 8 GPU 服务器</a></li>
-<li><a href="https://www.bilibili.com/video/BV1rv411F72C/">从 HGX H200 聊 HGX / DGX / DGX Pod 区别</a></li>
-<li><a href="https://www.bilibili.com/video/BV1kk4y1Q7bE/">漫谈 A100 / H100 / GH200 的 scale-up 和 scale-out</a></li>
+<li><a href="https://www.bilibili.com/video/BV1sCSPBVEmL/" target="_blank" rel="noopener noreferrer">浪潮 V100 8 卡 NVLink 服务器安装与避坑</a></li>
+<li><a href="https://www.bilibili.com/video/BV1zYHW6WERy/" target="_blank" rel="noopener noreferrer">双 V100 NVLink 模型服务器</a></li>
+<li><a href="https://www.bilibili.com/video/BV1NPqQYXEi7/" target="_blank" rel="noopener noreferrer">拆解 NVIDIA HGX H200 8 GPU 服务器</a></li>
+<li><a href="https://www.bilibili.com/video/BV1rv411F72C/" target="_blank" rel="noopener noreferrer">从 HGX H200 聊 HGX / DGX / DGX Pod 区别</a></li>
+<li><a href="https://www.bilibili.com/video/BV1kk4y1Q7bE/" target="_blank" rel="noopener noreferrer">漫谈 A100 / H100 / GH200 的 scale-up 和 scale-out</a></li>
 </ul>
 <h2 id="doc-08-10"><a class="hlink" href="#doc-08-10" title="本节链接">#</a>10. 参考资料</h2>
 <ul>
-<li><a href="https://www.nvidia.com/en-us/data-center/nvlink/">NVIDIA NVLink</a></li>
-<li><a href="https://www.nvidia.com/en-us/data-center/hgx/">NVIDIA HGX Platform</a></li>
-<li><a href="https://www.nvidia.com/en-us/data-center/dgx-platform/">NVIDIA DGX Platform</a></li>
-<li><a href="https://docs.nvidia.com/dgx/dgxh100-user-guide/introduction-to-dgxh100.html">DGX H100 User Guide</a></li>
-<li><a href="https://docs.nvidia.com/dgx/dgxa100-user-guide/introduction-to-dgxa100.html">DGX A100 User Guide</a></li>
-<li><a href="https://docs.nvidia.com/deeplearning/nccl/user-guide/docs/">NVIDIA NCCL Documentation</a></li>
+<li><a href="https://www.nvidia.com/en-us/data-center/nvlink/" target="_blank" rel="noopener noreferrer">NVIDIA NVLink</a></li>
+<li><a href="https://www.nvidia.com/en-us/data-center/hgx/" target="_blank" rel="noopener noreferrer">NVIDIA HGX Platform</a></li>
+<li><a href="https://www.nvidia.com/en-us/data-center/dgx-platform/" target="_blank" rel="noopener noreferrer">NVIDIA DGX Platform</a></li>
+<li><a href="https://docs.nvidia.com/dgx/dgxh100-user-guide/introduction-to-dgxh100.html" target="_blank" rel="noopener noreferrer">DGX H100 User Guide</a></li>
+<li><a href="https://docs.nvidia.com/dgx/dgxa100-user-guide/introduction-to-dgxa100.html" target="_blank" rel="noopener noreferrer">DGX A100 User Guide</a></li>
+<li><a href="https://docs.nvidia.com/deeplearning/nccl/user-guide/docs/" target="_blank" rel="noopener noreferrer">NVIDIA NCCL Documentation</a></li>
 </ul>
 <h2 id="doc-08-11"><a class="hlink" href="#doc-08-11" title="本节链接">#</a>11. 验收清单</h2>
 <ul>
@@ -7271,20 +7279,20 @@ NVL72 rear fiber routing
 </ul>
 <h2 id="doc-09-12"><a class="hlink" href="#doc-09-12" title="本节链接">#</a>12. 视频参考</h2>
 <ul>
-<li><a href="https://www.bilibili.com/video/BV1sGNEzRE3p/">英伟达 GB200 NVL72 详解</a></li>
-<li><a href="https://www.bilibili.com/video/BV1Rx4y1J7RC/">独家讲解：NVL72 内部互联细节</a></li>
-<li><a href="https://www.bilibili.com/video/BV1cAC7B4EGh/">40 分钟详细解读 NVIDIA NVL72</a></li>
-<li><a href="https://www.bilibili.com/video/BV16EVa64E21/">GB300 NVL72 的 AI 超级数据中心</a></li>
-<li><a href="https://www.bilibili.com/video/BV1mrWuzUEHv/">2 分钟搞懂 B200/B300 与 GB200/GB300 运维区别</a></li>
-<li><a href="https://www.bilibili.com/video/BV1W45x6DE13/">Vera Rubin NVL72 组装过程</a></li>
+<li><a href="https://www.bilibili.com/video/BV1sGNEzRE3p/" target="_blank" rel="noopener noreferrer">英伟达 GB200 NVL72 详解</a></li>
+<li><a href="https://www.bilibili.com/video/BV1Rx4y1J7RC/" target="_blank" rel="noopener noreferrer">独家讲解：NVL72 内部互联细节</a></li>
+<li><a href="https://www.bilibili.com/video/BV1cAC7B4EGh/" target="_blank" rel="noopener noreferrer">40 分钟详细解读 NVIDIA NVL72</a></li>
+<li><a href="https://www.bilibili.com/video/BV16EVa64E21/" target="_blank" rel="noopener noreferrer">GB300 NVL72 的 AI 超级数据中心</a></li>
+<li><a href="https://www.bilibili.com/video/BV1mrWuzUEHv/" target="_blank" rel="noopener noreferrer">2 分钟搞懂 B200/B300 与 GB200/GB300 运维区别</a></li>
+<li><a href="https://www.bilibili.com/video/BV1W45x6DE13/" target="_blank" rel="noopener noreferrer">Vera Rubin NVL72 组装过程</a></li>
 </ul>
 <h2 id="doc-09-13"><a class="hlink" href="#doc-09-13" title="本节链接">#</a>13. 参考资料</h2>
 <ul>
-<li><a href="https://www.nvidia.com/en-us/data-center/gb200-nvl72/">NVIDIA GB200 NVL72</a></li>
-<li><a href="https://www.nvidia.com/en-us/data-center/gb300-nvl72/">NVIDIA GB300 NVL72</a></li>
-<li><a href="https://docs.nvidia.com/dgx-superpod/">NVIDIA DGX SuperPOD</a></li>
-<li><a href="https://www.nvidia.com/en-us/data-center/nvlink/">NVIDIA NVLink</a></li>
-<li><a href="https://docs.nvidia.com/deeplearning/nccl/user-guide/docs/">NVIDIA NCCL Documentation</a></li>
+<li><a href="https://www.nvidia.com/en-us/data-center/gb200-nvl72/" target="_blank" rel="noopener noreferrer">NVIDIA GB200 NVL72</a></li>
+<li><a href="https://www.nvidia.com/en-us/data-center/gb300-nvl72/" target="_blank" rel="noopener noreferrer">NVIDIA GB300 NVL72</a></li>
+<li><a href="https://docs.nvidia.com/dgx-superpod/" target="_blank" rel="noopener noreferrer">NVIDIA DGX SuperPOD</a></li>
+<li><a href="https://www.nvidia.com/en-us/data-center/nvlink/" target="_blank" rel="noopener noreferrer">NVIDIA NVLink</a></li>
+<li><a href="https://docs.nvidia.com/deeplearning/nccl/user-guide/docs/" target="_blank" rel="noopener noreferrer">NVIDIA NCCL Documentation</a></li>
 </ul>
 <h2 id="doc-09-14"><a class="hlink" href="#doc-09-14" title="本节链接">#</a>14. 验收清单</h2>
 <ul>
@@ -9700,10 +9708,18 @@ def reconcile(instances, router):
 </li>
 <li><a href="#doc-13-7_1">7. 落地清单</a></li>
 <li><a href="#doc-13-8_1">8. 与既有章节的衔接</a></li>
+<li><a href="#doc-13-9">9. 参考链接与引用来源</a><ul>
+<li><a href="#doc-13-91">9.1 本章主素材</a></li>
+<li><a href="#doc-13-92-pi">9.2 Pi</a></li>
+<li><a href="#doc-13-93-aider">9.3 Aider</a></li>
+<li><a href="#doc-13-94-4">9.4 第 4 节版图中的其他项目</a></li>
+<li><a href="#doc-13-95">9.5 星标数据口径</a></li>
+</ul>
+</li>
 </ul>
 </div>
 </details><div class="doc-content"><blockquote>
-<p><strong>本章素材</strong>：InfoQ 原文《人人都能整个"自己的 DeepSeek Harness"，那我们为啥还在给 Claude Code 们充会员？》（2026-08-31，作者 Tina；受访者：TiDB 唐刘、腾讯研究院茹炳晟、Floatboat 架构师 Remy、字节 Trae 天猪）+ Pi / Aider 官方仓库实测数据（截至 2026-10-11）。
+<p><strong>本章素材</strong>：InfoQ 原文《人人都能整个"自己的 DeepSeek Harness"，那我们为啥还在给 Claude Code 们充会员？》（2026-08-31，作者 Tina；受访者：TiDB 唐刘、腾讯研究院茹炳晟、Floatboat 架构师 Remy、字节 Trae 天猪）+ Pi / Aider 官方仓库实测数据（截至 2026-10-11）。原文链接：<a href="https://mp.weixin.qq.com/s/eJQATXv6DF2gqLiYpP2ioQ" target="_blank" rel="noopener noreferrer">https://mp.weixin.qq.com/s/eJQATXv6DF2gqLiYpP2ioQ</a>；<strong>本章引用的全部链接见文末 §9 参考链接与引用来源</strong>。
 <strong>本章回答三个问题</strong>：① 这篇文章到底说了什么？② Pi 和 Aider 这类 Harness 怎么比、怎么选？③ 「按最新方式实现一个 Harness」到底该长什么样？</p>
 </blockquote>
 <h2 id="doc-13-1"><a class="hlink" href="#doc-13-1" title="本节链接">#</a>1. 文章讲了什么（核心论点）</h2>
@@ -9794,8 +9810,8 @@ Retry is dangerous. Fail fast is underrated. —— TiDB 唐刘
 <tbody>
 <tr>
 <td>仓库</td>
-<td><code>earendil-works/pi</code>（原 <code>badlogic/pi-mono</code>）</td>
-<td><code>Aider-AI/aider</code></td>
+<td><a href="https://github.com/earendil-works/pi" target="_blank" rel="noopener noreferrer"><code>earendil-works/pi</code></a>（原 <code>badlogic/pi-mono</code>）</td>
+<td><a href="https://github.com/Aider-AI/aider" target="_blank" rel="noopener noreferrer"><code>Aider-AI/aider</code></a></td>
 </tr>
 <tr>
 <td>发起人</td>
@@ -9913,37 +9929,42 @@ Retry is dangerous. Fail fast is underrated. —— TiDB 唐刘
 </thead>
 <tbody>
 <tr>
-<td><strong>Claude Code</strong>（Anthropic）</td>
+<td><a href="https://github.com/deepseek-ai/deepseek-harness" target="_blank" rel="noopener noreferrer"><strong>DeepSeek Harness</strong></a>（DeepSeek 官方）</td>
+<td>官方 Harness（本章背景）</td>
+<td>"Everything is a Plugin"，插件化架构；文章发布时正在招募内测</td>
+</tr>
+<tr>
+<td><a href="https://github.com/anthropics/claude-code" target="_blank" rel="noopener noreferrer"><strong>Claude Code</strong></a>（Anthropic）</td>
 <td>产品化 Harness</td>
 <td>Dynamic Workflows：给目标，自己拆任务、调度数百子 Agent 搜索/编码/验证/汇总</td>
 </tr>
 <tr>
-<td><strong>Codex</strong>（OpenAI）</td>
+<td><a href="https://github.com/openai/codex" target="_blank" rel="noopener noreferrer"><strong>Codex</strong></a>（OpenAI）</td>
 <td>产品化 Harness</td>
 <td>与 ChatGPT Work <strong>共享同一套 Harness</strong>，只是调用的工具不同</td>
 </tr>
 <tr>
-<td><strong>OpenCode</strong></td>
+<td><a href="https://github.com/sst/opencode" target="_blank" rel="noopener noreferrer"><strong>OpenCode</strong></a></td>
 <td>开源 Coding Agent</td>
 <td>TiDB 团队最初使用的 Agent Core</td>
 </tr>
 <tr>
-<td><strong>Cline / Cursor / Windsurf</strong></td>
+<td><a href="https://github.com/cline/cline" target="_blank" rel="noopener noreferrer"><strong>Cline</strong></a> / Cursor / Windsurf</td>
 <td>2022–2023 期产物</td>
 <td>4000 Token 上下文时代，用工具调用 / MCP / RAG 管理上下文的产物</td>
 </tr>
 <tr>
-<td><strong>Reasonix</strong></td>
+<td><a href="https://github.com/esengine/DeepSeek-Reasonix" target="_blank" rel="noopener noreferrer"><strong>Reasonix</strong></a></td>
 <td>面向 DeepSeek 优化</td>
 <td>游戏引擎开发者 YHH 个人发起，后发展为数万 Star 社区项目</td>
 </tr>
 <tr>
-<td><strong>Amp</strong>（Thorsten Ball）</td>
+<td><a href="https://ampcode.com" target="_blank" rel="noopener noreferrer"><strong>Amp</strong></a>（Thorsten Ball）</td>
 <td>极简 Agent</td>
 <td>315 行 Go 实现终端读/搜/改文件</td>
 </tr>
 <tr>
-<td><strong>Gas Town</strong>（Steve Yegge）</td>
+<td><a href="https://github.com/gastownhall/gastown" target="_blank" rel="noopener noreferrer"><strong>Gas Town</strong></a>（Steve Yegge）</td>
 <td>多 Agent 编排</td>
 <td>一人持续管理 20–30 个并发 Coding Agent（本地单机）</td>
 </tr>
@@ -9953,7 +9974,7 @@ Retry is dangerous. Fail fast is underrated. —— TiDB 唐刘
 <td>全栈自研 Runtime / Agent Loop / Tools / Infra + 自进化系统 FloatSail；原生文件协议、GUI-Agent 双向协议</td>
 </tr>
 <tr>
-<td><strong>Pi / Aider</strong></td>
+<td><a href="https://github.com/earendil-works/pi" target="_blank" rel="noopener noreferrer"><strong>Pi</strong></a> / <a href="https://github.com/Aider-AI/aider" target="_blank" rel="noopener noreferrer"><strong>Aider</strong></a></td>
 <td>个人起家 → 社区</td>
 <td>见第 3 节</td>
 </tr>
@@ -10192,6 +10213,171 @@ Demo 5：受控自进化门禁
 </table>
 <blockquote>
 <p><strong>一句话总结本章</strong>：模型会持续被替换，Harness 也会持续趋同；能穿越这两次替换的，只有你<strong>自己掌握的那层 Control Plane</strong> —— 状态、权限、副作用边界和恢复能力。</p>
+</blockquote>
+<h2 id="doc-13-9"><a class="hlink" href="#doc-13-9" title="本节链接">#</a>9. 参考链接与引用来源</h2>
+<blockquote>
+<p>以下链接均于 <strong>2026-10-11</strong> 实测可访问（HTTP 200）。第三方文章与社区项目仅用于观点和生态参考，技术结论请以官方文档与源码为准。</p>
+</blockquote>
+<h3 id="doc-13-91"><a class="hlink" href="#doc-13-91" title="本节链接">#</a>9.1 本章主素材</h3>
+<table>
+<thead>
+<tr>
+<th>来源</th>
+<th>说明</th>
+<th>链接</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>InfoQ《人人都能整个"自己的 DeepSeek Harness"，那我们为啥还在给 Claude Code 们充会员？》</td>
+<td>本章第 1、4、5 节的主要观点来源；作者 Tina，2026-08-31</td>
+<td><a href="https://mp.weixin.qq.com/s/eJQATXv6DF2gqLiYpP2ioQ" target="_blank" rel="noopener noreferrer">https://mp.weixin.qq.com/s/eJQATXv6DF2gqLiYpP2ioQ</a></td>
+</tr>
+<tr>
+<td>InfoQ《自研 Runtime、Agent Loop、Infra：一家通用 Agent 公司的全栈赌注》</td>
+<td>第 4 节 Floatboat 全栈自研与「长程任务 Harness 多贡献 23%」的延伸阅读（原文内链）</td>
+<td><a href="https://mp.weixin.qq.com/s?__biz=MjM5MDE0Mjc4MA==&amp;mid=2651291797&amp;idx=2&amp;sn=a8d68cc1390fee7c5fc0db035d24c06a&amp;scene=21#wechat_redirect" target="_blank" rel="noopener noreferrer">https://mp.weixin.qq.com/s?__biz=MjM5MDE0Mjc4MA==&amp;mid=2651291797&amp;idx=2&amp;sn=a8d68cc1390fee7c5fc0db035d24c06a&amp;scene=21#wechat_redirect</a></td>
+</tr>
+</tbody>
+</table>
+<h3 id="doc-13-92-pi"><a class="hlink" href="#doc-13-92-pi" title="本节链接">#</a>9.2 Pi</h3>
+<table>
+<thead>
+<tr>
+<th>项目</th>
+<th>链接</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>主仓库（原 <code>badlogic/pi-mono</code>，现 <code>earendil-works/pi</code>）</td>
+<td><a href="https://github.com/earendil-works/pi" target="_blank" rel="noopener noreferrer">https://github.com/earendil-works/pi</a></td>
+</tr>
+<tr>
+<td>官网 / 文档</td>
+<td><a href="https://pi.dev" target="_blank" rel="noopener noreferrer">https://pi.dev</a></td>
+</tr>
+<tr>
+<td>CLI 安装包（npm）</td>
+<td><a href="https://www.npmjs.com/package/@earendil-works/pi-coding-agent" target="_blank" rel="noopener noreferrer">https://www.npmjs.com/package/@earendil-works/pi-coding-agent</a></td>
+</tr>
+<tr>
+<td>扩展生态 pi-skills（Skills for pi coding agent）</td>
+<td><a href="https://github.com/badlogic/pi-skills" target="_blank" rel="noopener noreferrer">https://github.com/badlogic/pi-skills</a></td>
+</tr>
+<tr>
+<td>长线程耐久性基准 durable-bench</td>
+<td><a href="https://github.com/badlogic/durable-bench" target="_blank" rel="noopener noreferrer">https://github.com/badlogic/durable-bench</a></td>
+</tr>
+<tr>
+<td>OpenClaw（Pi 的真实集成案例，Pi README 引用）</td>
+<td><a href="https://github.com/OpenClaw/OpenClaw" target="_blank" rel="noopener noreferrer">https://github.com/OpenClaw/OpenClaw</a></td>
+</tr>
+</tbody>
+</table>
+<h3 id="doc-13-93-aider"><a class="hlink" href="#doc-13-93-aider" title="本节链接">#</a>9.3 Aider</h3>
+<table>
+<thead>
+<tr>
+<th>项目</th>
+<th>链接</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>主仓库</td>
+<td><a href="https://github.com/Aider-AI/aider" target="_blank" rel="noopener noreferrer">https://github.com/Aider-AI/aider</a></td>
+</tr>
+<tr>
+<td>官网 / 文档</td>
+<td><a href="https://aider.chat" target="_blank" rel="noopener noreferrer">https://aider.chat</a></td>
+</tr>
+</tbody>
+</table>
+<h3 id="doc-13-94-4"><a class="hlink" href="#doc-13-94-4" title="本节链接">#</a>9.4 第 4 节版图中的其他项目</h3>
+<table>
+<thead>
+<tr>
+<th>项目</th>
+<th>链接</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DeepSeek Harness（DeepSeek 官方，本章背景）</td>
+<td><a href="https://github.com/deepseek-ai/deepseek-harness" target="_blank" rel="noopener noreferrer">https://github.com/deepseek-ai/deepseek-harness</a></td>
+</tr>
+<tr>
+<td>Reasonix（面向 DeepSeek 优化的 Coding Harness）</td>
+<td><a href="https://github.com/esengine/DeepSeek-Reasonix" target="_blank" rel="noopener noreferrer">https://github.com/esengine/DeepSeek-Reasonix</a></td>
+</tr>
+<tr>
+<td>Gas Town（Steve Yegge 的多 Agent 编排）</td>
+<td><a href="https://github.com/gastownhall/gastown" target="_blank" rel="noopener noreferrer">https://github.com/gastownhall/gastown</a></td>
+</tr>
+<tr>
+<td>OpenCode</td>
+<td><a href="https://github.com/sst/opencode" target="_blank" rel="noopener noreferrer">https://github.com/sst/opencode</a></td>
+</tr>
+<tr>
+<td>Cline</td>
+<td><a href="https://github.com/cline/cline" target="_blank" rel="noopener noreferrer">https://github.com/cline/cline</a></td>
+</tr>
+<tr>
+<td>Amp</td>
+<td><a href="https://ampcode.com" target="_blank" rel="noopener noreferrer">https://ampcode.com</a></td>
+</tr>
+<tr>
+<td>Claude Code（Anthropic）</td>
+<td><a href="https://github.com/anthropics/claude-code" target="_blank" rel="noopener noreferrer">https://github.com/anthropics/claude-code</a></td>
+</tr>
+<tr>
+<td>Codex（OpenAI）</td>
+<td><a href="https://github.com/openai/codex" target="_blank" rel="noopener noreferrer">https://github.com/openai/codex</a></td>
+</tr>
+<tr>
+<td>Floatboat</td>
+<td>见 §9.1 延伸阅读（InfoQ 专访）</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>说明</strong>：Cursor、Windsurf、Antigravity 等为闭源商业产品，官网即可检索，本章不再单列；Steve Yegge 早期关于"Agent 的 Kubernetes"的原始表述见 §9.1 原文所述。</p>
+</blockquote>
+<h3 id="doc-13-95"><a class="hlink" href="#doc-13-95" title="本节链接">#</a>9.5 星标数据口径</h3>
+<p>Pi / Aider 的星标、许可、语言、创建时间与最近提交时间，均取自 <strong>GitHub REST API</strong>，查询时间 <strong>2026-10-11</strong>：</p>
+<table>
+<thead>
+<tr>
+<th>仓库</th>
+<th style="text-align: right;">星标</th>
+<th>许可</th>
+<th>语言</th>
+<th>创建</th>
+<th>最近提交</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>earendil-works/pi</code></td>
+<td style="text-align: right;">≈114.2k</td>
+<td>MIT</td>
+<td>TypeScript</td>
+<td>2025-08-09</td>
+<td>2026-10-11</td>
+</tr>
+<tr>
+<td><code>Aider-AI/aider</code></td>
+<td style="text-align: right;">≈49.5k</td>
+<td>Apache-2.0</td>
+<td>Python</td>
+<td>2023-05-09</td>
+<td>2026-05-22</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>星标数为快照值，会随时间变化；引用时请注明查询日期。</p>
 </blockquote></div></section><section class="doc" id="doc-14" data-title="企业落地常见坑与注意事项"><header class="doc-head"><div class="doc-kicker">DOC 15</div><h2>企业落地常见坑与注意事项</h2><div class="doc-source">来源：10_企业落地常见坑与注意事项.md</div></header><details class="doc-toc"><summary>本篇目录</summary><div class="toc">
 <ul>
 <li><a href="#doc-14-1">1. 通用原则</a></li>
@@ -11129,14 +11315,14 @@ Demo 5：受控自进化门禁
 </ul>
 <h2 id="doc-14-5"><a class="hlink" href="#doc-14-5" title="本节链接">#</a>5. 配套视频与资料</h2>
 <ul>
-<li><a href="https://genai.owasp.org/llm-top-10/">OWASP LLM Top 10</a></li>
-<li><a href="https://www.nist.gov/itl/ai-risk-management-framework">NIST AI RMF</a></li>
-<li><a href="https://opentelemetry.io/docs/specs/semconv/gen-ai/">OpenTelemetry GenAI</a></li>
-<li><a href="https://www.promptfoo.dev/docs/">promptfoo</a></li>
-<li><a href="https://docs.ragas.io/">Ragas</a></li>
-<li><a href="https://docs.vllm.ai/en/latest/configuration/optimization.html">vLLM Optimization</a></li>
-<li><a href="https://docs.nvidia.com/datacenter/cloud-native/gpu-operator/latest/">GPU Operator</a></li>
-<li><a href="https://kueue.sigs.k8s.io/">Kueue</a></li>
+<li><a href="https://genai.owasp.org/llm-top-10/" target="_blank" rel="noopener noreferrer">OWASP LLM Top 10</a></li>
+<li><a href="https://www.nist.gov/itl/ai-risk-management-framework" target="_blank" rel="noopener noreferrer">NIST AI RMF</a></li>
+<li><a href="https://opentelemetry.io/docs/specs/semconv/gen-ai/" target="_blank" rel="noopener noreferrer">OpenTelemetry GenAI</a></li>
+<li><a href="https://www.promptfoo.dev/docs/" target="_blank" rel="noopener noreferrer">promptfoo</a></li>
+<li><a href="https://docs.ragas.io/" target="_blank" rel="noopener noreferrer">Ragas</a></li>
+<li><a href="https://docs.vllm.ai/en/latest/configuration/optimization.html" target="_blank" rel="noopener noreferrer">vLLM Optimization</a></li>
+<li><a href="https://docs.nvidia.com/datacenter/cloud-native/gpu-operator/latest/" target="_blank" rel="noopener noreferrer">GPU Operator</a></li>
+<li><a href="https://kueue.sigs.k8s.io/" target="_blank" rel="noopener noreferrer">Kueue</a></li>
 </ul></div></section><section class="doc" id="doc-15" data-title="国产 GPU 与千卡集群规划实施指南"><header class="doc-head"><div class="doc-kicker">DOC 16</div><h2>国产 GPU 与千卡集群规划实施指南</h2><div class="doc-source">来源：11_国产GPU与千卡集群规划实施指南.md</div></header><details class="doc-toc"><summary>本篇目录</summary><div class="toc">
 <ul>
 <li><a href="#doc-15-1-gpu-gpu">1. 国产 GPU 集群与通用 GPU 集群的差异</a></li>
@@ -11324,19 +11510,19 @@ Demo 5：受控自进化门禁
 </table>
 <h3 id="doc-15-22"><a class="hlink" href="#doc-15-22" title="本节链接">#</a>2.2 官方入口</h3>
 <ul>
-<li>华为昇腾：<a href="https://www.hiascend.com/">https://www.hiascend.com/</a></li>
-<li>昇腾 CANN：<a href="https://www.hiascend.com/cann">https://www.hiascend.com/cann</a></li>
-<li>MindIE：<a href="https://www.hiascend.com/developer/software/mindie">https://www.hiascend.com/developer/software/mindie</a></li>
-<li>MindCluster：<a href="https://www.hiascend.com/developer/software/mindcluster">https://www.hiascend.com/developer/software/mindcluster</a></li>
-<li>华为超节点：<a href="https://www.huawei.com/en/news/2025/9/hc-superpod-innovation">https://www.huawei.com/en/news/2025/9/hc-superpod-innovation</a></li>
-<li>寒武纪：<a href="https://www.cambricon.com/">https://www.cambricon.com/</a></li>
-<li>海光：<a href="https://www.hygon.cn/">https://www.hygon.cn/</a></li>
-<li>摩尔线程：<a href="https://www.mthreads.com/">https://www.mthreads.com/</a></li>
-<li>摩尔线程开发者：<a href="https://developer.mthreads.com/">https://developer.mthreads.com/</a></li>
-<li>壁仞科技：<a href="https://www.birentech.com/">https://www.birentech.com/</a></li>
-<li>昆仑芯：<a href="https://www.kunlunxin.com/">https://www.kunlunxin.com/</a></li>
-<li>沐曦：<a href="https://www.metax-tech.com/">https://www.metax-tech.com/</a></li>
-<li>天数智芯：<a href="https://www.iluvatar.com/">https://www.iluvatar.com/</a></li>
+<li>华为昇腾：<a href="https://www.hiascend.com/" target="_blank" rel="noopener noreferrer">https://www.hiascend.com/</a></li>
+<li>昇腾 CANN：<a href="https://www.hiascend.com/cann" target="_blank" rel="noopener noreferrer">https://www.hiascend.com/cann</a></li>
+<li>MindIE：<a href="https://www.hiascend.com/developer/software/mindie" target="_blank" rel="noopener noreferrer">https://www.hiascend.com/developer/software/mindie</a></li>
+<li>MindCluster：<a href="https://www.hiascend.com/developer/software/mindcluster" target="_blank" rel="noopener noreferrer">https://www.hiascend.com/developer/software/mindcluster</a></li>
+<li>华为超节点：<a href="https://www.huawei.com/en/news/2025/9/hc-superpod-innovation" target="_blank" rel="noopener noreferrer">https://www.huawei.com/en/news/2025/9/hc-superpod-innovation</a></li>
+<li>寒武纪：<a href="https://www.cambricon.com/" target="_blank" rel="noopener noreferrer">https://www.cambricon.com/</a></li>
+<li>海光：<a href="https://www.hygon.cn/" target="_blank" rel="noopener noreferrer">https://www.hygon.cn/</a></li>
+<li>摩尔线程：<a href="https://www.mthreads.com/" target="_blank" rel="noopener noreferrer">https://www.mthreads.com/</a></li>
+<li>摩尔线程开发者：<a href="https://developer.mthreads.com/" target="_blank" rel="noopener noreferrer">https://developer.mthreads.com/</a></li>
+<li>壁仞科技：<a href="https://www.birentech.com/" target="_blank" rel="noopener noreferrer">https://www.birentech.com/</a></li>
+<li>昆仑芯：<a href="https://www.kunlunxin.com/" target="_blank" rel="noopener noreferrer">https://www.kunlunxin.com/</a></li>
+<li>沐曦：<a href="https://www.metax-tech.com/" target="_blank" rel="noopener noreferrer">https://www.metax-tech.com/</a></li>
+<li>天数智芯：<a href="https://www.iluvatar.com/" target="_blank" rel="noopener noreferrer">https://www.iluvatar.com/</a></li>
 </ul>
 <h2 id="doc-15-3-gpu"><a class="hlink" href="#doc-15-3-gpu" title="本节链接">#</a>3. 国产 GPU 选型方法</h2>
 <p>不能只比较“单卡峰值 TFLOPS”。应按下面的顺序选型：</p>
@@ -11642,24 +11828,24 @@ GPU/NPU 数量
 <h2 id="doc-15-8"><a class="hlink" href="#doc-15-8" title="本节链接">#</a>8. 视频与资料</h2>
 <h3 id="doc-15-_1"><a class="hlink" href="#doc-15-_1" title="本节链接">#</a>国产集群</h3>
 <ul>
-<li><a href="https://www.bilibili.com/video/BV1gL411C7Ki/">昇腾 CANN 入门课</a></li>
-<li><a href="https://www.bilibili.com/video/BV1C94y1V7ZV/">Ascend C 算子开发入门</a></li>
-<li><a href="https://www.bilibili.com/video/BV17F7W6VEmd/">MindIE NPU 模型部署指南</a></li>
-<li><a href="https://www.bilibili.com/video/BV1wpak6gEZx/">基于昇腾超节点的大模型预训练实践</a></li>
-<li><a href="https://www.bilibili.com/video/BV1nY6xYmERG/">GPU 万卡集群概览</a></li>
-<li><a href="https://www.bilibili.com/video/BV1Be4y1o7Jx/">寒武纪 MLU370 安装</a></li>
-<li><a href="https://www.bilibili.com/video/BV1Bh411U7qo/">寒武纪软件栈基础课程</a></li>
-<li><a href="https://www.bilibili.com/video/BV1E1421o7g5/">摩尔线程 MUSA 编程课堂</a></li>
-<li><a href="https://www.bilibili.com/video/BV1kY9uBFEGx/">MUSA SDK 软件栈介绍</a></li>
-<li><a href="https://www.bilibili.com/video/BV1dRfPYZEru/">沐曦 MXMACA 编程教程</a></li>
+<li><a href="https://www.bilibili.com/video/BV1gL411C7Ki/" target="_blank" rel="noopener noreferrer">昇腾 CANN 入门课</a></li>
+<li><a href="https://www.bilibili.com/video/BV1C94y1V7ZV/" target="_blank" rel="noopener noreferrer">Ascend C 算子开发入门</a></li>
+<li><a href="https://www.bilibili.com/video/BV17F7W6VEmd/" target="_blank" rel="noopener noreferrer">MindIE NPU 模型部署指南</a></li>
+<li><a href="https://www.bilibili.com/video/BV1wpak6gEZx/" target="_blank" rel="noopener noreferrer">基于昇腾超节点的大模型预训练实践</a></li>
+<li><a href="https://www.bilibili.com/video/BV1nY6xYmERG/" target="_blank" rel="noopener noreferrer">GPU 万卡集群概览</a></li>
+<li><a href="https://www.bilibili.com/video/BV1Be4y1o7Jx/" target="_blank" rel="noopener noreferrer">寒武纪 MLU370 安装</a></li>
+<li><a href="https://www.bilibili.com/video/BV1Bh411U7qo/" target="_blank" rel="noopener noreferrer">寒武纪软件栈基础课程</a></li>
+<li><a href="https://www.bilibili.com/video/BV1E1421o7g5/" target="_blank" rel="noopener noreferrer">摩尔线程 MUSA 编程课堂</a></li>
+<li><a href="https://www.bilibili.com/video/BV1kY9uBFEGx/" target="_blank" rel="noopener noreferrer">MUSA SDK 软件栈介绍</a></li>
+<li><a href="https://www.bilibili.com/video/BV1dRfPYZEru/" target="_blank" rel="noopener noreferrer">沐曦 MXMACA 编程教程</a></li>
 </ul>
 <h3 id="doc-15-_2"><a class="hlink" href="#doc-15-_2" title="本节链接">#</a>千卡 / 大规模集群</h3>
 <ul>
-<li><a href="https://www.youtube.com/watch?v=o9xAU7KWbvI">How to Design a GPU Cluster for AI Training</a></li>
-<li><a href="https://www.youtube.com/watch?v=31m3KHgvV-M">GPU Cluster Network Design for AI Training</a></li>
-<li><a href="https://www.youtube.com/watch?v=rfu5FwncZ6s">Building a GPU Cluster for AI</a></li>
-<li><a href="https://www.youtube.com/watch?v=oXV6Bd7Km-k">The Hidden Crisis Behind Large-Scale GPU Clusters</a></li>
-<li><a href="https://www.youtube.com/watch?v=N5AJJ0tAoxc">Inside a New AI Cluster with NVIDIA B200</a></li>
+<li><a href="https://www.youtube.com/watch?v=o9xAU7KWbvI" target="_blank" rel="noopener noreferrer">How to Design a GPU Cluster for AI Training</a></li>
+<li><a href="https://www.youtube.com/watch?v=31m3KHgvV-M" target="_blank" rel="noopener noreferrer">GPU Cluster Network Design for AI Training</a></li>
+<li><a href="https://www.youtube.com/watch?v=rfu5FwncZ6s" target="_blank" rel="noopener noreferrer">Building a GPU Cluster for AI</a></li>
+<li><a href="https://www.youtube.com/watch?v=oXV6Bd7Km-k" target="_blank" rel="noopener noreferrer">The Hidden Crisis Behind Large-Scale GPU Clusters</a></li>
+<li><a href="https://www.youtube.com/watch?v=N5AJJ0tAoxc" target="_blank" rel="noopener noreferrer">Inside a New AI Cluster with NVIDIA B200</a></li>
 </ul>
 <h2 id="doc-15-9"><a class="hlink" href="#doc-15-9" title="本节链接">#</a>9. 最终检查表</h2>
 <ul>
@@ -11822,52 +12008,52 @@ GPU/NPU 数量
 <tbody>
 <tr>
 <td>AWS</td>
-<td><a href="https://aws.amazon.com/ec2/instance-types/accelerated-computing/">https://aws.amazon.com/ec2/instance-types/accelerated-computing/</a></td>
+<td><a href="https://aws.amazon.com/ec2/instance-types/accelerated-computing/" target="_blank" rel="noopener noreferrer">https://aws.amazon.com/ec2/instance-types/accelerated-computing/</a></td>
 <td>P/G 系列、EFA、Capacity Reservation、Spot</td>
 </tr>
 <tr>
 <td>AWS EFA</td>
-<td><a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/efa.html">https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/efa.html</a></td>
+<td><a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/efa.html" target="_blank" rel="noopener noreferrer">https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/efa.html</a></td>
 <td>GPUDirect RDMA、拓扑和多实例通信</td>
 </tr>
 <tr>
 <td>Microsoft Azure</td>
-<td><a href="https://learn.microsoft.com/en-us/azure/virtual-machines/sizes-gpu">https://learn.microsoft.com/en-us/azure/virtual-machines/sizes-gpu</a></td>
+<td><a href="https://learn.microsoft.com/en-us/azure/virtual-machines/sizes-gpu" target="_blank" rel="noopener noreferrer">https://learn.microsoft.com/en-us/azure/virtual-machines/sizes-gpu</a></td>
 <td>ND/NC 系列、InfiniBand、区域和配额</td>
 </tr>
 <tr>
 <td>Azure InfiniBand</td>
-<td><a href="https://learn.microsoft.com/en-us/azure/virtual-machines/extensions/hpc-compute-infiniband-linux">https://learn.microsoft.com/en-us/azure/virtual-machines/extensions/hpc-compute-infiniband-linux</a></td>
+<td><a href="https://learn.microsoft.com/en-us/azure/virtual-machines/extensions/hpc-compute-infiniband-linux" target="_blank" rel="noopener noreferrer">https://learn.microsoft.com/en-us/azure/virtual-machines/extensions/hpc-compute-infiniband-linux</a></td>
 <td>多节点训练网络</td>
 </tr>
 <tr>
 <td>Google Cloud</td>
-<td><a href="https://cloud.google.com/compute/docs/gpus">https://cloud.google.com/compute/docs/gpus</a></td>
+<td><a href="https://cloud.google.com/compute/docs/gpus" target="_blank" rel="noopener noreferrer">https://cloud.google.com/compute/docs/gpus</a></td>
 <td>A3/A4/G2 等、GPU 配额、区域库存</td>
 </tr>
 <tr>
 <td>阿里云</td>
-<td><a href="https://www.alibabacloud.com/help/en/ecs/user-guide/gpu-accelerated-compute-optimized-instance-families">https://www.alibabacloud.com/help/en/ecs/user-guide/gpu-accelerated-compute-optimized-instance-families</a></td>
+<td><a href="https://www.alibabacloud.com/help/en/ecs/user-guide/gpu-accelerated-compute-optimized-instance-families" target="_blank" rel="noopener noreferrer">https://www.alibabacloud.com/help/en/ecs/user-guide/gpu-accelerated-compute-optimized-instance-families</a></td>
 <td>GPU ECS、eRDMA、弹性供应</td>
 </tr>
 <tr>
 <td>腾讯云</td>
-<td><a href="https://www.tencentcloud.com/document/product/213/11518">https://www.tencentcloud.com/document/product/213/11518</a></td>
+<td><a href="https://www.tencentcloud.com/document/product/213/11518" target="_blank" rel="noopener noreferrer">https://www.tencentcloud.com/document/product/213/11518</a></td>
 <td>GPU 计算型实例、网络和存储</td>
 </tr>
 <tr>
 <td>百度智能云</td>
-<td><a href="https://cloud.baidu.com/product/gpu.html">https://cloud.baidu.com/product/gpu.html</a></td>
+<td><a href="https://cloud.baidu.com/product/gpu.html" target="_blank" rel="noopener noreferrer">https://cloud.baidu.com/product/gpu.html</a></td>
 <td>GPU 云服务器、训练平台</td>
 </tr>
 <tr>
 <td>火山引擎</td>
-<td><a href="https://www.volcengine.com/product/gpu">https://www.volcengine.com/product/gpu</a></td>
+<td><a href="https://www.volcengine.com/product/gpu" target="_blank" rel="noopener noreferrer">https://www.volcengine.com/product/gpu</a></td>
 <td>GPU 实例、弹性算力</td>
 </tr>
 <tr>
 <td>华为云</td>
-<td><a href="https://www.huaweicloud.com/">https://www.huaweicloud.com/</a></td>
+<td><a href="https://www.huaweicloud.com/" target="_blank" rel="noopener noreferrer">https://www.huaweicloud.com/</a></td>
 <td>GPU / AI 实例、昇腾生态和 ModelArts</td>
 </tr>
 </tbody>
@@ -12017,20 +12203,20 @@ GPU 实例费
 </table>
 <h2 id="doc-16-9"><a class="hlink" href="#doc-16-9" title="本节链接">#</a>9. 视频与资料</h2>
 <ul>
-<li><a href="https://aws.amazon.com/ec2/instance-types/accelerated-computing/">AWS EC2 加速计算实例</a></li>
-<li><a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/efa.html">AWS EFA 文档</a></li>
-<li><a href="https://learn.microsoft.com/en-us/azure/virtual-machines/sizes-gpu">Azure GPU VM</a></li>
-<li><a href="https://learn.microsoft.com/en-us/azure/virtual-machines/extensions/hpc-compute-infiniband-linux">Azure InfiniBand</a></li>
-<li><a href="https://cloud.google.com/compute/docs/gpus">Google Cloud GPU</a></li>
-<li><a href="https://www.alibabacloud.com/help/en/ecs/user-guide/gpu-accelerated-compute-optimized-instance-families">阿里云 GPU 实例</a></li>
-<li><a href="https://www.tencentcloud.com/document/product/213/11518">腾讯云 GPU 文档</a></li>
-<li><a href="https://cloud.baidu.com/product/gpu.html">百度智能云 GPU</a></li>
-<li><a href="https://www.volcengine.com/product/gpu">火山引擎 GPU</a></li>
-<li><a href="https://www.youtube.com/watch?v=4lzE3Dan6vs">AWS GPU/Spot 讲解</a></li>
-<li><a href="https://www.youtube.com/watch?v=Cb13DAB59Po">Google Cloud GPU VM 教程</a></li>
-<li><a href="https://www.youtube.com/watch?v=7sJ2X3hYNaA">Azure NVIDIA VM 与 LLM 部署</a></li>
-<li><a href="https://www.youtube.com/watch?v=31m3KHgvV-M">GPU Cluster Network Design</a></li>
-<li><a href="https://www.youtube.com/watch?v=wVRnTM5pQbo">How to Reduce Cloud GPU Costs</a></li>
+<li><a href="https://aws.amazon.com/ec2/instance-types/accelerated-computing/" target="_blank" rel="noopener noreferrer">AWS EC2 加速计算实例</a></li>
+<li><a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/efa.html" target="_blank" rel="noopener noreferrer">AWS EFA 文档</a></li>
+<li><a href="https://learn.microsoft.com/en-us/azure/virtual-machines/sizes-gpu" target="_blank" rel="noopener noreferrer">Azure GPU VM</a></li>
+<li><a href="https://learn.microsoft.com/en-us/azure/virtual-machines/extensions/hpc-compute-infiniband-linux" target="_blank" rel="noopener noreferrer">Azure InfiniBand</a></li>
+<li><a href="https://cloud.google.com/compute/docs/gpus" target="_blank" rel="noopener noreferrer">Google Cloud GPU</a></li>
+<li><a href="https://www.alibabacloud.com/help/en/ecs/user-guide/gpu-accelerated-compute-optimized-instance-families" target="_blank" rel="noopener noreferrer">阿里云 GPU 实例</a></li>
+<li><a href="https://www.tencentcloud.com/document/product/213/11518" target="_blank" rel="noopener noreferrer">腾讯云 GPU 文档</a></li>
+<li><a href="https://cloud.baidu.com/product/gpu.html" target="_blank" rel="noopener noreferrer">百度智能云 GPU</a></li>
+<li><a href="https://www.volcengine.com/product/gpu" target="_blank" rel="noopener noreferrer">火山引擎 GPU</a></li>
+<li><a href="https://www.youtube.com/watch?v=4lzE3Dan6vs" target="_blank" rel="noopener noreferrer">AWS GPU/Spot 讲解</a></li>
+<li><a href="https://www.youtube.com/watch?v=Cb13DAB59Po" target="_blank" rel="noopener noreferrer">Google Cloud GPU VM 教程</a></li>
+<li><a href="https://www.youtube.com/watch?v=7sJ2X3hYNaA" target="_blank" rel="noopener noreferrer">Azure NVIDIA VM 与 LLM 部署</a></li>
+<li><a href="https://www.youtube.com/watch?v=31m3KHgvV-M" target="_blank" rel="noopener noreferrer">GPU Cluster Network Design</a></li>
+<li><a href="https://www.youtube.com/watch?v=wVRnTM5pQbo" target="_blank" rel="noopener noreferrer">How to Reduce Cloud GPU Costs</a></li>
 </ul>
 <h2 id="doc-16-10"><a class="hlink" href="#doc-16-10" title="本节链接">#</a>10. 最终检查表</h2>
 <ul>
@@ -12927,97 +13113,97 @@ adversarial_set  20 条注入/越权/数据外泄
 </thead>
 <tbody>
 <tr>
-<td><a href="https://learn.microsoft.com/en-us/agent-framework/concepts/harness">Microsoft Agent Framework: Agent Harness</a></td>
+<td><a href="https://learn.microsoft.com/en-us/agent-framework/concepts/harness" target="_blank" rel="noopener noreferrer">Microsoft Agent Framework: Agent Harness</a></td>
 <td>官方文档</td>
 <td>把 Harness 定义为模型周围的运行时脚手架，驱动模型和工具调用、会话状态、审批策略、长任务推进</td>
 <td>作为 Harness 组件清单的主参考</td>
 </tr>
 <tr>
-<td><a href="https://www.bcg.com/publications/2026/harness-engineering-scale-agentic-ai">BCG: Harness Engineering: The Operating System for Agentic AI</a></td>
+<td><a href="https://www.bcg.com/publications/2026/harness-engineering-scale-agentic-ai" target="_blank" rel="noopener noreferrer">BCG: Harness Engineering: The Operating System for Agentic AI</a></td>
 <td>行业研究，2026-09-16</td>
 <td>Harness 是企业 Agent 的操作系统；强调 start small、build don’t buy、选择性落地</td>
 <td>企业组织、采购和治理视角</td>
 </tr>
 <tr>
-<td><a href="https://parallel.ai/articles/what-is-an-agent-harness">Parallel: What is an agent harness?</a></td>
+<td><a href="https://parallel.ai/articles/what-is-an-agent-harness" target="_blank" rel="noopener noreferrer">Parallel: What is an agent harness?</a></td>
 <td>深度解读，2026-09-26</td>
 <td>Intent、Orchestration、Tool Execution、Context、Memory、Verification、Persistence</td>
 <td>理解 Harness 与 Prompt Engineering / Framework 的边界</td>
 </tr>
 <tr>
-<td><a href="https://www.anthropic.com/engineering/building-effective-agents">Anthropic: Building effective agents</a></td>
+<td><a href="https://www.anthropic.com/engineering/building-effective-agents" target="_blank" rel="noopener noreferrer">Anthropic: Building effective agents</a></td>
 <td>工程博客，2024-12-19</td>
 <td>Workflow vs Agent、Prompt Chaining、Routing、Parallelization、Orchestrator、Evaluator</td>
 <td>建立最简单的 Agent 设计原则；注意文中旧框架已标注变化</td>
 </tr>
 <tr>
-<td><a href="https://www.anthropic.com/engineering/effective-harnesses-for-long-running-agents">Anthropic: Effective harnesses for long-running agents</a></td>
+<td><a href="https://www.anthropic.com/engineering/effective-harnesses-for-long-running-agents" target="_blank" rel="noopener noreferrer">Anthropic: Effective harnesses for long-running agents</a></td>
 <td>工程博客，2025-11-26</td>
 <td>Initializer Agent、Progress Log、跨 Context Window 恢复、增量交付</td>
 <td>长任务 Harness 的关键设计</td>
 </tr>
 <tr>
-<td><a href="https://www.anthropic.com/engineering/writing-tools-for-agents">Anthropic: Writing effective tools for agents</a></td>
+<td><a href="https://www.anthropic.com/engineering/writing-tools-for-agents" target="_blank" rel="noopener noreferrer">Anthropic: Writing effective tools for agents</a></td>
 <td>工程博客，2025-09-11</td>
 <td>工具边界、命名空间、返回上下文、Token 效率、工具评测</td>
 <td>设计企业级 Tool / MCP</td>
 </tr>
 <tr>
-<td><a href="https://developers.openai.com/codex/guides/agents-md/">OpenAI: Custom instructions with AGENTS.md</a></td>
+<td><a href="https://developers.openai.com/codex/guides/agents-md/" target="_blank" rel="noopener noreferrer">OpenAI: Custom instructions with AGENTS.md</a></td>
 <td>官方文档</td>
 <td>全局、仓库、子目录 AGENTS.md 的优先级与覆盖机制</td>
 <td>为 Codex 类编码 Harness 建立团队规则</td>
 </tr>
 <tr>
-<td><a href="https://developers.openai.com/codex/skills/">OpenAI: Codex Skills</a></td>
+<td><a href="https://developers.openai.com/codex/skills/" target="_blank" rel="noopener noreferrer">OpenAI: Codex Skills</a></td>
 <td>官方文档</td>
 <td>SKILL.md、渐进式披露、仓库/用户/管理员范围、显式与隐式触发</td>
 <td>构建可复用工作流和领域能力</td>
 </tr>
 <tr>
-<td><a href="https://platform.openai.com/docs/guides/agents">OpenAI: Agents API Guide</a></td>
+<td><a href="https://platform.openai.com/docs/guides/agents" target="_blank" rel="noopener noreferrer">OpenAI: Agents API Guide</a></td>
 <td>官方文档</td>
 <td>Responses、状态、工具、后台运行、多 Agent、评测和生产建议</td>
 <td>对比托管 Agent 能力与自研 Harness</td>
 </tr>
 <tr>
-<td><a href="https://developers.openai.com/codex/administration/">OpenAI: Codex Administration</a></td>
+<td><a href="https://developers.openai.com/codex/administration/" target="_blank" rel="noopener noreferrer">OpenAI: Codex Administration</a></td>
 <td>官方文档</td>
 <td>企业部署、权限、策略和治理入口</td>
 <td>大企业推广 AI Coding / Agent 的治理参考</td>
 </tr>
 <tr>
-<td><a href="https://modelcontextprotocol.io/docs/getting-started/intro">Model Context Protocol</a></td>
+<td><a href="https://modelcontextprotocol.io/docs/getting-started/intro" target="_blank" rel="noopener noreferrer">Model Context Protocol</a></td>
 <td>开放协议</td>
 <td>Host / Client / Server、工具、资源和提示词协议；当前文档版本含 2026-07-28</td>
 <td>工具接入的标准协议</td>
 </tr>
 <tr>
-<td><a href="https://a2a-protocol.org/">A2A Protocol</a></td>
+<td><a href="https://a2a-protocol.org/" target="_blank" rel="noopener noreferrer">A2A Protocol</a></td>
 <td>开放协议</td>
 <td>Agent-to-Agent 通信、发现、任务与协作</td>
 <td>多 Agent / 多团队互操作</td>
 </tr>
 <tr>
-<td><a href="https://agentskills.io/">Open Agent Skills</a></td>
+<td><a href="https://agentskills.io/" target="_blank" rel="noopener noreferrer">Open Agent Skills</a></td>
 <td>开放标准</td>
 <td>用 SKILL.md 打包可复用 Agent 能力</td>
 <td>让团队能力可版本化、可分发</td>
 </tr>
 <tr>
-<td><a href="https://github.com/NousResearch/hermes-agent">Nous Research Hermes Agent</a></td>
+<td><a href="https://github.com/NousResearch/hermes-agent" target="_blank" rel="noopener noreferrer">Nous Research Hermes Agent</a></td>
 <td>开源参考</td>
 <td>自我改进、长期记忆、Harness 生态</td>
 <td>观察个人 Agent Harness 设计，不建议直接照搬到企业</td>
 </tr>
 <tr>
-<td><a href="https://openclaw.ai/">OpenClaw</a></td>
+<td><a href="https://openclaw.ai/" target="_blank" rel="noopener noreferrer">OpenClaw</a></td>
 <td>开源参考</td>
 <td>本机运行、插件、记忆、多渠道 Surface</td>
 <td>观察个人助理型 Harness，重点研究隔离和权限</td>
 </tr>
 <tr>
-<td><a href="https://github.com/bytedance/deer-flow">ByteDance DeerFlow</a></td>
+<td><a href="https://github.com/bytedance/deer-flow" target="_blank" rel="noopener noreferrer">ByteDance DeerFlow</a></td>
 <td>开源参考</td>
 <td>长任务 SuperAgent Harness、Sandbox、Memory、Tools、Skills、Subagents、Message Gateway</td>
 <td>研究生产级长任务 Harness 的架构拆分</td>
@@ -13036,31 +13222,31 @@ adversarial_set  20 条注入/越权/数据外泄
 </thead>
 <tbody>
 <tr>
-<td><a href="https://fde.academy/blog/ai-product-engineer">FDE Academy: AI Product Engineer</a></td>
+<td><a href="https://fde.academy/blog/ai-product-engineer" target="_blank" rel="noopener noreferrer">FDE Academy: AI Product Engineer</a></td>
 <td>岗位解析，2026-08-26</td>
 <td>AI Product Engineer 端到端负责问题、原型、评估、上线和迭代</td>
 <td>PDE 能力模型的直接参考</td>
 </tr>
 <tr>
-<td><a href="https://www.jxxy.net/ai/articles/AdrianPunk115-2084181951255392726/">PDE 新职业解析</a></td>
+<td><a href="https://www.jxxy.net/ai/articles/AdrianPunk115-2084181951255392726/" target="_blank" rel="noopener noreferrer">PDE 新职业解析</a></td>
 <td>中文行业文章，2026-08-11</td>
 <td>PDE = Product Design Engineer；设计、交互、生产代码三合一</td>
 <td>中文岗位语境和转型路径</td>
 </tr>
 <tr>
-<td><a href="https://www.nngroup.com/articles/ai-chat-ux/">Nielsen Norman Group: AI Chat UX</a></td>
+<td><a href="https://www.nngroup.com/articles/ai-chat-ux/" target="_blank" rel="noopener noreferrer">Nielsen Norman Group: AI Chat UX</a></td>
 <td>UX 研究</td>
 <td>Chat 界面的用户预期、可见性和信任问题</td>
 <td>设计 AI 交互状态</td>
 </tr>
 <tr>
-<td><a href="https://pair.withgoogle.com/guidebook/">Google PAIR: People + AI Guidebook</a></td>
+<td><a href="https://pair.withgoogle.com/guidebook/" target="_blank" rel="noopener noreferrer">Google PAIR: People + AI Guidebook</a></td>
 <td>产品设计指南</td>
 <td>用户价值、反馈、错误恢复、信任和解释</td>
 <td>AI 产品设计基础</td>
 </tr>
 <tr>
-<td><a href="https://www.microsoft.com/en-us/haxtoolkit/">Microsoft HAX Toolkit</a></td>
+<td><a href="https://www.microsoft.com/en-us/haxtoolkit/" target="_blank" rel="noopener noreferrer">Microsoft HAX Toolkit</a></td>
 <td>人机交互指南</td>
 <td>不确定性、错误、可解释性、用户控制</td>
 <td>补足 AI 产品的交互异常状态</td>
@@ -13069,11 +13255,11 @@ adversarial_set  20 条注入/越权/数据外泄
 </table>
 <p>PDE 的工程部分继续使用：</p>
 <ul>
-<li><a href="https://developer.mozilla.org/">MDN Web Docs</a>：HTML / CSS / JavaScript / Accessibility</li>
-<li><a href="https://react.dev/">React</a>：组件、状态和交互</li>
-<li><a href="https://nextjs.org/docs">Next.js</a>：全栈产品页面与 API</li>
-<li><a href="https://fastapi.tiangolo.com/">FastAPI</a>：后端 API</li>
-<li><a href="https://docs.pydantic.dev/">Pydantic</a>：结构化输入输出与校验</li>
+<li><a href="https://developer.mozilla.org/" target="_blank" rel="noopener noreferrer">MDN Web Docs</a>：HTML / CSS / JavaScript / Accessibility</li>
+<li><a href="https://react.dev/" target="_blank" rel="noopener noreferrer">React</a>：组件、状态和交互</li>
+<li><a href="https://nextjs.org/docs" target="_blank" rel="noopener noreferrer">Next.js</a>：全栈产品页面与 API</li>
+<li><a href="https://fastapi.tiangolo.com/" target="_blank" rel="noopener noreferrer">FastAPI</a>：后端 API</li>
+<li><a href="https://docs.pydantic.dev/" target="_blank" rel="noopener noreferrer">Pydantic</a>：结构化输入输出与校验</li>
 </ul>
 <h2 id="doc-19-ai-infra"><a class="hlink" href="#doc-19-ai-infra" title="本节链接">#</a>三、AI Infra：推理、编排、调度和平台</h2>
 <h3 id="doc-19-31"><a class="hlink" href="#doc-19-31" title="本节链接">#</a>3.1 推理引擎</h3>
@@ -13088,27 +13274,27 @@ adversarial_set  20 条注入/越权/数据外泄
 <tbody>
 <tr>
 <td>vLLM</td>
-<td><a href="https://docs.vllm.ai/">docs.vllm.ai</a></td>
+<td><a href="https://docs.vllm.ai/" target="_blank" rel="noopener noreferrer">docs.vllm.ai</a></td>
 <td>主推理引擎，PagedAttention、Continuous Batching、OpenAI API</td>
 </tr>
 <tr>
 <td>SGLang</td>
-<td><a href="https://docs.sglang.ai/">docs.sglang.ai</a></td>
+<td><a href="https://docs.sglang.ai/" target="_blank" rel="noopener noreferrer">docs.sglang.ai</a></td>
 <td>RadixAttention、复杂控制流、Agent / RAG 负载</td>
 </tr>
 <tr>
 <td>TensorRT-LLM</td>
-<td><a href="https://docs.nvidia.com/tensorrt-llm/">NVIDIA TensorRT-LLM Docs</a></td>
+<td><a href="https://docs.nvidia.com/tensorrt-llm/" target="_blank" rel="noopener noreferrer">NVIDIA TensorRT-LLM Docs</a></td>
 <td>NVIDIA 深度优化和编译优化</td>
 </tr>
 <tr>
 <td>NVIDIA NIM</td>
-<td><a href="https://docs.nvidia.com/nim/large-language-models/latest/">NVIDIA NIM LLM Docs</a></td>
+<td><a href="https://docs.nvidia.com/nim/large-language-models/latest/" target="_blank" rel="noopener noreferrer">NVIDIA NIM LLM Docs</a></td>
 <td>企业模型容器和标准化推理服务</td>
 </tr>
 <tr>
 <td>NVIDIA Dynamo</td>
-<td><a href="https://docs.nvidia.com/dynamo/latest/">NVIDIA Dynamo Docs</a></td>
+<td><a href="https://docs.nvidia.com/dynamo/latest/" target="_blank" rel="noopener noreferrer">NVIDIA Dynamo Docs</a></td>
 <td>分布式推理、Disaggregated Serving、KV-aware Routing、缓存、自动扩缩容</td>
 </tr>
 </tbody>
@@ -13125,37 +13311,37 @@ adversarial_set  20 条注入/越权/数据外泄
 <tbody>
 <tr>
 <td>Ray Serve LLM</td>
-<td><a href="https://docs.ray.io/en/latest/serve/llm/index.html">Ray Serve LLM</a></td>
+<td><a href="https://docs.ray.io/en/latest/serve/llm/index.html" target="_blank" rel="noopener noreferrer">Ray Serve LLM</a></td>
 <td>Python 原生 LLM 服务、副本、扩缩容、组合式应用</td>
 </tr>
 <tr>
 <td>KubeRay</td>
-<td><a href="https://docs.ray.io/en/latest/cluster/kubernetes/index.html">Ray on Kubernetes</a></td>
+<td><a href="https://docs.ray.io/en/latest/cluster/kubernetes/index.html" target="_blank" rel="noopener noreferrer">Ray on Kubernetes</a></td>
 <td>在 K8s 上运行 Ray 集群和 Ray Serve</td>
 </tr>
 <tr>
 <td>KServe</td>
-<td><a href="https://kserve.github.io/website/">KServe</a></td>
+<td><a href="https://kserve.github.io/website/" target="_blank" rel="noopener noreferrer">KServe</a></td>
 <td>生成式与预测式推理平台、Canary、模型缓存、自动扩缩容</td>
 </tr>
 <tr>
 <td>Gateway API Inference Extension</td>
-<td><a href="https://gateway-api-inference-extension.sigs.k8s.io/">项目文档</a></td>
+<td><a href="https://gateway-api-inference-extension.sigs.k8s.io/" target="_blank" rel="noopener noreferrer">项目文档</a></td>
 <td>Inference Gateway、Endpoint Picker、前缀缓存和推理路由</td>
 </tr>
 <tr>
 <td>llm-d</td>
-<td><a href="https://llm-d.ai/">llm-d.ai</a></td>
+<td><a href="https://llm-d.ai/" target="_blank" rel="noopener noreferrer">llm-d.ai</a></td>
 <td>Kubernetes 原生分布式 LLM 推理，Well-Lit Paths，多硬件</td>
 </tr>
 <tr>
 <td>vLLM Production Stack</td>
-<td><a href="https://github.com/vllm-project/production-stack">GitHub</a></td>
+<td><a href="https://github.com/vllm-project/production-stack" target="_blank" rel="noopener noreferrer">GitHub</a></td>
 <td>vLLM 的 K8s 参考栈、路由、KV Cache Offloading、监控</td>
 </tr>
 <tr>
 <td>LiteLLM</td>
-<td><a href="https://docs.litellm.ai/">docs.litellm.ai</a></td>
+<td><a href="https://docs.litellm.ai/" target="_blank" rel="noopener noreferrer">docs.litellm.ai</a></td>
 <td>多模型网关、配额、路由和 OpenAI 兼容接口</td>
 </tr>
 </tbody>
@@ -13172,22 +13358,22 @@ adversarial_set  20 条注入/越权/数据外泄
 <tbody>
 <tr>
 <td>Kueue</td>
-<td><a href="https://kueue.sigs.k8s.io/">kueue.sigs.k8s.io</a></td>
+<td><a href="https://kueue.sigs.k8s.io/" target="_blank" rel="noopener noreferrer">kueue.sigs.k8s.io</a></td>
 <td>队列、配额、优先级、抢占、多租户 GPU 共享</td>
 </tr>
 <tr>
 <td>Kubeflow Trainer</td>
-<td><a href="https://www.kubeflow.org/docs/components/trainer/">Kubeflow Trainer</a></td>
+<td><a href="https://www.kubeflow.org/docs/components/trainer/" target="_blank" rel="noopener noreferrer">Kubeflow Trainer</a></td>
 <td>K8s 原生分布式训练和微调</td>
 </tr>
 <tr>
 <td>GPU Operator</td>
-<td><a href="https://docs.nvidia.com/datacenter/cloud-native/gpu-operator/latest/">NVIDIA GPU Operator</a></td>
+<td><a href="https://docs.nvidia.com/datacenter/cloud-native/gpu-operator/latest/" target="_blank" rel="noopener noreferrer">NVIDIA GPU Operator</a></td>
 <td>GPU 驱动、设备插件、监控和节点管理</td>
 </tr>
 <tr>
 <td>MLflow GenAI</td>
-<td><a href="https://mlflow.org/docs/latest/genai/">MLflow for Agents and LLMs</a></td>
+<td><a href="https://mlflow.org/docs/latest/genai/" target="_blank" rel="noopener noreferrer">MLflow for Agents and LLMs</a></td>
 <td>Tracing、评估、Prompt、模型和 Agent 生命周期</td>
 </tr>
 </tbody>
@@ -13204,52 +13390,52 @@ adversarial_set  20 条注入/越权/数据外泄
 <tbody>
 <tr>
 <td>OpenTelemetry GenAI</td>
-<td><a href="https://opentelemetry.io/docs/specs/semconv/gen-ai/">Semantic Conventions</a></td>
+<td><a href="https://opentelemetry.io/docs/specs/semconv/gen-ai/" target="_blank" rel="noopener noreferrer">Semantic Conventions</a></td>
 <td>LLM / Agent 的 Trace、Span、Token、工具调用标准</td>
 </tr>
 <tr>
 <td>Langfuse</td>
-<td><a href="https://langfuse.com/docs">Langfuse Docs</a></td>
+<td><a href="https://langfuse.com/docs" target="_blank" rel="noopener noreferrer">Langfuse Docs</a></td>
 <td>LLM / Agent Tracing、Prompt、评估、成本监控</td>
 </tr>
 <tr>
 <td>Prometheus</td>
-<td><a href="https://prometheus.io/docs/">prometheus.io</a></td>
+<td><a href="https://prometheus.io/docs/" target="_blank" rel="noopener noreferrer">prometheus.io</a></td>
 <td>基础设施和 GPU 指标</td>
 </tr>
 <tr>
 <td>Grafana</td>
-<td><a href="https://grafana.com/docs/grafana/latest/">grafana.com/docs</a></td>
+<td><a href="https://grafana.com/docs/grafana/latest/" target="_blank" rel="noopener noreferrer">grafana.com/docs</a></td>
 <td>服务、GPU、成本和业务指标可视化</td>
 </tr>
 <tr>
 <td>promptfoo</td>
-<td><a href="https://www.promptfoo.dev/docs/">promptfoo Docs</a></td>
+<td><a href="https://www.promptfoo.dev/docs/" target="_blank" rel="noopener noreferrer">promptfoo Docs</a></td>
 <td>Prompt / Agent 红队与回归评测</td>
 </tr>
 <tr>
 <td>Ragas</td>
-<td><a href="https://docs.ragas.io/">Ragas Docs</a></td>
+<td><a href="https://docs.ragas.io/" target="_blank" rel="noopener noreferrer">Ragas Docs</a></td>
 <td>RAG 检索和生成质量评估</td>
 </tr>
 <tr>
 <td>DeepEval</td>
-<td><a href="https://github.com/confident-ai/deepeval">GitHub</a></td>
+<td><a href="https://github.com/confident-ai/deepeval" target="_blank" rel="noopener noreferrer">GitHub</a></td>
 <td>LLM / Agent 单元测试式评估</td>
 </tr>
 <tr>
 <td>OWASP LLM Top 10</td>
-<td><a href="https://genai.owasp.org/llm-top-10/">GenAI Security Project</a></td>
+<td><a href="https://genai.owasp.org/llm-top-10/" target="_blank" rel="noopener noreferrer">GenAI Security Project</a></td>
 <td>Prompt Injection、敏感信息、供应链、过度代理等风险</td>
 </tr>
 <tr>
 <td>NIST AI RMF</td>
-<td><a href="https://www.nist.gov/itl/ai-risk-management-framework">AI Risk Management Framework</a></td>
+<td><a href="https://www.nist.gov/itl/ai-risk-management-framework" target="_blank" rel="noopener noreferrer">AI Risk Management Framework</a></td>
 <td>企业 AI 风险和治理框架</td>
 </tr>
 <tr>
 <td>NVIDIA NeMo Guardrails</td>
-<td><a href="https://docs.nvidia.com/nemo/guardrails/latest/">官方文档</a></td>
+<td><a href="https://docs.nvidia.com/nemo/guardrails/latest/" target="_blank" rel="noopener noreferrer">官方文档</a></td>
 <td>输入、输出、工具和对话安全护栏</td>
 </tr>
 </tbody>
@@ -13265,122 +13451,122 @@ adversarial_set  20 条注入/越权/数据外泄
 </thead>
 <tbody>
 <tr>
-<td><a href="https://docs.nvidia.com/dgx-superpod/">NVIDIA DGX SuperPOD 文档入口</a></td>
+<td><a href="https://docs.nvidia.com/dgx-superpod/" target="_blank" rel="noopener noreferrer">NVIDIA DGX SuperPOD 文档入口</a></td>
 <td>官方架构与部署文档</td>
 <td>AI Factory / SuperPOD 的 GPU、网络、存储、电力和部署参考</td>
 </tr>
 <tr>
-<td><a href="https://www.nvidia.com/en-us/data-center/dgx-b300/">NVIDIA DGX B300</a></td>
+<td><a href="https://www.nvidia.com/en-us/data-center/dgx-b300/" target="_blank" rel="noopener noreferrer">NVIDIA DGX B300</a></td>
 <td>官方产品</td>
 <td>当前 DGX 平台和集群级部署能力</td>
 </tr>
 <tr>
-<td><a href="https://www.nvidia.com/en-us/data-center/gb300-nvl72/">NVIDIA GB300 NVL72</a></td>
+<td><a href="https://www.nvidia.com/en-us/data-center/gb300-nvl72/" target="_blank" rel="noopener noreferrer">NVIDIA GB300 NVL72</a></td>
 <td>官方产品</td>
 <td>机架级 GPU 互联、液冷和高密度 AI Factory 参考</td>
 </tr>
 <tr>
-<td><a href="https://www.nvidia.com/en-us/data-center/gb200-nvl72/">NVIDIA GB200 NVL72</a></td>
+<td><a href="https://www.nvidia.com/en-us/data-center/gb200-nvl72/" target="_blank" rel="noopener noreferrer">NVIDIA GB200 NVL72</a></td>
 <td>官方产品</td>
 <td>机架级 NVLink 域和分布式训练 / 推理参考</td>
 </tr>
 <tr>
-<td><a href="https://docs.nvidia.com/datacenter/cloud-native/gpu-operator/latest/">NVIDIA GPU Operator</a></td>
+<td><a href="https://docs.nvidia.com/datacenter/cloud-native/gpu-operator/latest/" target="_blank" rel="noopener noreferrer">NVIDIA GPU Operator</a></td>
 <td>官方文档</td>
 <td>K8s 驱动、Container Toolkit、Device Plugin、DCGM、MIG 和 RDMA</td>
 </tr>
 <tr>
-<td><a href="https://docs.nvidia.com/datacenter/cloud-native/gpu-operator/latest/gpu-operator-rdma.html">GPU Operator RDMA</a></td>
+<td><a href="https://docs.nvidia.com/datacenter/cloud-native/gpu-operator/latest/gpu-operator-rdma.html" target="_blank" rel="noopener noreferrer">GPU Operator RDMA</a></td>
 <td>官方文档</td>
 <td>RDMA 与 GPUDirect RDMA 在 K8s 上的配置</td>
 </tr>
 <tr>
-<td><a href="https://docs.nvidia.com/datacenter/cloud-native/gpu-operator/latest/gpu-operator-mig.html">GPU Operator MIG</a></td>
+<td><a href="https://docs.nvidia.com/datacenter/cloud-native/gpu-operator/latest/gpu-operator-mig.html" target="_blank" rel="noopener noreferrer">GPU Operator MIG</a></td>
 <td>官方文档</td>
 <td>MIG 实例、隔离和资源配置</td>
 </tr>
 <tr>
-<td><a href="https://github.com/Mellanox/network-operator">NVIDIA Network Operator</a></td>
+<td><a href="https://github.com/Mellanox/network-operator" target="_blank" rel="noopener noreferrer">NVIDIA Network Operator</a></td>
 <td>开源项目</td>
 <td>K8s 上的 Mellanox / NVIDIA NIC、RDMA、SR-IOV 和网络配置</td>
 </tr>
 <tr>
-<td><a href="https://docs.nvidia.com/datacenter/dcgm/latest/">NVIDIA DCGM</a></td>
+<td><a href="https://docs.nvidia.com/datacenter/dcgm/latest/" target="_blank" rel="noopener noreferrer">NVIDIA DCGM</a></td>
 <td>官方文档</td>
 <td>GPU 遥测、健康诊断、策略和指标</td>
 </tr>
 <tr>
-<td><a href="https://docs.nvidia.com/datacenter/dcgm/latest/user-guide/dcgm-diagnostics.html">DCGM Diagnostics</a></td>
+<td><a href="https://docs.nvidia.com/datacenter/dcgm/latest/user-guide/dcgm-diagnostics.html" target="_blank" rel="noopener noreferrer">DCGM Diagnostics</a></td>
 <td>官方文档</td>
 <td>GPU 诊断等级、健康检查和 Burn-in</td>
 </tr>
 <tr>
-<td><a href="https://docs.nvidia.com/deeplearning/nccl/user-guide/docs/">NVIDIA NCCL</a></td>
+<td><a href="https://docs.nvidia.com/deeplearning/nccl/user-guide/docs/" target="_blank" rel="noopener noreferrer">NVIDIA NCCL</a></td>
 <td>官方文档</td>
 <td>多卡 / 多机集合通信和调试</td>
 </tr>
 <tr>
-<td><a href="https://docs.nvidia.com/deploy/xid-errors/index.html">NVIDIA XID Errors</a></td>
+<td><a href="https://docs.nvidia.com/deploy/xid-errors/index.html" target="_blank" rel="noopener noreferrer">NVIDIA XID Errors</a></td>
 <td>官方文档</td>
 <td>GPU 驱动 / 硬件错误码解释</td>
 </tr>
 <tr>
-<td><a href="https://docs.nvidia.com/deploy/gpu-debug-guidelines/index.html">NVIDIA GPU Debug Guidelines</a></td>
+<td><a href="https://docs.nvidia.com/deploy/gpu-debug-guidelines/index.html" target="_blank" rel="noopener noreferrer">NVIDIA GPU Debug Guidelines</a></td>
 <td>官方文档</td>
 <td>GPU 故障排查和日志定位</td>
 </tr>
 <tr>
-<td><a href="https://github.com/NVIDIA/nvbandwidth">NVIDIA nvbandwidth</a></td>
+<td><a href="https://github.com/NVIDIA/nvbandwidth" target="_blank" rel="noopener noreferrer">NVIDIA nvbandwidth</a></td>
 <td>官方工具</td>
 <td>GPU / NVLink / PCIe / P2P 带宽测试</td>
 </tr>
 <tr>
-<td><a href="https://github.com/NVIDIA/nccl-tests">NVIDIA nccl-tests</a></td>
+<td><a href="https://github.com/NVIDIA/nccl-tests" target="_blank" rel="noopener noreferrer">NVIDIA nccl-tests</a></td>
 <td>官方工具</td>
 <td>All-Reduce、All-Gather 等集合通信基准</td>
 </tr>
 <tr>
-<td><a href="https://github.com/wilicc/gpu-burn">gpu-burn</a></td>
+<td><a href="https://github.com/wilicc/gpu-burn" target="_blank" rel="noopener noreferrer">gpu-burn</a></td>
 <td>开源工具</td>
 <td>GPU 稳定性、功耗、温度和 ECC Burn-in</td>
 </tr>
 <tr>
-<td><a href="https://kubernetes.io/docs/concepts/scheduling-eviction/dynamic-resource-allocation/">Kubernetes Dynamic Resource Allocation</a></td>
+<td><a href="https://kubernetes.io/docs/concepts/scheduling-eviction/dynamic-resource-allocation/" target="_blank" rel="noopener noreferrer">Kubernetes Dynamic Resource Allocation</a></td>
 <td>官方文档</td>
 <td>新一代 GPU 等设备资源分配</td>
 </tr>
 <tr>
-<td><a href="https://kueue.sigs.k8s.io/">Kueue</a></td>
+<td><a href="https://kueue.sigs.k8s.io/" target="_blank" rel="noopener noreferrer">Kueue</a></td>
 <td>官方文档</td>
 <td>队列、配额、优先级、抢占和 AI workload 调度</td>
 </tr>
 <tr>
-<td><a href="https://slurm.schedmd.com/documentation.html">Slurm Documentation</a></td>
+<td><a href="https://slurm.schedmd.com/documentation.html" target="_blank" rel="noopener noreferrer">Slurm Documentation</a></td>
 <td>官方文档</td>
 <td>HPC / 训练集群的作业调度、分区和 QoS</td>
 </tr>
 <tr>
-<td><a href="https://github.com/kubernetes/node-problem-detector">Node Problem Detector</a></td>
+<td><a href="https://github.com/kubernetes/node-problem-detector" target="_blank" rel="noopener noreferrer">Node Problem Detector</a></td>
 <td>开源项目</td>
 <td>节点硬件和内核问题检测</td>
 </tr>
 <tr>
-<td><a href="https://www.openbmc.org/">OpenBMC</a></td>
+<td><a href="https://www.openbmc.org/" target="_blank" rel="noopener noreferrer">OpenBMC</a></td>
 <td>开放项目</td>
 <td>带外管理、BMC 固件和服务器生命周期</td>
 </tr>
 <tr>
-<td><a href="https://maas.io/docs">MAAS</a></td>
+<td><a href="https://maas.io/docs" target="_blank" rel="noopener noreferrer">MAAS</a></td>
 <td>官方文档</td>
 <td>裸机生命周期、PXE、自动化和资产管理</td>
 </tr>
 <tr>
-<td><a href="https://tinkerbell.org/">Tinkerbell</a></td>
+<td><a href="https://tinkerbell.org/" target="_blank" rel="noopener noreferrer">Tinkerbell</a></td>
 <td>开源项目</td>
 <td>裸机 provisioning 和工作流</td>
 </tr>
 <tr>
-<td><a href="https://www.dmtf.org/standards/redfish">Redfish / DMTF</a></td>
+<td><a href="https://www.dmtf.org/standards/redfish" target="_blank" rel="noopener noreferrer">Redfish / DMTF</a></td>
 <td>标准</td>
 <td>服务器带外管理和自动化接口</td>
 </tr>
@@ -13394,13 +13580,13 @@ adversarial_set  20 条注入/越权/数据外泄
 <h3 id="doc-19-nvl72-72-gpu"><a class="hlink" href="#doc-19-nvl72-72-gpu" title="本节链接">#</a>NVL72 机架级 72 GPU</h3>
 <ul>
 <li>用户提供的《NVL72（机架内 72GPU，B200/B300/GB200/GB300）组网原理》资料。</li>
-<li><a href="https://www.nvidia.com/en-us/data-center/gb200-nvl72/">NVIDIA GB200 NVL72</a>、<a href="https://www.nvidia.com/en-us/data-center/gb300-nvl72/">NVIDIA GB300 NVL72</a>、<a href="https://docs.nvidia.com/dgx-superpod/">NVIDIA DGX SuperPOD</a>。</li>
+<li><a href="https://www.nvidia.com/en-us/data-center/gb200-nvl72/" target="_blank" rel="noopener noreferrer">NVIDIA GB200 NVL72</a>、<a href="https://www.nvidia.com/en-us/data-center/gb300-nvl72/" target="_blank" rel="noopener noreferrer">NVIDIA GB300 NVL72</a>、<a href="https://docs.nvidia.com/dgx-superpod/" target="_blank" rel="noopener noreferrer">NVIDIA DGX SuperPOD</a>。</li>
 <li>重点：18 个计算托盘、9 个 NVSwitch 交换托盘、机架背板、NVLink 5 Scale-Up、InfiniBand / RoCE Scale-Out。</li>
 </ul>
 <h3 id="doc-19-nvlink-hgx-8"><a class="hlink" href="#doc-19-nvlink-hgx-8" title="本节链接">#</a>NVLink / HGX 8 卡全互联</h3>
 <ul>
 <li>用户提供的《NVLink 8 卡全连接（Full Mesh 全互联）》资料。</li>
-<li><a href="https://www.nvidia.com/en-us/data-center/nvlink/">NVIDIA NVLink</a>、<a href="https://www.nvidia.com/en-us/data-center/nvlink-fusion/">NVIDIA NVLink Fusion</a>、<a href="https://www.nvidia.com/en-us/data-center/hgx/">NVIDIA HGX</a>、<a href="https://docs.nvidia.com/dgx/dgxh100-user-guide/introduction-to-dgxh100.html">DGX H100 User Guide</a>、<a href="https://docs.nvidia.com/dgx/dgxa100-user-guide/introduction-to-dgxa100.html">DGX A100 User Guide</a>。</li>
+<li><a href="https://www.nvidia.com/en-us/data-center/nvlink/" target="_blank" rel="noopener noreferrer">NVIDIA NVLink</a>、<a href="https://www.nvidia.com/en-us/data-center/nvlink-fusion/" target="_blank" rel="noopener noreferrer">NVIDIA NVLink Fusion</a>、<a href="https://www.nvidia.com/en-us/data-center/hgx/" target="_blank" rel="noopener noreferrer">NVIDIA HGX</a>、<a href="https://docs.nvidia.com/dgx/dgxh100-user-guide/introduction-to-dgxh100.html" target="_blank" rel="noopener noreferrer">DGX H100 User Guide</a>、<a href="https://docs.nvidia.com/dgx/dgxa100-user-guide/introduction-to-dgxa100.html" target="_blank" rel="noopener noreferrer">DGX A100 User Guide</a>。</li>
 <li>重点：SXM + NVSwitch 才能实现 8 卡 Full Mesh；PCIe NVLink Bridge 只能成对互联。</li>
 </ul>
 <h3 id="doc-19-hpn-v10"><a class="hlink" href="#doc-19-hpn-v10" title="本节链接">#</a>用户提供资料：网易 HPN v1.0</h3>
@@ -13423,62 +13609,62 @@ adversarial_set  20 条注入/越权/数据外泄
 <tbody>
 <tr>
 <td>华为昇腾</td>
-<td><a href="https://www.hiascend.com/">hiascend.com</a></td>
+<td><a href="https://www.hiascend.com/" target="_blank" rel="noopener noreferrer">hiascend.com</a></td>
 <td>Atlas、CANN、MindSpore、MindIE、MindCluster、HCCL</td>
 </tr>
 <tr>
 <td>昇腾 CANN</td>
-<td><a href="https://www.hiascend.com/cann">CANN</a></td>
+<td><a href="https://www.hiascend.com/cann" target="_blank" rel="noopener noreferrer">CANN</a></td>
 <td>驱动、算子、编译器、运行时和迁移</td>
 </tr>
 <tr>
 <td>MindIE</td>
-<td><a href="https://www.hiascend.com/developer/software/mindie">MindIE</a></td>
+<td><a href="https://www.hiascend.com/developer/software/mindie" target="_blank" rel="noopener noreferrer">MindIE</a></td>
 <td>大模型推理服务</td>
 </tr>
 <tr>
 <td>MindCluster</td>
-<td><a href="https://www.hiascend.com/developer/software/mindcluster">MindCluster</a></td>
+<td><a href="https://www.hiascend.com/developer/software/mindcluster" target="_blank" rel="noopener noreferrer">MindCluster</a></td>
 <td>集群训练、推理和运维</td>
 </tr>
 <tr>
 <td>华为超节点</td>
-<td><a href="https://www.huawei.com/en/news/2025/9/hc-superpod-innovation">SuperPoD</a></td>
+<td><a href="https://www.huawei.com/en/news/2025/9/hc-superpod-innovation" target="_blank" rel="noopener noreferrer">SuperPoD</a></td>
 <td>大规模互联和超节点架构</td>
 </tr>
 <tr>
 <td>寒武纪</td>
-<td><a href="https://www.cambricon.com/">cambricon.com</a></td>
+<td><a href="https://www.cambricon.com/" target="_blank" rel="noopener noreferrer">cambricon.com</a></td>
 <td>思元 / MLU 及软件生态</td>
 </tr>
 <tr>
 <td>海光</td>
-<td><a href="https://www.hygon.cn/">hygon.cn</a></td>
+<td><a href="https://www.hygon.cn/" target="_blank" rel="noopener noreferrer">hygon.cn</a></td>
 <td>DCU / 深算生态</td>
 </tr>
 <tr>
 <td>摩尔线程</td>
-<td><a href="https://www.mthreads.com/">mthreads.com</a> / <a href="https://developer.mthreads.com/">开发者平台</a></td>
+<td><a href="https://www.mthreads.com/" target="_blank" rel="noopener noreferrer">mthreads.com</a> / <a href="https://developer.mthreads.com/" target="_blank" rel="noopener noreferrer">开发者平台</a></td>
 <td>MUSA、KUAE、MUSA Deploy、云原生</td>
 </tr>
 <tr>
 <td>壁仞科技</td>
-<td><a href="https://www.birentech.com/">birentech.com</a></td>
+<td><a href="https://www.birentech.com/" target="_blank" rel="noopener noreferrer">birentech.com</a></td>
 <td>壁砺 GPU、BIRENSUPA、光互连</td>
 </tr>
 <tr>
 <td>昆仑芯</td>
-<td><a href="https://www.kunlunxin.com/">kunlunxin.com</a></td>
+<td><a href="https://www.kunlunxin.com/" target="_blank" rel="noopener noreferrer">kunlunxin.com</a></td>
 <td>R200 / R480、XPU 和集群</td>
 </tr>
 <tr>
 <td>沐曦</td>
-<td><a href="https://www.metax-tech.com/">metax-tech.com</a></td>
+<td><a href="https://www.metax-tech.com/" target="_blank" rel="noopener noreferrer">metax-tech.com</a></td>
 <td>MXMACA、GPU 超节点</td>
 </tr>
 <tr>
 <td>天数智芯</td>
-<td><a href="https://www.iluvatar.com/">iluvatar.com</a></td>
+<td><a href="https://www.iluvatar.com/" target="_blank" rel="noopener noreferrer">iluvatar.com</a></td>
 <td>天垓、彤央、智铠和软件栈</td>
 </tr>
 </tbody>
@@ -13493,19 +13679,19 @@ adversarial_set  20 条注入/越权/数据外泄
 </thead>
 <tbody>
 <tr>
-<td><a href="https://docs.nvidia.com/dgx-superpod/">NVIDIA DGX SuperPOD</a></td>
+<td><a href="https://docs.nvidia.com/dgx-superpod/" target="_blank" rel="noopener noreferrer">NVIDIA DGX SuperPOD</a></td>
 <td>超大规模 GPU、网络、存储、电力和部署参考</td>
 </tr>
 <tr>
-<td><a href="https://kueue.sigs.k8s.io/">Kueue</a></td>
+<td><a href="https://kueue.sigs.k8s.io/" target="_blank" rel="noopener noreferrer">Kueue</a></td>
 <td>多租户队列、配额、抢占和多集群调度</td>
 </tr>
 <tr>
-<td><a href="https://slurm.schedmd.com/documentation.html">Slurm</a></td>
+<td><a href="https://slurm.schedmd.com/documentation.html" target="_blank" rel="noopener noreferrer">Slurm</a></td>
 <td>HPC / 训练作业调度</td>
 </tr>
 <tr>
-<td><a href="https://docs.nvidia.com/deeplearning/nccl/user-guide/docs/">NVIDIA NCCL</a></td>
+<td><a href="https://docs.nvidia.com/deeplearning/nccl/user-guide/docs/" target="_blank" rel="noopener noreferrer">NVIDIA NCCL</a></td>
 <td>集合通信、拓扑和调试</td>
 </tr>
 </tbody>
@@ -13522,52 +13708,52 @@ adversarial_set  20 条注入/越权/数据外泄
 <tbody>
 <tr>
 <td>AWS</td>
-<td><a href="https://aws.amazon.com/ec2/instance-types/accelerated-computing/">加速计算实例</a></td>
+<td><a href="https://aws.amazon.com/ec2/instance-types/accelerated-computing/" target="_blank" rel="noopener noreferrer">加速计算实例</a></td>
 <td>GPU 实例、EFA、Capacity Block、Spot</td>
 </tr>
 <tr>
 <td>AWS EFA</td>
-<td><a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/efa.html">EFA Docs</a></td>
+<td><a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/efa.html" target="_blank" rel="noopener noreferrer">EFA Docs</a></td>
 <td>RDMA / GPUDirect RDMA</td>
 </tr>
 <tr>
 <td>Azure</td>
-<td><a href="https://learn.microsoft.com/en-us/azure/virtual-machines/sizes-gpu">GPU VM Sizes</a></td>
+<td><a href="https://learn.microsoft.com/en-us/azure/virtual-machines/sizes-gpu" target="_blank" rel="noopener noreferrer">GPU VM Sizes</a></td>
 <td>ND/NC 系列和 InfiniBand</td>
 </tr>
 <tr>
 <td>Azure InfiniBand</td>
-<td><a href="https://learn.microsoft.com/en-us/azure/virtual-machines/extensions/hpc-compute-infiniband-linux">文档</a></td>
+<td><a href="https://learn.microsoft.com/en-us/azure/virtual-machines/extensions/hpc-compute-infiniband-linux" target="_blank" rel="noopener noreferrer">文档</a></td>
 <td>多节点训练互连</td>
 </tr>
 <tr>
 <td>Google Cloud</td>
-<td><a href="https://cloud.google.com/compute/docs/gpus">GPU Docs</a></td>
+<td><a href="https://cloud.google.com/compute/docs/gpus" target="_blank" rel="noopener noreferrer">GPU Docs</a></td>
 <td>GPU 配额、区域库存和实例族</td>
 </tr>
 <tr>
 <td>阿里云</td>
-<td><a href="https://www.alibabacloud.com/help/en/ecs/user-guide/gpu-accelerated-compute-optimized-instance-families">GPU 实例</a></td>
+<td><a href="https://www.alibabacloud.com/help/en/ecs/user-guide/gpu-accelerated-compute-optimized-instance-families" target="_blank" rel="noopener noreferrer">GPU 实例</a></td>
 <td>ECS GPU、网络和弹性</td>
 </tr>
 <tr>
 <td>腾讯云</td>
-<td><a href="https://www.tencentcloud.com/document/product/213/11518">GPU 文档</a></td>
+<td><a href="https://www.tencentcloud.com/document/product/213/11518" target="_blank" rel="noopener noreferrer">GPU 文档</a></td>
 <td>GPU 实例和存储</td>
 </tr>
 <tr>
 <td>百度智能云</td>
-<td><a href="https://cloud.baidu.com/product/gpu.html">GPU</a></td>
+<td><a href="https://cloud.baidu.com/product/gpu.html" target="_blank" rel="noopener noreferrer">GPU</a></td>
 <td>GPU 云服务器和训练平台</td>
 </tr>
 <tr>
 <td>火山引擎</td>
-<td><a href="https://www.volcengine.com/product/gpu">GPU</a></td>
+<td><a href="https://www.volcengine.com/product/gpu" target="_blank" rel="noopener noreferrer">GPU</a></td>
 <td>弹性 GPU 实例</td>
 </tr>
 <tr>
 <td>华为云</td>
-<td><a href="https://www.huaweicloud.com/">huaweicloud.com</a></td>
+<td><a href="https://www.huaweicloud.com/" target="_blank" rel="noopener noreferrer">huaweicloud.com</a></td>
 <td>GPU / AI 实例和昇腾生态</td>
 </tr>
 <tr>
@@ -13694,7 +13880,7 @@ adversarial_set  20 条注入/越权/数据外泄
 </div>
 </details><div class="doc-content"><blockquote>
 <p>本页记录《AI Native / AI Harness / AI PDE / AI Infra / 智算集群 企业级完整学习方案》的版本演进：每次更新都登记日期、变更内容、涉及章节与线上提交，保证内容可追溯。</p>
-<p><strong>在线地址</strong>：<a href="https://net2817.github.io/harness/">https://net2817.github.io/harness/</a></p>
+<p><strong>在线地址</strong>：<a href="https://net2817.github.io/harness/" target="_blank" rel="noopener noreferrer">https://net2817.github.io/harness/</a></p>
 </blockquote>
 <h2 id="doc-20-1"><a class="hlink" href="#doc-20-1" title="本节链接">#</a>1. 版本总览</h2>
 <table>
@@ -13987,7 +14173,7 @@ adversarial_set  20 条注入/越权/数据外泄
 <td>第 18 章</td>
 </tr>
 <tr>
-<td>InfoQ《人人都能整个"自己的 DeepSeek Harness"…》</td>
+<td>InfoQ《人人都能整个"自己的 DeepSeek Harness"…》（<a href="https://mp.weixin.qq.com/s/eJQATXv6DF2gqLiYpP2ioQ" target="_blank" rel="noopener noreferrer">原文</a>）</td>
 <td>2026-08-31</td>
 <td>第 20 章</td>
 </tr>
@@ -14000,6 +14186,11 @@ adversarial_set  20 条注入/越权/数据外泄
 <td>NVIDIA HGX / NVL72 部署指南</td>
 <td>—</td>
 <td>第 14 / 15 章</td>
+</tr>
+<tr>
+<td>第 20 章全部引用链接（Pi / Aider / DeepSeek Harness / Reasonix / Gas Town 等）</td>
+<td>查询 2026-10-11</td>
+<td>第 20 章 §9</td>
 </tr>
 </tbody>
 </table>
