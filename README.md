@@ -3,7 +3,7 @@
 本仓库包含可直接部署到 GitHub Pages 的完整 HTML 学习手册。
 
 - `index.html`：自包含单页手册，支持搜索、主题切换、代码复制和打印导出 PDF。
-- 内容覆盖 AI Harness、AI PDE、AI Infra、GPU 物理集群、HPN/RDMA、NVLink、HGX、NVL72、智算集群 v3.3（GLM-5.3、存储、网络、骨干环网、异构算力）、国产 GPU、千卡集群和公有云 GPU，并附大模型推理服务可靠性工程师的岗位解读与模拟面试问答，以及 Pi / Aider Harness 横向对比、可运行的薄 Loop + WAL 参考实现、两篇典型岗位面试题库（推理 SRE / AI 平台架构师）与修订记录。
+- 内容覆盖 AI Harness、AI PDE、AI Infra、GPU 物理集群、HPN/RDMA、NVLink、HGX、NVL72、智算集群 v3.3（GLM-5.3、存储、网络、骨干环网、异构算力）、国产 GPU、千卡集群和公有云 GPU，并附大模型推理服务可靠性工程师的岗位解读与模拟面试问答，以及 Pi / Aider Harness 横向对比、可运行的薄 Loop + WAL 参考实现、两篇典型岗位面试题库（推理 SRE / AI 平台架构师）、Coze / Dify / LangChain 选型对比与修订记录。
 - Agent Harness 架构图：展示会话与上下文、任务编排、提示与策略、模型与工具路由、记忆与状态、安全护栏、执行运行时和可观测性。
 
 ## 启用 GitHub Pages
