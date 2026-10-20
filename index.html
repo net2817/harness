@@ -827,329 +827,378 @@ html[data-theme="dark"] { --bg:#0f141b; --panel:#151d26; --panel2:#1d2834; --ink
 <li><a href="#doc-14-10">10. 与既有章节的衔接</a></li>
 </ul>
 </div>
-</div></details><details class="nav-group"><summary class="nav-link" data-target="doc-15"><span class="nav-num">16</span><span class="nav-title">Harness 横向对比与最新实现范式：Pi / Aider 与 2026 工程共识</span></summary><div class="nav-sub"><a class="nav-jump" href="#doc-15">↑ 跳到本章开头</a><div class="toc">
+</div></details><details class="nav-group"><summary class="nav-link" data-target="doc-15"><span class="nav-num">16</span><span class="nav-title">DCS 运维平台架构师：专项教程与模拟试卷</span></summary><div class="nav-sub"><a class="nav-jump" href="#doc-15">↑ 跳到本章开头</a><div class="toc">
 <ul>
-<li><a href="#doc-15-1">1. 文章讲了什么（核心论点）</a></li>
-<li><a href="#doc-15-2-harness">2. 一个 Harness 由什么组成</a></li>
-<li><a href="#doc-15-3-pi-vs-aider">3. Pi vs Aider 对比</a><ul>
-<li><a href="#doc-15-31-2026-10-11">3.1 事实卡（截至 2026-10-11，仓库实测）</a></li>
-<li><a href="#doc-15-32">3.2 设计哲学差异（这是选型的分水岭）</a></li>
-<li><a href="#doc-15-33">3.3 一段话选型</a></li>
+<li><a href="#doc-15-1">1. 岗位能力拆解与学习地图</a></li>
+<li><a href="#doc-15-2-8">2. 8 周详细教程</a><ul>
+<li><a href="#doc-15-1_1">第 1 周：数据中心与服务器运维基础</a></li>
+<li><a href="#doc-15-2-gpu">第 2 周：GPU 硬件、固件基线与压测</a></li>
+<li><a href="#doc-15-3">第 3 周：高功率密度整机柜（供电 + 散热）</a></li>
+<li><a href="#doc-15-4-ai-factory">第 4 周：互连与 AI Factory</a></li>
+<li><a href="#doc-15-5-aiops-rca">第 5 周：AIOps 基础（监控、告警、RCA、容量、变更、自愈）</a></li>
+<li><a href="#doc-15-6-agent-harness-mcp">第 6 周：Agent 平台（Harness + MCP + 编排 + 评测 + 治理）</a></li>
+<li><a href="#doc-15-7-rag">第 7 周：RAG 与知识工程</a></li>
+<li><a href="#doc-15-8">第 8 周：产品化与综合项目</a></li>
 </ul>
 </li>
-<li><a href="#doc-15-4-harness-2026">4. 更广的 Harness 版图（2026）</a></li>
-<li><a href="#doc-15-5">5. 「最新的实现方式」：八条铁律</a><ul>
-<li><a href="#doc-15-1-agent-loop-control-plane">铁律 1 —— 薄 Agent Loop，厚 Control Plane</a></li>
-<li><a href="#doc-15-2-wal-operation-log">铁律 2 —— 执行状态持久化：WAL / Operation Log</a></li>
-<li><a href="#doc-15-3-fail-fast-retry">铁律 3 —— Fail Fast 优于 Retry</a></li>
-<li><a href="#doc-15-4">铁律 4 —— 确定性验证（外部不变量）</a></li>
-<li><a href="#doc-15-5_1">铁律 5 —— 长程稳定性是分水岭</a></li>
-<li><a href="#doc-15-6-agent">铁律 6 —— 多 Agent 是例外，不是默认</a></li>
-<li><a href="#doc-15-7">铁律 7 —— 自进化必须受控闭环</a></li>
-<li><a href="#doc-15-8">铁律 8 —— 从命令式编排走向声明式目标</a></li>
+<li><a href="#doc-15-3-12">3. 12 个动手实验清单（速查）</a></li>
+<li><a href="#doc-15-4">4. 模拟试卷</a><ul>
+<li><a href="#doc-15-a-gpu-60-100">试卷 A：数据中心与 GPU 基础（60 分钟，100 分）</a><ul>
+<li><a href="#doc-15-10-3-30">一、单选题（10 题 × 3 分 = 30 分）</a></li>
+<li><a href="#doc-15-5-4-20">二、多选题（5 题 × 4 分 = 20 分）</a></li>
+<li><a href="#doc-15-5-2-10">三、判断题（5 题 × 2 分 = 10 分）</a></li>
+<li><a href="#doc-15-3-10-30">四、简答题（3 题 × 10 分 = 30 分）</a></li>
+<li><a href="#doc-15-2-10-20">五、计算题（2 题 × 10 分 = 20 分）</a></li>
+<li><a href="#doc-15-_1">参考答案与评分点</a></li>
 </ul>
 </li>
-<li><a href="#doc-15-6-harness">6. 参考实现：按最新范式写一个可运行的 Harness</a><ul>
-<li><a href="#doc-15-61">6.1 结构</a></li>
-<li><a href="#doc-15-62-wal">6.2 WAL：状态可以丢，日志不能丢</a></li>
-<li><a href="#doc-15-63">6.3 安全恢复点：崩溃后怎么知道从哪继续</a></li>
-<li><a href="#doc-15-64-loop">6.4 薄 Loop：四步循环 + 两侧护栏</a></li>
-<li><a href="#doc-15-65">6.5 实测运行输出</a></li>
-<li><a href="#doc-15-66">6.6 从这个骨架到生产，还差什么</a></li>
+<li><a href="#doc-15-baiops-agent-90-100">试卷 B：AIOps 与 Agent 平台（90 分钟，100 分）</a><ul>
+<li><a href="#doc-15-10-2-20">一、单选题（10 题 × 2 分 = 20 分）</a></li>
+<li><a href="#doc-15-5-3-15">二、多选题（5 题 × 3 分 = 15 分）</a></li>
+<li><a href="#doc-15-5-2-10_1">三、判断题（5 题 × 2 分 = 10 分）</a></li>
+<li><a href="#doc-15-2-15-30">四、案例分析（2 题 × 15 分 = 30 分）</a></li>
+<li><a href="#doc-15-25">五、设计题（25 分）</a></li>
+<li><a href="#doc-15-_2">参考答案要点</a></li>
 </ul>
 </li>
-<li><a href="#doc-15-7_1">7. 落地清单</a></li>
-<li><a href="#doc-15-8_1">8. 与既有章节的衔接</a></li>
-<li><a href="#doc-15-9">9. 参考链接与引用来源</a><ul>
-<li><a href="#doc-15-91">9.1 本章主素材</a></li>
-<li><a href="#doc-15-92-pi">9.2 Pi</a></li>
-<li><a href="#doc-15-93-aider">9.3 Aider</a></li>
-<li><a href="#doc-15-94-4">9.4 第 4 节版图中的其他项目</a></li>
-<li><a href="#doc-15-95">9.5 星标数据口径</a></li>
+<li><a href="#doc-15-c120-100">试卷 C：综合架构（120 分钟，100 分）</a><ul>
+<li><a href="#doc-15-50">一、系统设计（50 分）</a></li>
+<li><a href="#doc-15-30">二、故障处置（30 分）</a></li>
+<li><a href="#doc-15-20">三、产品方案（20 分）</a></li>
+<li><a href="#doc-15-_3">评分标准</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#doc-15-5-qa20">5. 高频追问 Q&amp;A（20 题）</a></li>
+<li><a href="#doc-15-6-7">6. 考前 7 天冲刺计划</a></li>
+<li><a href="#doc-15-7">7. 与既有章节的衔接</a></li>
+</ul>
+</div>
+</div></details><details class="nav-group"><summary class="nav-link" data-target="doc-16"><span class="nav-num">17</span><span class="nav-title">Harness 横向对比与最新实现范式：Pi / Aider 与 2026 工程共识</span></summary><div class="nav-sub"><a class="nav-jump" href="#doc-16">↑ 跳到本章开头</a><div class="toc">
+<ul>
+<li><a href="#doc-16-1">1. 文章讲了什么（核心论点）</a></li>
+<li><a href="#doc-16-2-harness">2. 一个 Harness 由什么组成</a></li>
+<li><a href="#doc-16-3-pi-vs-aider">3. Pi vs Aider 对比</a><ul>
+<li><a href="#doc-16-31-2026-10-11">3.1 事实卡（截至 2026-10-11，仓库实测）</a></li>
+<li><a href="#doc-16-32">3.2 设计哲学差异（这是选型的分水岭）</a></li>
+<li><a href="#doc-16-33">3.3 一段话选型</a></li>
+</ul>
+</li>
+<li><a href="#doc-16-4-harness-2026">4. 更广的 Harness 版图（2026）</a></li>
+<li><a href="#doc-16-5">5. 「最新的实现方式」：八条铁律</a><ul>
+<li><a href="#doc-16-1-agent-loop-control-plane">铁律 1 —— 薄 Agent Loop，厚 Control Plane</a></li>
+<li><a href="#doc-16-2-wal-operation-log">铁律 2 —— 执行状态持久化：WAL / Operation Log</a></li>
+<li><a href="#doc-16-3-fail-fast-retry">铁律 3 —— Fail Fast 优于 Retry</a></li>
+<li><a href="#doc-16-4">铁律 4 —— 确定性验证（外部不变量）</a></li>
+<li><a href="#doc-16-5_1">铁律 5 —— 长程稳定性是分水岭</a></li>
+<li><a href="#doc-16-6-agent">铁律 6 —— 多 Agent 是例外，不是默认</a></li>
+<li><a href="#doc-16-7">铁律 7 —— 自进化必须受控闭环</a></li>
+<li><a href="#doc-16-8">铁律 8 —— 从命令式编排走向声明式目标</a></li>
+</ul>
+</li>
+<li><a href="#doc-16-6-harness">6. 参考实现：按最新范式写一个可运行的 Harness</a><ul>
+<li><a href="#doc-16-61">6.1 结构</a></li>
+<li><a href="#doc-16-62-wal">6.2 WAL：状态可以丢，日志不能丢</a></li>
+<li><a href="#doc-16-63">6.3 安全恢复点：崩溃后怎么知道从哪继续</a></li>
+<li><a href="#doc-16-64-loop">6.4 薄 Loop：四步循环 + 两侧护栏</a></li>
+<li><a href="#doc-16-65">6.5 实测运行输出</a></li>
+<li><a href="#doc-16-66">6.6 从这个骨架到生产，还差什么</a></li>
+</ul>
+</li>
+<li><a href="#doc-16-7_1">7. 落地清单</a></li>
+<li><a href="#doc-16-8_1">8. 与既有章节的衔接</a></li>
+<li><a href="#doc-16-9">9. 参考链接与引用来源</a><ul>
+<li><a href="#doc-16-91">9.1 本章主素材</a></li>
+<li><a href="#doc-16-92-pi">9.2 Pi</a></li>
+<li><a href="#doc-16-93-aider">9.3 Aider</a></li>
+<li><a href="#doc-16-94-4">9.4 第 4 节版图中的其他项目</a></li>
+<li><a href="#doc-16-95">9.5 星标数据口径</a></li>
 </ul>
 </li>
 </ul>
 </div>
-</div></details><details class="nav-group"><summary class="nav-link" data-target="doc-16"><span class="nav-num">17</span><span class="nav-title">Coze / Dify / LangChain 对比与选型：从低代码平台到代码框架</span></summary><div class="nav-sub"><a class="nav-jump" href="#doc-16">↑ 跳到本章开头</a><div class="toc">
+</div></details><details class="nav-group"><summary class="nav-link" data-target="doc-17"><span class="nav-num">18</span><span class="nav-title">Coze / Dify / LangChain 对比与选型：从低代码平台到代码框架</span></summary><div class="nav-sub"><a class="nav-jump" href="#doc-17">↑ 跳到本章开头</a><div class="toc">
 <ul>
-<li><a href="#doc-16-1">1. 先把三个东西放回正确的位置</a></li>
-<li><a href="#doc-16-2-14">2. 能力矩阵（14 维）</a></li>
-<li><a href="#doc-16-3">3. 选型决策树</a></li>
-<li><a href="#doc-16-4">4. 企业里最常见的三种组合</a><ul>
-<li><a href="#doc-16-acoze-api">组合 A：Coze 做前台，企业 API 做后端（最快验证）</a></li>
-<li><a href="#doc-16-bdify-ai-langgraph-agent">组合 B：Dify 做 AI 中台 + LangGraph 做复杂 Agent（最推荐的中大型形态）</a></li>
-<li><a href="#doc-16-c-langchain-langgraph">组合 C：全自研 LangChain / LangGraph（大型企业）</a></li>
+<li><a href="#doc-17-1">1. 先把三个东西放回正确的位置</a></li>
+<li><a href="#doc-17-2-14">2. 能力矩阵（14 维）</a></li>
+<li><a href="#doc-17-3">3. 选型决策树</a></li>
+<li><a href="#doc-17-4">4. 企业里最常见的三种组合</a><ul>
+<li><a href="#doc-17-acoze-api">组合 A：Coze 做前台，企业 API 做后端（最快验证）</a></li>
+<li><a href="#doc-17-bdify-ai-langgraph-agent">组合 B：Dify 做 AI 中台 + LangGraph 做复杂 Agent（最推荐的中大型形态）</a></li>
+<li><a href="#doc-17-c-langchain-langgraph">组合 C：全自研 LangChain / LangGraph（大型企业）</a></li>
 </ul>
 </li>
-<li><a href="#doc-16-5">5. 同一个需求，三套实现</a><ul>
-<li><a href="#doc-16-51-coze">5.1 Coze 实现</a></li>
-<li><a href="#doc-16-52-dify">5.2 Dify 实现</a></li>
-<li><a href="#doc-16-53-langgraph">5.3 LangGraph 实现（代码骨架）</a></li>
+<li><a href="#doc-17-5">5. 同一个需求，三套实现</a><ul>
+<li><a href="#doc-17-51-coze">5.1 Coze 实现</a></li>
+<li><a href="#doc-17-52-dify">5.2 Dify 实现</a></li>
+<li><a href="#doc-17-53-langgraph">5.3 LangGraph 实现（代码骨架）</a></li>
 </ul>
 </li>
-<li><a href="#doc-16-6">6. 企业落地坑（按平台）</a><ul>
-<li><a href="#doc-16-61-coze">6.1 Coze / 扣子</a></li>
-<li><a href="#doc-16-62-dify">6.2 Dify</a></li>
-<li><a href="#doc-16-63-langchain-langgraph">6.3 LangChain / LangGraph</a></li>
-<li><a href="#doc-16-64">6.4 三者共性坑</a></li>
+<li><a href="#doc-17-6">6. 企业落地坑（按平台）</a><ul>
+<li><a href="#doc-17-61-coze">6.1 Coze / 扣子</a></li>
+<li><a href="#doc-17-62-dify">6.2 Dify</a></li>
+<li><a href="#doc-17-63-langchain-langgraph">6.3 LangChain / LangGraph</a></li>
+<li><a href="#doc-17-64">6.4 三者共性坑</a></li>
 </ul>
 </li>
-<li><a href="#doc-16-7-30">7. 30 分钟对比实验（建议动手做一遍）</a></li>
-<li><a href="#doc-16-8-2026-10-20">8. 版本与事实基线（2026-10-20 实测）</a></li>
-<li><a href="#doc-16-9-2026-10-20">9. 参考链接（2026-10-20 实测可访问）</a></li>
-<li><a href="#doc-16-10">10. 与既有章节的衔接</a></li>
+<li><a href="#doc-17-7-30">7. 30 分钟对比实验（建议动手做一遍）</a></li>
+<li><a href="#doc-17-8-2026-10-20">8. 版本与事实基线（2026-10-20 实测）</a></li>
+<li><a href="#doc-17-9-2026-10-20">9. 参考链接（2026-10-20 实测可访问）</a></li>
+<li><a href="#doc-17-10">10. 与既有章节的衔接</a></li>
 </ul>
 </div>
-</div></details><details class="nav-group"><summary class="nav-link" data-target="doc-17"><span class="nav-num">18</span><span class="nav-title">FastAPI × MCP × React：AI 应用与 AIGC 全栈集成</span></summary><div class="nav-sub"><a class="nav-jump" href="#doc-17">↑ 跳到本章开头</a><div class="toc">
+</div></details><details class="nav-group"><summary class="nav-link" data-target="doc-18"><span class="nav-num">19</span><span class="nav-title">FastAPI × MCP × React：AI 应用与 AIGC 全栈集成</span></summary><div class="nav-sub"><a class="nav-jump" href="#doc-18">↑ 跳到本章开头</a><div class="toc">
 <ul>
-<li><a href="#doc-17-1">1. 一条请求怎么走</a></li>
-<li><a href="#doc-17-2-fastapi-ai">2. FastAPI 侧：把 AI 服务写对</a><ul>
-<li><a href="#doc-17-21">2.1 四个必备设计</a></li>
-<li><a href="#doc-17-22-chat-api">2.2 流式 Chat API（代码骨架）</a></li>
-<li><a href="#doc-17-23">2.3 生产必备能力</a></li>
+<li><a href="#doc-18-1">1. 一条请求怎么走</a></li>
+<li><a href="#doc-18-2-fastapi-ai">2. FastAPI 侧：把 AI 服务写对</a><ul>
+<li><a href="#doc-18-21">2.1 四个必备设计</a></li>
+<li><a href="#doc-18-22-chat-api">2.2 流式 Chat API（代码骨架）</a></li>
+<li><a href="#doc-18-23">2.3 生产必备能力</a></li>
 </ul>
 </li>
-<li><a href="#doc-17-3-mcp">3. MCP 集成</a><ul>
-<li><a href="#doc-17-31-mcp-30">3.1 MCP 是什么（30 秒版）</a></li>
-<li><a href="#doc-17-32-mcp-server">3.2 最小 MCP Server</a></li>
-<li><a href="#doc-17-33">3.3 两种集成方式</a><ul>
-<li><a href="#doc-17-a-mcp">方式 A：独立 MCP 服务（生产推荐）</a></li>
-<li><a href="#doc-17-b-fastapi">方式 B：挂载到 FastAPI（同一进程，适合小规模）</a></li>
+<li><a href="#doc-18-3-mcp">3. MCP 集成</a><ul>
+<li><a href="#doc-18-31-mcp-30">3.1 MCP 是什么（30 秒版）</a></li>
+<li><a href="#doc-18-32-mcp-server">3.2 最小 MCP Server</a></li>
+<li><a href="#doc-18-33">3.3 两种集成方式</a><ul>
+<li><a href="#doc-18-a-mcp">方式 A：独立 MCP 服务（生产推荐）</a></li>
+<li><a href="#doc-18-b-fastapi">方式 B：挂载到 FastAPI（同一进程，适合小规模）</a></li>
 </ul>
 </li>
-<li><a href="#doc-17-34-fastapi-mcp-client">3.4 FastAPI 作为 MCP Client 调用工具</a></li>
-<li><a href="#doc-17-35-mcp">3.5 MCP 的安全与治理（企业落地重点）</a></li>
-<li><a href="#doc-17-36">3.6 调试与测试</a></li>
+<li><a href="#doc-18-34-fastapi-mcp-client">3.4 FastAPI 作为 MCP Client 调用工具</a></li>
+<li><a href="#doc-18-35-mcp">3.5 MCP 的安全与治理（企业落地重点）</a></li>
+<li><a href="#doc-18-36">3.6 调试与测试</a></li>
 </ul>
 </li>
-<li><a href="#doc-17-4-react-ai">4. React 侧：流式 AI 界面</a><ul>
-<li><a href="#doc-17-41">4.1 技术选型</a></li>
-<li><a href="#doc-17-42-sse">4.2 SSE 的正确写法</a></li>
-<li><a href="#doc-17-43">4.3 状态机（别用一堆布尔值）</a></li>
-<li><a href="#doc-17-44">4.4 渲染与体验</a></li>
-<li><a href="#doc-17-45">4.5 一个可用的聊天页骨架</a></li>
+<li><a href="#doc-18-4-react-ai">4. React 侧：流式 AI 界面</a><ul>
+<li><a href="#doc-18-41">4.1 技术选型</a></li>
+<li><a href="#doc-18-42-sse">4.2 SSE 的正确写法</a></li>
+<li><a href="#doc-18-43">4.3 状态机（别用一堆布尔值）</a></li>
+<li><a href="#doc-18-44">4.4 渲染与体验</a></li>
+<li><a href="#doc-18-45">4.5 一个可用的聊天页骨架</a></li>
 </ul>
 </li>
-<li><a href="#doc-17-5-aigc">5. AIGC：图像 / 视频生成的全栈链路</a><ul>
-<li><a href="#doc-17-51">5.1 为什么必须异步</a></li>
-<li><a href="#doc-17-52-api">5.2 API 设计</a></li>
-<li><a href="#doc-17-53">5.3 后端实现要点</a></li>
-<li><a href="#doc-17-54-react">5.4 React 生成工作台</a></li>
-<li><a href="#doc-17-55-aigc">5.5 AIGC 的成本与合规</a></li>
+<li><a href="#doc-18-5-aigc">5. AIGC：图像 / 视频生成的全栈链路</a><ul>
+<li><a href="#doc-18-51">5.1 为什么必须异步</a></li>
+<li><a href="#doc-18-52-api">5.2 API 设计</a></li>
+<li><a href="#doc-18-53">5.3 后端实现要点</a></li>
+<li><a href="#doc-18-54-react">5.4 React 生成工作台</a></li>
+<li><a href="#doc-18-55-aigc">5.5 AIGC 的成本与合规</a></li>
 </ul>
 </li>
-<li><a href="#doc-17-6">6. 端到端联调清单</a></li>
-<li><a href="#doc-17-7">7. 常见坑</a></li>
-<li><a href="#doc-17-8-2026-10-20">8. 参考链接（2026-10-20 实测可访问）</a></li>
-<li><a href="#doc-17-9">9. 与既有章节的衔接</a></li>
+<li><a href="#doc-18-6">6. 端到端联调清单</a></li>
+<li><a href="#doc-18-7">7. 常见坑</a></li>
+<li><a href="#doc-18-8-2026-10-20">8. 参考链接（2026-10-20 实测可访问）</a></li>
+<li><a href="#doc-18-9">9. 与既有章节的衔接</a></li>
 </ul>
 </div>
-</div></details><details class="nav-group"><summary class="nav-link" data-target="doc-18"><span class="nav-num">19</span><span class="nav-title">企业落地常见坑与注意事项</span></summary><div class="nav-sub"><a class="nav-jump" href="#doc-18">↑ 跳到本章开头</a><div class="toc">
+</div></details><details class="nav-group"><summary class="nav-link" data-target="doc-19"><span class="nav-num">20</span><span class="nav-title">企业落地常见坑与注意事项</span></summary><div class="nav-sub"><a class="nav-jump" href="#doc-19">↑ 跳到本章开头</a><div class="toc">
 <ul>
-<li><a href="#doc-18-1">1. 通用原则</a></li>
-<li><a href="#doc-18-2">2. 分模块避坑表</a><ul>
-<li><a href="#doc-18-21-pythonfastapi">2.1 Python、FastAPI 与工程基础</a></li>
-<li><a href="#doc-18-22-prompt-context-engineering">2.2 Prompt 与 Context Engineering</a></li>
-<li><a href="#doc-18-23-harnessagent-loop">2.3 Harness、Agent Loop 与状态</a></li>
-<li><a href="#doc-18-24-memory-context">2.4 Memory 与 Context 压缩</a></li>
-<li><a href="#doc-18-25-ragembedding">2.5 RAG、Embedding 与向量数据库</a></li>
-<li><a href="#doc-18-26-function-callingmcp">2.6 Function Calling、MCP 与工具</a></li>
-<li><a href="#doc-18-27-sandbox-human-in-the-loop">2.7 Sandbox、审批与 Human-in-the-Loop</a></li>
-<li><a href="#doc-18-28-verification">2.8 Verification、评测与上线门禁</a></li>
-<li><a href="#doc-18-29-ai-pde">2.9 AI PDE 产品工程</a></li>
-<li><a href="#doc-18-210-vllm">2.10 vLLM 与单机推理</a></li>
-<li><a href="#doc-18-211-kubernetesgpu">2.11 Kubernetes、GPU 调度与推理平台</a></li>
-<li><a href="#doc-18-212-tp-pp-dp">2.12 分布式推理 TP / PP / DP</a></li>
-<li><a href="#doc-18-213">2.13 观测、监控与故障定位</a></li>
-<li><a href="#doc-18-214">2.14 安全、合规与数据治理</a></li>
-<li><a href="#doc-18-215-gpu">2.15 GPU 物理集群</a></li>
-<li><a href="#doc-18-216-gpu">2.16 国产 GPU 集群</a></li>
-<li><a href="#doc-18-217">2.17 千卡集群规划与实施</a></li>
-<li><a href="#doc-18-218-gpu">2.18 公有云 GPU</a></li>
+<li><a href="#doc-19-1">1. 通用原则</a></li>
+<li><a href="#doc-19-2">2. 分模块避坑表</a><ul>
+<li><a href="#doc-19-21-pythonfastapi">2.1 Python、FastAPI 与工程基础</a></li>
+<li><a href="#doc-19-22-prompt-context-engineering">2.2 Prompt 与 Context Engineering</a></li>
+<li><a href="#doc-19-23-harnessagent-loop">2.3 Harness、Agent Loop 与状态</a></li>
+<li><a href="#doc-19-24-memory-context">2.4 Memory 与 Context 压缩</a></li>
+<li><a href="#doc-19-25-ragembedding">2.5 RAG、Embedding 与向量数据库</a></li>
+<li><a href="#doc-19-26-function-callingmcp">2.6 Function Calling、MCP 与工具</a></li>
+<li><a href="#doc-19-27-sandbox-human-in-the-loop">2.7 Sandbox、审批与 Human-in-the-Loop</a></li>
+<li><a href="#doc-19-28-verification">2.8 Verification、评测与上线门禁</a></li>
+<li><a href="#doc-19-29-ai-pde">2.9 AI PDE 产品工程</a></li>
+<li><a href="#doc-19-210-vllm">2.10 vLLM 与单机推理</a></li>
+<li><a href="#doc-19-211-kubernetesgpu">2.11 Kubernetes、GPU 调度与推理平台</a></li>
+<li><a href="#doc-19-212-tp-pp-dp">2.12 分布式推理 TP / PP / DP</a></li>
+<li><a href="#doc-19-213">2.13 观测、监控与故障定位</a></li>
+<li><a href="#doc-19-214">2.14 安全、合规与数据治理</a></li>
+<li><a href="#doc-19-215-gpu">2.15 GPU 物理集群</a></li>
+<li><a href="#doc-19-216-gpu">2.16 国产 GPU 集群</a></li>
+<li><a href="#doc-19-217">2.17 千卡集群规划与实施</a></li>
+<li><a href="#doc-19-218-gpu">2.18 公有云 GPU</a></li>
 </ul>
 </li>
-<li><a href="#doc-18-3">3. 企业上线红线</a></li>
-<li><a href="#doc-18-4-p0">4. P0 上线检查清单</a></li>
-<li><a href="#doc-18-5">5. 配套视频与资料</a></li>
+<li><a href="#doc-19-3">3. 企业上线红线</a></li>
+<li><a href="#doc-19-4-p0">4. P0 上线检查清单</a></li>
+<li><a href="#doc-19-5">5. 配套视频与资料</a></li>
 </ul>
 </div>
-</div></details><details class="nav-group"><summary class="nav-link" data-target="doc-19"><span class="nav-num">20</span><span class="nav-title">国产 GPU 与千卡集群规划实施指南</span></summary><div class="nav-sub"><a class="nav-jump" href="#doc-19">↑ 跳到本章开头</a><div class="toc">
+</div></details><details class="nav-group"><summary class="nav-link" data-target="doc-20"><span class="nav-num">21</span><span class="nav-title">国产 GPU 与千卡集群规划实施指南</span></summary><div class="nav-sub"><a class="nav-jump" href="#doc-20">↑ 跳到本章开头</a><div class="toc">
 <ul>
-<li><a href="#doc-19-1-gpu-gpu">1. 国产 GPU 集群与通用 GPU 集群的差异</a></li>
-<li><a href="#doc-19-2">2. 主流国产算力生态地图</a><ul>
-<li><a href="#doc-19-21">2.1 厂商与平台速查</a></li>
-<li><a href="#doc-19-22">2.2 官方入口</a></li>
+<li><a href="#doc-20-1-gpu-gpu">1. 国产 GPU 集群与通用 GPU 集群的差异</a></li>
+<li><a href="#doc-20-2">2. 主流国产算力生态地图</a><ul>
+<li><a href="#doc-20-21">2.1 厂商与平台速查</a></li>
+<li><a href="#doc-20-22">2.2 官方入口</a></li>
 </ul>
 </li>
-<li><a href="#doc-19-3-gpu">3. 国产 GPU 选型方法</a><ul>
-<li><a href="#doc-19-31-workload">3.1 先确定 workload</a></li>
-<li><a href="#doc-19-32">3.2 再看硬指标</a></li>
-<li><a href="#doc-19-33">3.3 最后看软件生态</a></li>
-<li><a href="#doc-19-34">3.4 选型评分表</a></li>
+<li><a href="#doc-20-3-gpu">3. 国产 GPU 选型方法</a><ul>
+<li><a href="#doc-20-31-workload">3.1 先确定 workload</a></li>
+<li><a href="#doc-20-32">3.2 再看硬指标</a></li>
+<li><a href="#doc-20-33">3.3 最后看软件生态</a></li>
+<li><a href="#doc-20-34">3.4 选型评分表</a></li>
 </ul>
 </li>
-<li><a href="#doc-19-4">4. 千卡集群规划</a><ul>
-<li><a href="#doc-19-41">4.1 先定义目标</a></li>
-<li><a href="#doc-19-42">4.2 容量粗估</a></li>
-<li><a href="#doc-19-43">4.3 网络规划</a></li>
-<li><a href="#doc-19-44">4.4 存储规划</a></li>
-<li><a href="#doc-19-45">4.5 供电与散热</a></li>
-<li><a href="#doc-19-46">4.6 故障域设计</a></li>
+<li><a href="#doc-20-4">4. 千卡集群规划</a><ul>
+<li><a href="#doc-20-41">4.1 先定义目标</a></li>
+<li><a href="#doc-20-42">4.2 容量粗估</a></li>
+<li><a href="#doc-20-43">4.3 网络规划</a></li>
+<li><a href="#doc-20-44">4.4 存储规划</a></li>
+<li><a href="#doc-20-45">4.5 供电与散热</a></li>
+<li><a href="#doc-20-46">4.6 故障域设计</a></li>
 </ul>
 </li>
-<li><a href="#doc-19-5">5. 分阶段实施路线</a><ul>
-<li><a href="#doc-19-1832-poc">阶段 1：8～32 卡 PoC</a></li>
-<li><a href="#doc-19-264128">阶段 2：64～128 卡试点</a></li>
-<li><a href="#doc-19-3256512">阶段 3：256～512 卡平台化</a></li>
-<li><a href="#doc-19-4_1">阶段 4：千卡及以上</a></li>
+<li><a href="#doc-20-5">5. 分阶段实施路线</a><ul>
+<li><a href="#doc-20-1832-poc">阶段 1：8～32 卡 PoC</a></li>
+<li><a href="#doc-20-264128">阶段 2：64～128 卡试点</a></li>
+<li><a href="#doc-20-3256512">阶段 3：256～512 卡平台化</a></li>
+<li><a href="#doc-20-4_1">阶段 4：千卡及以上</a></li>
 </ul>
 </li>
-<li><a href="#doc-19-6">6. 国产软件栈迁移要点</a><ul>
-<li><a href="#doc-19-61">6.1 分层解耦</a></li>
-<li><a href="#doc-19-62">6.2 迁移检查清单</a></li>
+<li><a href="#doc-20-6">6. 国产软件栈迁移要点</a><ul>
+<li><a href="#doc-20-61">6.1 分层解耦</a></li>
+<li><a href="#doc-20-62">6.2 迁移检查清单</a></li>
 </ul>
 </li>
-<li><a href="#doc-19-7">7. 千卡集群验收</a><ul>
-<li><a href="#doc-19-71">7.1 单节点</a></li>
-<li><a href="#doc-19-72">7.2 多节点</a></li>
-<li><a href="#doc-19-73">7.3 推理服务</a></li>
-<li><a href="#doc-19-74">7.4 故障演练</a></li>
+<li><a href="#doc-20-7">7. 千卡集群验收</a><ul>
+<li><a href="#doc-20-71">7.1 单节点</a></li>
+<li><a href="#doc-20-72">7.2 多节点</a></li>
+<li><a href="#doc-20-73">7.3 推理服务</a></li>
+<li><a href="#doc-20-74">7.4 故障演练</a></li>
 </ul>
 </li>
-<li><a href="#doc-19-8">8. 视频与资料</a><ul>
-<li><a href="#doc-19-_1">国产集群</a></li>
-<li><a href="#doc-19-_2">千卡 / 大规模集群</a></li>
+<li><a href="#doc-20-8">8. 视频与资料</a><ul>
+<li><a href="#doc-20-_1">国产集群</a></li>
+<li><a href="#doc-20-_2">千卡 / 大规模集群</a></li>
 </ul>
 </li>
-<li><a href="#doc-19-9">9. 最终检查表</a></li>
+<li><a href="#doc-20-9">9. 最终检查表</a></li>
 </ul>
 </div>
-</div></details><details class="nav-group"><summary class="nav-link" data-target="doc-20"><span class="nav-num">21</span><span class="nav-title">公有云 GPU 选型与实施要点</span></summary><div class="nav-sub"><a class="nav-jump" href="#doc-20">↑ 跳到本章开头</a><div class="toc">
+</div></details><details class="nav-group"><summary class="nav-link" data-target="doc-21"><span class="nav-num">22</span><span class="nav-title">公有云 GPU 选型与实施要点</span></summary><div class="nav-sub"><a class="nav-jump" href="#doc-21">↑ 跳到本章开头</a><div class="toc">
 <ul>
-<li><a href="#doc-20-1-gpu-gpu">1. 公有云 GPU 与自建 GPU 集群</a></li>
-<li><a href="#doc-20-2">2. 选型维度</a><ul>
-<li><a href="#doc-20-21-gpu">2.1 GPU 层</a></li>
-<li><a href="#doc-20-22-cpu-pcie">2.2 CPU、内存和 PCIe</a></li>
-<li><a href="#doc-20-23">2.3 网络</a></li>
-<li><a href="#doc-20-24">2.4 存储</a></li>
-<li><a href="#doc-20-25">2.5 计费</a></li>
+<li><a href="#doc-21-1-gpu-gpu">1. 公有云 GPU 与自建 GPU 集群</a></li>
+<li><a href="#doc-21-2">2. 选型维度</a><ul>
+<li><a href="#doc-21-21-gpu">2.1 GPU 层</a></li>
+<li><a href="#doc-21-22-cpu-pcie">2.2 CPU、内存和 PCIe</a></li>
+<li><a href="#doc-21-23">2.3 网络</a></li>
+<li><a href="#doc-21-24">2.4 存储</a></li>
+<li><a href="#doc-21-25">2.5 计费</a></li>
 </ul>
 </li>
-<li><a href="#doc-20-3-gpu">3. 主要公有云 GPU 入口</a></li>
-<li><a href="#doc-20-4">4. 公有云千卡集群规划</a><ul>
-<li><a href="#doc-20-41">4.1 先判断是否真的需要千卡</a></li>
-<li><a href="#doc-20-42">4.2 容量规划</a></li>
-<li><a href="#doc-20-43">4.3 拓扑和故障域</a></li>
-<li><a href="#doc-20-44-checkpoint">4.4 存储与 Checkpoint</a></li>
+<li><a href="#doc-21-3-gpu">3. 主要公有云 GPU 入口</a></li>
+<li><a href="#doc-21-4">4. 公有云千卡集群规划</a><ul>
+<li><a href="#doc-21-41">4.1 先判断是否真的需要千卡</a></li>
+<li><a href="#doc-21-42">4.2 容量规划</a></li>
+<li><a href="#doc-21-43">4.3 拓扑和故障域</a></li>
+<li><a href="#doc-21-44-checkpoint">4.4 存储与 Checkpoint</a></li>
 </ul>
 </li>
-<li><a href="#doc-20-5">5. 成本控制</a><ul>
-<li><a href="#doc-20-51">5.1 成本公式</a></li>
-<li><a href="#doc-20-52">5.2 控制手段</a></li>
+<li><a href="#doc-21-5">5. 成本控制</a><ul>
+<li><a href="#doc-21-51">5.1 成本公式</a></li>
+<li><a href="#doc-21-52">5.2 控制手段</a></li>
 </ul>
 </li>
-<li><a href="#doc-20-6">6. 公有云安全</a></li>
-<li><a href="#doc-20-7">7. 实施步骤</a></li>
-<li><a href="#doc-20-8">8. 常见坑</a></li>
-<li><a href="#doc-20-9">9. 视频与资料</a></li>
-<li><a href="#doc-20-10">10. 最终检查表</a></li>
+<li><a href="#doc-21-6">6. 公有云安全</a></li>
+<li><a href="#doc-21-7">7. 实施步骤</a></li>
+<li><a href="#doc-21-8">8. 常见坑</a></li>
+<li><a href="#doc-21-9">9. 视频与资料</a></li>
+<li><a href="#doc-21-10">10. 最终检查表</a></li>
 </ul>
 </div>
-</div></details><details class="nav-group"><summary class="nav-link" data-target="doc-21"><span class="nav-num">22</span><span class="nav-title">32 周完整学习路线</span></summary><div class="nav-sub"><a class="nav-jump" href="#doc-21">↑ 跳到本章开头</a><div class="toc">
+</div></details><details class="nav-group"><summary class="nav-link" data-target="doc-22"><span class="nav-num">23</span><span class="nav-title">32 周完整学习路线</span></summary><div class="nav-sub"><a class="nav-jump" href="#doc-22">↑ 跳到本章开头</a><div class="toc">
 <ul>
-<li><a href="#doc-21-1">1. 能力目标</a></li>
-<li><a href="#doc-21-2">2. 每周固定节奏</a></li>
-<li><a href="#doc-21-3">3. 前置要求</a></li>
-<li><a href="#doc-21-4-32">4. 32 周路线</a><ul>
-<li><a href="#doc-21-1-ai-14">第 1 阶段：工程与 AI 基础（第 1～4 周）</a></li>
-<li><a href="#doc-21-2-harness-58">第 2 阶段：Harness 基础（第 5～8 周）</a></li>
-<li><a href="#doc-21-3-harness-912">第 3 阶段：Harness 生产化（第 9～12 周）</a></li>
-<li><a href="#doc-21-4-ai-pde-1316">第 4 阶段：AI PDE 产品工程（第 13～16 周）</a></li>
-<li><a href="#doc-21-5-ai-infra-kubernetes-1720">第 5 阶段：AI Infra 单机与 Kubernetes（第 17～20 周）</a></li>
-<li><a href="#doc-21-6-2124">第 6 阶段：分布式推理与调度（第 21～24 周）</a></li>
-<li><a href="#doc-21-7-2528">第 7 阶段：观测、评估、安全与成本（第 25～28 周）</a></li>
-<li><a href="#doc-21-8-2932">第 8 阶段：毕业项目（第 29～32 周）</a></li>
+<li><a href="#doc-22-1">1. 能力目标</a></li>
+<li><a href="#doc-22-2">2. 每周固定节奏</a></li>
+<li><a href="#doc-22-3">3. 前置要求</a></li>
+<li><a href="#doc-22-4-32">4. 32 周路线</a><ul>
+<li><a href="#doc-22-1-ai-14">第 1 阶段：工程与 AI 基础（第 1～4 周）</a></li>
+<li><a href="#doc-22-2-harness-58">第 2 阶段：Harness 基础（第 5～8 周）</a></li>
+<li><a href="#doc-22-3-harness-912">第 3 阶段：Harness 生产化（第 9～12 周）</a></li>
+<li><a href="#doc-22-4-ai-pde-1316">第 4 阶段：AI PDE 产品工程（第 13～16 周）</a></li>
+<li><a href="#doc-22-5-ai-infra-kubernetes-1720">第 5 阶段：AI Infra 单机与 Kubernetes（第 17～20 周）</a></li>
+<li><a href="#doc-22-6-2124">第 6 阶段：分布式推理与调度（第 21～24 周）</a></li>
+<li><a href="#doc-22-7-2528">第 7 阶段：观测、评估、安全与成本（第 25～28 周）</a></li>
+<li><a href="#doc-22-8-2932">第 8 阶段：毕业项目（第 29～32 周）</a></li>
 </ul>
 </li>
-<li><a href="#doc-21-5">5. 每周实验记录模板</a></li>
-<li><a href="#doc-21-6">6. 阶段通关规则</a></li>
-<li><a href="#doc-21-7-12">7. 最终答辩的 12 个问题</a></li>
+<li><a href="#doc-22-5">5. 每周实验记录模板</a></li>
+<li><a href="#doc-22-6">6. 阶段通关规则</a></li>
+<li><a href="#doc-22-7-12">7. 最终答辩的 12 个问题</a></li>
 </ul>
 </div>
-</div></details><details class="nav-group"><summary class="nav-link" data-target="doc-22"><span class="nav-num">23</span><span class="nav-title">毕业项目 SOP 与验收</span></summary><div class="nav-sub"><a class="nav-jump" href="#doc-22">↑ 跳到本章开头</a><div class="toc">
+</div></details><details class="nav-group"><summary class="nav-link" data-target="doc-23"><span class="nav-num">24</span><span class="nav-title">毕业项目 SOP 与验收</span></summary><div class="nav-sub"><a class="nav-jump" href="#doc-23">↑ 跳到本章开头</a><div class="toc">
 <ul>
-<li><a href="#doc-22-1">1. 项目目标</a></li>
-<li><a href="#doc-22-2">2. 毕业项目必须覆盖</a></li>
-<li><a href="#doc-22-3">3. 推荐目录</a></li>
-<li><a href="#doc-22-4">4. 端到端验收流程</a><ul>
-<li><a href="#doc-22-_1">第一步：启动</a></li>
-<li><a href="#doc-22-_2">第二步：产品流程</a></li>
-<li><a href="#doc-22-harness">第三步：Harness 流程</a></li>
-<li><a href="#doc-22-infra">第四步：Infra 流程</a></li>
-<li><a href="#doc-22-_3">第五步：评测</a></li>
-<li><a href="#doc-22-_4">第六步：压测</a></li>
-<li><a href="#doc-22-_5">第七步：故障演练</a></li>
-<li><a href="#doc-22-_6">第八步：安全演练</a></li>
+<li><a href="#doc-23-1">1. 项目目标</a></li>
+<li><a href="#doc-23-2">2. 毕业项目必须覆盖</a></li>
+<li><a href="#doc-23-3">3. 推荐目录</a></li>
+<li><a href="#doc-23-4">4. 端到端验收流程</a><ul>
+<li><a href="#doc-23-_1">第一步：启动</a></li>
+<li><a href="#doc-23-_2">第二步：产品流程</a></li>
+<li><a href="#doc-23-harness">第三步：Harness 流程</a></li>
+<li><a href="#doc-23-infra">第四步：Infra 流程</a></li>
+<li><a href="#doc-23-_3">第五步：评测</a></li>
+<li><a href="#doc-23-_4">第六步：压测</a></li>
+<li><a href="#doc-23-_5">第七步：故障演练</a></li>
+<li><a href="#doc-23-_6">第八步：安全演练</a></li>
 </ul>
 </li>
-<li><a href="#doc-22-5">5. 必须提交的文件</a></li>
-<li><a href="#doc-22-6">6. 评分表</a></li>
-<li><a href="#doc-22-7">7. 答辩四分钟结构</a></li>
+<li><a href="#doc-23-5">5. 必须提交的文件</a></li>
+<li><a href="#doc-23-6">6. 评分表</a></li>
+<li><a href="#doc-23-7">7. 答辩四分钟结构</a></li>
 </ul>
 </div>
-</div></details><details class="nav-group"><summary class="nav-link" data-target="doc-23"><span class="nav-num">24</span><span class="nav-title">最新资料与来源索引</span></summary><div class="nav-sub"><a class="nav-jump" href="#doc-23">↑ 跳到本章开头</a><div class="toc">
+</div></details><details class="nav-group"><summary class="nav-link" data-target="doc-24"><span class="nav-num">25</span><span class="nav-title">最新资料与来源索引</span></summary><div class="nav-sub"><a class="nav-jump" href="#doc-24">↑ 跳到本章开头</a><div class="toc">
 <ul>
-<li><a href="#doc-23-ai-harness-agent-runtime">一、AI Harness / Agent Runtime</a></li>
-<li><a href="#doc-23-ai-pde">二、AI PDE：产品设计 / 产品开发工程</a></li>
-<li><a href="#doc-23-ai-infra">三、AI Infra：推理、编排、调度和平台</a><ul>
-<li><a href="#doc-23-31">3.1 推理引擎</a></li>
-<li><a href="#doc-23-32-kubernetes">3.2 Kubernetes 服务与路由</a></li>
-<li><a href="#doc-23-33">3.3 调度、训练与模型生命周期</a></li>
-<li><a href="#doc-23-34">3.4 观测、评估与安全</a></li>
+<li><a href="#doc-24-ai-harness-agent-runtime">一、AI Harness / Agent Runtime</a></li>
+<li><a href="#doc-24-ai-pde">二、AI PDE：产品设计 / 产品开发工程</a></li>
+<li><a href="#doc-24-ai-infra">三、AI Infra：推理、编排、调度和平台</a><ul>
+<li><a href="#doc-24-31">3.1 推理引擎</a></li>
+<li><a href="#doc-24-32-kubernetes">3.2 Kubernetes 服务与路由</a></li>
+<li><a href="#doc-24-33">3.3 调度、训练与模型生命周期</a></li>
+<li><a href="#doc-24-34">3.4 观测、评估与安全</a></li>
 </ul>
 </li>
-<li><a href="#doc-23-gpu">四、GPU 物理集群：选型、建设、调优、监控和故障</a><ul>
-<li><a href="#doc-23-nvl72-72-gpu">NVL72 机架级 72 GPU</a></li>
-<li><a href="#doc-23-nvlink-hgx-8">NVLink / HGX 8 卡全互联</a></li>
-<li><a href="#doc-23-hpn-v10">用户提供资料：网易 HPN v1.0</a></li>
+<li><a href="#doc-24-gpu">四、GPU 物理集群：选型、建设、调优、监控和故障</a><ul>
+<li><a href="#doc-24-nvl72-72-gpu">NVL72 机架级 72 GPU</a></li>
+<li><a href="#doc-24-nvlink-hgx-8">NVLink / HGX 8 卡全互联</a></li>
+<li><a href="#doc-24-hpn-v10">用户提供资料：网易 HPN v1.0</a></li>
 </ul>
 </li>
-<li><a href="#doc-23-gpu_1">五、国产 GPU、千卡集群与公有云</a><ul>
-<li><a href="#doc-23-_1">国产算力</a></li>
-<li><a href="#doc-23-_2">千卡集群</a></li>
-<li><a href="#doc-23-gpu_2">公有云 GPU</a></li>
+<li><a href="#doc-24-gpu_1">五、国产 GPU、千卡集群与公有云</a><ul>
+<li><a href="#doc-24-_1">国产算力</a></li>
+<li><a href="#doc-24-_2">千卡集群</a></li>
+<li><a href="#doc-24-gpu_2">公有云 GPU</a></li>
 </ul>
 </li>
-<li><a href="#doc-23-ai-native">六、用户提供：智算方案与 AI Native 研发手册</a><ul>
-<li><a href="#doc-23-_3">智算集群方案</a></li>
-<li><a href="#doc-23-ai-native_1">AI Native 研发范式</a></li>
+<li><a href="#doc-24-ai-native">六、用户提供：智算方案与 AI Native 研发手册</a><ul>
+<li><a href="#doc-24-_3">智算集群方案</a></li>
+<li><a href="#doc-24-ai-native_1">AI Native 研发范式</a></li>
 </ul>
 </li>
-<li><a href="#doc-23-_4">七、资料可信度规则</a></li>
-<li><a href="#doc-23-_5">八、高频版本风险</a></li>
+<li><a href="#doc-24-_4">七、资料可信度规则</a></li>
+<li><a href="#doc-24-_5">八、高频版本风险</a></li>
 </ul>
 </div>
-</div></details><details class="nav-group"><summary class="nav-link" data-target="doc-24"><span class="nav-num">25</span><span class="nav-title">修订记录与变更日志</span></summary><div class="nav-sub"><a class="nav-jump" href="#doc-24">↑ 跳到本章开头</a><div class="toc">
+</div></details><details class="nav-group"><summary class="nav-link" data-target="doc-25"><span class="nav-num">26</span><span class="nav-title">修订记录与变更日志</span></summary><div class="nav-sub"><a class="nav-jump" href="#doc-25">↑ 跳到本章开头</a><div class="toc">
 <ul>
-<li><a href="#doc-24-1">1. 版本总览</a></li>
-<li><a href="#doc-24-2">2. 详细修订记录</a><ul>
-<li><a href="#doc-24-v19-2026-10-20-dcs">v1.9 · 2026-10-20 — 全栈集成与 DCS 运维平台架构师</a></li>
-<li><a href="#doc-24-v18-2026-10-20-coze-dify-langchain">v1.8 · 2026-10-20 — Coze / Dify / LangChain 对比与选型</a></li>
-<li><a href="#doc-24-v17-2026-10-13-ai">v1.7 · 2026-10-13 — AI 平台架构师岗位与面试</a></li>
-<li><a href="#doc-24-v16-2026-10-11">v1.6 · 2026-10-11 — 目录跳转与修订记录</a></li>
-<li><a href="#doc-24-v15-2026-10-11-harness">v1.5 · 2026-10-11 — Harness 横向对比与最新实现范式</a></li>
-<li><a href="#doc-24-v14-2026-10-11">v1.4 · 2026-10-11 — 典型岗位与面试</a></li>
-<li><a href="#doc-24-v13-2026-10-10-v33">v1.3 · 2026-10-10 — 智算集群建设方案升级 v3.3</a></li>
-<li><a href="#doc-24-v12-2026-10-10-ai-native">v1.2 · 2026-10-10 — AI Native 知识体系升级</a></li>
-<li><a href="#doc-24-v11-2026-10-10">v1.1 · 2026-10-10 — 智算集群建设方案</a></li>
-<li><a href="#doc-24-v10-2026-10-04">v1.0 · 2026-10-04 — 初版</a></li>
+<li><a href="#doc-25-1">1. 版本总览</a></li>
+<li><a href="#doc-25-2">2. 详细修订记录</a><ul>
+<li><a href="#doc-25-v110-2026-10-20-dcs">v1.10 · 2026-10-20 — DCS 专项教程与模拟试卷</a></li>
+<li><a href="#doc-25-v19-2026-10-20-dcs">v1.9 · 2026-10-20 — 全栈集成与 DCS 运维平台架构师</a></li>
+<li><a href="#doc-25-v18-2026-10-20-coze-dify-langchain">v1.8 · 2026-10-20 — Coze / Dify / LangChain 对比与选型</a></li>
+<li><a href="#doc-25-v17-2026-10-13-ai">v1.7 · 2026-10-13 — AI 平台架构师岗位与面试</a></li>
+<li><a href="#doc-25-v16-2026-10-11">v1.6 · 2026-10-11 — 目录跳转与修订记录</a></li>
+<li><a href="#doc-25-v15-2026-10-11-harness">v1.5 · 2026-10-11 — Harness 横向对比与最新实现范式</a></li>
+<li><a href="#doc-25-v14-2026-10-11">v1.4 · 2026-10-11 — 典型岗位与面试</a></li>
+<li><a href="#doc-25-v13-2026-10-10-v33">v1.3 · 2026-10-10 — 智算集群建设方案升级 v3.3</a></li>
+<li><a href="#doc-25-v12-2026-10-10-ai-native">v1.2 · 2026-10-10 — AI Native 知识体系升级</a></li>
+<li><a href="#doc-25-v11-2026-10-10">v1.1 · 2026-10-10 — 智算集群建设方案</a></li>
+<li><a href="#doc-25-v10-2026-10-04">v1.0 · 2026-10-04 — 初版</a></li>
 </ul>
 </li>
-<li><a href="#doc-24-3">3. 数据来源与版本基线</a></li>
-<li><a href="#doc-24-4">4. 维护约定</a></li>
+<li><a href="#doc-25-3">3. 数据来源与版本基线</a></li>
+<li><a href="#doc-25-4">4. 维护约定</a></li>
 </ul>
 </div>
-</div></details></aside><main class="main"><section class="hero"><h1>AI Harness / AI PDE / AI Infra<br>企业级完整学习方案</h1><p>从 AI Native 研发范式、Agent Harness、RAG、vLLM 与 Kubernetes，到 GPU 物理集群、HPN/RDMA、NVLink、HGX、NVL72、智算集群 v3.3（千卡→5000→10240 卡）、国产 GPU、千卡集群和公有云 GPU，并附大模型推理服务可靠性工程师的岗位解读与模拟面试问答，以及 Pi / Aider Harness 横向对比、可运行的薄 Loop + WAL 参考实现、两篇典型岗位面试题库（推理 SRE / AI 平台架构师）、Coze / Dify / LangChain 选型对比、FastAPI × MCP × React × AIGC 全栈集成与修订记录。</p><p>每个模块包含视频参考、官方资料、操作步骤、企业落地避坑和验收产物。本页面适配桌面与手机，可从浏览器直接打印为 PDF。</p><p class="updated">最近更新 2026-10-11 · v1.6：新增章节目录跳转（侧栏可展开到小节、标题锚点直达）与修订记录 · <a href="#doc-24">查看完整修订记录</a></p><div class="pills"><a class="pill" href="#doc-24">修订记录</a><span class="pill">36 周路线</span><span class="pill">70+ 视频入口</span><span class="pill">HPN v1.0</span><span class="pill">NVLink / HGX / NVL72</span><span class="pill">千卡与国产 GPU</span><span class="pill">智算集群 v3.3</span><span class="pill">异构算力</span><span class="pill">EP=32 + 机内 TP8</span><span class="pill">岗位与面试 ×2</span><span class="pill">AI 平台架构师</span><span class="pill">Pi / Aider 对比</span><span class="pill">Coze / Dify / LangChain</span><span class="pill">FastAPI × MCP × React</span><span class="pill">AIGC</span><span class="pill">薄 Loop + WAL</span><span class="pill">AI Native</span><span class="pill">企业上线清单</span></div></section><section class="doc" id="doc-00" data-title="总览"><header class="doc-head"><div class="doc-kicker">DOC 01</div><h2>总览</h2><div class="doc-source">来源：README.md</div></header><details class="doc-toc"><summary>本篇目录</summary><div class="toc">
+</div></details></aside><main class="main"><section class="hero"><h1>AI Harness / AI PDE / AI Infra<br>企业级完整学习方案</h1><p>从 AI Native 研发范式、Agent Harness、RAG、vLLM 与 Kubernetes，到 GPU 物理集群、HPN/RDMA、NVLink、HGX、NVL72、智算集群 v3.3（千卡→5000→10240 卡）、国产 GPU、千卡集群和公有云 GPU，并附大模型推理服务可靠性工程师的岗位解读与模拟面试问答，以及 Pi / Aider Harness 横向对比、可运行的薄 Loop + WAL 参考实现、两篇典型岗位面试题库（推理 SRE / AI 平台架构师）、Coze / Dify / LangChain 选型对比、FastAPI × MCP × React × AIGC 全栈集成、DCS 专项教程与 3 套模拟试卷，以及修订记录。</p><p>每个模块包含视频参考、官方资料、操作步骤、企业落地避坑和验收产物。本页面适配桌面与手机，可从浏览器直接打印为 PDF。</p><p class="updated">最近更新 2026-10-11 · v1.6：新增章节目录跳转（侧栏可展开到小节、标题锚点直达）与修订记录 · <a href="#doc-25">查看完整修订记录</a></p><div class="pills"><a class="pill" href="#doc-25">修订记录</a><span class="pill">36 周路线</span><span class="pill">70+ 视频入口</span><span class="pill">HPN v1.0</span><span class="pill">NVLink / HGX / NVL72</span><span class="pill">千卡与国产 GPU</span><span class="pill">智算集群 v3.3</span><span class="pill">异构算力</span><span class="pill">EP=32 + 机内 TP8</span><span class="pill">岗位与面试 ×2</span><span class="pill">AI 平台架构师</span><span class="pill">Pi / Aider 对比</span><span class="pill">Coze / Dify / LangChain</span><span class="pill">FastAPI × MCP × React</span><span class="pill">AIGC</span><span class="pill">模拟试卷</span><span class="pill">薄 Loop + WAL</span><span class="pill">AI Native</span><span class="pill">企业上线清单</span></div></section><section class="doc" id="doc-00" data-title="总览"><header class="doc-head"><div class="doc-kicker">DOC 01</div><h2>总览</h2><div class="doc-source">来源：README.md</div></header><details class="doc-toc"><summary>本篇目录</summary><div class="toc">
 <ul>
 <li><a href="#doc-00-_1">这个包解决什么问题</a></li>
 <li><a href="#doc-00-pde">PDE 术语说明</a></li>
@@ -1190,7 +1239,7 @@ html[data-theme="dark"] { --bg:#0f141b; --panel:#151d26; --panel2:#1d2834; --ink
 </thead>
 <tbody>
 <tr>
-<td><a href="#doc-23">01_最新资料与来源索引.md</a></td>
+<td><a href="#doc-24">01_最新资料与来源索引.md</a></td>
 <td>最新一手资料、官方文档、协议、参考实现和可信度标注</td>
 </tr>
 <tr>
@@ -1206,11 +1255,11 @@ html[data-theme="dark"] { --bg:#0f141b; --panel:#151d26; --panel2:#1d2834; --ink
 <td>从单机 vLLM 到 K8s、路由、调度、分布式推理、监控、安全</td>
 </tr>
 <tr>
-<td><a href="#doc-21">05_32周完整学习路线.md</a></td>
+<td><a href="#doc-22">05_32周完整学习路线.md</a></td>
 <td>32 周学习节奏、每周产出、阶段验收和毕业项目</td>
 </tr>
 <tr>
-<td><a href="#doc-22">06_毕业项目SOP与验收.md</a></td>
+<td><a href="#doc-23">06_毕业项目SOP与验收.md</a></td>
 <td>端到端毕业项目目录、接口、部署、压测、答辩和评分表</td>
 </tr>
 <tr>
@@ -1226,15 +1275,15 @@ html[data-theme="dark"] { --bg:#0f141b; --panel:#151d26; --panel2:#1d2834; --ink
 <td>36 周逐周视频、官方文档、操作步骤、验收产物和视频失效后的检索方法</td>
 </tr>
 <tr>
-<td><a href="#doc-18">10_企业落地常见坑与注意事项.md</a></td>
+<td><a href="#doc-19">10_企业落地常见坑与注意事项.md</a></td>
 <td>按模块整理企业落地典型错误、正确做法和上线前检查</td>
 </tr>
 <tr>
-<td><a href="#doc-19">11_国产GPU与千卡集群规划实施指南.md</a></td>
+<td><a href="#doc-20">11_国产GPU与千卡集群规划实施指南.md</a></td>
 <td>国产 GPU 生态、选型、迁移、千卡容量/网络/存储/故障域和实施路线</td>
 </tr>
 <tr>
-<td><a href="#doc-20">12_公有云GPU选型与实施要点.md</a></td>
+<td><a href="#doc-21">12_公有云GPU选型与实施要点.md</a></td>
 <td>公有云 GPU 实例、网络、存储、配额、Spot、成本、安全和千卡规划</td>
 </tr>
 <tr>
@@ -11530,45 +11579,798 @@ Agent层   AI Harness（上下文/工具/状态/恢复/审批）
 <td>第 12 章</td>
 </tr>
 </tbody>
-</table></div></section><section class="doc" id="doc-15" data-title="Harness 横向对比与最新实现范式：Pi / Aider 与 2026 工程共识"><header class="doc-head"><div class="doc-kicker">DOC 16</div><h2>Harness 横向对比与最新实现范式：Pi / Aider 与 2026 工程共识</h2><div class="doc-source">来源：20_Harness横向对比与最新实现范式.md</div></header><details class="doc-toc"><summary>本篇目录</summary><div class="toc">
+</table></div></section><section class="doc" id="doc-15" data-title="DCS 运维平台架构师：专项教程与模拟试卷"><header class="doc-head"><div class="doc-kicker">DOC 16</div><h2>DCS 运维平台架构师：专项教程与模拟试卷</h2><div class="doc-source">来源：26_DCS运维平台架构师_专项教程与模拟试卷.md</div></header><details class="doc-toc"><summary>本篇目录</summary><div class="toc">
 <ul>
-<li><a href="#doc-15-1">1. 文章讲了什么（核心论点）</a></li>
-<li><a href="#doc-15-2-harness">2. 一个 Harness 由什么组成</a></li>
-<li><a href="#doc-15-3-pi-vs-aider">3. Pi vs Aider 对比</a><ul>
-<li><a href="#doc-15-31-2026-10-11">3.1 事实卡（截至 2026-10-11，仓库实测）</a></li>
-<li><a href="#doc-15-32">3.2 设计哲学差异（这是选型的分水岭）</a></li>
-<li><a href="#doc-15-33">3.3 一段话选型</a></li>
+<li><a href="#doc-15-1">1. 岗位能力拆解与学习地图</a></li>
+<li><a href="#doc-15-2-8">2. 8 周详细教程</a><ul>
+<li><a href="#doc-15-1_1">第 1 周：数据中心与服务器运维基础</a></li>
+<li><a href="#doc-15-2-gpu">第 2 周：GPU 硬件、固件基线与压测</a></li>
+<li><a href="#doc-15-3">第 3 周：高功率密度整机柜（供电 + 散热）</a></li>
+<li><a href="#doc-15-4-ai-factory">第 4 周：互连与 AI Factory</a></li>
+<li><a href="#doc-15-5-aiops-rca">第 5 周：AIOps 基础（监控、告警、RCA、容量、变更、自愈）</a></li>
+<li><a href="#doc-15-6-agent-harness-mcp">第 6 周：Agent 平台（Harness + MCP + 编排 + 评测 + 治理）</a></li>
+<li><a href="#doc-15-7-rag">第 7 周：RAG 与知识工程</a></li>
+<li><a href="#doc-15-8">第 8 周：产品化与综合项目</a></li>
 </ul>
 </li>
-<li><a href="#doc-15-4-harness-2026">4. 更广的 Harness 版图（2026）</a></li>
-<li><a href="#doc-15-5">5. 「最新的实现方式」：八条铁律</a><ul>
-<li><a href="#doc-15-1-agent-loop-control-plane">铁律 1 —— 薄 Agent Loop，厚 Control Plane</a></li>
-<li><a href="#doc-15-2-wal-operation-log">铁律 2 —— 执行状态持久化：WAL / Operation Log</a></li>
-<li><a href="#doc-15-3-fail-fast-retry">铁律 3 —— Fail Fast 优于 Retry</a></li>
-<li><a href="#doc-15-4">铁律 4 —— 确定性验证（外部不变量）</a></li>
-<li><a href="#doc-15-5_1">铁律 5 —— 长程稳定性是分水岭</a></li>
-<li><a href="#doc-15-6-agent">铁律 6 —— 多 Agent 是例外，不是默认</a></li>
-<li><a href="#doc-15-7">铁律 7 —— 自进化必须受控闭环</a></li>
-<li><a href="#doc-15-8">铁律 8 —— 从命令式编排走向声明式目标</a></li>
+<li><a href="#doc-15-3-12">3. 12 个动手实验清单（速查）</a></li>
+<li><a href="#doc-15-4">4. 模拟试卷</a><ul>
+<li><a href="#doc-15-a-gpu-60-100">试卷 A：数据中心与 GPU 基础（60 分钟，100 分）</a><ul>
+<li><a href="#doc-15-10-3-30">一、单选题（10 题 × 3 分 = 30 分）</a></li>
+<li><a href="#doc-15-5-4-20">二、多选题（5 题 × 4 分 = 20 分）</a></li>
+<li><a href="#doc-15-5-2-10">三、判断题（5 题 × 2 分 = 10 分）</a></li>
+<li><a href="#doc-15-3-10-30">四、简答题（3 题 × 10 分 = 30 分）</a></li>
+<li><a href="#doc-15-2-10-20">五、计算题（2 题 × 10 分 = 20 分）</a></li>
+<li><a href="#doc-15-_1">参考答案与评分点</a></li>
 </ul>
 </li>
-<li><a href="#doc-15-6-harness">6. 参考实现：按最新范式写一个可运行的 Harness</a><ul>
-<li><a href="#doc-15-61">6.1 结构</a></li>
-<li><a href="#doc-15-62-wal">6.2 WAL：状态可以丢，日志不能丢</a></li>
-<li><a href="#doc-15-63">6.3 安全恢复点：崩溃后怎么知道从哪继续</a></li>
-<li><a href="#doc-15-64-loop">6.4 薄 Loop：四步循环 + 两侧护栏</a></li>
-<li><a href="#doc-15-65">6.5 实测运行输出</a></li>
-<li><a href="#doc-15-66">6.6 从这个骨架到生产，还差什么</a></li>
+<li><a href="#doc-15-baiops-agent-90-100">试卷 B：AIOps 与 Agent 平台（90 分钟，100 分）</a><ul>
+<li><a href="#doc-15-10-2-20">一、单选题（10 题 × 2 分 = 20 分）</a></li>
+<li><a href="#doc-15-5-3-15">二、多选题（5 题 × 3 分 = 15 分）</a></li>
+<li><a href="#doc-15-5-2-10_1">三、判断题（5 题 × 2 分 = 10 分）</a></li>
+<li><a href="#doc-15-2-15-30">四、案例分析（2 题 × 15 分 = 30 分）</a></li>
+<li><a href="#doc-15-25">五、设计题（25 分）</a></li>
+<li><a href="#doc-15-_2">参考答案要点</a></li>
 </ul>
 </li>
-<li><a href="#doc-15-7_1">7. 落地清单</a></li>
-<li><a href="#doc-15-8_1">8. 与既有章节的衔接</a></li>
-<li><a href="#doc-15-9">9. 参考链接与引用来源</a><ul>
-<li><a href="#doc-15-91">9.1 本章主素材</a></li>
-<li><a href="#doc-15-92-pi">9.2 Pi</a></li>
-<li><a href="#doc-15-93-aider">9.3 Aider</a></li>
-<li><a href="#doc-15-94-4">9.4 第 4 节版图中的其他项目</a></li>
-<li><a href="#doc-15-95">9.5 星标数据口径</a></li>
+<li><a href="#doc-15-c120-100">试卷 C：综合架构（120 分钟，100 分）</a><ul>
+<li><a href="#doc-15-50">一、系统设计（50 分）</a></li>
+<li><a href="#doc-15-30">二、故障处置（30 分）</a></li>
+<li><a href="#doc-15-20">三、产品方案（20 分）</a></li>
+<li><a href="#doc-15-_3">评分标准</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#doc-15-5-qa20">5. 高频追问 Q&amp;A（20 题）</a></li>
+<li><a href="#doc-15-6-7">6. 考前 7 天冲刺计划</a></li>
+<li><a href="#doc-15-7">7. 与既有章节的衔接</a></li>
+</ul>
+</div>
+</details><div class="doc-content"><blockquote>
+<p><strong>配套关系</strong>：第 25 章是「JD 解读 + 30 道问答 + 系统设计」，本章是它的<strong>训练手册与考场</strong>——8 周教程、12 个动手实验、3 套模拟试卷（含答案与评分标准）、20 道高频追问。</p>
+<p><strong>适用对象</strong>：准备字节跳动 DCS / 大厂 AI Infra 运维平台架构岗的候选人；也适合已在岗、需要补齐"硬件 + AIOps + Agent + 知识工程 + 产品化"全链路的工程师。</p>
+<p><strong>建议用法</strong>：先做一套模拟卷摸底（第 4 节）→ 按错题定位到第 2 节对应周 → 完成该周实验 → 两周后重做同卷。</p>
+</blockquote>
+<h2 id="doc-15-1"><a class="hlink" href="#doc-15-1" title="本节链接">#</a>1. 岗位能力拆解与学习地图</h2>
+<p>把 JD 拆成 <strong>6 个能力域、20 个知识点</strong>：</p>
+<table>
+<thead>
+<tr>
+<th>能力域</th>
+<th>知识点</th>
+<th>重要度</th>
+<th>对应章节</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>A. 数据中心与服务器</strong></td>
+<td>① DCIM/CMDB 与生命周期 ② BMC/Redfish/IPMI ③ 服务器上线/维修/退役流程</td>
+<td>必须</td>
+<td>第 25 章 §6.A、本章 Lab 1/2</td>
+</tr>
+<tr>
+<td><strong>B. GPU 与固件</strong></td>
+<td>④ 国产 vs 非国产 GPU 架构 ⑤ 固件基线矩阵 ⑥ GPU 压测与慢卡识别</td>
+<td>必须</td>
+<td>第 25 章 §6.A、本章 Lab 3/4</td>
+</tr>
+<tr>
+<td><strong>C. 高密机柜与互连</strong></td>
+<td>⑦ 供电（PowerShelf/48V） ⑧ 液冷（冷板/CDU/SideCar） ⑨ NVLink/HCCS/RDMA ⑩ 铜缆 vs 光互连 ⑪ AI Factory</td>
+<td>必须</td>
+<td>第 25 章 §6.A、本章 Lab 5/6</td>
+</tr>
+<tr>
+<td><strong>D. AIOps</strong></td>
+<td>⑫ 监控与告警收敛 ⑬ 根因分析 ⑭ 容量规划 ⑮ 变更管理 ⑯ 自愈分级</td>
+<td>必须</td>
+<td>第 25 章 §6.B、本章 Lab 7/8/11</td>
+</tr>
+<tr>
+<td><strong>E. Agent 平台</strong></td>
+<td>⑰ AI Harness / 编排 / 工具 / 记忆 / 评测 / 观测 / 治理</td>
+<td>必须</td>
+<td>第 02、18、20、22、24 章</td>
+</tr>
+<tr>
+<td><strong>F. RAG 与产品化</strong></td>
+<td>⑱ 文档智能与混合检索 ⑲ 分类体系与知识质量 ⑳ 产品愿景/优先级/采纳度</td>
+<td>加分</td>
+<td>第 23 章、本章 Lab 10/12</td>
+</tr>
+</tbody>
+</table>
+<p><strong>优先级建议</strong>：A/B/C 是 DCS 岗位的"差异化壁垒"（很多 AI 候选人不懂硬件），D/E 是"通用门槛"，F 是"加分项"。<strong>时间分配建议：硬件 40%、AIOps 25%、Agent 25%、RAG/产品 10%。</strong></p>
+<h2 id="doc-15-2-8"><a class="hlink" href="#doc-15-2-8" title="本节链接">#</a>2. 8 周详细教程</h2>
+<blockquote>
+<p>每周按 <strong>6–10 小时</strong> 设计：2 小时读 + 4 小时动手 + 2 小时写交付物。
+每周都必须留下<strong>可验证的产物</strong>（脚本、报告、看板截图、复盘），面试时这就是你的项目素材。</p>
+</blockquote>
+<h3 id="doc-15-1_1"><a class="hlink" href="#doc-15-1_1" title="本节链接">#</a>第 1 周：数据中心与服务器运维基础</h3>
+<p><strong>目标</strong>：能说清一台服务器从到货到退役的全生命周期，以及 DCIM/CMDB 在整个运维体系中的位置。</p>
+<p><strong>知识点</strong></p>
+<ol>
+<li>数据中心分层：园区 → 楼栋 → 机房 → 模块 → 机柜 → U 位 → 设备；</li>
+<li>服务器生命周期：到货 → 上架 → 配置 → 上线 → 运行 → 维修 → 退役 → 资产处置；</li>
+<li>DCIM 与 CMDB 的区别：DCIM 管"物理与设施"，CMDB 管"配置项与关系"；</li>
+<li>BMC / IPMI / Redfish：带外管理的三代接口，Redfish 是当前主流（RESTful + JSON）；</li>
+<li>工单与变更：事件（Incident）vs 变更（Change）vs 问题（Problem）。</li>
+</ol>
+<p><strong>动手实验</strong></p>
+<ul>
+<li>用 Redfish 读取一台服务器（或模拟器）的资产、电源、温度、风扇信息：</li>
+</ul>
+<pre><code class="language-bash">curl -k -u admin:password https://&lt;BMC_IP&gt;/redfish/v1/Systems
+curl -k -u admin:password https://&lt;BMC_IP&gt;/redfish/v1/Chassis
+curl -k -u admin:password https://&lt;BMC_IP&gt;/redfish/v1/Managers
+</code></pre>
+<ul>
+<li>建一张最小 CMDB 表（Postgres）：<code>device(id, sn, model, rack_id, u_position, bmc_ip, status, owner)</code>；</li>
+<li>画一张"设备-机柜-机房-交换机-电源域"的拓扑图。</li>
+</ul>
+<p><strong>交付物</strong>：<code>week01_cmdb.sql</code> + 拓扑图 + 200 字总结。</p>
+<p><strong>自检</strong>：能否解释"为什么 CMDB 不准，AIOps 一定不准"？</p>
+<h3 id="doc-15-2-gpu"><a class="hlink" href="#doc-15-2-gpu" title="本节链接">#</a>第 2 周：GPU 硬件、固件基线与压测</h3>
+<p><strong>目标</strong>：能独立完成一批 GPU 服务器的上线验证，并给出"能否进池"的结论。</p>
+<p><strong>知识点</strong></p>
+<ol>
+<li>GPU 架构：SM/CUDA Core、显存（HBM）、NVLink、PCIe、MIG；</li>
+<li>国产 GPU：昇腾（达芬奇 + CANN + HCCL）、海光（DCU + ROCm 系）、寒武纪（MLU）；</li>
+<li>固件体系：BIOS、BMC、GPU VBIOS、NVSwitch、网卡、SSD、CPLD；</li>
+<li>压测工具：<code>nvidia-smi</code>、DCGM、<code>nvbandwidth</code>、<code>nccl-tests</code>、<code>gpu-burn</code>、<code>ib_write_bw</code>；</li>
+<li>慢卡识别：同型号同配置下的带宽/算力/温度/功耗对比。</li>
+</ol>
+<p><strong>动手实验</strong></p>
+<pre><code class="language-bash"># 1) 健康与拓扑
+nvidia-smi -q
+nvidia-smi topo -m
+
+# 2) GPU 诊断（需 DCGM）
+dcgmi diag -r 3
+
+# 3) P2P / NVLink 带宽
+nvbandwidth
+
+# 4) 集合通信（8 卡 AllReduce）
+./build/all_reduce_perf -b 8 -e 8G -f 2 -g 8
+
+# 5) 稳定性与功耗
+gpu-burn 600
+
+# 6) RDMA 链路
+ibv_devinfo
+ib_write_bw -d mlx5_0 -a
+</code></pre>
+<p><strong>交付物</strong>：一份《GPU 节点上线压测报告》，包含：机型、固件版本、单卡/多卡/网络带宽、温度功耗、结论（进池/降级/返修）。</p>
+<p><strong>自检</strong>：能否解释"为什么 <code>nvidia-smi</code> 利用率 100% 不代表吞吐高"？</p>
+<h3 id="doc-15-3"><a class="hlink" href="#doc-15-3" title="本节链接">#</a>第 3 周：高功率密度整机柜（供电 + 散热）</h3>
+<p><strong>目标</strong>：能对一个 50–150kW 机柜做供电与散热方案计算。</p>
+<p><strong>知识点</strong></p>
+<ol>
+<li>功率分解：GPU + CPU + 内存 + 网卡 + 电源损耗；</li>
+<li>供电：传统 PSU vs <strong>PowerShelf（48V/50V DC 机柜级供电）</strong>；N+N 冗余；</li>
+<li>散热：风冷 → <strong>冷板液冷</strong> → 浸没；<strong>冷板 + 风冷融合</strong>是当前主流过渡方案；</li>
+<li><strong>CDU</strong>（冷量分配单元）与 <strong>SideCar</strong>（侧柜）的作用；</li>
+<li>关键指标：PUE、WUE、进液温度、流量、压差、漏液检测；</li>
+<li>工程约束：承重、层高、管路、快接头、维护空间、噪声。</li>
+</ol>
+<p><strong>动手实验（计算表）</strong></p>
+<table>
+<thead>
+<tr>
+<th>公式</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>P_total = P_IT × PUE</code></td>
+<td>总设施功率</td>
+</tr>
+<tr>
+<td><code>年电费 = P_total(kW) × 8760 × 电价</code></td>
+<td>年电费</td>
+</tr>
+<tr>
+<td><code>Q = P / (c_p × ΔT)</code></td>
+<td>冷却液流量（水 cp≈4.18 kJ/kg·K）</td>
+</tr>
+<tr>
+<td><code>1 kW ≈ 3412 BTU/h</code></td>
+<td>冷量换算</td>
+</tr>
+</tbody>
+</table>
+<p><strong>算例</strong>：IT 负载 100kW，PUE 1.25 → 总功率 125kW，年电费（0.6 元/kWh）= 125×8760×0.6 ≈ <strong>65.7 万元</strong>。
+80kW 冷板，ΔT=10K → 流量 = 80/(4.18×10) ≈ <strong>1.91 L/s ≈ 6.9 m³/h</strong>。</p>
+<p><strong>交付物</strong>：一份《100kW 机柜供电与液冷方案》Excel（含功率、UPS、CDU、流量、管径、冗余）。</p>
+<p><strong>自检</strong>：能否解释"为什么高密机柜不能只靠提高风扇转速"？</p>
+<h3 id="doc-15-4-ai-factory"><a class="hlink" href="#doc-15-4-ai-factory" title="本节链接">#</a>第 4 周：互连与 AI Factory</h3>
+<p><strong>目标</strong>：能区分 Scale-up 与 Scale-out，并给出铜缆/光互连的选型建议。</p>
+<p><strong>知识点</strong></p>
+<ol>
+<li><strong>Scale-up</strong>：NVLink / NVSwitch（NVIDIA）、HCCS / 灵衢（昇腾），机内或超节点内；</li>
+<li><strong>Scale-out</strong>：InfiniBand / RoCEv2，跨机柜、跨机房；</li>
+<li>铜缆（DAC/ACC）vs 光互连（AOC/光模块）：距离、带宽、功耗、成本、故障率；</li>
+<li>拓扑：rail-optimized、Spine-Leaf、无阻塞 vs 收敛；</li>
+<li><strong>AI Factory</strong>：算力、网络、存储、供电、制冷、软件一体化，目标是<strong>单位 token 成本最优</strong>。</li>
+</ol>
+<p><strong>动手实验</strong></p>
+<ul>
+<li>用 <code>nvidia-smi topo -m</code> 读懂 <code>NV</code>/<code>PIX</code>/<code>PHB</code>/<code>SYS</code> 的含义；</li>
+<li>用 <code>ibstat</code> / <code>ibv_devinfo</code> 检查 IB 端口速率与状态；</li>
+<li>画一张"8 卡 HGX + 多机 IB + 存储"的端到端拓扑图，标出每段带宽。</li>
+</ul>
+<p><strong>交付物</strong>：一份《互连选型对照表》（短距/长距、带宽、成本、故障特征）。</p>
+<p><strong>自检</strong>：能否解释"NVLink 为什么不能跨机柜"？</p>
+<h3 id="doc-15-5-aiops-rca"><a class="hlink" href="#doc-15-5-aiops-rca" title="本节链接">#</a>第 5 周：AIOps 基础（监控、告警、RCA、容量、变更、自愈）</h3>
+<p><strong>目标</strong>：能搭一个最小 AIOps 闭环原型。</p>
+<p><strong>知识点</strong></p>
+<ol>
+<li>监控四件套：Metrics / Logs / Traces / Alerts；</li>
+<li>告警收敛：时间聚合、拓扑聚合、因果抑制；</li>
+<li>根因分析：规则 + 图 + 统计 + 知识 + LLM；</li>
+<li>容量：水位、预测、扩容决策；</li>
+<li>变更：分级、审批、灰度、回滚、审计；</li>
+<li>自愈：L0–L3 分级与防误操作。</li>
+</ol>
+<p><strong>动手实验</strong></p>
+<ul>
+<li>用 Prometheus + node_exporter 采集一台机器指标；</li>
+<li>写一个告警收敛脚本：把同一机柜 5 分钟内的 50 条告警聚合成 1 个事件；</li>
+<li>用 CMDB 拓扑做"共同祖先"查询（Redis/Postgres 均可）。</li>
+</ul>
+<p><strong>交付物</strong>：告警收敛前后对比报告（数量、MTTD、误报率）。</p>
+<p><strong>自检</strong>：能否说出"告警收敛"和"告警抑制"的区别？</p>
+<h3 id="doc-15-6-agent-harness-mcp"><a class="hlink" href="#doc-15-6-agent-harness-mcp" title="本节链接">#</a>第 6 周：Agent 平台（Harness + MCP + 编排 + 评测 + 治理）</h3>
+<p><strong>目标</strong>：能搭一个"查告警 → 查知识 → 给建议 → 人工审批 → 执行"的最小 Agent。</p>
+<p><strong>知识点</strong></p>
+<ol>
+<li>Harness 四件事：上下文、工具、状态、恢复；</li>
+<li>MCP：Tools/Resources/Prompts、stdio vs Streamable HTTP；</li>
+<li>工具设计：单一职责、Schema、超时、幂等、权限；</li>
+<li>编排：单 Agent 优先，多 Agent 仅用于上下文压力/交叉验证；</li>
+<li>评测：Golden Set + 回归门禁 + 线上指标；</li>
+<li>治理：模型准入、工具准入、审计、配额、成本。</li>
+</ol>
+<p><strong>动手实验</strong></p>
+<ul>
+<li>用第 24 章的 FastAPI + MCP 代码，做一个 <code>get_alerts</code> / <code>search_runbook</code> / <code>create_ticket</code> 三个工具的 Server；</li>
+<li>让 Agent 完成一次"P2 告警 → 检索 Runbook → 给出处置建议 → 人工确认"；</li>
+<li>记录完整 trajectory（每步输入/工具/结果/耗时）。</li>
+</ul>
+<p><strong>交付物</strong>：可运行的 Agent Demo + 一次完整轨迹 + 评测集（20 条）。</p>
+<p><strong>自检</strong>：能否解释"为什么写操作必须审批 + 幂等"？</p>
+<h3 id="doc-15-7-rag"><a class="hlink" href="#doc-15-7-rag" title="本节链接">#</a>第 7 周：RAG 与知识工程</h3>
+<p><strong>目标</strong>：搭一个能回答运维 Runbook 问题的知识库，并给出评测结果。</p>
+<p><strong>知识点</strong></p>
+<ol>
+<li>文档解析：PDF/表格/扫描件/代码；</li>
+<li>分块：按结构而非固定长度；</li>
+<li>混合检索：BM25 + 向量 + 元数据过滤 + Rerank；</li>
+<li>引用与权限继承；</li>
+<li>分类体系（业务域/文档类型/生命周期/权限域）；</li>
+<li>知识质量：准确性、时效性、完整性、可用性。</li>
+</ol>
+<p><strong>动手实验</strong></p>
+<ul>
+<li>用 20–50 份 Runbook/FAQ 建库；</li>
+<li>对比"纯向量"与"BM25 + 向量 + Rerank"的 Recall@5；</li>
+<li>建 30 条 Golden Questions，测答案正确率与引用准确率。</li>
+</ul>
+<p><strong>交付物</strong>：检索评测表 + 一页结论（哪种组合最好、为什么）。</p>
+<p><strong>自检</strong>：能否解释"为什么企业知识库不能只用向量检索"？</p>
+<h3 id="doc-15-8"><a class="hlink" href="#doc-15-8" title="本节链接">#</a>第 8 周：产品化与综合项目</h3>
+<p><strong>目标</strong>：把前 7 周的能力组装成一个可演示、可度量、可答辩的项目。</p>
+<p><strong>知识点</strong></p>
+<ol>
+<li>愿景与用户旅程；2. 价值-成本矩阵与 RICE；3. 采纳度指标；4. 推广与反馈闭环；5. ROI 计算。</li>
+</ol>
+<p><strong>综合项目（二选一）</strong></p>
+<ul>
+<li><strong>项目 A：DC 巡检 Copilot</strong> —— 定时巡检 → 异常检测 → 生成报告 → 建议工单；</li>
+<li><strong>项目 B：告警 RCA 助手</strong> —— 告警收敛 → 拓扑关联 → 知识检索 → 根因假设 → 人工确认。</li>
+</ul>
+<p><strong>交付物</strong>：架构图 + Demo + 指标看板 + 10 页答辩材料 + 3 分钟演示视频。</p>
+<h2 id="doc-15-3-12"><a class="hlink" href="#doc-15-3-12" title="本节链接">#</a>3. 12 个动手实验清单（速查）</h2>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>实验</th>
+<th>关键产出</th>
+<th>验收标准</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Redfish 资产采集</td>
+<td>采集脚本</td>
+<td>能稳定采集 10 台设备</td>
+</tr>
+<tr>
+<td>2</td>
+<td>最小 CMDB</td>
+<td>表结构 + 拓扑</td>
+<td>能回答"某机柜有哪些设备"</td>
+</tr>
+<tr>
+<td>3</td>
+<td>GPU 健康与压测</td>
+<td>压测报告</td>
+<td>带宽 ≥ 基线 95%</td>
+</tr>
+<tr>
+<td>4</td>
+<td>固件漂移检测</td>
+<td>对比脚本</td>
+<td>能发现版本不一致并告警</td>
+</tr>
+<tr>
+<td>5</td>
+<td>机柜功率/冷量计算</td>
+<td>Excel</td>
+<td>计算可复算、有冗余</td>
+</tr>
+<tr>
+<td>6</td>
+<td>RDMA 链路验证</td>
+<td>带宽/时延数据</td>
+<td>达到链路理论值 80%+</td>
+</tr>
+<tr>
+<td>7</td>
+<td>告警收敛</td>
+<td>聚合服务</td>
+<td>压缩比 ≥ 10:1</td>
+</tr>
+<tr>
+<td>8</td>
+<td>RCA 原型</td>
+<td>规则+图+LLM</td>
+<td>Top-3 命中率 ≥ 60%</td>
+</tr>
+<tr>
+<td>9</td>
+<td>Agent 最小闭环</td>
+<td>可运行 Demo</td>
+<td>轨迹完整、可回放</td>
+</tr>
+<tr>
+<td>10</td>
+<td>RAG 知识库</td>
+<td>检索评测</td>
+<td>Recall@5 ≥ 0.8</td>
+</tr>
+<tr>
+<td>11</td>
+<td>容量预测</td>
+<td>预测模型</td>
+<td>MAPE ≤ 15%</td>
+</tr>
+<tr>
+<td>12</td>
+<td>产品指标看板</td>
+<td>Dashboard</td>
+<td>含采纳度 + 价值指标</td>
+</tr>
+</tbody>
+</table>
+<h2 id="doc-15-4"><a class="hlink" href="#doc-15-4" title="本节链接">#</a>4. 模拟试卷</h2>
+<blockquote>
+<p>三套卷分别对应"硬件基础 → AIOps/Agent → 综合架构"。建议闭卷限时完成，再对照答案评分。</p>
+</blockquote>
+<h3 id="doc-15-a-gpu-60-100"><a class="hlink" href="#doc-15-a-gpu-60-100" title="本节链接">#</a>试卷 A：数据中心与 GPU 基础（60 分钟，100 分）</h3>
+<h4 id="doc-15-10-3-30"><a class="hlink" href="#doc-15-10-3-30" title="本节链接">#</a>一、单选题（10 题 × 3 分 = 30 分）</h4>
+<ol>
+<li>
+<p>PUE 的正确计算方式是：
+   A. IT 能耗 / 总能耗　B. 总能耗 / IT 能耗　C. 制冷能耗 / IT 能耗　D. 总能耗 / 制冷能耗</p>
+</li>
+<li>
+<p>冷板液冷主要带走的热量来自：
+   A. 机房整体空气　B. GPU/CPU 等高热流器件　C. 仅电源模块　D. 仅硬盘</p>
+</li>
+<li>
+<p>PowerShelf 的核心作用是：
+   A. 机柜级 AC→48V/50V DC 供电　B. 机柜级散热　C. 网络交换　D. 资产管理</p>
+</li>
+<li>
+<p>SideCar 在液冷方案中通常用于：
+   A. 放 GPU　B. 放 CDU 等液冷设备　C. 放交换机　D. 放电池</p>
+</li>
+<li>
+<p>NVLink 属于：
+   A. Scale-out　B. Scale-up　C. 存储协议　D. 管理协议</p>
+</li>
+<li>
+<p>HCCS 是以下哪类平台的互连技术：
+   A. NVIDIA GPU　B. 华为昇腾 NPU　C. Intel CPU　D. 以太网交换机</p>
+</li>
+<li>
+<p>固件基线漂移最可能导致：
+   A. 机房停电　B. 同型号节点性能不一致、难复现故障　C. IP 冲突　D. DNS 解析失败</p>
+</li>
+<li>
+<p><code>nccl-tests</code> 主要测试：
+   A. 磁盘 IO　B. GPU 集合通信带宽与延迟　C. 网络路由　D. 电源效率</p>
+</li>
+<li>
+<p>以下哪种场景最适合铜缆互连：
+   A. 跨机房 10km　B. 同一机柜内短距　C. 跨洲　D. 跨楼层 500m</p>
+</li>
+<li>
+<p>AI Factory 方法论的核心目标是：
+   A. 只买最贵的 GPU　B. 算力/网络/存储/制冷/软件一体化，优化单位 token 成本　C. 只关注 PUE　D. 只关注 GPU 数量</p>
+</li>
+</ol>
+<h4 id="doc-15-5-4-20"><a class="hlink" href="#doc-15-5-4-20" title="本节链接">#</a>二、多选题（5 题 × 4 分 = 20 分）</h4>
+<ol>
+<li>
+<p>固件基线通常应包含哪些版本？（ ）
+   A. BIOS　B. BMC　C. GPU VBIOS　D. NVSwitch 固件　E. 网卡固件</p>
+</li>
+<li>
+<p>GPU 上线压测通常包含哪些层次？（ ）
+   A. 单卡健康　B. 单机多卡　C. 多机网络　D. 端到端模型　E. 只测开机</p>
+</li>
+<li>
+<p>高功率密度机柜的散热手段包括：（ ）
+   A. 冷板液冷　B. 风冷融合　C. CDU　D. SideCar　E. 只开窗通风</p>
+</li>
+<li>
+<p>国产 GPU 与非国产 GPU 的差异主要体现在：（ ）
+   A. 计算架构　B. 互连技术　C. 固件/驱动体系　D. 工具链与监控接口　E. 完全无差异</p>
+</li>
+<li>
+<p>AI Factory 需要统筹考虑：（ ）
+   A. 算力　B. 网络　C. 存储　D. 供电与制冷　E. 软件栈</p>
+</li>
+</ol>
+<h4 id="doc-15-5-2-10"><a class="hlink" href="#doc-15-5-2-10" title="本节链接">#</a>三、判断题（5 题 × 2 分 = 10 分）</h4>
+<ol>
+<li>冷板液冷可以完全取代风冷，机柜里不再需要任何风冷。（ ）</li>
+<li>NVLink 可以跨机柜连接多个机架。（ ）</li>
+<li>固件版本越新越好，不需要做兼容性验证。（ ）</li>
+<li>PUE 越低通常越节能，但还要结合 WUE 与总成本评估。（ ）</li>
+<li>GPU 压测只要跑通一次就可以长期进池。（ ）</li>
+</ol>
+<h4 id="doc-15-3-10-30"><a class="hlink" href="#doc-15-3-10-30" title="本节链接">#</a>四、简答题（3 题 × 10 分 = 30 分）</h4>
+<ol>
+<li>请描述固件基线管理的完整闭环（至少 5 个环节）。</li>
+<li>请设计一套 GPU 服务器上线前的压测方案（分层次说明）。</li>
+<li>一个 100kW 机柜，请说明供电与散热的关键设计点。</li>
+</ol>
+<h4 id="doc-15-2-10-20"><a class="hlink" href="#doc-15-2-10-20" title="本节链接">#</a>五、计算题（2 题 × 10 分 = 20 分）</h4>
+<ol>
+<li>某机房 IT 负载 100kW，PUE = 1.25，电价 0.6 元/kWh。求总功率与年电费。</li>
+<li>某冷板液冷系统带走 80kW 热量，供回水温差 ΔT = 10K，水的比热容取 4.18 kJ/(kg·K)。求体积流量（L/s 与 m³/h）。</li>
+</ol>
+<h4 id="doc-15-_1"><a class="hlink" href="#doc-15-_1" title="本节链接">#</a>参考答案与评分点</h4>
+<p><strong>单选</strong>：1-B　2-B　3-A　4-B　5-B　6-B　7-B　8-B　9-B　10-B</p>
+<p><strong>多选</strong>：1-ABCDE　2-ABCD　3-ABCD　4-ABCD　5-ABCDE</p>
+<p><strong>判断</strong>：1-错（混合方案）　2-错（NVLink 限于机内/超节点）　3-错（需兼容矩阵）　4-对　5-错（需持续/定期验证）</p>
+<p><strong>简答 1 要点</strong>：清单 → 版本矩阵 → 采集 → 漂移检测 → 灰度升级 → 回滚 → 审计（答出 5 个即满分）。</p>
+<p><strong>简答 2 要点</strong>：单卡（nvidia-smi/DCGM）→ 单机多卡（nvbandwidth/nccl-tests）→ 多机网络（ib_write_bw）→ 端到端模型（吞吐/延迟）→ 72 小时稳定性与基线对比。</p>
+<p><strong>简答 3 要点</strong>：功率分解 → PowerShelf 48V/50V → N+N 冗余 → 冷板液冷 + 风冷融合 → CDU/SideCar → 漏液检测/快接头/双路供水 → PUE/WUE。</p>
+<p><strong>计算 1</strong>：总功率 = 100 × 1.25 = <strong>125 kW</strong>；年电量 = 125 × 8760 = <strong>1,095,000 kWh</strong>；年电费 = 1,095,000 × 0.6 = <strong>657,000 元</strong>。</p>
+<p><strong>计算 2</strong>：<code>Q = P/(c_p·ΔT) = 80/(4.18×10) = 1.914 kg/s ≈ 1.91 L/s</code>；换算 <code>1.91×3.6 ≈ 6.89 m³/h</code>。</p>
+<h3 id="doc-15-baiops-agent-90-100"><a class="hlink" href="#doc-15-baiops-agent-90-100" title="本节链接">#</a>试卷 B：AIOps 与 Agent 平台（90 分钟，100 分）</h3>
+<h4 id="doc-15-10-2-20"><a class="hlink" href="#doc-15-10-2-20" title="本节链接">#</a>一、单选题（10 题 × 2 分 = 20 分）</h4>
+<ol>
+<li>
+<p>告警收敛的核心目的：
+   A. 减少告警数量、突出根因　B. 关闭所有告警　C. 增加告警渠道　D. 降低监控频率</p>
+</li>
+<li>
+<p>RCA 中"共同祖先"通常依赖：
+   A. 日志文本长度　B. CMDB 拓扑关系　C. GPU 型号　D. 机房面积</p>
+</li>
+<li>
+<p>自愈分级中，重启卡死进程通常属于：
+   A. L0　B. L1　C. L2　D. L3</p>
+</li>
+<li>
+<p>AI Harness 不包含以下哪项：
+   A. 上下文管理　B. 工具调用　C. 状态持久化　D. 机房制冷</p>
+</li>
+<li>
+<p>多 Agent 最合理的引入场景是：
+   A. 任何任务　B. 上下文压力或交叉验证　C. 为了显得先进　D. 单 Agent 能搞定時</p>
+</li>
+<li>
+<p>MCP 的边界是：
+   A. 解决权限与审计　B. 解决工具暴露协议　C. 解决 GPU 调度　D. 解决存储</p>
+</li>
+<li>
+<p>RAG 中 BM25 的主要价值：
+   A. 语义泛化　B. 精确匹配专有名词/错误码　C. 图片生成　D. 权限控制</p>
+</li>
+<li>
+<p>评测门禁的作用是：
+   A. 阻止所有发布　B. 变更不劣化才允许发布　C. 替代人工　D. 提高成本</p>
+</li>
+<li>
+<p>平台采纳度最直接的口径是：
+   A. 代码行数　B. 周活跃用户/团队数与任务完成率　C. 服务器数量　D. 会议室数量</p>
+</li>
+<li>
+<p>变更管理中最重要的一条是：
+    A. 越快越好　B. 有回滚方案与影响面评估　C. 不需要审批　D. 只在白天做</p>
+</li>
+</ol>
+<h4 id="doc-15-5-3-15"><a class="hlink" href="#doc-15-5-3-15" title="本节链接">#</a>二、多选题（5 题 × 3 分 = 15 分）</h4>
+<ol>
+<li>
+<p>告警收敛的常用手段包括：（ ）
+   A. 时间窗聚合　B. 拓扑聚合　C. 因果抑制　D. 随机丢弃　E. 去重</p>
+</li>
+<li>
+<p>自愈防误操作的手段包括：（ ）
+   A. 影响面上限　B. 冷却期　C. 熔断　D. 影子模式　E. 一键撤销</p>
+</li>
+<li>
+<p>Agent 评测应包含：（ ）
+   A. 任务成功率　B. 工具调用准确率　C. 引用正确率　D. 平均步数与成本　E. 只看响应时间</p>
+</li>
+<li>
+<p>RAG 提升效果的手段：（ ）
+   A. 结构化分块　B. 混合检索　C. Rerank　D. 元数据过滤　E. 把整库塞进上下文</p>
+</li>
+<li>
+<p>产品推广的有效做法：（ ）
+   A. 样板间　B. 量化收益　C. 培训认证　D. 反馈闭环　E. 强制全员使用</p>
+</li>
+</ol>
+<h4 id="doc-15-5-2-10_1"><a class="hlink" href="#doc-15-5-2-10_1" title="本节链接">#</a>三、判断题（5 题 × 2 分 = 10 分）</h4>
+<ol>
+<li>告警数量越多说明监控越好。（ ）</li>
+<li>CMDB 不准确时，RCA 结果仍然可靠。（ ）</li>
+<li>写操作 Agent 必须审批 + 幂等 + 审计。（ ）</li>
+<li>多 Agent 一定比单 Agent 效果好。（ ）</li>
+<li>评测集应持续从线上失败案例中补充。（ ）</li>
+</ol>
+<h4 id="doc-15-2-15-30"><a class="hlink" href="#doc-15-2-15-30" title="本节链接">#</a>四、案例分析（2 题 × 15 分 = 30 分）</h4>
+<p><strong>案例 1</strong>：某机房一台核心交换机故障，5 分钟内产生 500 条告警（涉及 200 台服务器、50 个服务）。请说明你会如何收敛、定位与处置。</p>
+<p><strong>案例 2</strong>：某运维 Agent 在未审批的情况下执行了"清理磁盘"工具，删除了生产日志。请分析根因、止血措施与长期改进。</p>
+<h4 id="doc-15-25"><a class="hlink" href="#doc-15-25" title="本节链接">#</a>五、设计题（25 分）</h4>
+<p>设计一个"告警 → RCA → 建议 → 人工审批 → 执行 → 复盘"的 Agent 闭环，要求画出架构、说明状态机、权限与审计设计。</p>
+<h4 id="doc-15-_2"><a class="hlink" href="#doc-15-_2" title="本节链接">#</a>参考答案要点</h4>
+<p><strong>单选</strong>：1-A　2-B　3-C　4-D　5-B　6-B　7-B　8-B　9-B　10-B</p>
+<p><strong>多选</strong>：1-ABCE　2-ABCDE　3-ABCD　4-ABCD　5-ABCD</p>
+<p><strong>判断</strong>：1-错　2-错　3-对　4-错　5-对</p>
+<p><strong>案例 1 要点</strong>：按拓扑聚合（交换机→下挂设备）→ 因果抑制（交换机告警抑制下游）→ 确认影响面 → 切流/隔离 → 修复/更换 → 复盘（为什么单点能影响 200 台）。</p>
+<p><strong>案例 2 要点</strong>：根因是"工具无审批 + 权限过大 + 缺少影响面评估"；止血：停止 Agent、恢复快照、评估数据损失；改进：写操作强制审批、最小权限、软删除/回收站、影响面上限、审计与演练。</p>
+<p><strong>设计题评分</strong>：架构分层（5）＋状态机（5）＋权限/审批（5）＋审计与回放（5）＋评测与度量（5）。</p>
+<h3 id="doc-15-c120-100"><a class="hlink" href="#doc-15-c120-100" title="本节链接">#</a>试卷 C：综合架构（120 分钟，100 分）</h3>
+<h4 id="doc-15-50"><a class="hlink" href="#doc-15-50" title="本节链接">#</a>一、系统设计（50 分）</h4>
+<p>为一家拥有 <strong>5 个数据中心、10 万台服务器（含异构 GPU）</strong> 的公司设计 AI 运维平台，覆盖监控告警、根因定位、自动化处置、容量规划、知识问答，支持多租户与审计。要求：画出分层架构、说明数据流、给出 5 项关键取舍、定义 6 个核心指标。</p>
+<h4 id="doc-15-30"><a class="hlink" href="#doc-15-30" title="本节链接">#</a>二、故障处置（30 分）</h4>
+<p>早高峰 9:10，某推理池 30% 节点 GPU OOM，模型成功率从 99.8% 降到 96%，P99 延迟翻倍。请按"止血—定位—修复—预防"四段给出处置方案。</p>
+<h4 id="doc-15-20"><a class="hlink" href="#doc-15-20" title="本节链接">#</a>三、产品方案（20 分）</h4>
+<p>平台已上线 3 个月，但只有 2 个团队在用。请给出提升采纳度的方案（目标、策略、指标、节奏）。</p>
+<h4 id="doc-15-_3"><a class="hlink" href="#doc-15-_3" title="本节链接">#</a>评分标准</h4>
+<table>
+<thead>
+<tr>
+<th>题</th>
+<th>评分点</th>
+<th>分值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>一</td>
+<td>分层完整（采集/数据/AI/应用/治理/交互）</td>
+<td>15</td>
+</tr>
+<tr>
+<td>一</td>
+<td>数据流清晰、CMDB 与知识库定位正确</td>
+<td>10</td>
+</tr>
+<tr>
+<td>一</td>
+<td>5 项取舍有理由（规则先行、低风险自愈、CMDB 地基、中心重边缘轻、Copilot→Autopilot）</td>
+<td>15</td>
+</tr>
+<tr>
+<td>一</td>
+<td>6 个指标可度量（MTTD/MTTR/告警压缩比/自愈成功率/容量预测准确率/GPU 利用率）</td>
+<td>10</td>
+</tr>
+<tr>
+<td>二</td>
+<td>止血优先、影响面判断、降级与切流</td>
+<td>10</td>
+</tr>
+<tr>
+<td>二</td>
+<td>定位维度（发布/流量结构/节点/模型版本）</td>
+<td>10</td>
+</tr>
+<tr>
+<td>二</td>
+<td>修复与预防闭环（前兆告警、容量模型、演练）</td>
+<td>10</td>
+</tr>
+<tr>
+<td>三</td>
+<td>目标与用户旅程</td>
+<td>5</td>
+</tr>
+<tr>
+<td>三</td>
+<td>样板间 + 量化收益 + 培训 + 反馈闭环</td>
+<td>10</td>
+</tr>
+<tr>
+<td>三</td>
+<td>指标（DAU/团队数/任务完成率/节省工时）</td>
+<td>5</td>
+</tr>
+</tbody>
+</table>
+<h2 id="doc-15-5-qa20"><a class="hlink" href="#doc-15-5-qa20" title="本节链接">#</a>5. 高频追问 Q&amp;A（20 题）</h2>
+<p><strong>Q1. PowerShelf 和传统服务器 PSU 有什么区别？</strong>
+传统 PSU 是"每台服务器各自 AC→DC"，转换损耗分散、线缆多、维护颗粒度细；PowerShelf 是"机柜级 AC→48V/50V DC"，统一供电、效率更高、支持 N+N 冗余与热插拔，适合高密机柜。代价是机柜级单点风险更高，必须做好冗余与配电设计。</p>
+<p><strong>Q2. 冷板液冷漏液怎么防？</strong>
+①快接头 + 双密封；②漏液检测绳/传感器，分区告警；③CDU 压力/流量/液位监控；④负压设计（部分方案）；⑤定期巡检与保压测试；⑥漏水时自动切断对应支路。<strong>不能只靠"买好管子"</strong>，要有检测 + 隔离 + 演练。</p>
+<p><strong>Q3. 风冷和液冷怎么配比？</strong>
+按热流密度算：GPU/CPU 用冷板，内存/网卡/电源仍靠风冷，形成"风液融合"。比例取决于单柜功率、器件热流密度、机房条件；通常高密 GPU 机柜液冷承担 70%–90% 热量，剩余由风冷带走。最终以厂商热设计文档与实测为准。</p>
+<p><strong>Q4. 机柜承重和抗震要注意什么？</strong>
+满载 GPU 服务器单柜可达 1–1.5 吨甚至更高；要核算楼板承重、机柜底座、抗震支架、运输与吊装；液冷还要考虑管路重量与振动。<strong>设计前必须拿到机房结构图纸与承重余量</strong>。</p>
+<p><strong>Q5. CMDB 数据不准怎么办？</strong>
+①自动发现（Redfish/网络扫描/Agent）替代人工录入；②唯一 ID 与生命周期状态机；③变更联动（工单关闭即更新）；④数据质量评分与定期稽核；⑤"谁维护谁负责"的 owner 机制。<strong>先把核心关系（设备-机柜-网络-业务）做准，再谈 AI</strong>。</p>
+<p><strong>Q6. 告警风暴怎么处理？</strong>
+拓扑聚合 + 时间窗 + 因果抑制 + 去重 + 分级。先判断"是不是同一个根因"（同交换机/同电源/同机柜），再做抑制；同时限制通知渠道（只推 P0/P1），避免刷屏。</p>
+<p><strong>Q7. 数字孪生在运维中的价值是什么？</strong>
+把机房/机柜/设备/管路/网络建模成可计算的虚拟副本，用于：容量模拟、变更影响分析、故障演练、液冷流量/温度仿真。<strong>价值在"提前验证"，不是"好看"</strong>。</p>
+<p><strong>Q8. 变更风险评分怎么做？</strong>
+特征：变更类型、影响设备数、是否核心业务、历史失败率、是否首次执行、回滚难度、时间窗口。用逻辑回归/GBDT 或规则打分，输出"低/中/高"；高风险强制审批与灰度。</p>
+<p><strong>Q9. AIOps 模型误报太多怎么办？</strong>
+①先做规则与阈值基线；②用多指标联合判定（而非单指标）；③引入"持续时间/趋势"条件；④按业务分级告警；⑤持续用人工标注反馈训练；⑥设置"观察期"而不是立即告警。</p>
+<p><strong>Q10. 慢卡怎么发现？</strong>
+同型号基线对比：带宽、算力、温度、功耗、ECC、NVLink 速率；用 <code>nvbandwidth</code>/<code>nccl-tests</code> 定期抽检；训练任务里看 step time 分布。发现后隔离、复测、返修。</p>
+<p><strong>Q11. Agent 工具设计的原则？</strong>
+单一职责、动词命名、参数少而明确、返回结构化可截断、超时与幂等、权限最小化、错误码稳定、可审计。</p>
+<p><strong>Q12. 长任务 Agent 怎么恢复？</strong>
+状态机 + 持久化 checkpoint + operation log；崩溃后从最近可信状态恢复；副作用操作要有幂等键；恢复前先判断"上次操作结果是否未知"。</p>
+<p><strong>Q13. 记忆污染怎么防？</strong>
+只写可验证的事实；写入前做去重与置信度评估；设置 TTL；保留来源与版本；提供人工纠正入口；定期审计。</p>
+<p><strong>Q14. 评测集怎么构建？</strong>
+从真实业务抽取 + 人工标注 + 边界/对抗样本；分层（Golden/边界/对抗）；每次线上失败补入；定期更新，避免过拟合。</p>
+<p><strong>Q15. RAG 表格问答怎么做？</strong>
+表格结构化解析（行列/表头/合并单元格）→ 转成结构化记录或"表头+行"文本 → 元数据过滤 → 必要时用 Text-to-SQL；不要直接把表格拍平成一段文本。</p>
+<p><strong>Q16. RAG 权限继承怎么做？</strong>
+文档级 ACL → 检索时按用户权限过滤（元数据/向量库过滤）→ 生成前再次校验 → 引用只展示有权限的片段。<strong>不能只在应用层做一次过滤</strong>。</p>
+<p><strong>Q17. 增量索引与删除怎么做？</strong>
+用文档版本号/更新时间做增量；删除要同步删向量与缓存（软删 + 定期清理）；Embedding 模型升级要重建索引并做双写/切换。</p>
+<p><strong>Q18. 平台冷启动怎么推广？</strong>
+选 1–2 个高频高痛场景做样板间，拿到量化收益（节省工时/降低 MTTR），再做内部分享、培训、激励；<strong>不要一上来就全公司推</strong>。</p>
+<p><strong>Q19. 怎么量化 AI 平台的 ROI？</strong>
+<code>ROI = (节省人力成本 + 降低故障损失 + 提升资源利用率收益 − 平台与模型成本) / 投入</code>。要能拆到场景级：每个场景节省多少工时、减少多少故障时长、提升多少利用率。</p>
+<p><strong>Q20. 行为面试怎么用 STAR？</strong>
+Situation（背景与规模）→ Task（你的目标与职责）→ Action（你做了什么关键决策）→ Result（量化结果）。<strong>重点讲"你的决策"和"取舍"，不要只讲团队做了什么</strong>。</p>
+<h2 id="doc-15-6-7"><a class="hlink" href="#doc-15-6-7" title="本节链接">#</a>6. 考前 7 天冲刺计划</h2>
+<table>
+<thead>
+<tr>
+<th>天</th>
+<th>任务</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>D-7</td>
+<td>做试卷 A，定位硬件薄弱点</td>
+</tr>
+<tr>
+<td>D-6</td>
+<td>复习 GPU 架构 + 固件基线 + 压测（第 2 周）</td>
+</tr>
+<tr>
+<td>D-5</td>
+<td>复习机柜供电/液冷/互连（第 3–4 周）+ 重算计算题</td>
+</tr>
+<tr>
+<td>D-4</td>
+<td>做试卷 B，定位 AIOps/Agent 薄弱点</td>
+</tr>
+<tr>
+<td>D-3</td>
+<td>复习告警收敛/RCA/自愈 + Agent 平台（第 5–6 周）</td>
+</tr>
+<tr>
+<td>D-2</td>
+<td>复习 RAG + 产品化（第 7–8 周），准备 2 个项目案例</td>
+</tr>
+<tr>
+<td>D-1</td>
+<td>做试卷 C（限时），复盘错题；准备反问问题</td>
+</tr>
+<tr>
+<td>当天</td>
+<td>只回顾错题与项目亮点，不再学新知识</td>
+</tr>
+</tbody>
+</table>
+<h2 id="doc-15-7"><a class="hlink" href="#doc-15-7" title="本节链接">#</a>7. 与既有章节的衔接</h2>
+<table>
+<thead>
+<tr>
+<th>想补什么</th>
+<th>看哪章</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>JD 逐条解读 + 30 道问答 + 系统设计</td>
+<td>第 25 章</td>
+</tr>
+<tr>
+<td>Agent Harness、工具、状态、评测</td>
+<td>第 02、18、20 章</td>
+</tr>
+<tr>
+<td>企业 AI 平台架构、模型网关</td>
+<td>第 22 章</td>
+</tr>
+<tr>
+<td>FastAPI / MCP / React 全栈实现</td>
+<td>第 24 章</td>
+</tr>
+<tr>
+<td>Coze / Dify / LangChain 选型</td>
+<td>第 23 章</td>
+</tr>
+<tr>
+<td>GPU 集群、网络、监控、国产 GPU</td>
+<td>第 07、08、11、13、14、15、17 章</td>
+</tr>
+</tbody>
+</table></div></section><section class="doc" id="doc-16" data-title="Harness 横向对比与最新实现范式：Pi / Aider 与 2026 工程共识"><header class="doc-head"><div class="doc-kicker">DOC 17</div><h2>Harness 横向对比与最新实现范式：Pi / Aider 与 2026 工程共识</h2><div class="doc-source">来源：20_Harness横向对比与最新实现范式.md</div></header><details class="doc-toc"><summary>本篇目录</summary><div class="toc">
+<ul>
+<li><a href="#doc-16-1">1. 文章讲了什么（核心论点）</a></li>
+<li><a href="#doc-16-2-harness">2. 一个 Harness 由什么组成</a></li>
+<li><a href="#doc-16-3-pi-vs-aider">3. Pi vs Aider 对比</a><ul>
+<li><a href="#doc-16-31-2026-10-11">3.1 事实卡（截至 2026-10-11，仓库实测）</a></li>
+<li><a href="#doc-16-32">3.2 设计哲学差异（这是选型的分水岭）</a></li>
+<li><a href="#doc-16-33">3.3 一段话选型</a></li>
+</ul>
+</li>
+<li><a href="#doc-16-4-harness-2026">4. 更广的 Harness 版图（2026）</a></li>
+<li><a href="#doc-16-5">5. 「最新的实现方式」：八条铁律</a><ul>
+<li><a href="#doc-16-1-agent-loop-control-plane">铁律 1 —— 薄 Agent Loop，厚 Control Plane</a></li>
+<li><a href="#doc-16-2-wal-operation-log">铁律 2 —— 执行状态持久化：WAL / Operation Log</a></li>
+<li><a href="#doc-16-3-fail-fast-retry">铁律 3 —— Fail Fast 优于 Retry</a></li>
+<li><a href="#doc-16-4">铁律 4 —— 确定性验证（外部不变量）</a></li>
+<li><a href="#doc-16-5_1">铁律 5 —— 长程稳定性是分水岭</a></li>
+<li><a href="#doc-16-6-agent">铁律 6 —— 多 Agent 是例外，不是默认</a></li>
+<li><a href="#doc-16-7">铁律 7 —— 自进化必须受控闭环</a></li>
+<li><a href="#doc-16-8">铁律 8 —— 从命令式编排走向声明式目标</a></li>
+</ul>
+</li>
+<li><a href="#doc-16-6-harness">6. 参考实现：按最新范式写一个可运行的 Harness</a><ul>
+<li><a href="#doc-16-61">6.1 结构</a></li>
+<li><a href="#doc-16-62-wal">6.2 WAL：状态可以丢，日志不能丢</a></li>
+<li><a href="#doc-16-63">6.3 安全恢复点：崩溃后怎么知道从哪继续</a></li>
+<li><a href="#doc-16-64-loop">6.4 薄 Loop：四步循环 + 两侧护栏</a></li>
+<li><a href="#doc-16-65">6.5 实测运行输出</a></li>
+<li><a href="#doc-16-66">6.6 从这个骨架到生产，还差什么</a></li>
+</ul>
+</li>
+<li><a href="#doc-16-7_1">7. 落地清单</a></li>
+<li><a href="#doc-16-8_1">8. 与既有章节的衔接</a></li>
+<li><a href="#doc-16-9">9. 参考链接与引用来源</a><ul>
+<li><a href="#doc-16-91">9.1 本章主素材</a></li>
+<li><a href="#doc-16-92-pi">9.2 Pi</a></li>
+<li><a href="#doc-16-93-aider">9.3 Aider</a></li>
+<li><a href="#doc-16-94-4">9.4 第 4 节版图中的其他项目</a></li>
+<li><a href="#doc-16-95">9.5 星标数据口径</a></li>
 </ul>
 </li>
 </ul>
@@ -11577,7 +12379,7 @@ Agent层   AI Harness（上下文/工具/状态/恢复/审批）
 <p><strong>本章素材</strong>：InfoQ 原文《人人都能整个"自己的 DeepSeek Harness"，那我们为啥还在给 Claude Code 们充会员？》（2026-08-31，作者 Tina；受访者：TiDB 唐刘、腾讯研究院茹炳晟、Floatboat 架构师 Remy、字节 Trae 天猪）+ Pi / Aider 官方仓库实测数据（截至 2026-10-11）。原文链接：<a href="https://mp.weixin.qq.com/s/eJQATXv6DF2gqLiYpP2ioQ" target="_blank" rel="noopener noreferrer">https://mp.weixin.qq.com/s/eJQATXv6DF2gqLiYpP2ioQ</a>；<strong>本章引用的全部链接见文末 §9 参考链接与引用来源</strong>。
 <strong>本章回答三个问题</strong>：① 这篇文章到底说了什么？② Pi 和 Aider 这类 Harness 怎么比、怎么选？③ 「按最新方式实现一个 Harness」到底该长什么样？</p>
 </blockquote>
-<h2 id="doc-15-1"><a class="hlink" href="#doc-15-1" title="本节链接">#</a>1. 文章讲了什么（核心论点）</h2>
+<h2 id="doc-16-1"><a class="hlink" href="#doc-16-1" title="本节链接">#</a>1. 文章讲了什么（核心论点）</h2>
 <table>
 <thead>
 <tr>
@@ -11634,7 +12436,7 @@ Agent层   AI Harness（上下文/工具/状态/恢复/审批）
 Retry is dangerous. Fail fast is underrated. —— TiDB 唐刘
 状态可以丢，但日志不能丢，丢了日志就丢了真相。 —— Pi Harness v2（WAL 思路）
 </code></pre>
-<h2 id="doc-15-2-harness"><a class="hlink" href="#doc-15-2-harness" title="本节链接">#</a>2. 一个 Harness 由什么组成</h2>
+<h2 id="doc-16-2-harness"><a class="hlink" href="#doc-16-2-harness" title="本节链接">#</a>2. 一个 Harness 由什么组成</h2>
 <pre><code>┌──────────────────────────────────────────────────────────────┐
 │  Control Plane（厚）                                          │
 │  权限 / 沙箱 · 状态持久化(WAL) · Checkpoint·Rollback·Failover │
@@ -11652,8 +12454,8 @@ Retry is dangerous. Fail fast is underrated. —— TiDB 唐刘
 <blockquote>
 <p>关键收益：<strong>换模型、换 Agent Core 不必推倒重来</strong>。TiDB 团队最初用 OpenCode，后换成 Pi，「不管上面的 Agent 怎么换，下面的 Sandbox、权限、状态和控制面都不需要跟着重写」。</p>
 </blockquote>
-<h2 id="doc-15-3-pi-vs-aider"><a class="hlink" href="#doc-15-3-pi-vs-aider" title="本节链接">#</a>3. Pi vs Aider 对比</h2>
-<h3 id="doc-15-31-2026-10-11"><a class="hlink" href="#doc-15-31-2026-10-11" title="本节链接">#</a>3.1 事实卡（截至 2026-10-11，仓库实测）</h3>
+<h2 id="doc-16-3-pi-vs-aider"><a class="hlink" href="#doc-16-3-pi-vs-aider" title="本节链接">#</a>3. Pi vs Aider 对比</h2>
+<h3 id="doc-16-31-2026-10-11"><a class="hlink" href="#doc-16-31-2026-10-11" title="本节链接">#</a>3.1 事实卡（截至 2026-10-11，仓库实测）</h3>
 <table>
 <thead>
 <tr>
@@ -11700,7 +12502,7 @@ Retry is dangerous. Fail fast is underrated. —— TiDB 唐刘
 </tr>
 </tbody>
 </table>
-<h3 id="doc-15-32"><a class="hlink" href="#doc-15-32" title="本节链接">#</a>3.2 设计哲学差异（这是选型的分水岭）</h3>
+<h3 id="doc-16-32"><a class="hlink" href="#doc-16-32" title="本节链接">#</a>3.2 设计哲学差异（这是选型的分水岭）</h3>
 <table>
 <thead>
 <tr>
@@ -11767,13 +12569,13 @@ Retry is dangerous. Fail fast is underrated. —— TiDB 唐刘
 </tr>
 </tbody>
 </table>
-<h3 id="doc-15-33"><a class="hlink" href="#doc-15-33" title="本节链接">#</a>3.3 一段话选型</h3>
+<h3 id="doc-16-33"><a class="hlink" href="#doc-16-33" title="本节链接">#</a>3.3 一段话选型</h3>
 <ul>
 <li><strong>要做"自己的 Harness"</strong> → 选 <strong>Pi</strong>：它把 Loop 做薄、把扩展点做齐，允许你把自己的 Control Plane（权限/沙箱/持久状态/审计）接上去，并且换模型换 Core 不用重写底座。</li>
 <li><strong>要马上提效、要审计与回滚</strong> → 选 <strong>Aider</strong>：Git 原生 + repo map，在存量代码库上做增量修改最顺手。</li>
 <li><strong>要跑生产级长程任务</strong> → 两者都需要<strong>外挂</strong> Control Plane；差别在于 Pi 的 SDK/扩展点更适合"自己造"，Aider 的 Git 工作流更适合"直接用"。</li>
 </ul>
-<h2 id="doc-15-4-harness-2026"><a class="hlink" href="#doc-15-4-harness-2026" title="本节链接">#</a>4. 更广的 Harness 版图（2026）</h2>
+<h2 id="doc-16-4-harness-2026"><a class="hlink" href="#doc-16-4-harness-2026" title="本节链接">#</a>4. 更广的 Harness 版图（2026）</h2>
 <table>
 <thead>
 <tr>
@@ -11835,29 +12637,29 @@ Retry is dangerous. Fail fast is underrated. —— TiDB 唐刘
 </tr>
 </tbody>
 </table>
-<h2 id="doc-15-5"><a class="hlink" href="#doc-15-5" title="本节链接">#</a>5. 「最新的实现方式」：八条铁律</h2>
-<h3 id="doc-15-1-agent-loop-control-plane"><a class="hlink" href="#doc-15-1-agent-loop-control-plane" title="本节链接">#</a>铁律 1 —— 薄 Agent Loop，厚 Control Plane</h3>
+<h2 id="doc-16-5"><a class="hlink" href="#doc-16-5" title="本节链接">#</a>5. 「最新的实现方式」：八条铁律</h2>
+<h3 id="doc-16-1-agent-loop-control-plane"><a class="hlink" href="#doc-16-1-agent-loop-control-plane" title="本节链接">#</a>铁律 1 —— 薄 Agent Loop，厚 Control Plane</h3>
 <p>Loop 只做四件事；权限、沙箱、持久化、恢复、审计全部在 Loop 之外。<strong>判断标准</strong>：如果换一个模型 / 换一个 Agent Core 需要改 Control Plane，说明分层错了。</p>
-<h3 id="doc-15-2-wal-operation-log"><a class="hlink" href="#doc-15-2-wal-operation-log" title="本节链接">#</a>铁律 2 —— 执行状态持久化：WAL / Operation Log</h3>
+<h3 id="doc-16-2-wal-operation-log"><a class="hlink" href="#doc-16-2-wal-operation-log" title="本节链接">#</a>铁律 2 —— 执行状态持久化：WAL / Operation Log</h3>
 <p>Pi 的 Harness v2 把<strong>操作意图、执行步骤、Tool 状态、消息队列</strong>全部落盘，进程崩溃后按 <strong>Operation Log</strong> 判断"安全恢复点"。这与数据库 <strong>WAL</strong> 完全同构：<strong>先写日志，再改状态；状态可以丢，日志不能丢。</strong></p>
-<h3 id="doc-15-3-fail-fast-retry"><a class="hlink" href="#doc-15-3-fail-fast-retry" title="本节链接">#</a>铁律 3 —— Fail Fast 优于 Retry</h3>
+<h3 id="doc-16-3-fail-fast-retry"><a class="hlink" href="#doc-16-3-fail-fast-retry" title="本节链接">#</a>铁律 3 —— Fail Fast 优于 Retry</h3>
 <p>「Retry is dangerous. Fail fast is underrated.」推理期一个不起眼的偏差，如果在第 11–50 步还被当作事实继续消费，最后你根本不知道从哪一步开始错的。做法：<strong>错误计数 + 连续错误阈值 + 立即停止</strong>，而不是重试放大。但 Fail Fast 必须搭配两件事：<strong>限制错误传播</strong>、<strong>从最近一个可信状态恢复</strong>。</p>
-<h3 id="doc-15-4"><a class="hlink" href="#doc-15-4" title="本节链接">#</a>铁律 4 —— 确定性验证（外部不变量）</h3>
+<h3 id="doc-16-4"><a class="hlink" href="#doc-16-4" title="本节链接">#</a>铁律 4 —— 确定性验证（外部不变量）</h3>
 <p>Agent 说"我修好了"没有意义。必须由<strong>外部不变量</strong>证明：编译通过、测试通过、类型正确。Coding Harness 要与 CI 打通，覆盖 测试生成 → 测试执行 → 结果分析 → 错误反馈 → 代码修正。<strong>并且验证结果要三态</strong>：<code>PASS / BLOCKED / UNKNOWN</code>（UNKNOWN 不默认放行，升级为人工或异步复核）。</p>
-<h3 id="doc-15-5_1"><a class="hlink" href="#doc-15-5_1" title="本节链接">#</a>铁律 5 —— 长程稳定性是分水岭</h3>
+<h3 id="doc-16-5_1"><a class="hlink" href="#doc-16-5_1" title="本节链接">#</a>铁律 5 —— 长程稳定性是分水岭</h3>
 <p>「能用」和「能连续跑 50 小时还知道自己干过什么」是两回事。长程难度不看步数，看<strong>依赖链深度、状态跨越的时间与工具数、目标开放度、操作可逆性、错误被发现前要经过多少轮反馈</strong>。</p>
-<h3 id="doc-15-6-agent"><a class="hlink" href="#doc-15-6-agent" title="本节链接">#</a>铁律 6 —— 多 Agent 是例外，不是默认</h3>
+<h3 id="doc-16-6-agent"><a class="hlink" href="#doc-16-6-agent" title="本节链接">#</a>铁律 6 —— 多 Agent 是例外，不是默认</h3>
 <p>「Communication is complexity.」十个组件频繁通信的系统大概率难 Debug、性能也差。<strong>只要单 Agent 能搞定就不要引入多 Agent</strong> —— 复杂度不会消失，只会转移。值得付出成本的两个场景：① 缓解上下文压力；② 交叉验证与发散探索。</p>
-<h3 id="doc-15-7"><a class="hlink" href="#doc-15-7" title="本节链接">#</a>铁律 7 —— 自进化必须受控闭环</h3>
+<h3 id="doc-16-7"><a class="hlink" href="#doc-16-7" title="本节链接">#</a>铁律 7 —— 自进化必须受控闭环</h3>
 <p><code>发现问题 → 生成改动 → 隔离评测 → 门槛校验（质量/成本/时延/安全）→ 灰度 → 保留回滚</code>。没有版本管理和可观测性，自进化只是在积累技术债。Human-Centric：<strong>人在环中 → 人在环上</strong>（局部优化自动完成，人管目标、边界、例外和系统级治理）。</p>
-<h3 id="doc-15-8"><a class="hlink" href="#doc-15-8" title="本节链接">#</a>铁律 8 —— 从命令式编排走向声明式目标</h3>
+<h3 id="doc-16-8"><a class="hlink" href="#doc-16-8" title="本节链接">#</a>铁律 8 —— 从命令式编排走向声明式目标</h3>
 <p>模型越强，一部分显式编排必然消失 —— 很像数据库：早期要告诉它"怎么 Join、从哪张表开始"，Optimizer 变强后，人只说"我要什么"。<strong>但边界不能因为"上层更聪明"就消失</strong>：SQL / Optimizer 可以越来越聪明，Transaction / Privilege / Durability 必须稳定。</p>
-<h2 id="doc-15-6-harness"><a class="hlink" href="#doc-15-6-harness" title="本节链接">#</a>6. 参考实现：按最新范式写一个可运行的 Harness</h2>
+<h2 id="doc-16-6-harness"><a class="hlink" href="#doc-16-6-harness" title="本节链接">#</a>6. 参考实现：按最新范式写一个可运行的 Harness</h2>
 <blockquote>
 <p>完整可运行代码：<strong><a href="examples/harness_wal.py">examples/harness_wal.py</a></strong>（单文件、无第三方依赖，<code>python harness_wal.py</code> 即可跑通 5 个演示）。
 它把上面八条铁律中的 1/2/3/4/7 落成了可执行代码。</p>
 </blockquote>
-<h3 id="doc-15-61"><a class="hlink" href="#doc-15-61" title="本节链接">#</a>6.1 结构</h3>
+<h3 id="doc-16-61"><a class="hlink" href="#doc-16-61" title="本节链接">#</a>6.1 结构</h3>
 <pre><code>harness_wal.py
 ├── OpLog          WAL：追加写 + fsync + 哈希链，可回放校验
 ├── Workspace      持久状态：由 WAL 回放重建，可快照 / 可回滚
@@ -11867,7 +12669,7 @@ Retry is dangerous. Fail fast is underrated. —— TiDB 唐刘
 │   └── recovery_point()   崩溃后找&quot;安全恢复点&quot;
 └── SelfEvolutionGate      受控自进化门禁（质量/成本/时延）
 </code></pre>
-<h3 id="doc-15-62-wal"><a class="hlink" href="#doc-15-62-wal" title="本节链接">#</a>6.2 WAL：状态可以丢，日志不能丢</h3>
+<h3 id="doc-16-62-wal"><a class="hlink" href="#doc-16-62-wal" title="本节链接">#</a>6.2 WAL：状态可以丢，日志不能丢</h3>
 <pre><code class="language-python">class OpLog:
     &quot;&quot;&quot;先写日志再改状态；每条记录带 prev 指针 + digest，形成哈希链。&quot;&quot;&quot;
     def append(self, kind: str, payload):
@@ -11899,7 +12701,7 @@ Retry is dangerous. Fail fast is underrated. —— TiDB 唐刘
             records.append(rec)
         return records
 </code></pre>
-<h3 id="doc-15-63"><a class="hlink" href="#doc-15-63" title="本节链接">#</a>6.3 安全恢复点：崩溃后怎么知道从哪继续</h3>
+<h3 id="doc-16-63"><a class="hlink" href="#doc-16-63" title="本节链接">#</a>6.3 安全恢复点：崩溃后怎么知道从哪继续</h3>
 <pre><code class="language-python">@staticmethod
 def recovery_point(records):
     &quot;&quot;&quot;最后一个 tool.call 若没有配对的 tool.result，就是崩溃点。
@@ -11916,7 +12718,7 @@ def recovery_point(records):
             pending = r[&quot;payload&quot;]
     return last_step, pending
 </code></pre>
-<h3 id="doc-15-64-loop"><a class="hlink" href="#doc-15-64-loop" title="本节链接">#</a>6.4 薄 Loop：四步循环 + 两侧护栏</h3>
+<h3 id="doc-16-64-loop"><a class="hlink" href="#doc-16-64-loop" title="本节链接">#</a>6.4 薄 Loop：四步循环 + 两侧护栏</h3>
 <pre><code class="language-python">for step in range(start_step, self.max_steps):
     plan = self.planner(ctx)                       # ① 规划（模型决策）
     tool, args = plan[&quot;tool&quot;], plan.get(&quot;args&quot;, {})
@@ -11953,7 +12755,7 @@ def recovery_point(records):
     if step and step % self.checkpoint_every == 0:
         self.checkpoint()                          # 定期落盘快照 → 可回滚点
 </code></pre>
-<h3 id="doc-15-65"><a class="hlink" href="#doc-15-65" title="本节链接">#</a>6.5 实测运行输出</h3>
+<h3 id="doc-16-65"><a class="hlink" href="#doc-16-65" title="本节链接">#</a>6.5 实测运行输出</h3>
 <pre><code class="language-text">Demo 1：正常执行 —— 薄 Loop + WAL + Checkpoint
   [checkpoint] 已落盘：3 个文件
 状态: finished      文件: ['docs/design.md', 'src/app.py', 'src/util.py']
@@ -11980,7 +12782,7 @@ Demo 5：受控自进化门禁
   候选 {'quality': 0.91, ...}                          -&gt; 拒绝：质量未达标
   候选 {'quality': 0.97, 'cost': 1.3, ...}             -&gt; 拒绝：成本上升超阈值
 </code></pre>
-<h3 id="doc-15-66"><a class="hlink" href="#doc-15-66" title="本节链接">#</a>6.6 从这个骨架到生产，还差什么</h3>
+<h3 id="doc-16-66"><a class="hlink" href="#doc-16-66" title="本节链接">#</a>6.6 从这个骨架到生产，还差什么</h3>
 <table>
 <thead>
 <tr>
@@ -12019,7 +12821,7 @@ Demo 5：受控自进化门禁
 </tr>
 </tbody>
 </table>
-<h2 id="doc-15-7_1"><a class="hlink" href="#doc-15-7_1" title="本节链接">#</a>7. 落地清单</h2>
+<h2 id="doc-16-7_1"><a class="hlink" href="#doc-16-7_1" title="本节链接">#</a>7. 落地清单</h2>
 <ul>
 <li>[ ] Loop 与 Control Plane <strong>分层清晰</strong>：换模型 / 换 Core 不需要改 Control Plane；</li>
 <li>[ ] 所有副作用操作<strong>先写日志、后执行</strong>，日志带哈希链与 fsync；</li>
@@ -12031,7 +12833,7 @@ Demo 5：受控自进化门禁
 <li>[ ] 自进化走<strong>隔离评测 → 门槛 → 灰度 → 保留回滚</strong>，全程可观测可溯源；</li>
 <li>[ ] 全链路可观测：模型调用、工具调用、Guardrail 判定、恢复动作均可查询。</li>
 </ul>
-<h2 id="doc-15-8_1"><a class="hlink" href="#doc-15-8_1" title="本节链接">#</a>8. 与既有章节的衔接</h2>
+<h2 id="doc-16-8_1"><a class="hlink" href="#doc-16-8_1" title="本节链接">#</a>8. 与既有章节的衔接</h2>
 <table>
 <thead>
 <tr>
@@ -12069,11 +12871,11 @@ Demo 5：受控自进化门禁
 <blockquote>
 <p><strong>一句话总结本章</strong>：模型会持续被替换，Harness 也会持续趋同；能穿越这两次替换的，只有你<strong>自己掌握的那层 Control Plane</strong> —— 状态、权限、副作用边界和恢复能力。</p>
 </blockquote>
-<h2 id="doc-15-9"><a class="hlink" href="#doc-15-9" title="本节链接">#</a>9. 参考链接与引用来源</h2>
+<h2 id="doc-16-9"><a class="hlink" href="#doc-16-9" title="本节链接">#</a>9. 参考链接与引用来源</h2>
 <blockquote>
 <p>以下链接均于 <strong>2026-10-11</strong> 实测可访问（HTTP 200）。第三方文章与社区项目仅用于观点和生态参考，技术结论请以官方文档与源码为准。</p>
 </blockquote>
-<h3 id="doc-15-91"><a class="hlink" href="#doc-15-91" title="本节链接">#</a>9.1 本章主素材</h3>
+<h3 id="doc-16-91"><a class="hlink" href="#doc-16-91" title="本节链接">#</a>9.1 本章主素材</h3>
 <table>
 <thead>
 <tr>
@@ -12095,7 +12897,7 @@ Demo 5：受控自进化门禁
 </tr>
 </tbody>
 </table>
-<h3 id="doc-15-92-pi"><a class="hlink" href="#doc-15-92-pi" title="本节链接">#</a>9.2 Pi</h3>
+<h3 id="doc-16-92-pi"><a class="hlink" href="#doc-16-92-pi" title="本节链接">#</a>9.2 Pi</h3>
 <table>
 <thead>
 <tr>
@@ -12130,7 +12932,7 @@ Demo 5：受控自进化门禁
 </tr>
 </tbody>
 </table>
-<h3 id="doc-15-93-aider"><a class="hlink" href="#doc-15-93-aider" title="本节链接">#</a>9.3 Aider</h3>
+<h3 id="doc-16-93-aider"><a class="hlink" href="#doc-16-93-aider" title="本节链接">#</a>9.3 Aider</h3>
 <table>
 <thead>
 <tr>
@@ -12149,7 +12951,7 @@ Demo 5：受控自进化门禁
 </tr>
 </tbody>
 </table>
-<h3 id="doc-15-94-4"><a class="hlink" href="#doc-15-94-4" title="本节链接">#</a>9.4 第 4 节版图中的其他项目</h3>
+<h3 id="doc-16-94-4"><a class="hlink" href="#doc-16-94-4" title="本节链接">#</a>9.4 第 4 节版图中的其他项目</h3>
 <table>
 <thead>
 <tr>
@@ -12199,7 +13001,7 @@ Demo 5：受控自进化门禁
 <blockquote>
 <p><strong>说明</strong>：Cursor、Windsurf、Antigravity 等为闭源商业产品，官网即可检索，本章不再单列；Steve Yegge 早期关于"Agent 的 Kubernetes"的原始表述见 §9.1 原文所述。</p>
 </blockquote>
-<h3 id="doc-15-95"><a class="hlink" href="#doc-15-95" title="本节链接">#</a>9.5 星标数据口径</h3>
+<h3 id="doc-16-95"><a class="hlink" href="#doc-16-95" title="本节链接">#</a>9.5 星标数据口径</h3>
 <p>Pi / Aider 的星标、许可、语言、创建时间与最近提交时间，均取自 <strong>GitHub REST API</strong>，查询时间 <strong>2026-10-11</strong>：</p>
 <table>
 <thead>
@@ -12233,34 +13035,34 @@ Demo 5：受控自进化门禁
 </table>
 <blockquote>
 <p>星标数为快照值，会随时间变化；引用时请注明查询日期。</p>
-</blockquote></div></section><section class="doc" id="doc-16" data-title="Coze / Dify / LangChain 对比与选型：从低代码平台到代码框架"><header class="doc-head"><div class="doc-kicker">DOC 17</div><h2>Coze / Dify / LangChain 对比与选型：从低代码平台到代码框架</h2><div class="doc-source">来源：23_Coze_Dify_LangChain对比与选型.md</div></header><details class="doc-toc"><summary>本篇目录</summary><div class="toc">
+</blockquote></div></section><section class="doc" id="doc-17" data-title="Coze / Dify / LangChain 对比与选型：从低代码平台到代码框架"><header class="doc-head"><div class="doc-kicker">DOC 18</div><h2>Coze / Dify / LangChain 对比与选型：从低代码平台到代码框架</h2><div class="doc-source">来源：23_Coze_Dify_LangChain对比与选型.md</div></header><details class="doc-toc"><summary>本篇目录</summary><div class="toc">
 <ul>
-<li><a href="#doc-16-1">1. 先把三个东西放回正确的位置</a></li>
-<li><a href="#doc-16-2-14">2. 能力矩阵（14 维）</a></li>
-<li><a href="#doc-16-3">3. 选型决策树</a></li>
-<li><a href="#doc-16-4">4. 企业里最常见的三种组合</a><ul>
-<li><a href="#doc-16-acoze-api">组合 A：Coze 做前台，企业 API 做后端（最快验证）</a></li>
-<li><a href="#doc-16-bdify-ai-langgraph-agent">组合 B：Dify 做 AI 中台 + LangGraph 做复杂 Agent（最推荐的中大型形态）</a></li>
-<li><a href="#doc-16-c-langchain-langgraph">组合 C：全自研 LangChain / LangGraph（大型企业）</a></li>
+<li><a href="#doc-17-1">1. 先把三个东西放回正确的位置</a></li>
+<li><a href="#doc-17-2-14">2. 能力矩阵（14 维）</a></li>
+<li><a href="#doc-17-3">3. 选型决策树</a></li>
+<li><a href="#doc-17-4">4. 企业里最常见的三种组合</a><ul>
+<li><a href="#doc-17-acoze-api">组合 A：Coze 做前台，企业 API 做后端（最快验证）</a></li>
+<li><a href="#doc-17-bdify-ai-langgraph-agent">组合 B：Dify 做 AI 中台 + LangGraph 做复杂 Agent（最推荐的中大型形态）</a></li>
+<li><a href="#doc-17-c-langchain-langgraph">组合 C：全自研 LangChain / LangGraph（大型企业）</a></li>
 </ul>
 </li>
-<li><a href="#doc-16-5">5. 同一个需求，三套实现</a><ul>
-<li><a href="#doc-16-51-coze">5.1 Coze 实现</a></li>
-<li><a href="#doc-16-52-dify">5.2 Dify 实现</a></li>
-<li><a href="#doc-16-53-langgraph">5.3 LangGraph 实现（代码骨架）</a></li>
+<li><a href="#doc-17-5">5. 同一个需求，三套实现</a><ul>
+<li><a href="#doc-17-51-coze">5.1 Coze 实现</a></li>
+<li><a href="#doc-17-52-dify">5.2 Dify 实现</a></li>
+<li><a href="#doc-17-53-langgraph">5.3 LangGraph 实现（代码骨架）</a></li>
 </ul>
 </li>
-<li><a href="#doc-16-6">6. 企业落地坑（按平台）</a><ul>
-<li><a href="#doc-16-61-coze">6.1 Coze / 扣子</a></li>
-<li><a href="#doc-16-62-dify">6.2 Dify</a></li>
-<li><a href="#doc-16-63-langchain-langgraph">6.3 LangChain / LangGraph</a></li>
-<li><a href="#doc-16-64">6.4 三者共性坑</a></li>
+<li><a href="#doc-17-6">6. 企业落地坑（按平台）</a><ul>
+<li><a href="#doc-17-61-coze">6.1 Coze / 扣子</a></li>
+<li><a href="#doc-17-62-dify">6.2 Dify</a></li>
+<li><a href="#doc-17-63-langchain-langgraph">6.3 LangChain / LangGraph</a></li>
+<li><a href="#doc-17-64">6.4 三者共性坑</a></li>
 </ul>
 </li>
-<li><a href="#doc-16-7-30">7. 30 分钟对比实验（建议动手做一遍）</a></li>
-<li><a href="#doc-16-8-2026-10-20">8. 版本与事实基线（2026-10-20 实测）</a></li>
-<li><a href="#doc-16-9-2026-10-20">9. 参考链接（2026-10-20 实测可访问）</a></li>
-<li><a href="#doc-16-10">10. 与既有章节的衔接</a></li>
+<li><a href="#doc-17-7-30">7. 30 分钟对比实验（建议动手做一遍）</a></li>
+<li><a href="#doc-17-8-2026-10-20">8. 版本与事实基线（2026-10-20 实测）</a></li>
+<li><a href="#doc-17-9-2026-10-20">9. 参考链接（2026-10-20 实测可访问）</a></li>
+<li><a href="#doc-17-10">10. 与既有章节的衔接</a></li>
 </ul>
 </div>
 </details><div class="doc-content"><blockquote>
@@ -12268,7 +13070,7 @@ Demo 5：受控自进化门禁
 三者经常被放在一起比较，但它们<strong>根本不是同一类东西</strong>——一个是产品化平台，一个是开源自托管平台，一个是开发者框架。选错的代价不是"多写几行代码"，而是<strong>锁死迁移路径、返工三个月</strong>。</p>
 <p>本章给出一张定位表、一张 14 维能力矩阵、一棵选型决策树、三种企业常见组合、同一需求的三套实现，以及一份 30 分钟可执行的对比实验。</p>
 </blockquote>
-<h2 id="doc-16-1"><a class="hlink" href="#doc-16-1" title="本节链接">#</a>1. 先把三个东西放回正确的位置</h2>
+<h2 id="doc-17-1"><a class="hlink" href="#doc-17-1" title="本节链接">#</a>1. 先把三个东西放回正确的位置</h2>
 <table>
 <thead>
 <tr>
@@ -12311,7 +13113,7 @@ LangChain 最自由，工程成本最高 —— 什么都能做，但什么都�
 <blockquote>
 <p>⚠️ 最常见的认知错误：<strong>把 LangChain 当成"开源的 Dify"</strong>。LangChain 是库，不提供账号体系、多租户、权限、应用管理、发布渠道；这些在 Dify 里是产品能力。反过来，<strong>把 Dify 当成"能写任意代码的框架"</strong>也会失望——它的强项是标准化编排，不是无限定制。</p>
 </blockquote>
-<h2 id="doc-16-2-14"><a class="hlink" href="#doc-16-2-14" title="本节链接">#</a>2. 能力矩阵（14 维）</h2>
+<h2 id="doc-17-2-14"><a class="hlink" href="#doc-17-2-14" title="本节链接">#</a>2. 能力矩阵（14 维）</h2>
 <blockquote>
 <p>说明：以下为<strong>定性对比</strong>，具体能力随版本变化很快，落地前必须以当前版本文档为准。</p>
 </blockquote>
@@ -12412,7 +13214,7 @@ LangChain 最自由，工程成本最高 —— 什么都能做，但什么都�
 </tbody>
 </table>
 <p><strong>关于许可的提醒</strong>：Dify 的许可证不是"纯 Apache-2.0"，而是带附加条件的开源许可；n8n 使用的是 Sustainable Use License（fair-code，非 OSI 开源）。<strong>任何"能不能商用/能不能做 SaaS/能不能去 logo"的问题，都必须回到 LICENSE 原文</strong>，不要听二手结论。</p>
-<h2 id="doc-16-3"><a class="hlink" href="#doc-16-3" title="本节链接">#</a>3. 选型决策树</h2>
+<h2 id="doc-17-3"><a class="hlink" href="#doc-17-3" title="本节链接">#</a>3. 选型决策树</h2>
 <p>先回答<strong>三个硬问题</strong>，顺序不能乱：</p>
 <pre><code>Q1 数据能不能出企业边界？
    ├─ 不能 → 排除纯 SaaS，只能在「自托管 Dify」与「LangChain 自研」之间选
@@ -12456,8 +13258,8 @@ Q3 谁来长期维护？
 <blockquote>
 <p>经验值：<strong>先用 Coze 验证业务价值（1–2 周），再用 Dify 做部门级产品化（1–2 月），确有必要时用 LangGraph 做核心复杂链路</strong>。反过来（一上来就全自研）是中小企业最常见的过度工程。</p>
 </blockquote>
-<h2 id="doc-16-4"><a class="hlink" href="#doc-16-4" title="本节链接">#</a>4. 企业里最常见的三种组合</h2>
-<h3 id="doc-16-acoze-api"><a class="hlink" href="#doc-16-acoze-api" title="本节链接">#</a>组合 A：Coze 做前台，企业 API 做后端（最快验证）</h3>
+<h2 id="doc-17-4"><a class="hlink" href="#doc-17-4" title="本节链接">#</a>4. 企业里最常见的三种组合</h2>
+<h3 id="doc-17-acoze-api"><a class="hlink" href="#doc-17-acoze-api" title="本节链接">#</a>组合 A：Coze 做前台，企业 API 做后端（最快验证）</h3>
 <pre><code>用户 → Coze Bot（对话/Workflow/插件）
                  │ 调用
                  ▼
@@ -12470,7 +13272,7 @@ Q3 谁来长期维护？
 <li><strong>适用</strong>：业务方要在一两周内看到效果；数据本身不敏感，或只走"查询类"能力。</li>
 <li><strong>边界</strong>：Coze 只做"交互与轻编排"，<strong>真正的业务规则与写操作放在企业 API 里</strong>，这样将来换平台时业务逻辑不丢。</li>
 </ul>
-<h3 id="doc-16-bdify-ai-langgraph-agent"><a class="hlink" href="#doc-16-bdify-ai-langgraph-agent" title="本节链接">#</a>组合 B：Dify 做 AI 中台 + LangGraph 做复杂 Agent（最推荐的中大型形态）</h3>
+<h3 id="doc-17-bdify-ai-langgraph-agent"><a class="hlink" href="#doc-17-bdify-ai-langgraph-agent" title="本节链接">#</a>组合 B：Dify 做 AI 中台 + LangGraph 做复杂 Agent（最推荐的中大型形态）</h3>
 <pre><code>业务应用 / 前端
       │
       ▼
@@ -12486,7 +13288,7 @@ LangGraph Agent 微服务（状态机 + 工具 + 人工审批 + Checkpoint）
 <li><strong>适用</strong>：既要"业务能自己配流程"，又要"核心链路能写代码"。</li>
 <li><strong>关键设计</strong>：<strong>Dify 管"应用与知识"，LangGraph 管"复杂状态与恢复"</strong>，两者用稳定的 HTTP 契约解耦；不要把所有逻辑都塞进 Dify 的代码节点。</li>
 </ul>
-<h3 id="doc-16-c-langchain-langgraph"><a class="hlink" href="#doc-16-c-langchain-langgraph" title="本节链接">#</a>组合 C：全自研 LangChain / LangGraph（大型企业）</h3>
+<h3 id="doc-17-c-langchain-langgraph"><a class="hlink" href="#doc-17-c-langchain-langgraph" title="本节链接">#</a>组合 C：全自研 LangChain / LangGraph（大型企业）</h3>
 <pre><code>自研控制台（应用/版本/权限/配额）
         │
         ▼
@@ -12502,9 +13304,9 @@ OTel + Prometheus + Loki + Tempo（自建可观测）
 <li><strong>适用</strong>：有平台团队、有明确差异化需求、对合规和可控性要求极高。</li>
 <li><strong>代价</strong>：UI、权限、多租户、发布、评测、审计<strong>全部要自己建</strong>。没有 3–5 人以上的平台团队，不要轻易走这条路。</li>
 </ul>
-<h2 id="doc-16-5"><a class="hlink" href="#doc-16-5" title="本节链接">#</a>5. 同一个需求，三套实现</h2>
+<h2 id="doc-17-5"><a class="hlink" href="#doc-17-5" title="本节链接">#</a>5. 同一个需求，三套实现</h2>
 <p><strong>需求</strong>：企业知识库问答；当用户问题命中"退款/投诉"意图时，调用工单 API 创建工单；创建前必须人工确认。</p>
-<h3 id="doc-16-51-coze"><a class="hlink" href="#doc-16-51-coze" title="本节链接">#</a>5.1 Coze 实现</h3>
+<h3 id="doc-17-51-coze"><a class="hlink" href="#doc-17-51-coze" title="本节链接">#</a>5.1 Coze 实现</h3>
 <ol>
 <li>建<strong>知识库</strong>：上传产品文档/FAQ，配置分段与召回条数；</li>
 <li>建 <strong>Workflow</strong>：开始 → 意图识别（LLM 节点）→ 条件分支；
@@ -12517,7 +13319,7 @@ OTel + Prometheus + Loki + Tempo（自建可观测）
 <li><strong>优点</strong>：半天到两天可完成；运营可自己改提示词与分支。</li>
 <li><strong>注意</strong>：人工确认节点、复杂重试、状态恢复能力有限，<strong>写操作务必在企业 API 侧做二次校验与幂等</strong>。</li>
 </ul>
-<h3 id="doc-16-52-dify"><a class="hlink" href="#doc-16-52-dify" title="本节链接">#</a>5.2 Dify 实现</h3>
+<h3 id="doc-17-52-dify"><a class="hlink" href="#doc-17-52-dify" title="本节链接">#</a>5.2 Dify 实现</h3>
 <ol>
 <li><strong>知识库</strong>：创建数据集，配置分段规则、索引方式、召回与重排；</li>
 <li><strong>Chatflow</strong>：开始 → LLM 意图分类 → 条件分支；
@@ -12531,7 +13333,7 @@ OTel + Prometheus + Loki + Tempo（自建可观测）
 <li><strong>优点</strong>：自托管、数据不出域、有完整应用管理；业务与研发都能上手。</li>
 <li><strong>注意</strong>：大版本升级有 breaking change，<strong>升级前必须备份并先在测试环境跑通</strong>。</li>
 </ul>
-<h3 id="doc-16-53-langgraph"><a class="hlink" href="#doc-16-53-langgraph" title="本节链接">#</a>5.3 LangGraph 实现（代码骨架）</h3>
+<h3 id="doc-17-53-langgraph"><a class="hlink" href="#doc-17-53-langgraph" title="本节链接">#</a>5.3 LangGraph 实现（代码骨架）</h3>
 <pre><code class="language-python">from typing import TypedDict
 from langgraph.graph import StateGraph, START, END
 from langgraph.checkpoint.memory import MemorySaver
@@ -12587,8 +13389,8 @@ app = g.compile(checkpointer=MemorySaver())   # 生产环境换成持久化 chec
 <blockquote>
 <p>骨架仅示意流程，实际使用时请以当前 LangGraph 版本文档为准（<code>interrupt</code>、checkpointer 的 API 在小版本间有演进）。</p>
 </blockquote>
-<h2 id="doc-16-6"><a class="hlink" href="#doc-16-6" title="本节链接">#</a>6. 企业落地坑（按平台）</h2>
-<h3 id="doc-16-61-coze"><a class="hlink" href="#doc-16-61-coze" title="本节链接">#</a>6.1 Coze / 扣子</h3>
+<h2 id="doc-17-6"><a class="hlink" href="#doc-17-6" title="本节链接">#</a>6. 企业落地坑（按平台）</h2>
+<h3 id="doc-17-61-coze"><a class="hlink" href="#doc-17-61-coze" title="本节链接">#</a>6.1 Coze / 扣子</h3>
 <table>
 <thead>
 <tr>
@@ -12630,7 +13432,7 @@ app = g.compile(checkpointer=MemorySaver())   # 生产环境换成持久化 chec
 </tr>
 </tbody>
 </table>
-<h3 id="doc-16-62-dify"><a class="hlink" href="#doc-16-62-dify" title="本节链接">#</a>6.2 Dify</h3>
+<h3 id="doc-17-62-dify"><a class="hlink" href="#doc-17-62-dify" title="本节链接">#</a>6.2 Dify</h3>
 <table>
 <thead>
 <tr>
@@ -12672,7 +13474,7 @@ app = g.compile(checkpointer=MemorySaver())   # 生产环境换成持久化 chec
 </tr>
 </tbody>
 </table>
-<h3 id="doc-16-63-langchain-langgraph"><a class="hlink" href="#doc-16-63-langchain-langgraph" title="本节链接">#</a>6.3 LangChain / LangGraph</h3>
+<h3 id="doc-17-63-langchain-langgraph"><a class="hlink" href="#doc-17-63-langchain-langgraph" title="本节链接">#</a>6.3 LangChain / LangGraph</h3>
 <table>
 <thead>
 <tr>
@@ -12714,7 +13516,7 @@ app = g.compile(checkpointer=MemorySaver())   # 生产环境换成持久化 chec
 </tr>
 </tbody>
 </table>
-<h3 id="doc-16-64"><a class="hlink" href="#doc-16-64" title="本节链接">#</a>6.4 三者共性坑</h3>
+<h3 id="doc-17-64"><a class="hlink" href="#doc-17-64" title="本节链接">#</a>6.4 三者共性坑</h3>
 <ol>
 <li><strong>RAG 效果不由平台决定</strong>，由<strong>数据质量、分段策略、检索与重排、评测集</strong>决定；</li>
 <li><strong>Agent 复杂度要克制</strong>——单 Agent 能搞定就不要多 Agent（见第 20 章「Communication is complexity」）；</li>
@@ -12722,7 +13524,7 @@ app = g.compile(checkpointer=MemorySaver())   # 生产环境换成持久化 chec
 <li><strong>成本从第一天就要计量</strong>（token、调用次数、单任务成本），否则规模化后无法优化；</li>
 <li><strong>写操作必须幂等 + 审批 + 审计</strong>，平台不替你做这些。</li>
 </ol>
-<h2 id="doc-16-7-30"><a class="hlink" href="#doc-16-7-30" title="本节链接">#</a>7. 30 分钟对比实验（建议动手做一遍）</h2>
+<h2 id="doc-17-7-30"><a class="hlink" href="#doc-17-7-30" title="本节链接">#</a>7. 30 分钟对比实验（建议动手做一遍）</h2>
 <p><strong>统一任务</strong>：同一份 20 页产品手册 + 5 个问题（3 个可答、1 个需跨段推理、1 个文档中没有），在三个平台各实现一遍。</p>
 <p><strong>记录 6 个指标：</strong></p>
 <table>
@@ -12816,7 +13618,7 @@ app = g.compile(checkpointer=MemorySaver())   # 生产环境换成持久化 chec
 <blockquote>
 <p>经验结论（供参考，仍需自己验证）：<strong>Coze 在"搭建耗时"上通常大幅领先；Dify 在"综合平衡"上最好；LangGraph 在"改规则/复杂逻辑"上最强，但搭建与迁移成本最高。</strong></p>
 </blockquote>
-<h2 id="doc-16-8-2026-10-20"><a class="hlink" href="#doc-16-8-2026-10-20" title="本节链接">#</a>8. 版本与事实基线（2026-10-20 实测）</h2>
+<h2 id="doc-17-8-2026-10-20"><a class="hlink" href="#doc-17-8-2026-10-20" title="本节链接">#</a>8. 版本与事实基线（2026-10-20 实测）</h2>
 <table>
 <thead>
 <tr>
@@ -12898,7 +13700,7 @@ app = g.compile(checkpointer=MemorySaver())   # 生产环境换成持久化 chec
 <blockquote>
 <p>星标与版本为快照，会随时间变化；引用时请注明查询日期。</p>
 </blockquote>
-<h2 id="doc-16-9-2026-10-20"><a class="hlink" href="#doc-16-9-2026-10-20" title="本节链接">#</a>9. 参考链接（2026-10-20 实测可访问）</h2>
+<h2 id="doc-17-9-2026-10-20"><a class="hlink" href="#doc-17-9-2026-10-20" title="本节链接">#</a>9. 参考链接（2026-10-20 实测可访问）</h2>
 <table>
 <thead>
 <tr>
@@ -12976,7 +13778,7 @@ app = g.compile(checkpointer=MemorySaver())   # 生产环境换成持久化 chec
 <blockquote>
 <p>关于"LangChain 中文社区"：中文资料更新速度通常落后于官方文档，<strong>接口与参数以官方英文文档为准</strong>，中文内容只用于建立直觉。</p>
 </blockquote>
-<h2 id="doc-16-10"><a class="hlink" href="#doc-16-10" title="本节链接">#</a>10. 与既有章节的衔接</h2>
+<h2 id="doc-17-10"><a class="hlink" href="#doc-17-10" title="本节链接">#</a>10. 与既有章节的衔接</h2>
 <table>
 <thead>
 <tr>
@@ -13014,55 +13816,55 @@ app = g.compile(checkpointer=MemorySaver())   # 生产环境换成持久化 chec
 <td>第 06 章 毕业项目 SOP 与验收</td>
 </tr>
 </tbody>
-</table></div></section><section class="doc" id="doc-17" data-title="FastAPI × MCP × React：AI 应用与 AIGC 全栈集成"><header class="doc-head"><div class="doc-kicker">DOC 18</div><h2>FastAPI × MCP × React：AI 应用与 AIGC 全栈集成</h2><div class="doc-source">来源：24_FastAPI_MCP_React与AIGC全栈集成.md</div></header><details class="doc-toc"><summary>本篇目录</summary><div class="toc">
+</table></div></section><section class="doc" id="doc-18" data-title="FastAPI × MCP × React：AI 应用与 AIGC 全栈集成"><header class="doc-head"><div class="doc-kicker">DOC 19</div><h2>FastAPI × MCP × React：AI 应用与 AIGC 全栈集成</h2><div class="doc-source">来源：24_FastAPI_MCP_React与AIGC全栈集成.md</div></header><details class="doc-toc"><summary>本篇目录</summary><div class="toc">
 <ul>
-<li><a href="#doc-17-1">1. 一条请求怎么走</a></li>
-<li><a href="#doc-17-2-fastapi-ai">2. FastAPI 侧：把 AI 服务写对</a><ul>
-<li><a href="#doc-17-21">2.1 四个必备设计</a></li>
-<li><a href="#doc-17-22-chat-api">2.2 流式 Chat API（代码骨架）</a></li>
-<li><a href="#doc-17-23">2.3 生产必备能力</a></li>
+<li><a href="#doc-18-1">1. 一条请求怎么走</a></li>
+<li><a href="#doc-18-2-fastapi-ai">2. FastAPI 侧：把 AI 服务写对</a><ul>
+<li><a href="#doc-18-21">2.1 四个必备设计</a></li>
+<li><a href="#doc-18-22-chat-api">2.2 流式 Chat API（代码骨架）</a></li>
+<li><a href="#doc-18-23">2.3 生产必备能力</a></li>
 </ul>
 </li>
-<li><a href="#doc-17-3-mcp">3. MCP 集成</a><ul>
-<li><a href="#doc-17-31-mcp-30">3.1 MCP 是什么（30 秒版）</a></li>
-<li><a href="#doc-17-32-mcp-server">3.2 最小 MCP Server</a></li>
-<li><a href="#doc-17-33">3.3 两种集成方式</a><ul>
-<li><a href="#doc-17-a-mcp">方式 A：独立 MCP 服务（生产推荐）</a></li>
-<li><a href="#doc-17-b-fastapi">方式 B：挂载到 FastAPI（同一进程，适合小规模）</a></li>
+<li><a href="#doc-18-3-mcp">3. MCP 集成</a><ul>
+<li><a href="#doc-18-31-mcp-30">3.1 MCP 是什么（30 秒版）</a></li>
+<li><a href="#doc-18-32-mcp-server">3.2 最小 MCP Server</a></li>
+<li><a href="#doc-18-33">3.3 两种集成方式</a><ul>
+<li><a href="#doc-18-a-mcp">方式 A：独立 MCP 服务（生产推荐）</a></li>
+<li><a href="#doc-18-b-fastapi">方式 B：挂载到 FastAPI（同一进程，适合小规模）</a></li>
 </ul>
 </li>
-<li><a href="#doc-17-34-fastapi-mcp-client">3.4 FastAPI 作为 MCP Client 调用工具</a></li>
-<li><a href="#doc-17-35-mcp">3.5 MCP 的安全与治理（企业落地重点）</a></li>
-<li><a href="#doc-17-36">3.6 调试与测试</a></li>
+<li><a href="#doc-18-34-fastapi-mcp-client">3.4 FastAPI 作为 MCP Client 调用工具</a></li>
+<li><a href="#doc-18-35-mcp">3.5 MCP 的安全与治理（企业落地重点）</a></li>
+<li><a href="#doc-18-36">3.6 调试与测试</a></li>
 </ul>
 </li>
-<li><a href="#doc-17-4-react-ai">4. React 侧：流式 AI 界面</a><ul>
-<li><a href="#doc-17-41">4.1 技术选型</a></li>
-<li><a href="#doc-17-42-sse">4.2 SSE 的正确写法</a></li>
-<li><a href="#doc-17-43">4.3 状态机（别用一堆布尔值）</a></li>
-<li><a href="#doc-17-44">4.4 渲染与体验</a></li>
-<li><a href="#doc-17-45">4.5 一个可用的聊天页骨架</a></li>
+<li><a href="#doc-18-4-react-ai">4. React 侧：流式 AI 界面</a><ul>
+<li><a href="#doc-18-41">4.1 技术选型</a></li>
+<li><a href="#doc-18-42-sse">4.2 SSE 的正确写法</a></li>
+<li><a href="#doc-18-43">4.3 状态机（别用一堆布尔值）</a></li>
+<li><a href="#doc-18-44">4.4 渲染与体验</a></li>
+<li><a href="#doc-18-45">4.5 一个可用的聊天页骨架</a></li>
 </ul>
 </li>
-<li><a href="#doc-17-5-aigc">5. AIGC：图像 / 视频生成的全栈链路</a><ul>
-<li><a href="#doc-17-51">5.1 为什么必须异步</a></li>
-<li><a href="#doc-17-52-api">5.2 API 设计</a></li>
-<li><a href="#doc-17-53">5.3 后端实现要点</a></li>
-<li><a href="#doc-17-54-react">5.4 React 生成工作台</a></li>
-<li><a href="#doc-17-55-aigc">5.5 AIGC 的成本与合规</a></li>
+<li><a href="#doc-18-5-aigc">5. AIGC：图像 / 视频生成的全栈链路</a><ul>
+<li><a href="#doc-18-51">5.1 为什么必须异步</a></li>
+<li><a href="#doc-18-52-api">5.2 API 设计</a></li>
+<li><a href="#doc-18-53">5.3 后端实现要点</a></li>
+<li><a href="#doc-18-54-react">5.4 React 生成工作台</a></li>
+<li><a href="#doc-18-55-aigc">5.5 AIGC 的成本与合规</a></li>
 </ul>
 </li>
-<li><a href="#doc-17-6">6. 端到端联调清单</a></li>
-<li><a href="#doc-17-7">7. 常见坑</a></li>
-<li><a href="#doc-17-8-2026-10-20">8. 参考链接（2026-10-20 实测可访问）</a></li>
-<li><a href="#doc-17-9">9. 与既有章节的衔接</a></li>
+<li><a href="#doc-18-6">6. 端到端联调清单</a></li>
+<li><a href="#doc-18-7">7. 常见坑</a></li>
+<li><a href="#doc-18-8-2026-10-20">8. 参考链接（2026-10-20 实测可访问）</a></li>
+<li><a href="#doc-18-9">9. 与既有章节的衔接</a></li>
 </ul>
 </div>
 </details><div class="doc-content"><blockquote>
 <p>本章把三件事连成一条完整链路：<strong>FastAPI 做后端、MCP 做工具协议、React 做前端</strong>，并在此基础上落地 <strong>AIGC（图像/视频生成）</strong> 场景。</p>
 <p>适用人群：要把 Agent/LLM 能力做成"可上线产品"的工程师；只做过 Demo、没处理过流式/取消/长任务/进度回传的同学重点看第 2、4、5 节。</p>
 </blockquote>
-<h2 id="doc-17-1"><a class="hlink" href="#doc-17-1" title="本节链接">#</a>1. 一条请求怎么走</h2>
+<h2 id="doc-18-1"><a class="hlink" href="#doc-18-1" title="本节链接">#</a>1. 一条请求怎么走</h2>
 <pre><code>React（浏览器）
    │  ① POST /api/chat/stream（fetch + ReadableStream）
    ▼
@@ -13079,8 +13881,8 @@ MCP Server（工具层）
 FastAPI  →  SSE 事件流  →  React 增量渲染
 </code></pre>
 <p><strong>AIGC 是另一条路径</strong>：因为图像/视频生成是<strong>秒级到分钟级</strong>的任务，不能占着 HTTP 连接同步等待，必须走 <strong>提交任务 → 查询/订阅进度 → 取产物</strong> 的异步模式（见第 5 节）。</p>
-<h2 id="doc-17-2-fastapi-ai"><a class="hlink" href="#doc-17-2-fastapi-ai" title="本节链接">#</a>2. FastAPI 侧：把 AI 服务写对</h2>
-<h3 id="doc-17-21"><a class="hlink" href="#doc-17-21" title="本节链接">#</a>2.1 四个必备设计</h3>
+<h2 id="doc-18-2-fastapi-ai"><a class="hlink" href="#doc-18-2-fastapi-ai" title="本节链接">#</a>2. FastAPI 侧：把 AI 服务写对</h2>
+<h3 id="doc-18-21"><a class="hlink" href="#doc-18-21" title="本节链接">#</a>2.1 四个必备设计</h3>
 <table>
 <thead>
 <tr>
@@ -13112,7 +13914,7 @@ FastAPI  →  SSE 事件流  →  React 增量渲染
 </tr>
 </tbody>
 </table>
-<h3 id="doc-17-22-chat-api"><a class="hlink" href="#doc-17-22-chat-api" title="本节链接">#</a>2.2 流式 Chat API（代码骨架）</h3>
+<h3 id="doc-18-22-chat-api"><a class="hlink" href="#doc-18-22-chat-api" title="本节链接">#</a>2.2 流式 Chat API（代码骨架）</h3>
 <pre><code class="language-python">import asyncio, json, uuid
 from fastapi import FastAPI, Request
 from fastapi.responses import StreamingResponse
@@ -13160,7 +13962,7 @@ async def chat_stream(req: ChatRequest, request: Request):
 <li><strong><code>request.is_disconnected()</code></strong> —— 用户关页面/点停止后，后端要尽快取消模型调用，否则白烧 GPU；</li>
 <li><strong>心跳</strong> —— 长任务建议每 15–30 秒发一个 <code>: ping</code> 注释行，防止中间设备掐断空闲连接。</li>
 </ol>
-<h3 id="doc-17-23"><a class="hlink" href="#doc-17-23" title="本节链接">#</a>2.3 生产必备能力</h3>
+<h3 id="doc-18-23"><a class="hlink" href="#doc-18-23" title="本节链接">#</a>2.3 生产必备能力</h3>
 <table>
 <thead>
 <tr>
@@ -13203,8 +14005,8 @@ async def chat_stream(req: ChatRequest, request: Request):
 </tr>
 </tbody>
 </table>
-<h2 id="doc-17-3-mcp"><a class="hlink" href="#doc-17-3-mcp" title="本节链接">#</a>3. MCP 集成</h2>
-<h3 id="doc-17-31-mcp-30"><a class="hlink" href="#doc-17-31-mcp-30" title="本节链接">#</a>3.1 MCP 是什么（30 秒版）</h3>
+<h2 id="doc-18-3-mcp"><a class="hlink" href="#doc-18-3-mcp" title="本节链接">#</a>3. MCP 集成</h2>
+<h3 id="doc-18-31-mcp-30"><a class="hlink" href="#doc-18-31-mcp-30" title="本节链接">#</a>3.1 MCP 是什么（30 秒版）</h3>
 <p><strong>MCP（Model Context Protocol）</strong> 是"模型 ↔ 工具/数据"的开放协议。三个角色：</p>
 <pre><code>Host（宿主，如 IDE/Agent 应用）
   └─ Client（协议客户端）
@@ -13262,7 +14064,7 @@ async def chat_stream(req: ChatRequest, request: Request):
 <blockquote>
 <p>注意区分两个包：<code>mcp</code>（官方 Python SDK，内含 <code>mcp.server.fastmcp.FastMCP</code>）与独立的 <code>fastmcp</code>（社区增强版）。本文示例用官方 SDK 的 API；两者 API 相近但不完全等价，<strong>以当前版本文档为准</strong>。</p>
 </blockquote>
-<h3 id="doc-17-32-mcp-server"><a class="hlink" href="#doc-17-32-mcp-server" title="本节链接">#</a>3.2 最小 MCP Server</h3>
+<h3 id="doc-18-32-mcp-server"><a class="hlink" href="#doc-18-32-mcp-server" title="本节链接">#</a>3.2 最小 MCP Server</h3>
 <pre><code class="language-python"># mcp_server.py
 from mcp.server.fastmcp import FastMCP
 
@@ -13287,15 +14089,15 @@ if __name__ == &quot;__main__&quot;:
 <li><strong>参数少而明确</strong>，用类型注解 + 默认值 + 枚举，避免"自由文本参数"；</li>
 <li><strong>返回结构化、可截断</strong>，大结果要分页/摘要，别把 10MB JSON 塞回模型。</li>
 </ol>
-<h3 id="doc-17-33"><a class="hlink" href="#doc-17-33" title="本节链接">#</a>3.3 两种集成方式</h3>
-<h4 id="doc-17-a-mcp"><a class="hlink" href="#doc-17-a-mcp" title="本节链接">#</a>方式 A：独立 MCP 服务（<strong>生产推荐</strong>）</h4>
+<h3 id="doc-18-33"><a class="hlink" href="#doc-18-33" title="本节链接">#</a>3.3 两种集成方式</h3>
+<h4 id="doc-18-a-mcp"><a class="hlink" href="#doc-18-a-mcp" title="本节链接">#</a>方式 A：独立 MCP 服务（<strong>生产推荐</strong>）</h4>
 <pre><code>FastAPI（API 层） --HTTP--&gt; MCP Server（独立进程/独立 Deployment）
                                      │
                                      └─ 工具实现（只读/写操作分开）
 </code></pre>
 <p><strong>优点</strong>：故障隔离、可独立扩缩容、可独立做鉴权与审计、升级不影响 API 层。
 <strong>做法</strong>：把 <code>mcp_server.py</code> 打成镜像，用 K8s Deployment 部署，FastAPI 通过 MCP Client 调用。</p>
-<h4 id="doc-17-b-fastapi"><a class="hlink" href="#doc-17-b-fastapi" title="本节链接">#</a>方式 B：挂载到 FastAPI（同一进程，适合小规模）</h4>
+<h4 id="doc-18-b-fastapi"><a class="hlink" href="#doc-18-b-fastapi" title="本节链接">#</a>方式 B：挂载到 FastAPI（同一进程，适合小规模）</h4>
 <pre><code class="language-python">from contextlib import asynccontextmanager
 from fastapi import FastAPI
 from mcp_server import mcp
@@ -13313,7 +14115,7 @@ app.mount(&quot;/mcp&quot;, mcp.streamable_http_app())
 <blockquote>
 <p>⚠️ 挂载方式对 SDK 版本较敏感（<code>session_manager</code>、<code>streamable_http_app</code> 的签名可能变化），升级前先在测试环境验证。</p>
 </blockquote>
-<h3 id="doc-17-34-fastapi-mcp-client"><a class="hlink" href="#doc-17-34-fastapi-mcp-client" title="本节链接">#</a>3.4 FastAPI 作为 MCP Client 调用工具</h3>
+<h3 id="doc-18-34-fastapi-mcp-client"><a class="hlink" href="#doc-18-34-fastapi-mcp-client" title="本节链接">#</a>3.4 FastAPI 作为 MCP Client 调用工具</h3>
 <pre><code class="language-python">from mcp import ClientSession
 from mcp.client.streamable_http import streamablehttp_client
 
@@ -13327,7 +14129,7 @@ async def call_tool(name: str, arguments: dict):
             return result
 </code></pre>
 <p>生产上建议<strong>复用连接/会话</strong>而不是每次新建；并给 <code>call_tool</code> 加上<strong>超时、重试（仅幂等工具）、熔断、审计日志</strong>。</p>
-<h3 id="doc-17-35-mcp"><a class="hlink" href="#doc-17-35-mcp" title="本节链接">#</a>3.5 MCP 的安全与治理（企业落地重点）</h3>
+<h3 id="doc-18-35-mcp"><a class="hlink" href="#doc-18-35-mcp" title="本节链接">#</a>3.5 MCP 的安全与治理（企业落地重点）</h3>
 <table>
 <thead>
 <tr>
@@ -13369,14 +14171,14 @@ async def call_tool(name: str, arguments: dict):
 <blockquote>
 <p><strong>铁律</strong>：MCP 工具是"给模型装的手"，<strong>权限边界必须在工具侧强制执行</strong>，不能指望模型"自觉不调用"。</p>
 </blockquote>
-<h3 id="doc-17-36"><a class="hlink" href="#doc-17-36" title="本节链接">#</a>3.6 调试与测试</h3>
+<h3 id="doc-18-36"><a class="hlink" href="#doc-18-36" title="本节链接">#</a>3.6 调试与测试</h3>
 <ul>
 <li>用 <strong>MCP Inspector</strong> 连接 Server，手动调用 <code>tools/list</code> / <code>tools/call</code>，验证 Schema 与返回；</li>
 <li>为每个工具写<strong>契约测试</strong>（正常 / 缺参 / 越权 / 超时 / 大返回）；</li>
 <li>在 CI 里跑"工具调用回放"，防止改工具后 Agent 行为退化。</li>
 </ul>
-<h2 id="doc-17-4-react-ai"><a class="hlink" href="#doc-17-4-react-ai" title="本节链接">#</a>4. React 侧：流式 AI 界面</h2>
-<h3 id="doc-17-41"><a class="hlink" href="#doc-17-41" title="本节链接">#</a>4.1 技术选型</h3>
+<h2 id="doc-18-4-react-ai"><a class="hlink" href="#doc-18-4-react-ai" title="本节链接">#</a>4. React 侧：流式 AI 界面</h2>
+<h3 id="doc-18-41"><a class="hlink" href="#doc-18-41" title="本节链接">#</a>4.1 技术选型</h3>
 <table>
 <thead>
 <tr>
@@ -13413,7 +14215,7 @@ async def call_tool(name: str, arguments: dict):
 </tr>
 </tbody>
 </table>
-<h3 id="doc-17-42-sse"><a class="hlink" href="#doc-17-42-sse" title="本节链接">#</a>4.2 SSE 的正确写法</h3>
+<h3 id="doc-18-42-sse"><a class="hlink" href="#doc-18-42-sse" title="本节链接">#</a>4.2 SSE 的正确写法</h3>
 <p><code>EventSource</code> 只支持 GET、不能加自定义 Header，所以 <strong>LLM 对话场景推荐用 <code>fetch</code> + <code>ReadableStream</code> 手动解析 SSE</strong>：</p>
 <pre><code class="language-tsx">export type ChatState = &quot;idle&quot; | &quot;sending&quot; | &quot;streaming&quot; | &quot;done&quot; | &quot;error&quot;;
 
@@ -13479,13 +14281,13 @@ export function useChatSSE() {
 <li><strong><code>decoder.decode(value, {stream: true})</code></strong>：处理多字节中文被切断的情况；</li>
 <li><strong>错误要能区分</strong>：<code>AbortError</code> 是用户主动取消，不应显示为故障。</li>
 </ol>
-<h3 id="doc-17-43"><a class="hlink" href="#doc-17-43" title="本节链接">#</a>4.3 状态机（别用一堆布尔值）</h3>
+<h3 id="doc-18-43"><a class="hlink" href="#doc-18-43" title="本节链接">#</a>4.3 状态机（别用一堆布尔值）</h3>
 <pre><code>idle ──send──&gt; sending ──首个 token──&gt; streaming ──done──&gt; done
                    │                        │
                    └──── error ─────────────┴──&gt; error
 </code></pre>
 <p>对应 UI：发送按钮置灰、显示"思考中"、逐字渲染、完成后显示引用与重试、失败时显示错误码与"重试"。</p>
-<h3 id="doc-17-44"><a class="hlink" href="#doc-17-44" title="本节链接">#</a>4.4 渲染与体验</h3>
+<h3 id="doc-18-44"><a class="hlink" href="#doc-18-44" title="本节链接">#</a>4.4 渲染与体验</h3>
 <pre><code class="language-tsx">import Markdown from &quot;react-markdown&quot;;
 import remarkGfm from &quot;remark-gfm&quot;;
 import rehypeSanitize from &quot;rehype-sanitize&quot;;
@@ -13507,7 +14309,7 @@ export function Message({ content }: { content: string }) {
 <li><strong><code>React.memo</code> + 稳定的 key</strong>：避免每个 token 触发整个列表重渲染；</li>
 <li><strong>代码块高亮要按需加载</strong>：别把整个高亮库打进首屏。</li>
 </ul>
-<h3 id="doc-17-45"><a class="hlink" href="#doc-17-45" title="本节链接">#</a>4.5 一个可用的聊天页骨架</h3>
+<h3 id="doc-18-45"><a class="hlink" href="#doc-18-45" title="本节链接">#</a>4.5 一个可用的聊天页骨架</h3>
 <pre><code class="language-tsx">export default function ChatPage() {
   const { text, state, send, cancel } = useChatSSE();
   const [input, setInput] = React.useState(&quot;&quot;);
@@ -13537,8 +14339,8 @@ export function Message({ content }: { content: string }) {
   );
 }
 </code></pre>
-<h2 id="doc-17-5-aigc"><a class="hlink" href="#doc-17-5-aigc" title="本节链接">#</a>5. AIGC：图像 / 视频生成的全栈链路</h2>
-<h3 id="doc-17-51"><a class="hlink" href="#doc-17-51" title="本节链接">#</a>5.1 为什么必须异步</h3>
+<h2 id="doc-18-5-aigc"><a class="hlink" href="#doc-18-5-aigc" title="本节链接">#</a>5. AIGC：图像 / 视频生成的全栈链路</h2>
+<h3 id="doc-18-51"><a class="hlink" href="#doc-18-51" title="本节链接">#</a>5.1 为什么必须异步</h3>
 <table>
 <thead>
 <tr>
@@ -13576,7 +14378,7 @@ export function Message({ content }: { content: string }) {
 </tbody>
 </table>
 <p><strong>结论</strong>：AIGC 必须用 <strong>异步任务 + 进度事件 + 对象存储</strong>，不能用同步 HTTP 等结果。</p>
-<h3 id="doc-17-52-api"><a class="hlink" href="#doc-17-52-api" title="本节链接">#</a>5.2 API 设计</h3>
+<h3 id="doc-18-52-api"><a class="hlink" href="#doc-18-52-api" title="本节链接">#</a>5.2 API 设计</h3>
 <pre><code class="language-http">POST /api/aigc/jobs            → 202 {job_id, status:&quot;queued&quot;, events:&quot;/api/aigc/jobs/{id}/events&quot;}
 GET  /api/aigc/jobs/{id}       → {status, progress, result_url?, error?}
 GET  /api/aigc/jobs/{id}/events→ SSE：queued → running(progress) → succeeded/failed
@@ -13597,7 +14399,7 @@ async def create_aigc_job(req: AIGCJobRequest, tenant: str = Depends(auth)):
     job_id = await job_service.submit(tenant=tenant, req=req)   # 入队，立即返回
     return {&quot;job_id&quot;: job_id, &quot;status&quot;: &quot;queued&quot;, &quot;events&quot;: f&quot;/api/aigc/jobs/{job_id}/events&quot;}
 </code></pre>
-<h3 id="doc-17-53"><a class="hlink" href="#doc-17-53" title="本节链接">#</a>5.3 后端实现要点</h3>
+<h3 id="doc-18-53"><a class="hlink" href="#doc-18-53" title="本节链接">#</a>5.3 后端实现要点</h3>
 <pre><code>FastAPI ──submit──&gt; Redis Stream / MQ ──&gt; GPU Worker
                                             │
                                             ├─ ComfyUI（工作流）/ Diffusers（代码）
@@ -13646,7 +14448,7 @@ async def create_aigc_job(req: AIGCJobRequest, tenant: str = Depends(auth)):
 </tr>
 </tbody>
 </table>
-<h3 id="doc-17-54-react"><a class="hlink" href="#doc-17-54-react" title="本节链接">#</a>5.4 React 生成工作台</h3>
+<h3 id="doc-18-54-react"><a class="hlink" href="#doc-18-54-react" title="本节链接">#</a>5.4 React 生成工作台</h3>
 <table>
 <thead>
 <tr>
@@ -13681,14 +14483,14 @@ async def create_aigc_job(req: AIGCJobRequest, tenant: str = Depends(auth)):
 </tr>
 </tbody>
 </table>
-<h3 id="doc-17-55-aigc"><a class="hlink" href="#doc-17-55-aigc" title="本节链接">#</a>5.5 AIGC 的成本与合规</h3>
+<h3 id="doc-18-55-aigc"><a class="hlink" href="#doc-18-55-aigc" title="本节链接">#</a>5.5 AIGC 的成本与合规</h3>
 <ul>
 <li><strong>成本</strong>：按"分辨率 × 步数 × 模型大小 × 时长"估算；视频按秒计费；</li>
 <li><strong>配额</strong>：免费额度 + 付费套餐 + 团队共享池；</li>
 <li><strong>合规</strong>：生成内容标识（水印/元数据）、版权与肖像权提示、敏感内容拦截、日志留存；</li>
 <li><strong>可复现</strong>：保存 <code>prompt + 负向提示 + seed + 模型版本 + LoRA 版本 + 采样器 + 步数</code>，否则同一需求无法复现。</li>
 </ul>
-<h2 id="doc-17-6"><a class="hlink" href="#doc-17-6" title="本节链接">#</a>6. 端到端联调清单</h2>
+<h2 id="doc-18-6"><a class="hlink" href="#doc-18-6" title="本节链接">#</a>6. 端到端联调清单</h2>
 <ul>
 <li>[ ] FastAPI 的 SSE 在 Nginx/网关后仍然是逐字输出（<code>X-Accel-Buffering: no</code>）；</li>
 <li>[ ] 前端能正确处理"半包/粘包"，中文不乱码；</li>
@@ -13701,7 +14503,7 @@ async def create_aigc_job(req: AIGCJobRequest, tenant: str = Depends(auth)):
 <li>[ ] 全链路有 <code>request_id / job_id / trace_id</code>，可从一次失败追到具体节点；</li>
 <li>[ ] 限流、配额、幂等、审计四项在压测中验证通过。</li>
 </ul>
-<h2 id="doc-17-7"><a class="hlink" href="#doc-17-7" title="本节链接">#</a>7. 常见坑</h2>
+<h2 id="doc-18-7"><a class="hlink" href="#doc-18-7" title="本节链接">#</a>7. 常见坑</h2>
 <table>
 <thead>
 <tr>
@@ -13753,7 +14555,7 @@ async def create_aigc_job(req: AIGCJobRequest, tenant: str = Depends(auth)):
 </tr>
 </tbody>
 </table>
-<h2 id="doc-17-8-2026-10-20"><a class="hlink" href="#doc-17-8-2026-10-20" title="本节链接">#</a>8. 参考链接（2026-10-20 实测可访问）</h2>
+<h2 id="doc-18-8-2026-10-20"><a class="hlink" href="#doc-18-8-2026-10-20" title="本节链接">#</a>8. 参考链接（2026-10-20 实测可访问）</h2>
 <table>
 <thead>
 <tr>
@@ -13835,7 +14637,7 @@ async def create_aigc_job(req: AIGCJobRequest, tenant: str = Depends(auth)):
 <blockquote>
 <p>说明：<code>uvicorn.org</code> 与 <code>docs.pydantic.dev</code> 根路径在部分网络下不稳定，故改用可稳定访问的 <code>latest</code> 文档与 GitHub 仓库地址。</p>
 </blockquote>
-<h2 id="doc-17-9"><a class="hlink" href="#doc-17-9" title="本节链接">#</a>9. 与既有章节的衔接</h2>
+<h2 id="doc-18-9"><a class="hlink" href="#doc-18-9" title="本节链接">#</a>9. 与既有章节的衔接</h2>
 <table>
 <thead>
 <tr>
@@ -13873,39 +14675,39 @@ async def create_aigc_job(req: AIGCJobRequest, tenant: str = Depends(auth)):
 <td>第 07 / 08 章</td>
 </tr>
 </tbody>
-</table></div></section><section class="doc" id="doc-18" data-title="企业落地常见坑与注意事项"><header class="doc-head"><div class="doc-kicker">DOC 19</div><h2>企业落地常见坑与注意事项</h2><div class="doc-source">来源：10_企业落地常见坑与注意事项.md</div></header><details class="doc-toc"><summary>本篇目录</summary><div class="toc">
+</table></div></section><section class="doc" id="doc-19" data-title="企业落地常见坑与注意事项"><header class="doc-head"><div class="doc-kicker">DOC 20</div><h2>企业落地常见坑与注意事项</h2><div class="doc-source">来源：10_企业落地常见坑与注意事项.md</div></header><details class="doc-toc"><summary>本篇目录</summary><div class="toc">
 <ul>
-<li><a href="#doc-18-1">1. 通用原则</a></li>
-<li><a href="#doc-18-2">2. 分模块避坑表</a><ul>
-<li><a href="#doc-18-21-pythonfastapi">2.1 Python、FastAPI 与工程基础</a></li>
-<li><a href="#doc-18-22-prompt-context-engineering">2.2 Prompt 与 Context Engineering</a></li>
-<li><a href="#doc-18-23-harnessagent-loop">2.3 Harness、Agent Loop 与状态</a></li>
-<li><a href="#doc-18-24-memory-context">2.4 Memory 与 Context 压缩</a></li>
-<li><a href="#doc-18-25-ragembedding">2.5 RAG、Embedding 与向量数据库</a></li>
-<li><a href="#doc-18-26-function-callingmcp">2.6 Function Calling、MCP 与工具</a></li>
-<li><a href="#doc-18-27-sandbox-human-in-the-loop">2.7 Sandbox、审批与 Human-in-the-Loop</a></li>
-<li><a href="#doc-18-28-verification">2.8 Verification、评测与上线门禁</a></li>
-<li><a href="#doc-18-29-ai-pde">2.9 AI PDE 产品工程</a></li>
-<li><a href="#doc-18-210-vllm">2.10 vLLM 与单机推理</a></li>
-<li><a href="#doc-18-211-kubernetesgpu">2.11 Kubernetes、GPU 调度与推理平台</a></li>
-<li><a href="#doc-18-212-tp-pp-dp">2.12 分布式推理 TP / PP / DP</a></li>
-<li><a href="#doc-18-213">2.13 观测、监控与故障定位</a></li>
-<li><a href="#doc-18-214">2.14 安全、合规与数据治理</a></li>
-<li><a href="#doc-18-215-gpu">2.15 GPU 物理集群</a></li>
-<li><a href="#doc-18-216-gpu">2.16 国产 GPU 集群</a></li>
-<li><a href="#doc-18-217">2.17 千卡集群规划与实施</a></li>
-<li><a href="#doc-18-218-gpu">2.18 公有云 GPU</a></li>
+<li><a href="#doc-19-1">1. 通用原则</a></li>
+<li><a href="#doc-19-2">2. 分模块避坑表</a><ul>
+<li><a href="#doc-19-21-pythonfastapi">2.1 Python、FastAPI 与工程基础</a></li>
+<li><a href="#doc-19-22-prompt-context-engineering">2.2 Prompt 与 Context Engineering</a></li>
+<li><a href="#doc-19-23-harnessagent-loop">2.3 Harness、Agent Loop 与状态</a></li>
+<li><a href="#doc-19-24-memory-context">2.4 Memory 与 Context 压缩</a></li>
+<li><a href="#doc-19-25-ragembedding">2.5 RAG、Embedding 与向量数据库</a></li>
+<li><a href="#doc-19-26-function-callingmcp">2.6 Function Calling、MCP 与工具</a></li>
+<li><a href="#doc-19-27-sandbox-human-in-the-loop">2.7 Sandbox、审批与 Human-in-the-Loop</a></li>
+<li><a href="#doc-19-28-verification">2.8 Verification、评测与上线门禁</a></li>
+<li><a href="#doc-19-29-ai-pde">2.9 AI PDE 产品工程</a></li>
+<li><a href="#doc-19-210-vllm">2.10 vLLM 与单机推理</a></li>
+<li><a href="#doc-19-211-kubernetesgpu">2.11 Kubernetes、GPU 调度与推理平台</a></li>
+<li><a href="#doc-19-212-tp-pp-dp">2.12 分布式推理 TP / PP / DP</a></li>
+<li><a href="#doc-19-213">2.13 观测、监控与故障定位</a></li>
+<li><a href="#doc-19-214">2.14 安全、合规与数据治理</a></li>
+<li><a href="#doc-19-215-gpu">2.15 GPU 物理集群</a></li>
+<li><a href="#doc-19-216-gpu">2.16 国产 GPU 集群</a></li>
+<li><a href="#doc-19-217">2.17 千卡集群规划与实施</a></li>
+<li><a href="#doc-19-218-gpu">2.18 公有云 GPU</a></li>
 </ul>
 </li>
-<li><a href="#doc-18-3">3. 企业上线红线</a></li>
-<li><a href="#doc-18-4-p0">4. P0 上线检查清单</a></li>
-<li><a href="#doc-18-5">5. 配套视频与资料</a></li>
+<li><a href="#doc-19-3">3. 企业上线红线</a></li>
+<li><a href="#doc-19-4-p0">4. P0 上线检查清单</a></li>
+<li><a href="#doc-19-5">5. 配套视频与资料</a></li>
 </ul>
 </div>
 </details><div class="doc-content"><blockquote>
 <p>目标：不是告诉学习者“功能怎么做”，而是提前标出企业 PoC、试点和规模化阶段最容易翻车的点。每个模块都按“典型错误 -&gt; 正确做法 -&gt; 上线前检查”组织。</p>
 </blockquote>
-<h2 id="doc-18-1"><a class="hlink" href="#doc-18-1" title="本节链接">#</a>1. 通用原则</h2>
+<h2 id="doc-19-1"><a class="hlink" href="#doc-19-1" title="本节链接">#</a>1. 通用原则</h2>
 <p>企业 AI 项目失败通常不是因为模型不够强，而是因为下面几类问题：</p>
 <ol>
 <li>问题没有业务价值，只是为了用 AI；</li>
@@ -13917,8 +14719,8 @@ async def create_aigc_job(req: AIGCJobRequest, tenant: str = Depends(auth)):
 <li>供应商、模型和工具版本不可控；</li>
 <li>缺少故障演练和人工接管。</li>
 </ol>
-<h2 id="doc-18-2"><a class="hlink" href="#doc-18-2" title="本节链接">#</a>2. 分模块避坑表</h2>
-<h3 id="doc-18-21-pythonfastapi"><a class="hlink" href="#doc-18-21-pythonfastapi" title="本节链接">#</a>2.1 Python、FastAPI 与工程基础</h3>
+<h2 id="doc-19-2"><a class="hlink" href="#doc-19-2" title="本节链接">#</a>2. 分模块避坑表</h2>
+<h3 id="doc-19-21-pythonfastapi"><a class="hlink" href="#doc-19-21-pythonfastapi" title="本节链接">#</a>2.1 Python、FastAPI 与工程基础</h3>
 <table>
 <thead>
 <tr>
@@ -13960,7 +14762,7 @@ async def create_aigc_job(req: AIGCJobRequest, tenant: str = Depends(auth)):
 </tr>
 </tbody>
 </table>
-<h3 id="doc-18-22-prompt-context-engineering"><a class="hlink" href="#doc-18-22-prompt-context-engineering" title="本节链接">#</a>2.2 Prompt 与 Context Engineering</h3>
+<h3 id="doc-19-22-prompt-context-engineering"><a class="hlink" href="#doc-19-22-prompt-context-engineering" title="本节链接">#</a>2.2 Prompt 与 Context Engineering</h3>
 <table>
 <thead>
 <tr>
@@ -14002,7 +14804,7 @@ async def create_aigc_job(req: AIGCJobRequest, tenant: str = Depends(auth)):
 </tr>
 </tbody>
 </table>
-<h3 id="doc-18-23-harnessagent-loop"><a class="hlink" href="#doc-18-23-harnessagent-loop" title="本节链接">#</a>2.3 Harness、Agent Loop 与状态</h3>
+<h3 id="doc-19-23-harnessagent-loop"><a class="hlink" href="#doc-19-23-harnessagent-loop" title="本节链接">#</a>2.3 Harness、Agent Loop 与状态</h3>
 <table>
 <thead>
 <tr>
@@ -14044,7 +14846,7 @@ async def create_aigc_job(req: AIGCJobRequest, tenant: str = Depends(auth)):
 </tr>
 </tbody>
 </table>
-<h3 id="doc-18-24-memory-context"><a class="hlink" href="#doc-18-24-memory-context" title="本节链接">#</a>2.4 Memory 与 Context 压缩</h3>
+<h3 id="doc-19-24-memory-context"><a class="hlink" href="#doc-19-24-memory-context" title="本节链接">#</a>2.4 Memory 与 Context 压缩</h3>
 <table>
 <thead>
 <tr>
@@ -14086,7 +14888,7 @@ async def create_aigc_job(req: AIGCJobRequest, tenant: str = Depends(auth)):
 </tr>
 </tbody>
 </table>
-<h3 id="doc-18-25-ragembedding"><a class="hlink" href="#doc-18-25-ragembedding" title="本节链接">#</a>2.5 RAG、Embedding 与向量数据库</h3>
+<h3 id="doc-19-25-ragembedding"><a class="hlink" href="#doc-19-25-ragembedding" title="本节链接">#</a>2.5 RAG、Embedding 与向量数据库</h3>
 <table>
 <thead>
 <tr>
@@ -14138,7 +14940,7 @@ async def create_aigc_job(req: AIGCJobRequest, tenant: str = Depends(auth)):
 </tr>
 </tbody>
 </table>
-<h3 id="doc-18-26-function-callingmcp"><a class="hlink" href="#doc-18-26-function-callingmcp" title="本节链接">#</a>2.6 Function Calling、MCP 与工具</h3>
+<h3 id="doc-19-26-function-callingmcp"><a class="hlink" href="#doc-19-26-function-callingmcp" title="本节链接">#</a>2.6 Function Calling、MCP 与工具</h3>
 <table>
 <thead>
 <tr>
@@ -14190,7 +14992,7 @@ async def create_aigc_job(req: AIGCJobRequest, tenant: str = Depends(auth)):
 </tr>
 </tbody>
 </table>
-<h3 id="doc-18-27-sandbox-human-in-the-loop"><a class="hlink" href="#doc-18-27-sandbox-human-in-the-loop" title="本节链接">#</a>2.7 Sandbox、审批与 Human-in-the-Loop</h3>
+<h3 id="doc-19-27-sandbox-human-in-the-loop"><a class="hlink" href="#doc-19-27-sandbox-human-in-the-loop" title="本节链接">#</a>2.7 Sandbox、审批与 Human-in-the-Loop</h3>
 <table>
 <thead>
 <tr>
@@ -14232,7 +15034,7 @@ async def create_aigc_job(req: AIGCJobRequest, tenant: str = Depends(auth)):
 </tr>
 </tbody>
 </table>
-<h3 id="doc-18-28-verification"><a class="hlink" href="#doc-18-28-verification" title="本节链接">#</a>2.8 Verification、评测与上线门禁</h3>
+<h3 id="doc-19-28-verification"><a class="hlink" href="#doc-19-28-verification" title="本节链接">#</a>2.8 Verification、评测与上线门禁</h3>
 <table>
 <thead>
 <tr>
@@ -14274,7 +15076,7 @@ async def create_aigc_job(req: AIGCJobRequest, tenant: str = Depends(auth)):
 </tr>
 </tbody>
 </table>
-<h3 id="doc-18-29-ai-pde"><a class="hlink" href="#doc-18-29-ai-pde" title="本节链接">#</a>2.9 AI PDE 产品工程</h3>
+<h3 id="doc-19-29-ai-pde"><a class="hlink" href="#doc-19-29-ai-pde" title="本节链接">#</a>2.9 AI PDE 产品工程</h3>
 <table>
 <thead>
 <tr>
@@ -14321,7 +15123,7 @@ async def create_aigc_job(req: AIGCJobRequest, tenant: str = Depends(auth)):
 </tr>
 </tbody>
 </table>
-<h3 id="doc-18-210-vllm"><a class="hlink" href="#doc-18-210-vllm" title="本节链接">#</a>2.10 vLLM 与单机推理</h3>
+<h3 id="doc-19-210-vllm"><a class="hlink" href="#doc-19-210-vllm" title="本节链接">#</a>2.10 vLLM 与单机推理</h3>
 <table>
 <thead>
 <tr>
@@ -14373,7 +15175,7 @@ async def create_aigc_job(req: AIGCJobRequest, tenant: str = Depends(auth)):
 </tr>
 </tbody>
 </table>
-<h3 id="doc-18-211-kubernetesgpu"><a class="hlink" href="#doc-18-211-kubernetesgpu" title="本节链接">#</a>2.11 Kubernetes、GPU 调度与推理平台</h3>
+<h3 id="doc-19-211-kubernetesgpu"><a class="hlink" href="#doc-19-211-kubernetesgpu" title="本节链接">#</a>2.11 Kubernetes、GPU 调度与推理平台</h3>
 <table>
 <thead>
 <tr>
@@ -14425,7 +15227,7 @@ async def create_aigc_job(req: AIGCJobRequest, tenant: str = Depends(auth)):
 </tr>
 </tbody>
 </table>
-<h3 id="doc-18-212-tp-pp-dp"><a class="hlink" href="#doc-18-212-tp-pp-dp" title="本节链接">#</a>2.12 分布式推理 TP / PP / DP</h3>
+<h3 id="doc-19-212-tp-pp-dp"><a class="hlink" href="#doc-19-212-tp-pp-dp" title="本节链接">#</a>2.12 分布式推理 TP / PP / DP</h3>
 <table>
 <thead>
 <tr>
@@ -14472,7 +15274,7 @@ async def create_aigc_job(req: AIGCJobRequest, tenant: str = Depends(auth)):
 </tr>
 </tbody>
 </table>
-<h3 id="doc-18-213"><a class="hlink" href="#doc-18-213" title="本节链接">#</a>2.13 观测、监控与故障定位</h3>
+<h3 id="doc-19-213"><a class="hlink" href="#doc-19-213" title="本节链接">#</a>2.13 观测、监控与故障定位</h3>
 <table>
 <thead>
 <tr>
@@ -14519,7 +15321,7 @@ async def create_aigc_job(req: AIGCJobRequest, tenant: str = Depends(auth)):
 </tr>
 </tbody>
 </table>
-<h3 id="doc-18-214"><a class="hlink" href="#doc-18-214" title="本节链接">#</a>2.14 安全、合规与数据治理</h3>
+<h3 id="doc-19-214"><a class="hlink" href="#doc-19-214" title="本节链接">#</a>2.14 安全、合规与数据治理</h3>
 <table>
 <thead>
 <tr>
@@ -14571,7 +15373,7 @@ async def create_aigc_job(req: AIGCJobRequest, tenant: str = Depends(auth)):
 </tr>
 </tbody>
 </table>
-<h3 id="doc-18-215-gpu"><a class="hlink" href="#doc-18-215-gpu" title="本节链接">#</a>2.15 GPU 物理集群</h3>
+<h3 id="doc-19-215-gpu"><a class="hlink" href="#doc-19-215-gpu" title="本节链接">#</a>2.15 GPU 物理集群</h3>
 <table>
 <thead>
 <tr>
@@ -14623,7 +15425,7 @@ async def create_aigc_job(req: AIGCJobRequest, tenant: str = Depends(auth)):
 </tr>
 </tbody>
 </table>
-<h3 id="doc-18-216-gpu"><a class="hlink" href="#doc-18-216-gpu" title="本节链接">#</a>2.16 国产 GPU 集群</h3>
+<h3 id="doc-19-216-gpu"><a class="hlink" href="#doc-19-216-gpu" title="本节链接">#</a>2.16 国产 GPU 集群</h3>
 <table>
 <thead>
 <tr>
@@ -14675,7 +15477,7 @@ async def create_aigc_job(req: AIGCJobRequest, tenant: str = Depends(auth)):
 </tr>
 </tbody>
 </table>
-<h3 id="doc-18-217"><a class="hlink" href="#doc-18-217" title="本节链接">#</a>2.17 千卡集群规划与实施</h3>
+<h3 id="doc-19-217"><a class="hlink" href="#doc-19-217" title="本节链接">#</a>2.17 千卡集群规划与实施</h3>
 <table>
 <thead>
 <tr>
@@ -14727,7 +15529,7 @@ async def create_aigc_job(req: AIGCJobRequest, tenant: str = Depends(auth)):
 </tr>
 </tbody>
 </table>
-<h3 id="doc-18-218-gpu"><a class="hlink" href="#doc-18-218-gpu" title="本节链接">#</a>2.18 公有云 GPU</h3>
+<h3 id="doc-19-218-gpu"><a class="hlink" href="#doc-19-218-gpu" title="本节链接">#</a>2.18 公有云 GPU</h3>
 <table>
 <thead>
 <tr>
@@ -14779,7 +15581,7 @@ async def create_aigc_job(req: AIGCJobRequest, tenant: str = Depends(auth)):
 </tr>
 </tbody>
 </table>
-<h2 id="doc-18-3"><a class="hlink" href="#doc-18-3" title="本节链接">#</a>3. 企业上线红线</h2>
+<h2 id="doc-19-3"><a class="hlink" href="#doc-19-3" title="本节链接">#</a>3. 企业上线红线</h2>
 <p>以下任意一项未通过，不建议进入真实业务流量：</p>
 <ul>
 <li>没有数据分类和权限模型；</li>
@@ -14793,7 +15595,7 @@ async def create_aigc_job(req: AIGCJobRequest, tenant: str = Depends(auth)):
 <li>没有故障演练和 Runbook；</li>
 <li>没有真实用户验收指标。</li>
 </ul>
-<h2 id="doc-18-4-p0"><a class="hlink" href="#doc-18-4-p0" title="本节链接">#</a>4. P0 上线检查清单</h2>
+<h2 id="doc-19-4-p0"><a class="hlink" href="#doc-19-4-p0" title="本节链接">#</a>4. P0 上线检查清单</h2>
 <ul>
 <li>[ ] 谁负责模型、Harness、工具、数据和 GPU 平台？</li>
 <li>[ ] 数据能否出内网？是否能删除？</li>
@@ -14808,7 +15610,7 @@ async def create_aigc_job(req: AIGCJobRequest, tenant: str = Depends(auth)):
 <li>[ ] 审计日志保存多久？</li>
 <li>[ ] 国产卡、云卡、NVIDIA 卡之间如何替换？</li>
 </ul>
-<h2 id="doc-18-5"><a class="hlink" href="#doc-18-5" title="本节链接">#</a>5. 配套视频与资料</h2>
+<h2 id="doc-19-5"><a class="hlink" href="#doc-19-5" title="本节链接">#</a>5. 配套视频与资料</h2>
 <ul>
 <li><a href="https://genai.owasp.org/llm-top-10/" target="_blank" rel="noopener noreferrer">OWASP LLM Top 10</a></li>
 <li><a href="https://www.nist.gov/itl/ai-risk-management-framework" target="_blank" rel="noopener noreferrer">NIST AI RMF</a></li>
@@ -14818,62 +15620,62 @@ async def create_aigc_job(req: AIGCJobRequest, tenant: str = Depends(auth)):
 <li><a href="https://docs.vllm.ai/en/latest/configuration/optimization.html" target="_blank" rel="noopener noreferrer">vLLM Optimization</a></li>
 <li><a href="https://docs.nvidia.com/datacenter/cloud-native/gpu-operator/latest/" target="_blank" rel="noopener noreferrer">GPU Operator</a></li>
 <li><a href="https://kueue.sigs.k8s.io/" target="_blank" rel="noopener noreferrer">Kueue</a></li>
-</ul></div></section><section class="doc" id="doc-19" data-title="国产 GPU 与千卡集群规划实施指南"><header class="doc-head"><div class="doc-kicker">DOC 20</div><h2>国产 GPU 与千卡集群规划实施指南</h2><div class="doc-source">来源：11_国产GPU与千卡集群规划实施指南.md</div></header><details class="doc-toc"><summary>本篇目录</summary><div class="toc">
+</ul></div></section><section class="doc" id="doc-20" data-title="国产 GPU 与千卡集群规划实施指南"><header class="doc-head"><div class="doc-kicker">DOC 21</div><h2>国产 GPU 与千卡集群规划实施指南</h2><div class="doc-source">来源：11_国产GPU与千卡集群规划实施指南.md</div></header><details class="doc-toc"><summary>本篇目录</summary><div class="toc">
 <ul>
-<li><a href="#doc-19-1-gpu-gpu">1. 国产 GPU 集群与通用 GPU 集群的差异</a></li>
-<li><a href="#doc-19-2">2. 主流国产算力生态地图</a><ul>
-<li><a href="#doc-19-21">2.1 厂商与平台速查</a></li>
-<li><a href="#doc-19-22">2.2 官方入口</a></li>
+<li><a href="#doc-20-1-gpu-gpu">1. 国产 GPU 集群与通用 GPU 集群的差异</a></li>
+<li><a href="#doc-20-2">2. 主流国产算力生态地图</a><ul>
+<li><a href="#doc-20-21">2.1 厂商与平台速查</a></li>
+<li><a href="#doc-20-22">2.2 官方入口</a></li>
 </ul>
 </li>
-<li><a href="#doc-19-3-gpu">3. 国产 GPU 选型方法</a><ul>
-<li><a href="#doc-19-31-workload">3.1 先确定 workload</a></li>
-<li><a href="#doc-19-32">3.2 再看硬指标</a></li>
-<li><a href="#doc-19-33">3.3 最后看软件生态</a></li>
-<li><a href="#doc-19-34">3.4 选型评分表</a></li>
+<li><a href="#doc-20-3-gpu">3. 国产 GPU 选型方法</a><ul>
+<li><a href="#doc-20-31-workload">3.1 先确定 workload</a></li>
+<li><a href="#doc-20-32">3.2 再看硬指标</a></li>
+<li><a href="#doc-20-33">3.3 最后看软件生态</a></li>
+<li><a href="#doc-20-34">3.4 选型评分表</a></li>
 </ul>
 </li>
-<li><a href="#doc-19-4">4. 千卡集群规划</a><ul>
-<li><a href="#doc-19-41">4.1 先定义目标</a></li>
-<li><a href="#doc-19-42">4.2 容量粗估</a></li>
-<li><a href="#doc-19-43">4.3 网络规划</a></li>
-<li><a href="#doc-19-44">4.4 存储规划</a></li>
-<li><a href="#doc-19-45">4.5 供电与散热</a></li>
-<li><a href="#doc-19-46">4.6 故障域设计</a></li>
+<li><a href="#doc-20-4">4. 千卡集群规划</a><ul>
+<li><a href="#doc-20-41">4.1 先定义目标</a></li>
+<li><a href="#doc-20-42">4.2 容量粗估</a></li>
+<li><a href="#doc-20-43">4.3 网络规划</a></li>
+<li><a href="#doc-20-44">4.4 存储规划</a></li>
+<li><a href="#doc-20-45">4.5 供电与散热</a></li>
+<li><a href="#doc-20-46">4.6 故障域设计</a></li>
 </ul>
 </li>
-<li><a href="#doc-19-5">5. 分阶段实施路线</a><ul>
-<li><a href="#doc-19-1832-poc">阶段 1：8～32 卡 PoC</a></li>
-<li><a href="#doc-19-264128">阶段 2：64～128 卡试点</a></li>
-<li><a href="#doc-19-3256512">阶段 3：256～512 卡平台化</a></li>
-<li><a href="#doc-19-4_1">阶段 4：千卡及以上</a></li>
+<li><a href="#doc-20-5">5. 分阶段实施路线</a><ul>
+<li><a href="#doc-20-1832-poc">阶段 1：8～32 卡 PoC</a></li>
+<li><a href="#doc-20-264128">阶段 2：64～128 卡试点</a></li>
+<li><a href="#doc-20-3256512">阶段 3：256～512 卡平台化</a></li>
+<li><a href="#doc-20-4_1">阶段 4：千卡及以上</a></li>
 </ul>
 </li>
-<li><a href="#doc-19-6">6. 国产软件栈迁移要点</a><ul>
-<li><a href="#doc-19-61">6.1 分层解耦</a></li>
-<li><a href="#doc-19-62">6.2 迁移检查清单</a></li>
+<li><a href="#doc-20-6">6. 国产软件栈迁移要点</a><ul>
+<li><a href="#doc-20-61">6.1 分层解耦</a></li>
+<li><a href="#doc-20-62">6.2 迁移检查清单</a></li>
 </ul>
 </li>
-<li><a href="#doc-19-7">7. 千卡集群验收</a><ul>
-<li><a href="#doc-19-71">7.1 单节点</a></li>
-<li><a href="#doc-19-72">7.2 多节点</a></li>
-<li><a href="#doc-19-73">7.3 推理服务</a></li>
-<li><a href="#doc-19-74">7.4 故障演练</a></li>
+<li><a href="#doc-20-7">7. 千卡集群验收</a><ul>
+<li><a href="#doc-20-71">7.1 单节点</a></li>
+<li><a href="#doc-20-72">7.2 多节点</a></li>
+<li><a href="#doc-20-73">7.3 推理服务</a></li>
+<li><a href="#doc-20-74">7.4 故障演练</a></li>
 </ul>
 </li>
-<li><a href="#doc-19-8">8. 视频与资料</a><ul>
-<li><a href="#doc-19-_1">国产集群</a></li>
-<li><a href="#doc-19-_2">千卡 / 大规模集群</a></li>
+<li><a href="#doc-20-8">8. 视频与资料</a><ul>
+<li><a href="#doc-20-_1">国产集群</a></li>
+<li><a href="#doc-20-_2">千卡 / 大规模集群</a></li>
 </ul>
 </li>
-<li><a href="#doc-19-9">9. 最终检查表</a></li>
+<li><a href="#doc-20-9">9. 最终检查表</a></li>
 </ul>
 </div>
 </details><div class="doc-content"><blockquote>
 <p>资料核验日期：<strong>2026-10-04</strong>。国产加速器产品、驱动、编译器、通信库和框架适配变化很快。本文给出选型、规划、实施和验收方法，<strong>具体型号、算力、互联和软件版本必须以供应商当期文档、兼容矩阵和实测结果为准</strong>。</p>
 <p>核心原则：<strong>不要把“国产 GPU”当成一个统一产品</strong>。不同厂商的指令集、运行时、通信库、算子覆盖、容器和调度方式差异很大。国产化集群最重要的不是“能插卡”，而是模型、框架、算子、通信、调度、监控和运维能否形成完整闭环。</p>
 </blockquote>
-<h2 id="doc-19-1-gpu-gpu"><a class="hlink" href="#doc-19-1-gpu-gpu" title="本节链接">#</a>1. 国产 GPU 集群与通用 GPU 集群的差异</h2>
+<h2 id="doc-20-1-gpu-gpu"><a class="hlink" href="#doc-20-1-gpu-gpu" title="本节链接">#</a>1. 国产 GPU 集群与通用 GPU 集群的差异</h2>
 <table>
 <thead>
 <tr>
@@ -14925,8 +15727,8 @@ async def create_aigc_job(req: AIGCJobRequest, tenant: str = Depends(auth)):
 </tr>
 </tbody>
 </table>
-<h2 id="doc-19-2"><a class="hlink" href="#doc-19-2" title="本节链接">#</a>2. 主流国产算力生态地图</h2>
-<h3 id="doc-19-21"><a class="hlink" href="#doc-19-21" title="本节链接">#</a>2.1 厂商与平台速查</h3>
+<h2 id="doc-20-2"><a class="hlink" href="#doc-20-2" title="本节链接">#</a>2. 主流国产算力生态地图</h2>
+<h3 id="doc-20-21"><a class="hlink" href="#doc-20-21" title="本节链接">#</a>2.1 厂商与平台速查</h3>
 <table>
 <thead>
 <tr>
@@ -15003,7 +15805,7 @@ async def create_aigc_job(req: AIGCJobRequest, tenant: str = Depends(auth)):
 </tr>
 </tbody>
 </table>
-<h3 id="doc-19-22"><a class="hlink" href="#doc-19-22" title="本节链接">#</a>2.2 官方入口</h3>
+<h3 id="doc-20-22"><a class="hlink" href="#doc-20-22" title="本节链接">#</a>2.2 官方入口</h3>
 <ul>
 <li>华为昇腾：<a href="https://www.hiascend.com/" target="_blank" rel="noopener noreferrer">https://www.hiascend.com/</a></li>
 <li>昇腾 CANN：<a href="https://www.hiascend.com/cann" target="_blank" rel="noopener noreferrer">https://www.hiascend.com/cann</a></li>
@@ -15019,9 +15821,9 @@ async def create_aigc_job(req: AIGCJobRequest, tenant: str = Depends(auth)):
 <li>沐曦：<a href="https://www.metax-tech.com/" target="_blank" rel="noopener noreferrer">https://www.metax-tech.com/</a></li>
 <li>天数智芯：<a href="https://www.iluvatar.com/" target="_blank" rel="noopener noreferrer">https://www.iluvatar.com/</a></li>
 </ul>
-<h2 id="doc-19-3-gpu"><a class="hlink" href="#doc-19-3-gpu" title="本节链接">#</a>3. 国产 GPU 选型方法</h2>
+<h2 id="doc-20-3-gpu"><a class="hlink" href="#doc-20-3-gpu" title="本节链接">#</a>3. 国产 GPU 选型方法</h2>
 <p>不能只比较“单卡峰值 TFLOPS”。应按下面的顺序选型：</p>
-<h3 id="doc-19-31-workload"><a class="hlink" href="#doc-19-31-workload" title="本节链接">#</a>3.1 先确定 workload</h3>
+<h3 id="doc-20-31-workload"><a class="hlink" href="#doc-20-31-workload" title="本节链接">#</a>3.1 先确定 workload</h3>
 <table>
 <thead>
 <tr>
@@ -15056,7 +15858,7 @@ async def create_aigc_job(req: AIGCJobRequest, tenant: str = Depends(auth)):
 </tr>
 </tbody>
 </table>
-<h3 id="doc-19-32"><a class="hlink" href="#doc-19-32" title="本节链接">#</a>3.2 再看硬指标</h3>
+<h3 id="doc-20-32"><a class="hlink" href="#doc-20-32" title="本节链接">#</a>3.2 再看硬指标</h3>
 <ul>
 <li>显存容量和 HBM 带宽；</li>
 <li>FP16 / BF16 / FP8 / INT8 / INT4 支持；</li>
@@ -15067,7 +15869,7 @@ async def create_aigc_job(req: AIGCJobRequest, tenant: str = Depends(auth)):
 <li>功耗、散热和机柜密度；</li>
 <li>监控、ECC 和故障遥测能力。</li>
 </ul>
-<h3 id="doc-19-33"><a class="hlink" href="#doc-19-33" title="本节链接">#</a>3.3 最后看软件生态</h3>
+<h3 id="doc-20-33"><a class="hlink" href="#doc-20-33" title="本节链接">#</a>3.3 最后看软件生态</h3>
 <ul>
 <li>PyTorch / MindSpore / PaddlePaddle 等框架支持；</li>
 <li>Transformers、vLLM、SGLang、TensorRT-LLM 或厂商推理引擎适配；</li>
@@ -15077,7 +15879,7 @@ async def create_aigc_job(req: AIGCJobRequest, tenant: str = Depends(auth)):
 <li>模型迁移工具和性能分析工具；</li>
 <li>供应、驱动、固件和支持周期。</li>
 </ul>
-<h3 id="doc-19-34"><a class="hlink" href="#doc-19-34" title="本节链接">#</a>3.4 选型评分表</h3>
+<h3 id="doc-20-34"><a class="hlink" href="#doc-20-34" title="本节链接">#</a>3.4 选型评分表</h3>
 <table>
 <thead>
 <tr>
@@ -15129,11 +15931,11 @@ async def create_aigc_job(req: AIGCJobRequest, tenant: str = Depends(auth)):
 </tr>
 </tbody>
 </table>
-<h2 id="doc-19-4"><a class="hlink" href="#doc-19-4" title="本节链接">#</a>4. 千卡集群规划</h2>
+<h2 id="doc-20-4"><a class="hlink" href="#doc-20-4" title="本节链接">#</a>4. 千卡集群规划</h2>
 <blockquote>
 <p>以下为工程方法和公式框架，不是某个厂商的采购承诺。所有系数必须用真实 workload 实测。</p>
 </blockquote>
-<h3 id="doc-19-41"><a class="hlink" href="#doc-19-41" title="本节链接">#</a>4.1 先定义目标</h3>
+<h3 id="doc-20-41"><a class="hlink" href="#doc-20-41" title="本节链接">#</a>4.1 先定义目标</h3>
 <ul>
 <li>是训练、微调、推理还是混合负载？</li>
 <li>目标模型参数、序列长度、并发和吞吐是多少？</li>
@@ -15143,7 +15945,7 @@ async def create_aigc_job(req: AIGCJobRequest, tenant: str = Depends(auth)):
 <li>数据量和 Checkpoint 频率是多少？</li>
 <li>故障率、维护窗口和备件策略是什么？</li>
 </ul>
-<h3 id="doc-19-42"><a class="hlink" href="#doc-19-42" title="本节链接">#</a>4.2 容量粗估</h3>
+<h3 id="doc-20-42"><a class="hlink" href="#doc-20-42" title="本节链接">#</a>4.2 容量粗估</h3>
 <pre><code class="language-text">可用有效算力 =
 GPU/NPU 数量
 × 单卡有效算力
@@ -15158,7 +15960,7 @@ GPU/NPU 数量
 <li>数据加载、Checkpoint 和调度会损失利用率；</li>
 <li>量化、算子和框架兼容会改变有效性能。</li>
 </ul>
-<h3 id="doc-19-43"><a class="hlink" href="#doc-19-43" title="本节链接">#</a>4.3 网络规划</h3>
+<h3 id="doc-20-43"><a class="hlink" href="#doc-20-43" title="本节链接">#</a>4.3 网络规划</h3>
 <p>千卡集群的网络通常分为：</p>
 <pre><code class="language-text">计算网：TP / PP / EP / All-Reduce / All-to-All
 存储网：训练数据、Checkpoint、日志、对象存储
@@ -15178,7 +15980,7 @@ GPU/NPU 数量
 <li>跨 spine 的延迟和带宽；</li>
 <li>PFC、ECN、QoS、拥塞控制和多轨负载均衡。</li>
 </ul>
-<h3 id="doc-19-44"><a class="hlink" href="#doc-19-44" title="本节链接">#</a>4.4 存储规划</h3>
+<h3 id="doc-20-44"><a class="hlink" href="#doc-20-44" title="本节链接">#</a>4.4 存储规划</h3>
 <pre><code class="language-text">存储吞吐 ≈
 (Checkpoint 大小 / Checkpoint 间隔)
 × 安全系数
@@ -15195,7 +15997,7 @@ GPU/NPU 数量
 <li>故障降级和恢复；</li>
 <li>对象存储与并行文件系统的分层。</li>
 </ul>
-<h3 id="doc-19-45"><a class="hlink" href="#doc-19-45" title="本节链接">#</a>4.5 供电与散热</h3>
+<h3 id="doc-20-45"><a class="hlink" href="#doc-20-45" title="本节链接">#</a>4.5 供电与散热</h3>
 <pre><code class="language-text">机柜总功率 =
 计算节点
 + 交换机
@@ -15213,7 +16015,7 @@ GPU/NPU 数量
 <li>CDU、漏液检测和水温；</li>
 <li>故障降频和优雅停机。</li>
 </ul>
-<h3 id="doc-19-46"><a class="hlink" href="#doc-19-46" title="本节链接">#</a>4.6 故障域设计</h3>
+<h3 id="doc-20-46"><a class="hlink" href="#doc-20-46" title="本节链接">#</a>4.6 故障域设计</h3>
 <p>千卡规模下，故障是常态，不是异常。规划时必须考虑：</p>
 <ul>
 <li>单卡故障；</li>
@@ -15226,8 +16028,8 @@ GPU/NPU 数量
 <p>目标是：</p>
 <pre><code class="language-text">发现 -&gt; 隔离 -&gt; 重调度 -&gt; 恢复 -&gt; 验证 -&gt; 回池
 </code></pre>
-<h2 id="doc-19-5"><a class="hlink" href="#doc-19-5" title="本节链接">#</a>5. 分阶段实施路线</h2>
-<h3 id="doc-19-1832-poc"><a class="hlink" href="#doc-19-1832-poc" title="本节链接">#</a>阶段 1：8～32 卡 PoC</h3>
+<h2 id="doc-20-5"><a class="hlink" href="#doc-20-5" title="本节链接">#</a>5. 分阶段实施路线</h2>
+<h3 id="doc-20-1832-poc"><a class="hlink" href="#doc-20-1832-poc" title="本节链接">#</a>阶段 1：8～32 卡 PoC</h3>
 <ul>
 <li>验证目标模型能加载和运行；</li>
 <li>验证框架、算子、量化、推理引擎；</li>
@@ -15235,7 +16037,7 @@ GPU/NPU 数量
 <li>建立单节点性能基线；</li>
 <li>明确迁移改造点。</li>
 </ul>
-<h3 id="doc-19-264128"><a class="hlink" href="#doc-19-264128" title="本节链接">#</a>阶段 2：64～128 卡试点</h3>
+<h3 id="doc-20-264128"><a class="hlink" href="#doc-20-264128" title="本节链接">#</a>阶段 2：64～128 卡试点</h3>
 <ul>
 <li>多机通信、调度、存储和监控；</li>
 <li>训练 / 推理混合调度；</li>
@@ -15243,7 +16045,7 @@ GPU/NPU 数量
 <li>业务真实 workload；</li>
 <li>小规模用户试用。</li>
 </ul>
-<h3 id="doc-19-3256512"><a class="hlink" href="#doc-19-3256512" title="本节链接">#</a>阶段 3：256～512 卡平台化</h3>
+<h3 id="doc-20-3256512"><a class="hlink" href="#doc-20-3256512" title="本节链接">#</a>阶段 3：256～512 卡平台化</h3>
 <ul>
 <li>多租户、队列、配额、抢占；</li>
 <li>模型服务多副本和灰度；</li>
@@ -15251,7 +16053,7 @@ GPU/NPU 数量
 <li>监控、告警、容量和成本；</li>
 <li>故障演练和备件机制。</li>
 </ul>
-<h3 id="doc-19-4_1"><a class="hlink" href="#doc-19-4_1" title="本节链接">#</a>阶段 4：千卡及以上</h3>
+<h3 id="doc-20-4_1"><a class="hlink" href="#doc-20-4_1" title="本节链接">#</a>阶段 4：千卡及以上</h3>
 <ul>
 <li>拓扑感知调度；</li>
 <li>rail-optimized 网络；</li>
@@ -15260,8 +16062,8 @@ GPU/NPU 数量
 <li>硬件故障预测与预防性维护；</li>
 <li>跨集群和多供应商资源池。</li>
 </ul>
-<h2 id="doc-19-6"><a class="hlink" href="#doc-19-6" title="本节链接">#</a>6. 国产软件栈迁移要点</h2>
-<h3 id="doc-19-61"><a class="hlink" href="#doc-19-61" title="本节链接">#</a>6.1 分层解耦</h3>
+<h2 id="doc-20-6"><a class="hlink" href="#doc-20-6" title="本节链接">#</a>6. 国产软件栈迁移要点</h2>
+<h3 id="doc-20-61"><a class="hlink" href="#doc-20-61" title="本节链接">#</a>6.1 分层解耦</h3>
 <pre><code class="language-text">业务应用
 → 统一模型 API / OpenAI 兼容协议
 → Harness / 模型网关
@@ -15270,7 +16072,7 @@ GPU/NPU 数量
 → 国产 GPU / NPU
 </code></pre>
 <p>业务代码不能直接依赖某个厂商的 SDK。所有厂商相关代码放在适配层。</p>
-<h3 id="doc-19-62"><a class="hlink" href="#doc-19-62" title="本节链接">#</a>6.2 迁移检查清单</h3>
+<h3 id="doc-20-62"><a class="hlink" href="#doc-20-62" title="本节链接">#</a>6.2 迁移检查清单</h3>
 <ul>
 <li>[ ] 模型权重格式和 Tokenizer 兼容；</li>
 <li>[ ] Attention、MoE、RoPE、量化算子支持；</li>
@@ -15283,8 +16085,8 @@ GPU/NPU 数量
 <li>[ ] 供应商支持和问题升级路径；</li>
 <li>[ ] 有回退到 NVIDIA 或另一家国产卡的能力。</li>
 </ul>
-<h2 id="doc-19-7"><a class="hlink" href="#doc-19-7" title="本节链接">#</a>7. 千卡集群验收</h2>
-<h3 id="doc-19-71"><a class="hlink" href="#doc-19-71" title="本节链接">#</a>7.1 单节点</h3>
+<h2 id="doc-20-7"><a class="hlink" href="#doc-20-7" title="本节链接">#</a>7. 千卡集群验收</h2>
+<h3 id="doc-20-71"><a class="hlink" href="#doc-20-71" title="本节链接">#</a>7.1 单节点</h3>
 <ul>
 <li>驱动、固件、OS 基线；</li>
 <li>显存、温度、功耗、ECC；</li>
@@ -15292,7 +16094,7 @@ GPU/NPU 数量
 <li>节点内互联；</li>
 <li>本地存储和网络。</li>
 </ul>
-<h3 id="doc-19-72"><a class="hlink" href="#doc-19-72" title="本节链接">#</a>7.2 多节点</h3>
+<h3 id="doc-20-72"><a class="hlink" href="#doc-20-72" title="本节链接">#</a>7.2 多节点</h3>
 <ul>
 <li>集合通信：All-Reduce、All-Gather、Reduce-Scatter、All-to-All；</li>
 <li>小消息延迟、大消息带宽；</li>
@@ -15301,7 +16103,7 @@ GPU/NPU 数量
 <li>模型加载时间；</li>
 <li>Checkpoint 写入和恢复。</li>
 </ul>
-<h3 id="doc-19-73"><a class="hlink" href="#doc-19-73" title="本节链接">#</a>7.3 推理服务</h3>
+<h3 id="doc-20-73"><a class="hlink" href="#doc-20-73" title="本节链接">#</a>7.3 推理服务</h3>
 <ul>
 <li>模型加载和预热；</li>
 <li>TTFT、TPOT、吞吐、并发；</li>
@@ -15310,7 +16112,7 @@ GPU/NPU 数量
 <li>多副本、故障摘除和恢复；</li>
 <li>单位 Token 成本。</li>
 </ul>
-<h3 id="doc-19-74"><a class="hlink" href="#doc-19-74" title="本节链接">#</a>7.4 故障演练</h3>
+<h3 id="doc-20-74"><a class="hlink" href="#doc-20-74" title="本节链接">#</a>7.4 故障演练</h3>
 <ul>
 <li>单卡故障；</li>
 <li>单节点故障；</li>
@@ -15320,8 +16122,8 @@ GPU/NPU 数量
 <li>供电 / 制冷告警；</li>
 <li>慢节点和网络拥塞。</li>
 </ul>
-<h2 id="doc-19-8"><a class="hlink" href="#doc-19-8" title="本节链接">#</a>8. 视频与资料</h2>
-<h3 id="doc-19-_1"><a class="hlink" href="#doc-19-_1" title="本节链接">#</a>国产集群</h3>
+<h2 id="doc-20-8"><a class="hlink" href="#doc-20-8" title="本节链接">#</a>8. 视频与资料</h2>
+<h3 id="doc-20-_1"><a class="hlink" href="#doc-20-_1" title="本节链接">#</a>国产集群</h3>
 <ul>
 <li><a href="https://www.bilibili.com/video/BV1gL411C7Ki/" target="_blank" rel="noopener noreferrer">昇腾 CANN 入门课</a></li>
 <li><a href="https://www.bilibili.com/video/BV1C94y1V7ZV/" target="_blank" rel="noopener noreferrer">Ascend C 算子开发入门</a></li>
@@ -15334,7 +16136,7 @@ GPU/NPU 数量
 <li><a href="https://www.bilibili.com/video/BV1kY9uBFEGx/" target="_blank" rel="noopener noreferrer">MUSA SDK 软件栈介绍</a></li>
 <li><a href="https://www.bilibili.com/video/BV1dRfPYZEru/" target="_blank" rel="noopener noreferrer">沐曦 MXMACA 编程教程</a></li>
 </ul>
-<h3 id="doc-19-_2"><a class="hlink" href="#doc-19-_2" title="本节链接">#</a>千卡 / 大规模集群</h3>
+<h3 id="doc-20-_2"><a class="hlink" href="#doc-20-_2" title="本节链接">#</a>千卡 / 大规模集群</h3>
 <ul>
 <li><a href="https://www.youtube.com/watch?v=o9xAU7KWbvI" target="_blank" rel="noopener noreferrer">How to Design a GPU Cluster for AI Training</a></li>
 <li><a href="https://www.youtube.com/watch?v=31m3KHgvV-M" target="_blank" rel="noopener noreferrer">GPU Cluster Network Design for AI Training</a></li>
@@ -15342,7 +16144,7 @@ GPU/NPU 数量
 <li><a href="https://www.youtube.com/watch?v=oXV6Bd7Km-k" target="_blank" rel="noopener noreferrer">The Hidden Crisis Behind Large-Scale GPU Clusters</a></li>
 <li><a href="https://www.youtube.com/watch?v=N5AJJ0tAoxc" target="_blank" rel="noopener noreferrer">Inside a New AI Cluster with NVIDIA B200</a></li>
 </ul>
-<h2 id="doc-19-9"><a class="hlink" href="#doc-19-9" title="本节链接">#</a>9. 最终检查表</h2>
+<h2 id="doc-20-9"><a class="hlink" href="#doc-20-9" title="本节链接">#</a>9. 最终检查表</h2>
 <ul>
 <li>[ ] 目标模型在国产卡上能加载、训练和推理。</li>
 <li>[ ] 关键算子和精度已对齐。</li>
@@ -15353,42 +16155,42 @@ GPU/NPU 数量
 <li>[ ] 供应商兼容矩阵、SLA 和升级路径明确。</li>
 <li>[ ] 有第二供应商或 NVIDIA 回退路径。</li>
 <li>[ ] 有真实 workload 的性能、质量和成本数据。</li>
-</ul></div></section><section class="doc" id="doc-20" data-title="公有云 GPU 选型与实施要点"><header class="doc-head"><div class="doc-kicker">DOC 21</div><h2>公有云 GPU 选型与实施要点</h2><div class="doc-source">来源：12_公有云GPU选型与实施要点.md</div></header><details class="doc-toc"><summary>本篇目录</summary><div class="toc">
+</ul></div></section><section class="doc" id="doc-21" data-title="公有云 GPU 选型与实施要点"><header class="doc-head"><div class="doc-kicker">DOC 22</div><h2>公有云 GPU 选型与实施要点</h2><div class="doc-source">来源：12_公有云GPU选型与实施要点.md</div></header><details class="doc-toc"><summary>本篇目录</summary><div class="toc">
 <ul>
-<li><a href="#doc-20-1-gpu-gpu">1. 公有云 GPU 与自建 GPU 集群</a></li>
-<li><a href="#doc-20-2">2. 选型维度</a><ul>
-<li><a href="#doc-20-21-gpu">2.1 GPU 层</a></li>
-<li><a href="#doc-20-22-cpu-pcie">2.2 CPU、内存和 PCIe</a></li>
-<li><a href="#doc-20-23">2.3 网络</a></li>
-<li><a href="#doc-20-24">2.4 存储</a></li>
-<li><a href="#doc-20-25">2.5 计费</a></li>
+<li><a href="#doc-21-1-gpu-gpu">1. 公有云 GPU 与自建 GPU 集群</a></li>
+<li><a href="#doc-21-2">2. 选型维度</a><ul>
+<li><a href="#doc-21-21-gpu">2.1 GPU 层</a></li>
+<li><a href="#doc-21-22-cpu-pcie">2.2 CPU、内存和 PCIe</a></li>
+<li><a href="#doc-21-23">2.3 网络</a></li>
+<li><a href="#doc-21-24">2.4 存储</a></li>
+<li><a href="#doc-21-25">2.5 计费</a></li>
 </ul>
 </li>
-<li><a href="#doc-20-3-gpu">3. 主要公有云 GPU 入口</a></li>
-<li><a href="#doc-20-4">4. 公有云千卡集群规划</a><ul>
-<li><a href="#doc-20-41">4.1 先判断是否真的需要千卡</a></li>
-<li><a href="#doc-20-42">4.2 容量规划</a></li>
-<li><a href="#doc-20-43">4.3 拓扑和故障域</a></li>
-<li><a href="#doc-20-44-checkpoint">4.4 存储与 Checkpoint</a></li>
+<li><a href="#doc-21-3-gpu">3. 主要公有云 GPU 入口</a></li>
+<li><a href="#doc-21-4">4. 公有云千卡集群规划</a><ul>
+<li><a href="#doc-21-41">4.1 先判断是否真的需要千卡</a></li>
+<li><a href="#doc-21-42">4.2 容量规划</a></li>
+<li><a href="#doc-21-43">4.3 拓扑和故障域</a></li>
+<li><a href="#doc-21-44-checkpoint">4.4 存储与 Checkpoint</a></li>
 </ul>
 </li>
-<li><a href="#doc-20-5">5. 成本控制</a><ul>
-<li><a href="#doc-20-51">5.1 成本公式</a></li>
-<li><a href="#doc-20-52">5.2 控制手段</a></li>
+<li><a href="#doc-21-5">5. 成本控制</a><ul>
+<li><a href="#doc-21-51">5.1 成本公式</a></li>
+<li><a href="#doc-21-52">5.2 控制手段</a></li>
 </ul>
 </li>
-<li><a href="#doc-20-6">6. 公有云安全</a></li>
-<li><a href="#doc-20-7">7. 实施步骤</a></li>
-<li><a href="#doc-20-8">8. 常见坑</a></li>
-<li><a href="#doc-20-9">9. 视频与资料</a></li>
-<li><a href="#doc-20-10">10. 最终检查表</a></li>
+<li><a href="#doc-21-6">6. 公有云安全</a></li>
+<li><a href="#doc-21-7">7. 实施步骤</a></li>
+<li><a href="#doc-21-8">8. 常见坑</a></li>
+<li><a href="#doc-21-9">9. 视频与资料</a></li>
+<li><a href="#doc-21-10">10. 最终检查表</a></li>
 </ul>
 </div>
 </details><div class="doc-content"><blockquote>
 <p>资料核验日期：<strong>2026-10-04</strong>。云厂商实例族、GPU 型号、配额、区域可用性和计费方式变化很快，采购和上线前必须重新查看云厂商官方文档和当前区域库存。</p>
 <p>核心原则：<strong>云 GPU 不是“按卡租赁”这么简单</strong>。同一个 GPU 型号在不同实例、区域和网络配置下，显存、CPU、内存、NVLink、RDMA、存储和计费可能完全不同。</p>
 </blockquote>
-<h2 id="doc-20-1-gpu-gpu"><a class="hlink" href="#doc-20-1-gpu-gpu" title="本节链接">#</a>1. 公有云 GPU 与自建 GPU 集群</h2>
+<h2 id="doc-21-1-gpu-gpu"><a class="hlink" href="#doc-21-1-gpu-gpu" title="本节链接">#</a>1. 公有云 GPU 与自建 GPU 集群</h2>
 <table>
 <thead>
 <tr>
@@ -15442,8 +16244,8 @@ GPU/NPU 数量
 <li>峰值训练：云 + 预留容量 + Spot 混合；</li>
 <li>核心生产：私有化 / 专有云 + 云灾备或多云。</li>
 </ul>
-<h2 id="doc-20-2"><a class="hlink" href="#doc-20-2" title="本节链接">#</a>2. 选型维度</h2>
-<h3 id="doc-20-21-gpu"><a class="hlink" href="#doc-20-21-gpu" title="本节链接">#</a>2.1 GPU 层</h3>
+<h2 id="doc-21-2"><a class="hlink" href="#doc-21-2" title="本节链接">#</a>2. 选型维度</h2>
+<h3 id="doc-21-21-gpu"><a class="hlink" href="#doc-21-21-gpu" title="本节链接">#</a>2.1 GPU 层</h3>
 <ul>
 <li>GPU 型号和代际；</li>
 <li>显存容量和 HBM 带宽；</li>
@@ -15453,7 +16255,7 @@ GPU/NPU 数量
 <li>是否支持 NVLink / NVSwitch；</li>
 <li>是否支持集合通信和 GPUDirect RDMA。</li>
 </ul>
-<h3 id="doc-20-22-cpu-pcie"><a class="hlink" href="#doc-20-22-cpu-pcie" title="本节链接">#</a>2.2 CPU、内存和 PCIe</h3>
+<h3 id="doc-21-22-cpu-pcie"><a class="hlink" href="#doc-21-22-cpu-pcie" title="本节链接">#</a>2.2 CPU、内存和 PCIe</h3>
 <ul>
 <li>vCPU 与 GPU 的配比；</li>
 <li>内存容量和带宽；</li>
@@ -15462,7 +16264,7 @@ GPU/NPU 数量
 <li>本地 NVMe 容量和 IOPS；</li>
 <li>网卡数量、带宽和队列。</li>
 </ul>
-<h3 id="doc-20-23"><a class="hlink" href="#doc-20-23" title="本节链接">#</a>2.3 网络</h3>
+<h3 id="doc-21-23"><a class="hlink" href="#doc-21-23" title="本节链接">#</a>2.3 网络</h3>
 <ul>
 <li>实例内 GPU 互联；</li>
 <li>实例间网络带宽；</li>
@@ -15471,7 +16273,7 @@ GPU/NPU 数量
 <li>可用区和地域延迟；</li>
 <li>是否支持多轨和拓扑感知放置。</li>
 </ul>
-<h3 id="doc-20-24"><a class="hlink" href="#doc-20-24" title="本节链接">#</a>2.4 存储</h3>
+<h3 id="doc-21-24"><a class="hlink" href="#doc-21-24" title="本节链接">#</a>2.4 存储</h3>
 <ul>
 <li>本地 NVMe；</li>
 <li>云盘 / 块存储 IOPS；</li>
@@ -15481,7 +16283,7 @@ GPU/NPU 数量
 <li>模型缓存；</li>
 <li>快照、备份和恢复。</li>
 </ul>
-<h3 id="doc-20-25"><a class="hlink" href="#doc-20-25" title="本节链接">#</a>2.5 计费</h3>
+<h3 id="doc-21-25"><a class="hlink" href="#doc-21-25" title="本节链接">#</a>2.5 计费</h3>
 <ul>
 <li>按量计费；</li>
 <li>预留实例 / Capacity Block；</li>
@@ -15491,7 +16293,7 @@ GPU/NPU 数量
 <li>停机是否还收 GPU 费用；</li>
 <li>跨区域和跨云传输费用。</li>
 </ul>
-<h2 id="doc-20-3-gpu"><a class="hlink" href="#doc-20-3-gpu" title="本节链接">#</a>3. 主要公有云 GPU 入口</h2>
+<h2 id="doc-21-3-gpu"><a class="hlink" href="#doc-21-3-gpu" title="本节链接">#</a>3. 主要公有云 GPU 入口</h2>
 <table>
 <thead>
 <tr>
@@ -15556,8 +16358,8 @@ GPU/NPU 数量
 <blockquote>
 <p>具体实例规格和可用区库存必须以购买时官方控制台为准。</p>
 </blockquote>
-<h2 id="doc-20-4"><a class="hlink" href="#doc-20-4" title="本节链接">#</a>4. 公有云千卡集群规划</h2>
-<h3 id="doc-20-41"><a class="hlink" href="#doc-20-41" title="本节链接">#</a>4.1 先判断是否真的需要千卡</h3>
+<h2 id="doc-21-4"><a class="hlink" href="#doc-21-4" title="本节链接">#</a>4. 公有云千卡集群规划</h2>
+<h3 id="doc-21-41"><a class="hlink" href="#doc-21-41" title="本节链接">#</a>4.1 先判断是否真的需要千卡</h3>
 <p>千卡云集群成本高、配额难、故障面大。先问：</p>
 <ul>
 <li>能否通过更小模型、量化、LoRA 或蒸馏解决？</li>
@@ -15566,7 +16368,7 @@ GPU/NPU 数量
 <li>推理是否只需要多副本而不是 TP 千卡？</li>
 <li>是否存在跨云、跨区域的数据迁移成本？</li>
 </ul>
-<h3 id="doc-20-42"><a class="hlink" href="#doc-20-42" title="本节链接">#</a>4.2 容量规划</h3>
+<h3 id="doc-21-42"><a class="hlink" href="#doc-21-42" title="本节链接">#</a>4.2 容量规划</h3>
 <pre><code class="language-text">所需实例数 =
 峰值 GPU 需求
 / 单实例 GPU 数
@@ -15586,7 +16388,7 @@ GPU/NPU 数量
 <li>K8s Node 配额；</li>
 <li>区域库存和预留容量。</li>
 </ul>
-<h3 id="doc-20-43"><a class="hlink" href="#doc-20-43" title="本节链接">#</a>4.3 拓扑和故障域</h3>
+<h3 id="doc-21-43"><a class="hlink" href="#doc-21-43" title="本节链接">#</a>4.3 拓扑和故障域</h3>
 <ul>
 <li>尽量把高频通信实例放在同一放置组 / 同一低延迟网络区域；</li>
 <li>TP 不跨高延迟区域；</li>
@@ -15595,7 +16397,7 @@ GPU/NPU 数量
 <li>设计 Checkpoint 和快速恢复；</li>
 <li>监控多实例通信、慢节点和网络拥塞。</li>
 </ul>
-<h3 id="doc-20-44-checkpoint"><a class="hlink" href="#doc-20-44-checkpoint" title="本节链接">#</a>4.4 存储与 Checkpoint</h3>
+<h3 id="doc-21-44-checkpoint"><a class="hlink" href="#doc-21-44-checkpoint" title="本节链接">#</a>4.4 存储与 Checkpoint</h3>
 <ul>
 <li>训练数据与计算分离；</li>
 <li>模型权重和 Checkpoint 使用共享存储；</li>
@@ -15603,8 +16405,8 @@ GPU/NPU 数量
 <li>本地 NVMe 只做缓存，不承担唯一副本；</li>
 <li>对象存储用于归档和长期版本。</li>
 </ul>
-<h2 id="doc-20-5"><a class="hlink" href="#doc-20-5" title="本节链接">#</a>5. 成本控制</h2>
-<h3 id="doc-20-51"><a class="hlink" href="#doc-20-51" title="本节链接">#</a>5.1 成本公式</h3>
+<h2 id="doc-21-5"><a class="hlink" href="#doc-21-5" title="本节链接">#</a>5. 成本控制</h2>
+<h3 id="doc-21-51"><a class="hlink" href="#doc-21-51" title="本节链接">#</a>5.1 成本公式</h3>
 <pre><code class="language-text">总成本 =
 GPU 实例费
 + 存储费
@@ -15614,7 +16416,7 @@ GPU 实例费
 + 许可证和软件
 + 运维人力
 </code></pre>
-<h3 id="doc-20-52"><a class="hlink" href="#doc-20-52" title="本节链接">#</a>5.2 控制手段</h3>
+<h3 id="doc-21-52"><a class="hlink" href="#doc-21-52" title="本节链接">#</a>5.2 控制手段</h3>
 <ul>
 <li>标签：业务、团队、模型、环境；</li>
 <li>预算和告警；</li>
@@ -15627,7 +16429,7 @@ GPU 实例费
 <li>把数据放在同区域，减少出网；</li>
 <li>定期审计闲置 GPU。</li>
 </ul>
-<h2 id="doc-20-6"><a class="hlink" href="#doc-20-6" title="本节链接">#</a>6. 公有云安全</h2>
+<h2 id="doc-21-6"><a class="hlink" href="#doc-21-6" title="本节链接">#</a>6. 公有云安全</h2>
 <ul>
 <li>使用私有子网，GPU 实例不直接暴露公网；</li>
 <li>SSH 通过堡垒机或 SSM / Session Manager；</li>
@@ -15640,7 +16442,7 @@ GPU 实例费
 <li>镜像扫描和 SBOM；</li>
 <li>按租户和业务打标签，防止数据串用。</li>
 </ul>
-<h2 id="doc-20-7"><a class="hlink" href="#doc-20-7" title="本节链接">#</a>7. 实施步骤</h2>
+<h2 id="doc-21-7"><a class="hlink" href="#doc-21-7" title="本节链接">#</a>7. 实施步骤</h2>
 <ol>
 <li>选业务 workload 和目标区域；</li>
 <li>申请 GPU、vCPU、存储和网络配额；</li>
@@ -15653,7 +16455,7 @@ GPU 实例费
 <li>做 Spot 抢占、节点故障和网络故障演练；</li>
 <li>对比按量、Spot、预留和自建 TCO。</li>
 </ol>
-<h2 id="doc-20-8"><a class="hlink" href="#doc-20-8" title="本节链接">#</a>8. 常见坑</h2>
+<h2 id="doc-21-8"><a class="hlink" href="#doc-21-8" title="本节链接">#</a>8. 常见坑</h2>
 <table>
 <thead>
 <tr>
@@ -15696,7 +16498,7 @@ GPU 实例费
 </tr>
 </tbody>
 </table>
-<h2 id="doc-20-9"><a class="hlink" href="#doc-20-9" title="本节链接">#</a>9. 视频与资料</h2>
+<h2 id="doc-21-9"><a class="hlink" href="#doc-21-9" title="本节链接">#</a>9. 视频与资料</h2>
 <ul>
 <li><a href="https://aws.amazon.com/ec2/instance-types/accelerated-computing/" target="_blank" rel="noopener noreferrer">AWS EC2 加速计算实例</a></li>
 <li><a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/efa.html" target="_blank" rel="noopener noreferrer">AWS EFA 文档</a></li>
@@ -15713,7 +16515,7 @@ GPU 实例费
 <li><a href="https://www.youtube.com/watch?v=31m3KHgvV-M" target="_blank" rel="noopener noreferrer">GPU Cluster Network Design</a></li>
 <li><a href="https://www.youtube.com/watch?v=wVRnTM5pQbo" target="_blank" rel="noopener noreferrer">How to Reduce Cloud GPU Costs</a></li>
 </ul>
-<h2 id="doc-20-10"><a class="hlink" href="#doc-20-10" title="本节链接">#</a>10. 最终检查表</h2>
+<h2 id="doc-21-10"><a class="hlink" href="#doc-21-10" title="本节链接">#</a>10. 最终检查表</h2>
 <ul>
 <li>[ ] 已确认 GPU 型号、显存、NVLink、RDMA 和区域库存。</li>
 <li>[ ] 已申请 GPU、vCPU、内存、存储和网络配额。</li>
@@ -15724,25 +16526,25 @@ GPU 实例费
 <li>[ ] 已对比按量、Spot、预留和自建成本。</li>
 <li>[ ] 已做跨 AZ、节点故障和网络故障演练。</li>
 <li>[ ] 已保留迁移到其他云或自建集群的路径。</li>
-</ul></div></section><section class="doc" id="doc-21" data-title="32 周完整学习路线"><header class="doc-head"><div class="doc-kicker">DOC 22</div><h2>32 周完整学习路线</h2><div class="doc-source">来源：05_32周完整学习路线.md</div></header><details class="doc-toc"><summary>本篇目录</summary><div class="toc">
+</ul></div></section><section class="doc" id="doc-22" data-title="32 周完整学习路线"><header class="doc-head"><div class="doc-kicker">DOC 23</div><h2>32 周完整学习路线</h2><div class="doc-source">来源：05_32周完整学习路线.md</div></header><details class="doc-toc"><summary>本篇目录</summary><div class="toc">
 <ul>
-<li><a href="#doc-21-1">1. 能力目标</a></li>
-<li><a href="#doc-21-2">2. 每周固定节奏</a></li>
-<li><a href="#doc-21-3">3. 前置要求</a></li>
-<li><a href="#doc-21-4-32">4. 32 周路线</a><ul>
-<li><a href="#doc-21-1-ai-14">第 1 阶段：工程与 AI 基础（第 1～4 周）</a></li>
-<li><a href="#doc-21-2-harness-58">第 2 阶段：Harness 基础（第 5～8 周）</a></li>
-<li><a href="#doc-21-3-harness-912">第 3 阶段：Harness 生产化（第 9～12 周）</a></li>
-<li><a href="#doc-21-4-ai-pde-1316">第 4 阶段：AI PDE 产品工程（第 13～16 周）</a></li>
-<li><a href="#doc-21-5-ai-infra-kubernetes-1720">第 5 阶段：AI Infra 单机与 Kubernetes（第 17～20 周）</a></li>
-<li><a href="#doc-21-6-2124">第 6 阶段：分布式推理与调度（第 21～24 周）</a></li>
-<li><a href="#doc-21-7-2528">第 7 阶段：观测、评估、安全与成本（第 25～28 周）</a></li>
-<li><a href="#doc-21-8-2932">第 8 阶段：毕业项目（第 29～32 周）</a></li>
+<li><a href="#doc-22-1">1. 能力目标</a></li>
+<li><a href="#doc-22-2">2. 每周固定节奏</a></li>
+<li><a href="#doc-22-3">3. 前置要求</a></li>
+<li><a href="#doc-22-4-32">4. 32 周路线</a><ul>
+<li><a href="#doc-22-1-ai-14">第 1 阶段：工程与 AI 基础（第 1～4 周）</a></li>
+<li><a href="#doc-22-2-harness-58">第 2 阶段：Harness 基础（第 5～8 周）</a></li>
+<li><a href="#doc-22-3-harness-912">第 3 阶段：Harness 生产化（第 9～12 周）</a></li>
+<li><a href="#doc-22-4-ai-pde-1316">第 4 阶段：AI PDE 产品工程（第 13～16 周）</a></li>
+<li><a href="#doc-22-5-ai-infra-kubernetes-1720">第 5 阶段：AI Infra 单机与 Kubernetes（第 17～20 周）</a></li>
+<li><a href="#doc-22-6-2124">第 6 阶段：分布式推理与调度（第 21～24 周）</a></li>
+<li><a href="#doc-22-7-2528">第 7 阶段：观测、评估、安全与成本（第 25～28 周）</a></li>
+<li><a href="#doc-22-8-2932">第 8 阶段：毕业项目（第 29～32 周）</a></li>
 </ul>
 </li>
-<li><a href="#doc-21-5">5. 每周实验记录模板</a></li>
-<li><a href="#doc-21-6">6. 阶段通关规则</a></li>
-<li><a href="#doc-21-7-12">7. 最终答辩的 12 个问题</a></li>
+<li><a href="#doc-22-5">5. 每周实验记录模板</a></li>
+<li><a href="#doc-22-6">6. 阶段通关规则</a></li>
+<li><a href="#doc-22-7-12">7. 最终答辩的 12 个问题</a></li>
 </ul>
 </div>
 </details><div class="doc-content"><blockquote>
@@ -15752,7 +16554,7 @@ GPU 实例费
 <strong>物理集群增强版</strong>：第 1～32 周完成后，再增加 4 周 GPU 物理集群专项（见 07_GPU物理集群建设选型部署与调优.md 和 08_GPU集群监控调试故障处理与验收.md），总周期为 36 周。
 <strong>企业落地扩展</strong>：避坑见 10，国产 GPU / 千卡见 11，公有云 GPU 见 12。</p>
 </blockquote>
-<h2 id="doc-21-1"><a class="hlink" href="#doc-21-1" title="本节链接">#</a>1. 能力目标</h2>
+<h2 id="doc-22-1"><a class="hlink" href="#doc-22-1" title="本节链接">#</a>1. 能力目标</h2>
 <p>完成本路线后，应该能够：</p>
 <ul>
 <li>独立定义并交付一个 AI 产品功能；</li>
@@ -15763,7 +16565,7 @@ GPU 实例费
 <li>用 OWASP LLM Top 10、NIST AI RMF 和 OpenTelemetry 做安全与治理；</li>
 <li>完成一个可演示、可压测、可复盘、可答辩的毕业项目。</li>
 </ul>
-<h2 id="doc-21-2"><a class="hlink" href="#doc-21-2" title="本节链接">#</a>2. 每周固定节奏</h2>
+<h2 id="doc-22-2"><a class="hlink" href="#doc-22-2" title="本节链接">#</a>2. 每周固定节奏</h2>
 <table>
 <thead>
 <tr>
@@ -15800,7 +16602,7 @@ GPU 实例费
 </tr>
 </tbody>
 </table>
-<h2 id="doc-21-3"><a class="hlink" href="#doc-21-3" title="本节链接">#</a>3. 前置要求</h2>
+<h2 id="doc-22-3"><a class="hlink" href="#doc-22-3" title="本节链接">#</a>3. 前置要求</h2>
 <ul>
 <li>Python：函数、类、异步、类型标注、虚拟环境、测试；</li>
 <li>Linux：文件、进程、权限、网络、Shell；</li>
@@ -15842,8 +16644,8 @@ GPU 实例费
 </tbody>
 </table>
 <hr />
-<h2 id="doc-21-4-32"><a class="hlink" href="#doc-21-4-32" title="本节链接">#</a>4. 32 周路线</h2>
-<h3 id="doc-21-1-ai-14"><a class="hlink" href="#doc-21-1-ai-14" title="本节链接">#</a>第 1 阶段：工程与 AI 基础（第 1～4 周）</h3>
+<h2 id="doc-22-4-32"><a class="hlink" href="#doc-22-4-32" title="本节链接">#</a>4. 32 周路线</h2>
+<h3 id="doc-22-1-ai-14"><a class="hlink" href="#doc-22-1-ai-14" title="本节链接">#</a>第 1 阶段：工程与 AI 基础（第 1～4 周）</h3>
 <table>
 <thead>
 <tr>
@@ -15881,7 +16683,7 @@ GPU 实例费
 </tbody>
 </table>
 <p><strong>阶段 1 交付物</strong>：<code>foundation/</code>、API 服务、Docker Compose、周报。</p>
-<h3 id="doc-21-2-harness-58"><a class="hlink" href="#doc-21-2-harness-58" title="本节链接">#</a>第 2 阶段：Harness 基础（第 5～8 周）</h3>
+<h3 id="doc-22-2-harness-58"><a class="hlink" href="#doc-22-2-harness-58" title="本节链接">#</a>第 2 阶段：Harness 基础（第 5～8 周）</h3>
 <table>
 <thead>
 <tr>
@@ -15919,7 +16721,7 @@ GPU 实例费
 </tbody>
 </table>
 <p><strong>阶段 2 交付物</strong>：<code>agent-harness/</code> v0.1、Trace、测试、架构图。</p>
-<h3 id="doc-21-3-harness-912"><a class="hlink" href="#doc-21-3-harness-912" title="本节链接">#</a>第 3 阶段：Harness 生产化（第 9～12 周）</h3>
+<h3 id="doc-22-3-harness-912"><a class="hlink" href="#doc-22-3-harness-912" title="本节链接">#</a>第 3 阶段：Harness 生产化（第 9～12 周）</h3>
 <table>
 <thead>
 <tr>
@@ -15957,7 +16759,7 @@ GPU 实例费
 </tbody>
 </table>
 <p><strong>阶段 3 交付物</strong>：Harness v0.2、审批矩阵、长任务恢复报告。</p>
-<h3 id="doc-21-4-ai-pde-1316"><a class="hlink" href="#doc-21-4-ai-pde-1316" title="本节链接">#</a>第 4 阶段：AI PDE 产品工程（第 13～16 周）</h3>
+<h3 id="doc-22-4-ai-pde-1316"><a class="hlink" href="#doc-22-4-ai-pde-1316" title="本节链接">#</a>第 4 阶段：AI PDE 产品工程（第 13～16 周）</h3>
 <table>
 <thead>
 <tr>
@@ -15995,7 +16797,7 @@ GPU 实例费
 </tbody>
 </table>
 <p><strong>阶段 4 交付物</strong>：PDE 产品原型、PRD、状态机、评测集、灰度方案。</p>
-<h3 id="doc-21-5-ai-infra-kubernetes-1720"><a class="hlink" href="#doc-21-5-ai-infra-kubernetes-1720" title="本节链接">#</a>第 5 阶段：AI Infra 单机与 Kubernetes（第 17～20 周）</h3>
+<h3 id="doc-22-5-ai-infra-kubernetes-1720"><a class="hlink" href="#doc-22-5-ai-infra-kubernetes-1720" title="本节链接">#</a>第 5 阶段：AI Infra 单机与 Kubernetes（第 17～20 周）</h3>
 <table>
 <thead>
 <tr>
@@ -16033,7 +16835,7 @@ GPU 实例费
 </tbody>
 </table>
 <p><strong>阶段 5 交付物</strong>：K8s 推理服务、Helm/YAML、压测报告、Runbook。</p>
-<h3 id="doc-21-6-2124"><a class="hlink" href="#doc-21-6-2124" title="本节链接">#</a>第 6 阶段：分布式推理与调度（第 21～24 周）</h3>
+<h3 id="doc-22-6-2124"><a class="hlink" href="#doc-22-6-2124" title="本节链接">#</a>第 6 阶段：分布式推理与调度（第 21～24 周）</h3>
 <table>
 <thead>
 <tr>
@@ -16071,7 +16873,7 @@ GPU 实例费
 </tbody>
 </table>
 <p><strong>阶段 6 交付物</strong>：多卡基准、调度实验、推理平台选型矩阵。</p>
-<h3 id="doc-21-7-2528"><a class="hlink" href="#doc-21-7-2528" title="本节链接">#</a>第 7 阶段：观测、评估、安全与成本（第 25～28 周）</h3>
+<h3 id="doc-22-7-2528"><a class="hlink" href="#doc-22-7-2528" title="本节链接">#</a>第 7 阶段：观测、评估、安全与成本（第 25～28 周）</h3>
 <table>
 <thead>
 <tr>
@@ -16109,7 +16911,7 @@ GPU 实例费
 </tbody>
 </table>
 <p><strong>阶段 7 交付物</strong>：统一 Dashboard、评测报告、安全报告、成本和容量报告。</p>
-<h3 id="doc-21-8-2932"><a class="hlink" href="#doc-21-8-2932" title="本节链接">#</a>第 8 阶段：毕业项目（第 29～32 周）</h3>
+<h3 id="doc-22-8-2932"><a class="hlink" href="#doc-22-8-2932" title="本节链接">#</a>第 8 阶段：毕业项目（第 29～32 周）</h3>
 <table>
 <thead>
 <tr>
@@ -16148,7 +16950,7 @@ GPU 实例费
 <li>数据分析 Agent：Text-to-SQL + 可视化 + 数据权限 + 评测。</li>
 </ol>
 <hr />
-<h2 id="doc-21-5"><a class="hlink" href="#doc-21-5" title="本节链接">#</a>5. 每周实验记录模板</h2>
+<h2 id="doc-22-5"><a class="hlink" href="#doc-22-5" title="本节链接">#</a>5. 每周实验记录模板</h2>
 <pre><code class="language-markdown"># Week &lt;N&gt; Lab Report
 
 ## Goal
@@ -16162,7 +16964,7 @@ GPU 实例费
 ## Reproduction steps
 ## Next step
 </code></pre>
-<h2 id="doc-21-6"><a class="hlink" href="#doc-21-6" title="本节链接">#</a>6. 阶段通关规则</h2>
+<h2 id="doc-22-6"><a class="hlink" href="#doc-22-6" title="本节链接">#</a>6. 阶段通关规则</h2>
 <ul>
 <li>没有可复现命令，不算完成；</li>
 <li>没有指标，不算优化；</li>
@@ -16171,7 +16973,7 @@ GPU 实例费
 <li>没有评测集，不算 AI 产品；</li>
 <li>没有成本和回滚，不算企业级。</li>
 </ul>
-<h2 id="doc-21-7-12"><a class="hlink" href="#doc-21-7-12" title="本节链接">#</a>7. 最终答辩的 12 个问题</h2>
+<h2 id="doc-22-7-12"><a class="hlink" href="#doc-22-7-12" title="本节链接">#</a>7. 最终答辩的 12 个问题</h2>
 <ol>
 <li>用户问题是什么，基线是多少？</li>
 <li>为什么不使用普通 API 或规则系统？</li>
@@ -16185,28 +16987,28 @@ GPU 实例费
 <li>Prompt Injection、越权和数据泄露如何防？</li>
 <li>成本、容量、SLO 和降级如何管理？</li>
 <li>如果流量增长 10 倍，最先优化哪一层？</li>
-</ol></div></section><section class="doc" id="doc-22" data-title="毕业项目 SOP 与验收"><header class="doc-head"><div class="doc-kicker">DOC 23</div><h2>毕业项目 SOP 与验收</h2><div class="doc-source">来源：06_毕业项目SOP与验收.md</div></header><details class="doc-toc"><summary>本篇目录</summary><div class="toc">
+</ol></div></section><section class="doc" id="doc-23" data-title="毕业项目 SOP 与验收"><header class="doc-head"><div class="doc-kicker">DOC 24</div><h2>毕业项目 SOP 与验收</h2><div class="doc-source">来源：06_毕业项目SOP与验收.md</div></header><details class="doc-toc"><summary>本篇目录</summary><div class="toc">
 <ul>
-<li><a href="#doc-22-1">1. 项目目标</a></li>
-<li><a href="#doc-22-2">2. 毕业项目必须覆盖</a></li>
-<li><a href="#doc-22-3">3. 推荐目录</a></li>
-<li><a href="#doc-22-4">4. 端到端验收流程</a><ul>
-<li><a href="#doc-22-_1">第一步：启动</a></li>
-<li><a href="#doc-22-_2">第二步：产品流程</a></li>
-<li><a href="#doc-22-harness">第三步：Harness 流程</a></li>
-<li><a href="#doc-22-infra">第四步：Infra 流程</a></li>
-<li><a href="#doc-22-_3">第五步：评测</a></li>
-<li><a href="#doc-22-_4">第六步：压测</a></li>
-<li><a href="#doc-22-_5">第七步：故障演练</a></li>
-<li><a href="#doc-22-_6">第八步：安全演练</a></li>
+<li><a href="#doc-23-1">1. 项目目标</a></li>
+<li><a href="#doc-23-2">2. 毕业项目必须覆盖</a></li>
+<li><a href="#doc-23-3">3. 推荐目录</a></li>
+<li><a href="#doc-23-4">4. 端到端验收流程</a><ul>
+<li><a href="#doc-23-_1">第一步：启动</a></li>
+<li><a href="#doc-23-_2">第二步：产品流程</a></li>
+<li><a href="#doc-23-harness">第三步：Harness 流程</a></li>
+<li><a href="#doc-23-infra">第四步：Infra 流程</a></li>
+<li><a href="#doc-23-_3">第五步：评测</a></li>
+<li><a href="#doc-23-_4">第六步：压测</a></li>
+<li><a href="#doc-23-_5">第七步：故障演练</a></li>
+<li><a href="#doc-23-_6">第八步：安全演练</a></li>
 </ul>
 </li>
-<li><a href="#doc-22-5">5. 必须提交的文件</a></li>
-<li><a href="#doc-22-6">6. 评分表</a></li>
-<li><a href="#doc-22-7">7. 答辩四分钟结构</a></li>
+<li><a href="#doc-23-5">5. 必须提交的文件</a></li>
+<li><a href="#doc-23-6">6. 评分表</a></li>
+<li><a href="#doc-23-7">7. 答辩四分钟结构</a></li>
 </ul>
 </div>
-</details><div class="doc-content"><h2 id="doc-22-1"><a class="hlink" href="#doc-22-1" title="本节链接">#</a>1. 项目目标</h2>
+</details><div class="doc-content"><h2 id="doc-23-1"><a class="hlink" href="#doc-23-1" title="本节链接">#</a>1. 项目目标</h2>
 <p>完成一个可以在企业内部做 PoC 演示的 AI 产品，不做“只会聊天的 Demo”。</p>
 <p>推荐选题：</p>
 <table>
@@ -16235,13 +17037,13 @@ GPU 实例费
 </tr>
 </tbody>
 </table>
-<h2 id="doc-22-2"><a class="hlink" href="#doc-22-2" title="本节链接">#</a>2. 毕业项目必须覆盖</h2>
+<h2 id="doc-23-2"><a class="hlink" href="#doc-23-2" title="本节链接">#</a>2. 毕业项目必须覆盖</h2>
 <pre><code class="language-text">PDE 层：用户问题、PRD、交互、状态、反馈、上线
 Harness 层：模型、上下文、记忆、工具、审批、沙箱、恢复、评测
 Infra 层：模型服务、网关、多副本、监控、安全、成本
 物理集群层（选 GPU 专项时）：机柜、供电、制冷、网络、存储、Burn-in、监控、故障处理
 </code></pre>
-<h2 id="doc-22-3"><a class="hlink" href="#doc-22-3" title="本节链接">#</a>3. 推荐目录</h2>
+<h2 id="doc-23-3"><a class="hlink" href="#doc-23-3" title="本节链接">#</a>3. 推荐目录</h2>
 <pre><code class="language-text">graduation-project/
 ├── README.md
 ├── docs/
@@ -16275,14 +17077,14 @@ Infra 层：模型服务、网关、多副本、监控、安全、成本
 ├── reports/
 └── scripts/
 </code></pre>
-<h2 id="doc-22-4"><a class="hlink" href="#doc-22-4" title="本节链接">#</a>4. 端到端验收流程</h2>
-<h3 id="doc-22-_1"><a class="hlink" href="#doc-22-_1" title="本节链接">#</a>第一步：启动</h3>
+<h2 id="doc-23-4"><a class="hlink" href="#doc-23-4" title="本节链接">#</a>4. 端到端验收流程</h2>
+<h3 id="doc-23-_1"><a class="hlink" href="#doc-23-_1" title="本节链接">#</a>第一步：启动</h3>
 <pre><code class="language-bash">cp .env.example .env
 docker compose up -d
 curl http://localhost:8080/health
 </code></pre>
 <p>验收：一条命令启动，README 能让另一个工程师在 30 分钟内复现。</p>
-<h3 id="doc-22-_2"><a class="hlink" href="#doc-22-_2" title="本节链接">#</a>第二步：产品流程</h3>
+<h3 id="doc-23-_2"><a class="hlink" href="#doc-23-_2" title="本节链接">#</a>第二步：产品流程</h3>
 <p>打开前端，完成：</p>
 <ol>
 <li>用户提出问题；</li>
@@ -16293,7 +17095,7 @@ curl http://localhost:8080/health
 <li>用户可以取消、重试、反馈；</li>
 <li>人工接管后保留完整上下文。</li>
 </ol>
-<h3 id="doc-22-harness"><a class="hlink" href="#doc-22-harness" title="本节链接">#</a>第三步：Harness 流程</h3>
+<h3 id="doc-23-harness"><a class="hlink" href="#doc-23-harness" title="本节链接">#</a>第三步：Harness 流程</h3>
 <p>验证：</p>
 <ul>
 <li>最大步骤、时间、Token、成本上限；</li>
@@ -16302,7 +17104,7 @@ curl http://localhost:8080/health
 <li>模型替换后业务 API 不变；</li>
 <li>所有步骤有 Trace。</li>
 </ul>
-<h3 id="doc-22-infra"><a class="hlink" href="#doc-22-infra" title="本节链接">#</a>第四步：Infra 流程</h3>
+<h3 id="doc-23-infra"><a class="hlink" href="#doc-23-infra" title="本节链接">#</a>第四步：Infra 流程</h3>
 <p>验证：</p>
 <ul>
 <li>vLLM 提供 OpenAI 兼容接口；</li>
@@ -16313,7 +17115,7 @@ curl http://localhost:8080/health
 <li>故障副本不会导致整个服务不可用；</li>
 <li>有配额和限流。</li>
 </ul>
-<h3 id="doc-22-_3"><a class="hlink" href="#doc-22-_3" title="本节链接">#</a>第五步：评测</h3>
+<h3 id="doc-23-_3"><a class="hlink" href="#doc-23-_3" title="本节链接">#</a>第五步：评测</h3>
 <p>至少建立：</p>
 <pre><code class="language-text">golden_set       30 条真实任务
 ambiguous_set    20 条模糊问题
@@ -16328,7 +17130,7 @@ adversarial_set  20 条注入/越权/数据外泄
 <li>成本不得超过预算；</li>
 <li>人工接管率不能明显恶化。</li>
 </ul>
-<h3 id="doc-22-_4"><a class="hlink" href="#doc-22-_4" title="本节链接">#</a>第六步：压测</h3>
+<h3 id="doc-23-_4"><a class="hlink" href="#doc-23-_4" title="本节链接">#</a>第六步：压测</h3>
 <p>并发梯度：</p>
 <pre><code class="language-text">1, 4, 8, 16, 32, 64
 </code></pre>
@@ -16420,7 +17222,7 @@ adversarial_set  20 条注入/越权/数据外泄
 </tr>
 </tbody>
 </table>
-<h3 id="doc-22-_5"><a class="hlink" href="#doc-22-_5" title="本节链接">#</a>第七步：故障演练</h3>
+<h3 id="doc-23-_5"><a class="hlink" href="#doc-23-_5" title="本节链接">#</a>第七步：故障演练</h3>
 <p>至少做 5 个：</p>
 <ol>
 <li>杀掉一个模型副本；</li>
@@ -16435,7 +17237,7 @@ adversarial_set  20 条注入/越权/数据外泄
 - 自动恢复时间；
 - 人工处理步骤；
 - 预防措施。</p>
-<h3 id="doc-22-_6"><a class="hlink" href="#doc-22-_6" title="本节链接">#</a>第八步：安全演练</h3>
+<h3 id="doc-23-_6"><a class="hlink" href="#doc-23-_6" title="本节链接">#</a>第八步：安全演练</h3>
 <ul>
 <li>Prompt Injection：文档中植入恶意指令；</li>
 <li>越权工具：请求未授权工具；</li>
@@ -16445,7 +17247,7 @@ adversarial_set  20 条注入/越权/数据外泄
 <li>无界消费：制造无限循环和 Token 消耗。</li>
 </ul>
 <hr />
-<h2 id="doc-22-5"><a class="hlink" href="#doc-22-5" title="本节链接">#</a>5. 必须提交的文件</h2>
+<h2 id="doc-23-5"><a class="hlink" href="#doc-23-5" title="本节链接">#</a>5. 必须提交的文件</h2>
 <table>
 <thead>
 <tr>
@@ -16484,7 +17286,7 @@ adversarial_set  20 条注入/越权/数据外泄
 </tr>
 </tbody>
 </table>
-<h2 id="doc-22-6"><a class="hlink" href="#doc-22-6" title="本节链接">#</a>6. 评分表</h2>
+<h2 id="doc-23-6"><a class="hlink" href="#doc-23-6" title="本节链接">#</a>6. 评分表</h2>
 <table>
 <thead>
 <tr>
@@ -16546,7 +17348,7 @@ adversarial_set  20 条注入/越权/数据外泄
 <li><code>75～89</code>：可做受控试点；</li>
 <li><code>90+</code>：具备进入企业平台评审的基础。</li>
 </ul>
-<h2 id="doc-22-7"><a class="hlink" href="#doc-22-7" title="本节链接">#</a>7. 答辩四分钟结构</h2>
+<h2 id="doc-23-7"><a class="hlink" href="#doc-23-7" title="本节链接">#</a>7. 答辩四分钟结构</h2>
 <pre><code class="language-text">0:00 - 0:30  用户问题、基线和目标
 0:30 - 1:30  Harness 架构和关键控制
 1:30 - 2:30  Infra 部署、压测和容量
@@ -16561,42 +17363,42 @@ adversarial_set  20 条注入/越权/数据外泄
 <li>一次模型副本故障；</li>
 <li>一次评测回归对比；</li>
 <li>一张成本与延迟看板。</li>
-</ul></div></section><section class="doc" id="doc-23" data-title="最新资料与来源索引"><header class="doc-head"><div class="doc-kicker">DOC 24</div><h2>最新资料与来源索引</h2><div class="doc-source">来源：01_最新资料与来源索引.md</div></header><details class="doc-toc"><summary>本篇目录</summary><div class="toc">
+</ul></div></section><section class="doc" id="doc-24" data-title="最新资料与来源索引"><header class="doc-head"><div class="doc-kicker">DOC 25</div><h2>最新资料与来源索引</h2><div class="doc-source">来源：01_最新资料与来源索引.md</div></header><details class="doc-toc"><summary>本篇目录</summary><div class="toc">
 <ul>
-<li><a href="#doc-23-ai-harness-agent-runtime">一、AI Harness / Agent Runtime</a></li>
-<li><a href="#doc-23-ai-pde">二、AI PDE：产品设计 / 产品开发工程</a></li>
-<li><a href="#doc-23-ai-infra">三、AI Infra：推理、编排、调度和平台</a><ul>
-<li><a href="#doc-23-31">3.1 推理引擎</a></li>
-<li><a href="#doc-23-32-kubernetes">3.2 Kubernetes 服务与路由</a></li>
-<li><a href="#doc-23-33">3.3 调度、训练与模型生命周期</a></li>
-<li><a href="#doc-23-34">3.4 观测、评估与安全</a></li>
+<li><a href="#doc-24-ai-harness-agent-runtime">一、AI Harness / Agent Runtime</a></li>
+<li><a href="#doc-24-ai-pde">二、AI PDE：产品设计 / 产品开发工程</a></li>
+<li><a href="#doc-24-ai-infra">三、AI Infra：推理、编排、调度和平台</a><ul>
+<li><a href="#doc-24-31">3.1 推理引擎</a></li>
+<li><a href="#doc-24-32-kubernetes">3.2 Kubernetes 服务与路由</a></li>
+<li><a href="#doc-24-33">3.3 调度、训练与模型生命周期</a></li>
+<li><a href="#doc-24-34">3.4 观测、评估与安全</a></li>
 </ul>
 </li>
-<li><a href="#doc-23-gpu">四、GPU 物理集群：选型、建设、调优、监控和故障</a><ul>
-<li><a href="#doc-23-nvl72-72-gpu">NVL72 机架级 72 GPU</a></li>
-<li><a href="#doc-23-nvlink-hgx-8">NVLink / HGX 8 卡全互联</a></li>
-<li><a href="#doc-23-hpn-v10">用户提供资料：网易 HPN v1.0</a></li>
+<li><a href="#doc-24-gpu">四、GPU 物理集群：选型、建设、调优、监控和故障</a><ul>
+<li><a href="#doc-24-nvl72-72-gpu">NVL72 机架级 72 GPU</a></li>
+<li><a href="#doc-24-nvlink-hgx-8">NVLink / HGX 8 卡全互联</a></li>
+<li><a href="#doc-24-hpn-v10">用户提供资料：网易 HPN v1.0</a></li>
 </ul>
 </li>
-<li><a href="#doc-23-gpu_1">五、国产 GPU、千卡集群与公有云</a><ul>
-<li><a href="#doc-23-_1">国产算力</a></li>
-<li><a href="#doc-23-_2">千卡集群</a></li>
-<li><a href="#doc-23-gpu_2">公有云 GPU</a></li>
+<li><a href="#doc-24-gpu_1">五、国产 GPU、千卡集群与公有云</a><ul>
+<li><a href="#doc-24-_1">国产算力</a></li>
+<li><a href="#doc-24-_2">千卡集群</a></li>
+<li><a href="#doc-24-gpu_2">公有云 GPU</a></li>
 </ul>
 </li>
-<li><a href="#doc-23-ai-native">六、用户提供：智算方案与 AI Native 研发手册</a><ul>
-<li><a href="#doc-23-_3">智算集群方案</a></li>
-<li><a href="#doc-23-ai-native_1">AI Native 研发范式</a></li>
+<li><a href="#doc-24-ai-native">六、用户提供：智算方案与 AI Native 研发手册</a><ul>
+<li><a href="#doc-24-_3">智算集群方案</a></li>
+<li><a href="#doc-24-ai-native_1">AI Native 研发范式</a></li>
 </ul>
 </li>
-<li><a href="#doc-23-_4">七、资料可信度规则</a></li>
-<li><a href="#doc-23-_5">八、高频版本风险</a></li>
+<li><a href="#doc-24-_4">七、资料可信度规则</a></li>
+<li><a href="#doc-24-_5">八、高频版本风险</a></li>
 </ul>
 </div>
 </details><div class="doc-content"><blockquote>
 <p>检索与核验日期：<strong>2026-10-04</strong>。优先保留官方文档、协议规范、核心开源项目和能说明生产实践的行业资料。第三方文章只用于补充观点，不作为安全和接口唯一依据。</p>
 </blockquote>
-<h2 id="doc-23-ai-harness-agent-runtime"><a class="hlink" href="#doc-23-ai-harness-agent-runtime" title="本节链接">#</a>一、AI Harness / Agent Runtime</h2>
+<h2 id="doc-24-ai-harness-agent-runtime"><a class="hlink" href="#doc-24-ai-harness-agent-runtime" title="本节链接">#</a>一、AI Harness / Agent Runtime</h2>
 <table>
 <thead>
 <tr>
@@ -16705,7 +17507,7 @@ adversarial_set  20 条注入/越权/数据外泄
 </tr>
 </tbody>
 </table>
-<h2 id="doc-23-ai-pde"><a class="hlink" href="#doc-23-ai-pde" title="本节链接">#</a>二、AI PDE：产品设计 / 产品开发工程</h2>
+<h2 id="doc-24-ai-pde"><a class="hlink" href="#doc-24-ai-pde" title="本节链接">#</a>二、AI PDE：产品设计 / 产品开发工程</h2>
 <table>
 <thead>
 <tr>
@@ -16756,8 +17558,8 @@ adversarial_set  20 条注入/越权/数据外泄
 <li><a href="https://fastapi.tiangolo.com/" target="_blank" rel="noopener noreferrer">FastAPI</a>：后端 API</li>
 <li><a href="https://docs.pydantic.dev/" target="_blank" rel="noopener noreferrer">Pydantic</a>：结构化输入输出与校验</li>
 </ul>
-<h2 id="doc-23-ai-infra"><a class="hlink" href="#doc-23-ai-infra" title="本节链接">#</a>三、AI Infra：推理、编排、调度和平台</h2>
-<h3 id="doc-23-31"><a class="hlink" href="#doc-23-31" title="本节链接">#</a>3.1 推理引擎</h3>
+<h2 id="doc-24-ai-infra"><a class="hlink" href="#doc-24-ai-infra" title="本节链接">#</a>三、AI Infra：推理、编排、调度和平台</h2>
+<h3 id="doc-24-31"><a class="hlink" href="#doc-24-31" title="本节链接">#</a>3.1 推理引擎</h3>
 <table>
 <thead>
 <tr>
@@ -16794,7 +17596,7 @@ adversarial_set  20 条注入/越权/数据外泄
 </tr>
 </tbody>
 </table>
-<h3 id="doc-23-32-kubernetes"><a class="hlink" href="#doc-23-32-kubernetes" title="本节链接">#</a>3.2 Kubernetes 服务与路由</h3>
+<h3 id="doc-24-32-kubernetes"><a class="hlink" href="#doc-24-32-kubernetes" title="本节链接">#</a>3.2 Kubernetes 服务与路由</h3>
 <table>
 <thead>
 <tr>
@@ -16841,7 +17643,7 @@ adversarial_set  20 条注入/越权/数据外泄
 </tr>
 </tbody>
 </table>
-<h3 id="doc-23-33"><a class="hlink" href="#doc-23-33" title="本节链接">#</a>3.3 调度、训练与模型生命周期</h3>
+<h3 id="doc-24-33"><a class="hlink" href="#doc-24-33" title="本节链接">#</a>3.3 调度、训练与模型生命周期</h3>
 <table>
 <thead>
 <tr>
@@ -16873,7 +17675,7 @@ adversarial_set  20 条注入/越权/数据外泄
 </tr>
 </tbody>
 </table>
-<h3 id="doc-23-34"><a class="hlink" href="#doc-23-34" title="本节链接">#</a>3.4 观测、评估与安全</h3>
+<h3 id="doc-24-34"><a class="hlink" href="#doc-24-34" title="本节链接">#</a>3.4 观测、评估与安全</h3>
 <table>
 <thead>
 <tr>
@@ -16935,7 +17737,7 @@ adversarial_set  20 条注入/越权/数据外泄
 </tr>
 </tbody>
 </table>
-<h2 id="doc-23-gpu"><a class="hlink" href="#doc-23-gpu" title="本节链接">#</a>四、GPU 物理集群：选型、建设、调优、监控和故障</h2>
+<h2 id="doc-24-gpu"><a class="hlink" href="#doc-24-gpu" title="本节链接">#</a>四、GPU 物理集群：选型、建设、调优、监控和故障</h2>
 <table>
 <thead>
 <tr>
@@ -17072,27 +17874,27 @@ adversarial_set  20 条注入/越权/数据外泄
 </tr>
 </tbody>
 </table>
-<h3 id="doc-23-nvl72-72-gpu"><a class="hlink" href="#doc-23-nvl72-72-gpu" title="本节链接">#</a>NVL72 机架级 72 GPU</h3>
+<h3 id="doc-24-nvl72-72-gpu"><a class="hlink" href="#doc-24-nvl72-72-gpu" title="本节链接">#</a>NVL72 机架级 72 GPU</h3>
 <ul>
 <li>用户提供的《NVL72（机架内 72GPU，B200/B300/GB200/GB300）组网原理》资料。</li>
 <li><a href="https://www.nvidia.com/en-us/data-center/gb200-nvl72/" target="_blank" rel="noopener noreferrer">NVIDIA GB200 NVL72</a>、<a href="https://www.nvidia.com/en-us/data-center/gb300-nvl72/" target="_blank" rel="noopener noreferrer">NVIDIA GB300 NVL72</a>、<a href="https://docs.nvidia.com/dgx-superpod/" target="_blank" rel="noopener noreferrer">NVIDIA DGX SuperPOD</a>。</li>
 <li>重点：18 个计算托盘、9 个 NVSwitch 交换托盘、机架背板、NVLink 5 Scale-Up、InfiniBand / RoCE Scale-Out。</li>
 </ul>
-<h3 id="doc-23-nvlink-hgx-8"><a class="hlink" href="#doc-23-nvlink-hgx-8" title="本节链接">#</a>NVLink / HGX 8 卡全互联</h3>
+<h3 id="doc-24-nvlink-hgx-8"><a class="hlink" href="#doc-24-nvlink-hgx-8" title="本节链接">#</a>NVLink / HGX 8 卡全互联</h3>
 <ul>
 <li>用户提供的《NVLink 8 卡全连接（Full Mesh 全互联）》资料。</li>
 <li><a href="https://www.nvidia.com/en-us/data-center/nvlink/" target="_blank" rel="noopener noreferrer">NVIDIA NVLink</a>、<a href="https://www.nvidia.com/en-us/data-center/nvlink-fusion/" target="_blank" rel="noopener noreferrer">NVIDIA NVLink Fusion</a>、<a href="https://www.nvidia.com/en-us/data-center/hgx/" target="_blank" rel="noopener noreferrer">NVIDIA HGX</a>、<a href="https://docs.nvidia.com/dgx/dgxh100-user-guide/introduction-to-dgxh100.html" target="_blank" rel="noopener noreferrer">DGX H100 User Guide</a>、<a href="https://docs.nvidia.com/dgx/dgxa100-user-guide/introduction-to-dgxa100.html" target="_blank" rel="noopener noreferrer">DGX A100 User Guide</a>。</li>
 <li>重点：SXM + NVSwitch 才能实现 8 卡 Full Mesh；PCIe NVLink Bridge 只能成对互联。</li>
 </ul>
-<h3 id="doc-23-hpn-v10"><a class="hlink" href="#doc-23-hpn-v10" title="本节链接">#</a>用户提供资料：网易 HPN v1.0</h3>
+<h3 id="doc-24-hpn-v10"><a class="hlink" href="#doc-24-hpn-v10" title="本节链接">#</a>用户提供资料：网易 HPN v1.0</h3>
 <ul>
 <li>来源：用户提供的《网易集团 GPU 算力集群组网方案 HPN v1.0》文本。</li>
 <li>重点：三层网络、两层 8 轨道组网、256～4096 卡参考规模、IB/RoCE 选型、PFC/ECN、多路径负载均衡、集团算力网融合。</li>
 <li>使用方式：作为企业网络设计案例，不作为采购和性能承诺。必须用本方 GPU、NIC、交换机、模型和并行策略复测。</li>
 <li>已在 <code>13_HPN高性能算力网络与RDMA组网指南.md</code> 中整理为可执行设计、实施、监控、故障和验收指南。</li>
 </ul>
-<h2 id="doc-23-gpu_1"><a class="hlink" href="#doc-23-gpu_1" title="本节链接">#</a>五、国产 GPU、千卡集群与公有云</h2>
-<h3 id="doc-23-_1"><a class="hlink" href="#doc-23-_1" title="本节链接">#</a>国产算力</h3>
+<h2 id="doc-24-gpu_1"><a class="hlink" href="#doc-24-gpu_1" title="本节链接">#</a>五、国产 GPU、千卡集群与公有云</h2>
+<h3 id="doc-24-_1"><a class="hlink" href="#doc-24-_1" title="本节链接">#</a>国产算力</h3>
 <table>
 <thead>
 <tr>
@@ -17164,7 +17966,7 @@ adversarial_set  20 条注入/越权/数据外泄
 </tr>
 </tbody>
 </table>
-<h3 id="doc-23-_2"><a class="hlink" href="#doc-23-_2" title="本节链接">#</a>千卡集群</h3>
+<h3 id="doc-24-_2"><a class="hlink" href="#doc-24-_2" title="本节链接">#</a>千卡集群</h3>
 <table>
 <thead>
 <tr>
@@ -17191,7 +17993,7 @@ adversarial_set  20 条注入/越权/数据外泄
 </tr>
 </tbody>
 </table>
-<h3 id="doc-23-gpu_2"><a class="hlink" href="#doc-23-gpu_2" title="本节链接">#</a>公有云 GPU</h3>
+<h3 id="doc-24-gpu_2"><a class="hlink" href="#doc-24-gpu_2" title="本节链接">#</a>公有云 GPU</h3>
 <table>
 <thead>
 <tr>
@@ -17258,8 +18060,8 @@ adversarial_set  20 条注入/越权/数据外泄
 </tr>
 </tbody>
 </table>
-<h2 id="doc-23-ai-native"><a class="hlink" href="#doc-23-ai-native" title="本节链接">#</a>六、用户提供：智算方案与 AI Native 研发手册</h2>
-<h3 id="doc-23-_3"><a class="hlink" href="#doc-23-_3" title="本节链接">#</a>智算集群方案</h3>
+<h2 id="doc-24-ai-native"><a class="hlink" href="#doc-24-ai-native" title="本节链接">#</a>六、用户提供：智算方案与 AI Native 研发手册</h2>
+<h3 id="doc-24-_3"><a class="hlink" href="#doc-24-_3" title="本节链接">#</a>智算集群方案</h3>
 <table>
 <thead>
 <tr>
@@ -17315,7 +18117,7 @@ adversarial_set  20 条注入/越权/数据外泄
 </tbody>
 </table>
 <p><strong>使用原则</strong>：以 v3.2 和 2026-10-10 评审修订后的数据为准。旧版的 <code>TP=16 跨机</code>、旧网络投资、旧存储带宽和旧能效公式不再作为结论。</p>
-<h3 id="doc-23-ai-native_1"><a class="hlink" href="#doc-23-ai-native_1" title="本节链接">#</a>AI Native 研发范式</h3>
+<h3 id="doc-24-ai-native_1"><a class="hlink" href="#doc-24-ai-native_1" title="本节链接">#</a>AI Native 研发范式</h3>
 <table>
 <thead>
 <tr>
@@ -17337,7 +18139,7 @@ adversarial_set  20 条注入/越权/数据外泄
 <li>AI 提效度量要从工具使用量转向生产系统运行质量；</li>
 <li>人负责目标、边界和关键取舍，Agent 负责约束内执行。</li>
 </ul>
-<h2 id="doc-23-_4"><a class="hlink" href="#doc-23-_4" title="本节链接">#</a>七、资料可信度规则</h2>
+<h2 id="doc-24-_4"><a class="hlink" href="#doc-24-_4" title="本节链接">#</a>七、资料可信度规则</h2>
 <p>学习时按以下优先级选资料：</p>
 <ol>
 <li><strong>官方文档 / 协议规范</strong>：接口、参数、安全和兼容性以官方为准。</li>
@@ -17346,7 +18148,7 @@ adversarial_set  20 条注入/越权/数据外泄
 <li><strong>行业研究 / 咨询文章</strong>：用于组织、治理和落地方法，不替代技术验证。</li>
 <li><strong>个人教程 / 视频</strong>：只用于入门和建立直觉，必须回到官方文档验证。</li>
 </ol>
-<h2 id="doc-23-_5"><a class="hlink" href="#doc-23-_5" title="本节链接">#</a>八、高频版本风险</h2>
+<h2 id="doc-24-_5"><a class="hlink" href="#doc-24-_5" title="本节链接">#</a>八、高频版本风险</h2>
 <ul>
 <li>vLLM、SGLang、Dynamo、llm-d、Ray、KServe 的接口和部署方式变化较快，禁止在简历或生产中写死一个旧命令。</li>
 <li>MCP、A2A、Agent Skills 仍可能演进，接入时保留适配层，不要让协议渗入业务核心。</li>
@@ -17356,31 +18158,32 @@ adversarial_set  20 条注入/越权/数据外泄
 <li>GPU 代际、功耗、液冷、交换机、光模块和固件必须按整机 / 整柜验证，不能只看单卡参数。</li>
 <li>RoCE / InfiniBand 的 PFC、ECN、QoS、GID、MTU 和 rail 拓扑错误会表现为 NCCL 超时或吞吐异常。</li>
 <li>BMC / Redfish 网络必须与业务网隔离，默认凭据、固件漏洞和横向移动风险要纳入安全评审。</li>
-</ul></div></section><section class="doc" id="doc-24" data-title="修订记录与变更日志"><header class="doc-head"><div class="doc-kicker">DOC 25</div><h2>修订记录与变更日志</h2><div class="doc-source">来源：21_修订记录与变更日志.md</div></header><details class="doc-toc"><summary>本篇目录</summary><div class="toc">
+</ul></div></section><section class="doc" id="doc-25" data-title="修订记录与变更日志"><header class="doc-head"><div class="doc-kicker">DOC 26</div><h2>修订记录与变更日志</h2><div class="doc-source">来源：21_修订记录与变更日志.md</div></header><details class="doc-toc"><summary>本篇目录</summary><div class="toc">
 <ul>
-<li><a href="#doc-24-1">1. 版本总览</a></li>
-<li><a href="#doc-24-2">2. 详细修订记录</a><ul>
-<li><a href="#doc-24-v19-2026-10-20-dcs">v1.9 · 2026-10-20 — 全栈集成与 DCS 运维平台架构师</a></li>
-<li><a href="#doc-24-v18-2026-10-20-coze-dify-langchain">v1.8 · 2026-10-20 — Coze / Dify / LangChain 对比与选型</a></li>
-<li><a href="#doc-24-v17-2026-10-13-ai">v1.7 · 2026-10-13 — AI 平台架构师岗位与面试</a></li>
-<li><a href="#doc-24-v16-2026-10-11">v1.6 · 2026-10-11 — 目录跳转与修订记录</a></li>
-<li><a href="#doc-24-v15-2026-10-11-harness">v1.5 · 2026-10-11 — Harness 横向对比与最新实现范式</a></li>
-<li><a href="#doc-24-v14-2026-10-11">v1.4 · 2026-10-11 — 典型岗位与面试</a></li>
-<li><a href="#doc-24-v13-2026-10-10-v33">v1.3 · 2026-10-10 — 智算集群建设方案升级 v3.3</a></li>
-<li><a href="#doc-24-v12-2026-10-10-ai-native">v1.2 · 2026-10-10 — AI Native 知识体系升级</a></li>
-<li><a href="#doc-24-v11-2026-10-10">v1.1 · 2026-10-10 — 智算集群建设方案</a></li>
-<li><a href="#doc-24-v10-2026-10-04">v1.0 · 2026-10-04 — 初版</a></li>
+<li><a href="#doc-25-1">1. 版本总览</a></li>
+<li><a href="#doc-25-2">2. 详细修订记录</a><ul>
+<li><a href="#doc-25-v110-2026-10-20-dcs">v1.10 · 2026-10-20 — DCS 专项教程与模拟试卷</a></li>
+<li><a href="#doc-25-v19-2026-10-20-dcs">v1.9 · 2026-10-20 — 全栈集成与 DCS 运维平台架构师</a></li>
+<li><a href="#doc-25-v18-2026-10-20-coze-dify-langchain">v1.8 · 2026-10-20 — Coze / Dify / LangChain 对比与选型</a></li>
+<li><a href="#doc-25-v17-2026-10-13-ai">v1.7 · 2026-10-13 — AI 平台架构师岗位与面试</a></li>
+<li><a href="#doc-25-v16-2026-10-11">v1.6 · 2026-10-11 — 目录跳转与修订记录</a></li>
+<li><a href="#doc-25-v15-2026-10-11-harness">v1.5 · 2026-10-11 — Harness 横向对比与最新实现范式</a></li>
+<li><a href="#doc-25-v14-2026-10-11">v1.4 · 2026-10-11 — 典型岗位与面试</a></li>
+<li><a href="#doc-25-v13-2026-10-10-v33">v1.3 · 2026-10-10 — 智算集群建设方案升级 v3.3</a></li>
+<li><a href="#doc-25-v12-2026-10-10-ai-native">v1.2 · 2026-10-10 — AI Native 知识体系升级</a></li>
+<li><a href="#doc-25-v11-2026-10-10">v1.1 · 2026-10-10 — 智算集群建设方案</a></li>
+<li><a href="#doc-25-v10-2026-10-04">v1.0 · 2026-10-04 — 初版</a></li>
 </ul>
 </li>
-<li><a href="#doc-24-3">3. 数据来源与版本基线</a></li>
-<li><a href="#doc-24-4">4. 维护约定</a></li>
+<li><a href="#doc-25-3">3. 数据来源与版本基线</a></li>
+<li><a href="#doc-25-4">4. 维护约定</a></li>
 </ul>
 </div>
 </details><div class="doc-content"><blockquote>
 <p>本页记录《AI Native / AI Harness / AI PDE / AI Infra / 智算集群 企业级完整学习方案》的版本演进：每次更新都登记日期、变更内容、涉及章节与线上提交，保证内容可追溯。</p>
 <p><strong>在线地址</strong>：<a href="https://net2817.github.io/harness/" target="_blank" rel="noopener noreferrer">https://net2817.github.io/harness/</a></p>
 </blockquote>
-<h2 id="doc-24-1"><a class="hlink" href="#doc-24-1" title="本节链接">#</a>1. 版本总览</h2>
+<h2 id="doc-25-1"><a class="hlink" href="#doc-25-1" title="本节链接">#</a>1. 版本总览</h2>
 <table>
 <thead>
 <tr>
@@ -17391,6 +18194,12 @@ adversarial_set  20 条注入/越权/数据外泄
 </tr>
 </thead>
 <tbody>
+<tr>
+<td><strong>v1.10</strong></td>
+<td>2026-10-20</td>
+<td><strong>新增第 26 章 DCS 专项教程与模拟试卷</strong>：8 周教程、12 个动手实验、3 套模拟试卷（含答案与评分标准）、20 道高频追问、考前 7 天冲刺计划</td>
+<td style="text-align: right;">26</td>
+</tr>
 <tr>
 <td><strong>v1.9</strong></td>
 <td>2026-10-20</td>
@@ -17453,8 +18262,43 @@ adversarial_set  20 条注入/越权/数据外泄
 </tr>
 </tbody>
 </table>
-<h2 id="doc-24-2"><a class="hlink" href="#doc-24-2" title="本节链接">#</a>2. 详细修订记录</h2>
-<h3 id="doc-24-v19-2026-10-20-dcs"><a class="hlink" href="#doc-24-v19-2026-10-20-dcs" title="本节链接">#</a>v1.9 · 2026-10-20 — 全栈集成与 DCS 运维平台架构师</h3>
+<h2 id="doc-25-2"><a class="hlink" href="#doc-25-2" title="本节链接">#</a>2. 详细修订记录</h2>
+<h3 id="doc-25-v110-2026-10-20-dcs"><a class="hlink" href="#doc-25-v110-2026-10-20-dcs" title="本节链接">#</a>v1.10 · 2026-10-20 — DCS 专项教程与模拟试卷</h3>
+<table>
+<thead>
+<tr>
+<th>变更</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>新增第 26 章</td>
+<td>与第 25 章配套：<strong>JD 解读 → 8 周教程 → 12 个实验 → 3 套模拟卷 → 20 道追问 → 7 天冲刺</strong></td>
+</tr>
+<tr>
+<td>8 周教程</td>
+<td>数据中心/CMDB → GPU 与固件基线 → 高密机柜供电与液冷 → 互连与 AI Factory → AIOps → Agent 平台 → RAG 知识工程 → 产品化综合项目</td>
+</tr>
+<tr>
+<td>12 个实验</td>
+<td>Redfish 采集、最小 CMDB、GPU 压测、固件漂移、机柜计算、RDMA 验证、告警收敛、RCA、Agent 闭环、RAG 评测、容量预测、产品看板</td>
+</tr>
+<tr>
+<td>3 套模拟卷</td>
+<td>A：数据中心与 GPU 基础（100 分）；B：AIOps 与 Agent 平台（100 分）；C：综合架构（100 分）——均含参考答案、评分点与计算过程</td>
+</tr>
+<tr>
+<td>追加问答</td>
+<td>20 道高频追问：PowerShelf、漏液、风液配比、承重、CMDB、告警风暴、数字孪生、变更评分、慢卡、工具设计、长任务恢复、记忆污染、评测集、表格 RAG、权限继承、增量索引、冷启动、ROI、STAR</td>
+</tr>
+<tr>
+<td>冲刺计划</td>
+<td>考前 7 天逐日安排 + 重做同卷策略</td>
+</tr>
+</tbody>
+</table>
+<h3 id="doc-25-v19-2026-10-20-dcs"><a class="hlink" href="#doc-25-v19-2026-10-20-dcs" title="本节链接">#</a>v1.9 · 2026-10-20 — 全栈集成与 DCS 运维平台架构师</h3>
 <table>
 <thead>
 <tr>
@@ -17485,7 +18329,7 @@ adversarial_set  20 条注入/越权/数据外泄
 </tr>
 </tbody>
 </table>
-<h3 id="doc-24-v18-2026-10-20-coze-dify-langchain"><a class="hlink" href="#doc-24-v18-2026-10-20-coze-dify-langchain" title="本节链接">#</a>v1.8 · 2026-10-20 — Coze / Dify / LangChain 对比与选型</h3>
+<h3 id="doc-25-v18-2026-10-20-coze-dify-langchain"><a class="hlink" href="#doc-25-v18-2026-10-20-coze-dify-langchain" title="本节链接">#</a>v1.8 · 2026-10-20 — Coze / Dify / LangChain 对比与选型</h3>
 <table>
 <thead>
 <tr>
@@ -17528,7 +18372,7 @@ adversarial_set  20 条注入/越权/数据外泄
 </tr>
 </tbody>
 </table>
-<h3 id="doc-24-v17-2026-10-13-ai"><a class="hlink" href="#doc-24-v17-2026-10-13-ai" title="本节链接">#</a>v1.7 · 2026-10-13 — AI 平台架构师岗位与面试</h3>
+<h3 id="doc-25-v17-2026-10-13-ai"><a class="hlink" href="#doc-25-v17-2026-10-13-ai" title="本节链接">#</a>v1.7 · 2026-10-13 — AI 平台架构师岗位与面试</h3>
 <table>
 <thead>
 <tr>
@@ -17563,7 +18407,7 @@ adversarial_set  20 条注入/越权/数据外泄
 </tr>
 </tbody>
 </table>
-<h3 id="doc-24-v16-2026-10-11"><a class="hlink" href="#doc-24-v16-2026-10-11" title="本节链接">#</a>v1.6 · 2026-10-11 — 目录跳转与修订记录</h3>
+<h3 id="doc-25-v16-2026-10-11"><a class="hlink" href="#doc-25-v16-2026-10-11" title="本节链接">#</a>v1.6 · 2026-10-11 — 目录跳转与修订记录</h3>
 <table>
 <thead>
 <tr>
@@ -17590,7 +18434,7 @@ adversarial_set  20 条注入/越权/数据外泄
 </tr>
 </tbody>
 </table>
-<h3 id="doc-24-v15-2026-10-11-harness"><a class="hlink" href="#doc-24-v15-2026-10-11-harness" title="本节链接">#</a>v1.5 · 2026-10-11 — Harness 横向对比与最新实现范式</h3>
+<h3 id="doc-25-v15-2026-10-11-harness"><a class="hlink" href="#doc-25-v15-2026-10-11-harness" title="本节链接">#</a>v1.5 · 2026-10-11 — Harness 横向对比与最新实现范式</h3>
 <table>
 <thead>
 <tr>
@@ -17625,7 +18469,7 @@ adversarial_set  20 条注入/越权/数据外泄
 </tr>
 </tbody>
 </table>
-<h3 id="doc-24-v14-2026-10-11"><a class="hlink" href="#doc-24-v14-2026-10-11" title="本节链接">#</a>v1.4 · 2026-10-11 — 典型岗位与面试</h3>
+<h3 id="doc-25-v14-2026-10-11"><a class="hlink" href="#doc-25-v14-2026-10-11" title="本节链接">#</a>v1.4 · 2026-10-11 — 典型岗位与面试</h3>
 <table>
 <thead>
 <tr>
@@ -17648,7 +18492,7 @@ adversarial_set  20 条注入/越权/数据外泄
 </tr>
 </tbody>
 </table>
-<h3 id="doc-24-v13-2026-10-10-v33"><a class="hlink" href="#doc-24-v13-2026-10-10-v33" title="本节链接">#</a>v1.3 · 2026-10-10 — 智算集群建设方案升级 v3.3</h3>
+<h3 id="doc-25-v13-2026-10-10-v33"><a class="hlink" href="#doc-25-v13-2026-10-10-v33" title="本节链接">#</a>v1.3 · 2026-10-10 — 智算集群建设方案升级 v3.3</h3>
 <table>
 <thead>
 <tr>
@@ -17683,7 +18527,7 @@ adversarial_set  20 条注入/越权/数据外泄
 </tr>
 </tbody>
 </table>
-<h3 id="doc-24-v12-2026-10-10-ai-native"><a class="hlink" href="#doc-24-v12-2026-10-10-ai-native" title="本节链接">#</a>v1.2 · 2026-10-10 — AI Native 知识体系升级</h3>
+<h3 id="doc-25-v12-2026-10-10-ai-native"><a class="hlink" href="#doc-25-v12-2026-10-10-ai-native" title="本节链接">#</a>v1.2 · 2026-10-10 — AI Native 知识体系升级</h3>
 <table>
 <thead>
 <tr>
@@ -17706,7 +18550,7 @@ adversarial_set  20 条注入/越权/数据外泄
 </tr>
 </tbody>
 </table>
-<h3 id="doc-24-v11-2026-10-10"><a class="hlink" href="#doc-24-v11-2026-10-10" title="本节链接">#</a>v1.1 · 2026-10-10 — 智算集群建设方案</h3>
+<h3 id="doc-25-v11-2026-10-10"><a class="hlink" href="#doc-25-v11-2026-10-10" title="本节链接">#</a>v1.1 · 2026-10-10 — 智算集群建设方案</h3>
 <table>
 <thead>
 <tr>
@@ -17725,7 +18569,7 @@ adversarial_set  20 条注入/越权/数据外泄
 </tr>
 </tbody>
 </table>
-<h3 id="doc-24-v10-2026-10-04"><a class="hlink" href="#doc-24-v10-2026-10-04" title="本节链接">#</a>v1.0 · 2026-10-04 — 初版</h3>
+<h3 id="doc-25-v10-2026-10-04"><a class="hlink" href="#doc-25-v10-2026-10-04" title="本节链接">#</a>v1.0 · 2026-10-04 — 初版</h3>
 <table>
 <thead>
 <tr>
@@ -17752,7 +18596,7 @@ adversarial_set  20 条注入/越权/数据外泄
 </tr>
 </tbody>
 </table>
-<h2 id="doc-24-3"><a class="hlink" href="#doc-24-3" title="本节链接">#</a>3. 数据来源与版本基线</h2>
+<h2 id="doc-25-3"><a class="hlink" href="#doc-25-3" title="本节链接">#</a>3. 数据来源与版本基线</h2>
 <table>
 <thead>
 <tr>
@@ -17818,6 +18662,11 @@ adversarial_set  20 条注入/越权/数据外泄
 <td>第 25 章</td>
 </tr>
 <tr>
+<td>DCS 专项教程与模拟试卷（配套第 25 章）</td>
+<td>2026-10-20</td>
+<td>第 26 章</td>
+</tr>
+<tr>
 <td>InfoQ《人人都能整个"自己的 DeepSeek Harness"…》（<a href="https://mp.weixin.qq.com/s/eJQATXv6DF2gqLiYpP2ioQ" target="_blank" rel="noopener noreferrer">原文</a>）</td>
 <td>2026-08-31</td>
 <td>第 20 章</td>
@@ -17839,7 +18688,7 @@ adversarial_set  20 条注入/越权/数据外泄
 </tr>
 </tbody>
 </table>
-<h2 id="doc-24-4"><a class="hlink" href="#doc-24-4" title="本节链接">#</a>4. 维护约定</h2>
+<h2 id="doc-25-4"><a class="hlink" href="#doc-25-4" title="本节链接">#</a>4. 维护约定</h2>
 <ol>
 <li><strong>先改数据、再改结论</strong>：智算集群章节的任何数值变更，先改《附录 C 口径基线表》，再同步正文；</li>
 <li><strong>图文同版本</strong>：架构图、xlsx 与文档必须纳入同一版本号体系，每次修订强制复核图文一致性；</li>
