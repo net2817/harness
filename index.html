@@ -15,7 +15,67 @@ html[data-theme="dark"] { --bg:#0f141b; --panel:#151d26; --panel2:#1d2834; --ink
 .nav-sub{padding:2px 0 6px 6px;margin:0 0 6px 24px;border-left:1px solid var(--line)} .nav-sub ul{list-style:none;margin:0;padding:0} .nav-sub ul ul{margin-left:12px} .nav-sub li{margin:1px 0} .nav-sub a{display:block;font-size:12px;line-height:1.45;color:var(--muted);padding:3px 7px;border-radius:7px} .nav-sub a:hover{color:var(--accent);background:var(--panel2);text-decoration:none} .nav-sub .nav-jump{font-weight:600;color:var(--accent2);margin-bottom:2px}
 .doc-toc{margin:0 0 18px;border:1px solid var(--line);border-radius:12px;background:var(--panel2);padding:10px 14px} .doc-toc>summary{cursor:pointer;font-weight:700;font-size:14px} .doc-toc .toc>ul{list-style:none;margin:8px 0 0;padding:0;columns:2;column-gap:26px} @media (max-width:1000px){.doc-toc .toc>ul{columns:1}} .doc-toc .toc ul ul{list-style:none;margin:0 0 0 14px;padding:0} .doc-toc .toc li{margin:2px 0;font-size:13px} .doc-toc .toc a{color:var(--muted)} .doc-toc .toc a:hover{color:var(--accent)}
 .doc-content h1,.doc-content h2,.doc-content h3,.doc-content h4{position:relative} .hlink{position:absolute;left:-1.05em;top:0;opacity:0;color:var(--muted);font-weight:400;text-decoration:none;transition:opacity .15s} .doc-content h1:hover>.hlink,.doc-content h2:hover>.hlink,.doc-content h3:hover>.hlink,.doc-content h4:hover>.hlink{opacity:1}
-.doc-content a[target="_blank"]::after{content:"↗";font-size:.78em;opacity:.55;margin-left:.12em} .hero .updated{font-size:13px} a.pill{text-decoration:none;color:inherit} a.pill:hover{border-color:var(--accent);color:var(--accent);text-decoration:none}</style></head><body><div id="progress"></div><header class="topbar"><div class="topbar-inner"><div class="brand">AI <span>Harness / PDE / Infra</span></div><div class="search"><input id="searchInput" type="search" placeholder="搜索知识点、命令、GPU、NVL72、RAG、MCP..." aria-label="搜索全文"></div><button class="btn" id="themeBtn">主题</button><button class="btn" onclick="window.print()">导出 PDF</button></div></header><div class="layout"><aside class="sidebar"><div class="side-title">学习方案目录</div><details class="nav-group"><summary class="nav-link" data-target="doc-00"><span class="nav-num">01</span><span class="nav-title">总览</span></summary><div class="nav-sub"><a class="nav-jump" href="#doc-00">↑ 跳到本章开头</a><div class="toc">
+.doc-content a[target="_blank"]::after{content:"↗";font-size:.78em;opacity:.55;margin-left:.12em} .hero .updated{font-size:13px} a.pill{text-decoration:none;color:inherit} a.pill:hover{border-color:var(--accent);color:var(--accent);text-decoration:none}/* LANDSCAPE:CSS:BEGIN */
+.ls{margin:18px 0 8px}
+.ls-bar{display:flex;flex-wrap:wrap;gap:8px;align-items:center;padding:12px;border:1px solid var(--line);border-radius:14px;background:var(--panel2)}
+.ls-bar input[type=search]{flex:1 1 260px;min-width:200px;padding:8px 12px;border:1px solid var(--line);border-radius:9px;background:var(--panel);color:var(--ink);font:inherit;font-size:14px}
+.ls-bar input[type=search]:focus{outline:2px solid color-mix(in srgb,var(--accent) 45%,transparent);outline-offset:1px}
+.ls-bar select{padding:8px 10px;border:1px solid var(--line);border-radius:9px;background:var(--panel);color:var(--ink);font:inherit;font-size:13.5px}
+.ls-btn{padding:8px 12px;border:1px solid var(--line);border-radius:9px;background:var(--panel);color:var(--ink);font:inherit;font-size:13.5px;cursor:pointer}
+.ls-btn:hover{border-color:var(--accent)}
+.ls-btn[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:#fff}
+.ls-chips{display:flex;flex-wrap:wrap;gap:6px;margin:10px 0 6px}
+.ls-chip{padding:5px 10px;border:1px solid var(--line);border-radius:999px;background:var(--panel);color:var(--muted);font:inherit;font-size:12.5px;cursor:pointer;display:inline-flex;gap:6px;align-items:center}
+.ls-chip i{font-style:normal;font-size:11px;opacity:.72}
+.ls-chip:hover{border-color:var(--accent);color:var(--ink)}
+.ls-chip.on{background:var(--accent);border-color:var(--accent);color:#fff}
+.ls-chip.on i{opacity:.85}
+.ls-count{font-size:13px;color:var(--muted);margin:8px 0 16px}
+.ls-count b{color:var(--ink)}
+.ls-stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;margin:14px 0 18px}
+.ls-stat{border:1px solid var(--line);border-radius:12px;padding:12px 14px;background:var(--panel2)}
+.ls-stat b{display:block;font-size:24px;line-height:1.25;font-variant-numeric:tabular-nums}
+.ls-stat span{font-size:12px;color:var(--muted)}
+.ls-bars{border:1px solid var(--line);border-radius:12px;background:var(--panel2);padding:12px 14px;margin:14px 0}
+.ls-bar-row{display:grid;grid-template-columns:190px 1fr 86px;gap:10px;align-items:center;margin:5px 0;font-size:12.5px}
+.ls-bar-name{color:var(--ink);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.ls-bar-name span{color:var(--muted);margin-left:4px}
+.ls-bar-track{height:9px;background:color-mix(in srgb,var(--muted) 16%,transparent);border-radius:999px;overflow:hidden}
+.ls-bar-fill{display:block;height:100%;border-radius:999px;background:linear-gradient(90deg,var(--accent),var(--accent2))}
+.ls-bar-val{text-align:right;color:var(--muted);font-variant-numeric:tabular-nums}
+.ls-group{margin:20px 0 6px}
+.ls-gh{display:flex;flex-wrap:wrap;gap:6px 12px;align-items:baseline;border-bottom:1px solid var(--line);padding-bottom:8px;margin:0 0 12px}
+.ls-gh h3{font-size:17px;margin:0;border:0;padding:0}
+.ls-gh .ls-gi{font-size:11px;color:var(--accent);letter-spacing:.1em;margin-right:7px}
+.ls-gsub{font-size:12.5px;color:var(--muted)}
+.ls-gmeta{margin-left:auto;font-size:12.5px;color:var(--muted)}
+.ls-gmeta b{color:var(--ink);font-variant-numeric:tabular-nums}
+.ls-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:12px}
+.ls-card{border:1px solid var(--line);border-radius:12px;background:var(--panel);padding:12px 13px;display:flex;flex-direction:column;gap:6px}
+.ls-card:hover{border-color:color-mix(in srgb,var(--accent) 45%,var(--line))}
+.ls-ctop{display:flex;gap:8px;align-items:baseline;justify-content:space-between}
+.ls-repo{font-weight:700;font-size:14px;word-break:break-all}
+.ls-stars{font-size:12px;color:#a5760a;white-space:nowrap;font-variant-numeric:tabular-nums}
+html[data-theme="dark"] .ls-stars{color:#e3b341}
+.ls-pitch{margin:0;font-size:13.5px;font-weight:600;line-height:1.5}
+.ls-aud{margin:0;font-size:12.5px;color:var(--muted)}
+.ls-note{margin:0;font-size:12.5px;color:var(--muted);line-height:1.55}
+.ls-meta{display:flex;flex-wrap:wrap;gap:5px;margin-top:auto;padding-top:6px}
+.ls-tag{font-size:11px;padding:2px 7px;border-radius:6px;background:var(--panel2);color:var(--muted);border:1px solid var(--line);white-space:nowrap}
+.ls-tag.ls-d-easy{color:#0b7a4b;border-color:#b9e2cb;background:#eefaf3}
+.ls-tag.ls-d-medium{color:#8a5a00;border-color:#e8d5a8;background:#fdf6e6}
+.ls-tag.ls-d-hard{color:#9c2f2f;border-color:#e8bcbc;background:#fdf0f0}
+.ls-tag.ls-st-active{color:#0b7a4b}
+.ls-tag.ls-st-maintained{color:#8a5a00}
+.ls-tag.ls-st-stale,.ls-tag.ls-st-archived{color:#9c2f2f}
+html[data-theme="dark"] .ls-tag.ls-d-easy,html[data-theme="dark"] .ls-tag.ls-st-active{color:#5fd39b;border-color:#255b41;background:#12281f}
+html[data-theme="dark"] .ls-tag.ls-d-medium,html[data-theme="dark"] .ls-tag.ls-st-maintained{color:#e0b457;border-color:#5a4620;background:#241f12}
+html[data-theme="dark"] .ls-tag.ls-d-hard,html[data-theme="dark"] .ls-tag.ls-st-stale,html[data-theme="dark"] .ls-tag.ls-st-archived{color:#ef8b8b;border-color:#5c2a2a;background:#261414}
+.ls-empty{margin:18px 0;padding:18px;border:1px dashed var(--line);border-radius:12px;color:var(--muted);text-align:center}
+.ls-hidden{display:none!important}
+@media (max-width:1000px){.ls-bar-row{grid-template-columns:130px 1fr 76px}.ls-grid{grid-template-columns:1fr}}
+@media print{.ls-bar,.ls-chips,.ls-count{display:none!important}.ls-card{break-inside:avoid}.ls-grid{grid-template-columns:1fr 1fr}}
+/* LANDSCAPE:CSS:END */</style></head><body><div id="progress"></div><header class="topbar"><div class="topbar-inner"><div class="brand">AI <span>Harness / PDE / Infra</span></div><div class="search"><input id="searchInput" type="search" placeholder="搜索知识点、命令、GPU、NVL72、RAG、MCP..." aria-label="搜索全文"></div><button class="btn" id="themeBtn">主题</button><button class="btn" onclick="window.print()">导出 PDF</button></div></header><div class="layout"><aside class="sidebar"><div class="side-title">学习方案目录</div><details class="nav-group"><summary class="nav-link" data-target="doc-00"><span class="nav-num">01</span><span class="nav-title">总览</span></summary><div class="nav-sub"><a class="nav-jump" href="#doc-00">↑ 跳到本章开头</a><div class="toc">
 <ul>
 <li><a href="#doc-00-_1">这个包解决什么问题</a></li>
 <li><a href="#doc-00-pde">PDE 术语说明</a></li>
@@ -1181,6 +1241,7 @@ html[data-theme="dark"] { --bg:#0f141b; --panel:#151d26; --panel2:#1d2834; --ink
 <ul>
 <li><a href="#doc-25-1">1. 版本总览</a></li>
 <li><a href="#doc-25-2">2. 详细修订记录</a><ul>
+<li><a href="#doc-25-v111-2026-11-26">v1.11 · 2026-11-26 — GitHub Agent 全景图与选型指南</a></li>
 <li><a href="#doc-25-v110-2026-10-20-dcs">v1.10 · 2026-10-20 — DCS 专项教程与模拟试卷</a></li>
 <li><a href="#doc-25-v19-2026-10-20-dcs">v1.9 · 2026-10-20 — 全栈集成与 DCS 运维平台架构师</a></li>
 <li><a href="#doc-25-v18-2026-10-20-coze-dify-langchain">v1.8 · 2026-10-20 — Coze / Dify / LangChain 对比与选型</a></li>
@@ -1198,7 +1259,23 @@ html[data-theme="dark"] { --bg:#0f141b; --panel:#151d26; --panel2:#1d2834; --ink
 <li><a href="#doc-25-4">4. 维护约定</a></li>
 </ul>
 </div>
-</div></details></aside><main class="main"><section class="hero"><h1>AI Harness / AI PDE / AI Infra<br>企业级完整学习方案</h1><p>从 AI Native 研发范式、Agent Harness、RAG、vLLM 与 Kubernetes，到 GPU 物理集群、HPN/RDMA、NVLink、HGX、NVL72、智算集群 v3.3（千卡→5000→10240 卡）、国产 GPU、千卡集群和公有云 GPU，并附大模型推理服务可靠性工程师的岗位解读与模拟面试问答，以及 Pi / Aider Harness 横向对比、可运行的薄 Loop + WAL 参考实现、两篇典型岗位面试题库（推理 SRE / AI 平台架构师）、Coze / Dify / LangChain 选型对比、FastAPI × MCP × React × AIGC 全栈集成、DCS 专项教程与 3 套模拟试卷，以及修订记录。</p><p>每个模块包含视频参考、官方资料、操作步骤、企业落地避坑和验收产物。本页面适配桌面与手机，可从浏览器直接打印为 PDF。</p><p class="updated">最近更新 2026-10-11 · v1.6：新增章节目录跳转（侧栏可展开到小节、标题锚点直达）与修订记录 · <a href="#doc-25">查看完整修订记录</a></p><div class="pills"><a class="pill" href="#doc-25">修订记录</a><span class="pill">36 周路线</span><span class="pill">70+ 视频入口</span><span class="pill">HPN v1.0</span><span class="pill">NVLink / HGX / NVL72</span><span class="pill">千卡与国产 GPU</span><span class="pill">智算集群 v3.3</span><span class="pill">异构算力</span><span class="pill">EP=32 + 机内 TP8</span><span class="pill">岗位与面试 ×2</span><span class="pill">AI 平台架构师</span><span class="pill">Pi / Aider 对比</span><span class="pill">Coze / Dify / LangChain</span><span class="pill">FastAPI × MCP × React</span><span class="pill">AIGC</span><span class="pill">模拟试卷</span><span class="pill">薄 Loop + WAL</span><span class="pill">AI Native</span><span class="pill">企业上线清单</span></div></section><section class="doc" id="doc-00" data-title="总览"><header class="doc-head"><div class="doc-kicker">DOC 01</div><h2>总览</h2><div class="doc-source">来源：README.md</div></header><details class="doc-toc"><summary>本篇目录</summary><div class="toc">
+</div></details><!-- LANDSCAPE:NAV:BEGIN -->
+<details class="nav-group"><summary class="nav-link" data-target="doc-26"><span class="nav-num">27</span><span class="nav-title">附录：GitHub Agent 全景图与选型指南</span></summary><div class="nav-sub"><a class="nav-jump" href="#doc-26">↑ 跳到本章开头</a><div class="toc">
+<ul>
+<li><a href="#doc-26-1">1. 这一章解决什么问题</a></li>
+<li><a href="#doc-26-2">2. 数据与方法：137 条是怎么来的</a></li>
+<li><a href="#doc-26-3">3. 一眼看全：137 个项目怎么分布</a></li>
+<li><a href="#doc-26-4">4. 六条判断</a></li>
+<li><a href="#doc-26-5">5. 按场景选型：八张组合牌</a></li>
+<li><a href="#doc-26-6">6. 全量清单（可搜索 / 筛选 / 排序）</a></li>
+<li><a href="#doc-26-7">7. 与本书章节的映射</a></li>
+<li><a href="#doc-26-8">8. 从 30 分钟到 1 天的上手路径</a></li>
+<li><a href="#doc-26-9">9. 数据维护与更新</a></li>
+<li><a href="#doc-26-10">10. 来源与免责</a></li>
+</ul>
+</div>
+</div></details>
+<!-- LANDSCAPE:NAV:END --></aside><main class="main"><section class="hero"><h1>AI Harness / AI PDE / AI Infra<br>企业级完整学习方案</h1><p>从 AI Native 研发范式、Agent Harness、RAG、vLLM 与 Kubernetes，到 GPU 物理集群、HPN/RDMA、NVLink、HGX、NVL72、智算集群 v3.3（千卡→5000→10240 卡）、国产 GPU、千卡集群和公有云 GPU，并附大模型推理服务可靠性工程师的岗位解读与模拟面试问答，以及 Pi / Aider Harness 横向对比、可运行的薄 Loop + WAL 参考实现、两篇典型岗位面试题库（推理 SRE / AI 平台架构师）、Coze / Dify / LangChain 选型对比、FastAPI × MCP × React × AIGC 全栈集成、DCS 专项教程与 3 套模拟试卷、137 个 GitHub Agent 项目的赛道全景与选型指南（DOC 27），以及修订记录。</p><p>每个模块包含视频参考、官方资料、操作步骤、企业落地避坑和验收产物。本页面适配桌面与手机，可从浏览器直接打印为 PDF。</p><p class="updated">最近更新 2026-11-26 · v1.11：新增 DOC 27「GitHub Agent 全景图与选型指南」（137 项目 × 17 赛道，可搜索筛选）· <a href="#doc-26">查看第 27 章</a> · <a href="#doc-25">查看完整修订记录</a></p><div class="pills"><a class="pill" href="#doc-26">Agent 全景图 ×137</a><a class="pill" href="#doc-25">修订记录</a><span class="pill">36 周路线</span><span class="pill">70+ 视频入口</span><span class="pill">HPN v1.0</span><span class="pill">NVLink / HGX / NVL72</span><span class="pill">千卡与国产 GPU</span><span class="pill">智算集群 v3.3</span><span class="pill">异构算力</span><span class="pill">EP=32 + 机内 TP8</span><span class="pill">岗位与面试 ×2</span><span class="pill">AI 平台架构师</span><span class="pill">Pi / Aider 对比</span><span class="pill">Coze / Dify / LangChain</span><span class="pill">FastAPI × MCP × React</span><span class="pill">AIGC</span><span class="pill">模拟试卷</span><span class="pill">薄 Loop + WAL</span><span class="pill">AI Native</span><span class="pill">企业上线清单</span></div></section><section class="doc" id="doc-00" data-title="总览"><header class="doc-head"><div class="doc-kicker">DOC 01</div><h2>总览</h2><div class="doc-source">来源：README.md</div></header><details class="doc-toc"><summary>本篇目录</summary><div class="toc">
 <ul>
 <li><a href="#doc-00-_1">这个包解决什么问题</a></li>
 <li><a href="#doc-00-pde">PDE 术语说明</a></li>
@@ -1305,6 +1382,10 @@ html[data-theme="dark"] { --bg:#0f141b; --panel:#151d26; --panel2:#1d2834; --ink
 <tr>
 <td><a href="#doc-11">18_AI_Native研发范式与企业Agent基础设施.md</a></td>
 <td>AI Native 手册提炼、数字员工、Harness、Sandbox、Identity、Guardrail、Trajectory 和度量</td>
+</tr>
+<tr>
+<td><a href="#doc-26">27_GitHub_Agent全景图与选型指南.md</a></td>
+<td>137 个 GitHub Agent 项目的 17 赛道全景、六条趋势判断、八种场景组合与选型映射</td>
 </tr>
 </tbody>
 </table>
@@ -18162,6 +18243,7 @@ adversarial_set  20 条注入/越权/数据外泄
 <ul>
 <li><a href="#doc-25-1">1. 版本总览</a></li>
 <li><a href="#doc-25-2">2. 详细修订记录</a><ul>
+<li><a href="#doc-25-v111-2026-11-26">v1.11 · 2026-11-26 — GitHub Agent 全景图与选型指南</a></li>
 <li><a href="#doc-25-v110-2026-10-20-dcs">v1.10 · 2026-10-20 — DCS 专项教程与模拟试卷</a></li>
 <li><a href="#doc-25-v19-2026-10-20-dcs">v1.9 · 2026-10-20 — 全栈集成与 DCS 运维平台架构师</a></li>
 <li><a href="#doc-25-v18-2026-10-20-coze-dify-langchain">v1.8 · 2026-10-20 — Coze / Dify / LangChain 对比与选型</a></li>
@@ -18194,6 +18276,12 @@ adversarial_set  20 条注入/越权/数据外泄
 </tr>
 </thead>
 <tbody>
+<tr>
+<td><strong>v1.11</strong></td>
+<td>2026-11-26</td>
+<td><strong>新增第 27 章 GitHub Agent 全景图与选型指南（DOC 27）</strong>：同步上游 137 个项目 / 17 赛道快照（2026-11-24），提供可搜索、可筛选、可排序的全量清单；配六条趋势判断、八种场景组合、章节映射与「30 分钟 → 1 天」上手路径；新增数据流水线 <code>scripts/merge_landscape_data.py</code> + <code>scripts/build_landscape.py</code></td>
+<td style="text-align: right;">27</td>
+</tr>
 <tr>
 <td><strong>v1.10</strong></td>
 <td>2026-10-20</td>
@@ -18263,6 +18351,38 @@ adversarial_set  20 条注入/越权/数据外泄
 </tbody>
 </table>
 <h2 id="doc-25-2"><a class="hlink" href="#doc-25-2" title="本节链接">#</a>2. 详细修订记录</h2>
+<h3 id="doc-25-v111-2026-11-26"><a class="hlink" href="#doc-25-v111-2026-11-26" title="本节链接">#</a>v1.11 · 2026-11-26 — GitHub Agent 全景图与选型指南</h3>
+<table>
+<thead>
+<tr>
+<th>变更</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>新增 DOC 27</td>
+<td>同步上游 <a href="https://xiaowang018.github.io/agent-landscape/" target="_blank" rel="noopener noreferrer">GitHub Agent 项目全景图</a> 快照（2026-11-24）：<strong>137 个项目 / 17 个赛道 / 846 万星标 / 121 个近 45 天有提交</strong>，含可搜索、可筛选、可排序的全量清单</td>
+</tr>
+<tr>
+<td>分析结论</td>
+<td>六条趋势判断（成品入口、技能包层、框架下沉、接线层、训练层、星数通胀）、八种场景组合、三条「不要」、与本书 DOC 03/05/12/17/18/19/25 的映射表</td>
+</tr>
+<tr>
+<td>数据流水线</td>
+<td><code>docs/data/agent-landscape-2026-11-24.json</code> + <code>scripts/merge_landscape_data.py</code> + <code>scripts/build_landscape.py</code>；页面用 <code>LANDSCAPE</code> 标记块承载，可重复生成，不手改卡片</td>
+</tr>
+<tr>
+<td>锚点策略</td>
+<td>新章追加在修订记录之后（锚点 <code>doc-26</code>），不移动 <code>doc-00</code>～<code>doc-25</code> 的既有锚点，符合第 4 节「锚点稳定」约定</td>
+</tr>
+<tr>
+<td>兼容性</td>
+<td>新增交互只用原生 JS 与 CSS 变量，跟随明暗主题；打印时自动隐藏筛选条，卡片按双栏输出</td>
+</tr>
+</tbody>
+</table>
+
 <h3 id="doc-25-v110-2026-10-20-dcs"><a class="hlink" href="#doc-25-v110-2026-10-20-dcs" title="本节链接">#</a>v1.10 · 2026-10-20 — DCS 专项教程与模拟试卷</h3>
 <table>
 <thead>
@@ -18694,4 +18814,1387 @@ adversarial_set  20 条注入/越权/数据外泄
 <li><strong>图文同版本</strong>：架构图、xlsx 与文档必须纳入同一版本号体系，每次修订强制复核图文一致性；</li>
 <li><strong>每次发布必登记</strong>：新增/修改章节后，更新本页「版本总览」与「详细修订记录」，并记录线上提交号；</li>
 <li><strong>锚点稳定</strong>：章节顺序调整会导致页面锚点（<code>doc-NN</code>）变化，引用外部链接时请使用章节标题而非锚点。</li>
-</ol></div></section></main></div><button class="backtop" id="backtop" title="回到顶部">↑</button><script>const root=document.documentElement,search=document.getElementById('searchInput'),progress=document.getElementById('progress'),backtop=document.getElementById('backtop');const saved=localStorage.getItem('manual-theme');if(saved)root.dataset.theme=saved;document.getElementById('themeBtn').onclick=()=>{const n=root.dataset.theme==='dark'?'light':'dark';root.dataset.theme=n;localStorage.setItem('manual-theme',n);};window.addEventListener('scroll',()=>{const h=document.documentElement;progress.style.width=(h.scrollTop/(h.scrollHeight-h.clientHeight)*100)+'%';backtop.style.display=h.scrollTop>500?'block':'none';});backtop.onclick=()=>window.scrollTo({top:0,behavior:'smooth'});search.addEventListener('input',()=>{const q=search.value.trim().toLowerCase();document.querySelectorAll('.doc').forEach(d=>{const hit=!q||d.innerText.toLowerCase().includes(q);d.classList.toggle('hidden',!hit);});document.querySelectorAll('.nav-link').forEach(a=>{const t=document.getElementById(a.dataset.target);a.classList.toggle('hidden',!!t&&t.classList.contains('hidden'));});});document.querySelectorAll('pre').forEach(pre=>{const b=document.createElement('button');b.className='copy-btn';b.textContent='复制';b.onclick=()=>{navigator.clipboard.writeText(pre.querySelector('code')?.innerText||pre.innerText).then(()=>{b.textContent='已复制';setTimeout(()=>b.textContent='复制',1200);});};pre.appendChild(b);});const observer=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){document.querySelectorAll('.nav-link').forEach(a=>a.classList.remove('active'));document.querySelector('.nav-link[data-target="'+e.target.id+'"]')?.classList.add('active');}}),{rootMargin:'-15% 0px -75% 0px'});document.querySelectorAll('.doc').forEach(d=>observer.observe(d));</script></body></html>
+</ol></div></section><!-- LANDSCAPE:SECTION:BEGIN -->
+<section class="doc" id="doc-26" data-title="附录：GitHub Agent 全景图与选型指南（137 项目 × 17 赛道）"><header class="doc-head"><div class="doc-kicker">DOC 27</div><h2>附录：GitHub Agent 全景图与选型指南</h2><div class="doc-source">来源：27_GitHub_Agent全景图与选型指南.md · 数据快照 2026-11-24</div></header><details class="doc-toc"><summary>本篇目录</summary><div class="toc">
+<ul>
+<li><a href="#doc-26-1">1. 这一章解决什么问题</a></li>
+<li><a href="#doc-26-2">2. 数据与方法：137 条是怎么来的</a></li>
+<li><a href="#doc-26-3">3. 一眼看全：137 个项目怎么分布</a></li>
+<li><a href="#doc-26-4">4. 六条判断</a></li>
+<li><a href="#doc-26-5">5. 按场景选型：八张组合牌</a></li>
+<li><a href="#doc-26-6">6. 全量清单（可搜索 / 筛选 / 排序）</a></li>
+<li><a href="#doc-26-7">7. 与本书章节的映射</a></li>
+<li><a href="#doc-26-8">8. 从 30 分钟到 1 天的上手路径</a></li>
+<li><a href="#doc-26-9">9. 数据维护与更新</a></li>
+<li><a href="#doc-26-10">10. 来源与免责</a></li>
+</ul>
+</div>
+</details><div class="doc-content"><blockquote>
+<p>本章的数据与清单同步自开源项目 <a href="https://xiaowang018.github.io/agent-landscape/" target="_blank" rel="noopener noreferrer">GitHub Agent 项目全景图</a>（快照 <strong>2026-11-24</strong>）：<strong>137</strong> 个仓库、<strong>17</strong> 个赛道、累计 <strong>846 万</strong>星标。元数据抓自 GitHub REST API，中文定位、适用人群与上手门槛为人工标注。</p>
+</blockquote>
+<h2 id="doc-26-1"><a class="hlink" href="#doc-26-1" title="本节链接">#</a>1. 这一章解决什么问题</h2>
+<p>DOC 17（Harness 横向对比）用 11 个画像讲清了「一个 Harness 内部该怎么设计」，DOC 18 把 Coze / Dify / LangChain 放回各自的位置；但真正开始选型时，第一个问题还要更靠前一步：<strong>到底该从哪个仓库开始看？</strong></p>
+<p>本章把 GitHub 上 Agent 相关的 137 个项目按 17 个赛道摊开：给一份可搜索、可筛选的全量清单，给按场景的组合建议，并把每个赛道映射回本手册的对应章节。它是<strong>附录</strong>——正文给判断框架，附录给项目坐标：先用正文判断「我要的是哪一类能力」，再用本章找到这类能力里值得先装、先读源码的那两三个仓库。</p>
+<table>
+<thead>
+<tr>
+<th>文档</th>
+<th>回答的问题</th>
+<th>什么时候看</th>
+</tr>
+</thead>
+<tbody>
+<tr><td>DOC 17 Harness 横向对比</td><td>一个 Harness 内部该怎么设计（薄 Loop、WAL、Fail Fast、外部验证）</td><td>决定自研或改造 Harness 时</td></tr>
+<tr><td>DOC 18 Coze / Dify / LangChain</td><td>平台、框架、代码三者边界在哪</td><td>决定「买平台还是写代码」时</td></tr>
+<tr><td><strong>DOC 27（本章）</strong></td><td>137 个项目的坐标、赛道热度与上手门槛</td><td>决定「先看哪个仓库」时</td></tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>放置说明</strong>：本章编号 DOC 27、锚点 <code>doc-26</code>，追加在修订记录之后，是为了不移动 <code>doc-00</code>～<code>doc-25</code> 的既有锚点（见修订记录第 4 节「锚点稳定」约定）。</p>
+</blockquote>
+<h2 id="doc-26-2"><a class="hlink" href="#doc-26-2" title="本节链接">#</a>2. 数据与方法：137 条是怎么来的</h2>
+<p>一张「项目地图」最容易失效的地方不是缺项目，而是口径不清：星数什么时候抓的、门槛谁定的、归档的算不算。先把口径写死。</p>
+<table>
+<thead>
+<tr>
+<th>字段</th>
+<th>来源</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr><td>星标、Fork、语言、许可证、最后提交时间、是否归档、创建时间</td><td>GitHub REST API <code>/repos/{owner}/{repo}</code></td><td>机器抓取，不是人工录入；会随时间变化</td></tr>
+<tr><td>赛道、中文定位、适用人群、点评、上手门槛</td><td>人工标注</td><td>主观判断，可讨论；同一项目可能跨赛道</td></tr>
+</tbody>
+</table>
+<p>维护状态按 GitHub 数据自动判定，<strong>归档优先于提交日期</strong>（刚归档的仓库最后一次提交也可能很近）：</p>
+<ul>
+<li><strong>已归档</strong>（6 个）：仓库只读停更，不建议作为新项目选型；</li>
+<li><strong>活跃</strong>（121 个）：45 天内有提交；</li>
+<li><strong>维护中</strong>（6 个）：210 天内有提交；</li>
+<li><strong>沉寂</strong>（4 个）：超过 210 天无提交，同样不建议作为新项目选型。</li>
+</ul>
+<p>上手门槛按「装完能不能直接跑」分三档：<strong>易</strong>（60 个，装完能跑）、<strong>中</strong>（63 个，要读文档改代码）、<strong>难</strong>（14 个，要理解架构或研究背景）。「教程 / 学习资料」赛道里的门槛指<strong>阅读门槛</strong>：易＝零基础能读，中＝要会写代码，难＝要懂架构。</p>
+<p>许可证要单独说：137 个项目里只有 105 个是纯 MIT / Apache-2.0，剩下 32 个带附加条款——NOASSERTION、Sustainable Use、AGPL-3.0、MIT + 企业版、闭源分发等。<strong>星标高不等于能商用</strong>，落地前逐条读 LICENSE；DOC 20「企业上线红线」同样适用。</p>
+<p>收录边界也很明确：<strong>只收 Agent</strong>——纯 LLM 应用框架、模型推理框架、聊天客户端不在内，判断标准是「这东西能不能自己决定下一步做什么」。技能包与教程两个赛道是例外：它们不做决策，但选型时绕不过去，所以单独成赛道。</p>
+<p>已知局限：星数受传播效应影响，不等于工程质量；人工标注有主观性；快照不是实时数据（更新方法见第 9 节）；「活跃」只说明 45 天内有提交，不说明它没有回归。</p>
+<h2 id="doc-26-3"><a class="hlink" href="#doc-26-3" title="本节链接">#</a>3. 一眼看全：137 个项目怎么分布</h2>
+<div class="ls-stats">
+<div class="ls-stat"><b>137</b><span>收录项目</span></div>
+<div class="ls-stat"><b>17</b><span>赛道分类</span></div>
+<div class="ls-stat"><b>846 万</b><span>累计星标</span></div>
+<div class="ls-stat"><b>121</b><span>近 45 天有提交</span></div>
+</div>
+<p>星标不是均匀分布在 17 个赛道里的。下面按赛道总星标排序；条形长度是相对最高赛道（编码 Agent）的比例。</p>
+<div class="ls-bars">
+<div class="ls-bar-row"><span class="ls-bar-name">编码 Agent <span>21 个</span></span><span class="ls-bar-track"><span class="ls-bar-fill" style="width:100.0%"></span></span><span class="ls-bar-val">222 万</span></div>
+<div class="ls-bar-row"><span class="ls-bar-name">通用自主 Agent <span>9 个</span></span><span class="ls-bar-track"><span class="ls-bar-fill" style="width:47.2%"></span></span><span class="ls-bar-val">104.7 万</span></div>
+<div class="ls-bar-row"><span class="ls-bar-name">编排框架 / SDK <span>21 个</span></span><span class="ls-bar-track"><span class="ls-bar-fill" style="width:45.2%"></span></span><span class="ls-bar-val">100.3 万</span></div>
+<div class="ls-bar-row"><span class="ls-bar-name">技能包 / 工作流 <span>4 个</span></span><span class="ls-bar-track"><span class="ls-bar-fill" style="width:35.2%"></span></span><span class="ls-bar-val">78.2 万</span></div>
+<div class="ls-bar-row"><span class="ls-bar-name">低代码平台 / 工作流 <span>7 个</span></span><span class="ls-bar-track"><span class="ls-bar-fill" style="width:29.9%"></span></span><span class="ls-bar-val">66.4 万</span></div>
+<div class="ls-bar-row"><span class="ls-bar-name">知识库 / RAG <span>8 个</span></span><span class="ls-bar-track"><span class="ls-bar-fill" style="width:22.7%"></span></span><span class="ls-bar-val">50.3 万</span></div>
+<div class="ls-bar-row"><span class="ls-bar-name">教程 / 学习资料 <span>12 个</span></span><span class="ls-bar-track"><span class="ls-bar-fill" style="width:19.8%"></span></span><span class="ls-bar-val">43.9 万</span></div>
+<div class="ls-bar-row"><span class="ls-bar-name">工具协议 / MCP <span>9 个</span></span><span class="ls-bar-track"><span class="ls-bar-fill" style="width:16.8%"></span></span><span class="ls-bar-val">37.4 万</span></div>
+<div class="ls-bar-row"><span class="ls-bar-name">深度研究 / 检索 <span>6 个</span></span><span class="ls-bar-track"><span class="ls-bar-fill" style="width:13.1%"></span></span><span class="ls-bar-val">29.1 万</span></div>
+<div class="ls-bar-row"><span class="ls-bar-name">记忆层 <span>7 个</span></span><span class="ls-bar-track"><span class="ls-bar-fill" style="width:12.0%"></span></span><span class="ls-bar-val">26.6 万</span></div>
+<div class="ls-bar-row"><span class="ls-bar-name">多智能体协作 <span>6 个</span></span><span class="ls-bar-track"><span class="ls-bar-fill" style="width:11.2%"></span></span><span class="ls-bar-val">24.8 万</span></div>
+<div class="ls-bar-row"><span class="ls-bar-name">浏览器操作 <span>6 个</span></span><span class="ls-bar-track"><span class="ls-bar-fill" style="width:10.5%"></span></span><span class="ls-bar-val">23.4 万</span></div>
+<div class="ls-bar-row"><span class="ls-bar-name">桌面 / 电脑操作 <span>6 个</span></span><span class="ls-bar-track"><span class="ls-bar-fill" style="width:7.8%"></span></span><span class="ls-bar-val">17.3 万</span></div>
+<div class="ls-bar-row"><span class="ls-bar-name">Agent 可观测 / 评测 <span>6 个</span></span><span class="ls-bar-track"><span class="ls-bar-fill" style="width:4.8%"></span></span><span class="ls-bar-val">10.7 万</span></div>
+<div class="ls-bar-row"><span class="ls-bar-name">Agentic RL / 训练环境 <span>5 个</span></span><span class="ls-bar-track"><span class="ls-bar-fill" style="width:2.2%"></span></span><span class="ls-bar-val">4.9 万</span></div>
+<div class="ls-bar-row"><span class="ls-bar-name">语音 Agent <span>3 个</span></span><span class="ls-bar-track"><span class="ls-bar-fill" style="width:2.0%"></span></span><span class="ls-bar-val">4.4 万</span></div>
+<div class="ls-bar-row"><span class="ls-bar-name">Agent 基础设施 <span>1 个</span></span><span class="ls-bar-track"><span class="ls-bar-fill" style="width:2.0%"></span></span><span class="ls-bar-val">1.5 万</span></div>
+</div>
+<p>同一张图里能读出三件事：<strong>编码 Agent</strong> 数量与编排框架相同（都是 21 个），但星标是后者的 2.2 倍——热度和钱都在「能直接干活的成品」上；<strong>技能包</strong>只有 4 个项目却排到第 4，说明「怎么让 Agent 按规矩干活」已经独立成层；<strong>编排框架</strong>数量最多（21 个、100.3 万星），但已从「入口」退成「零件」。</p>
+<p>星标的集中度同样值得警惕：前 20 名占全部星标的 52.8%，前 10 名占 35.7%，而中位数只有 31,543。<strong>榜单头部讲的是传播故事，中位数才是这个生态的常态。</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">#</th>
+<th>项目</th>
+<th style="text-align: right;">星标</th>
+<th>赛道</th>
+<th>门槛</th>
+<th>状态</th>
+</tr>
+</thead>
+<tbody>
+<tr><td style="text-align:right;">1</td><td><a href="https://github.com/morluto/rea" target="_blank" rel="noopener noreferrer">morluto/rea</a></td><td style="text-align:right;">475,682</td><td>编码 Agent</td><td>难</td><td>活跃</td></tr>
+<tr><td style="text-align:right;">2</td><td><a href="https://github.com/openclaw/openclaw" target="_blank" rel="noopener noreferrer">openclaw/openclaw</a></td><td style="text-align:right;">395,121</td><td>通用自主 Agent</td><td>易</td><td>活跃</td></tr>
+<tr><td style="text-align:right;">3</td><td><a href="https://github.com/mattpocock/skills" target="_blank" rel="noopener noreferrer">mattpocock/skills</a></td><td style="text-align:right;">331,701</td><td>技能包 / 工作流</td><td>易</td><td>活跃</td></tr>
+<tr><td style="text-align:right;">4</td><td><a href="https://github.com/obra/superpowers" target="_blank" rel="noopener noreferrer">obra/superpowers</a></td><td style="text-align:right;">325,437</td><td>技能包 / 工作流</td><td>易</td><td>活跃</td></tr>
+<tr><td style="text-align:right;">5</td><td><a href="https://github.com/affaan-m/ECC" target="_blank" rel="noopener noreferrer">affaan-m/ECC</a></td><td style="text-align:right;">309,604</td><td>编排框架 / SDK</td><td>中</td><td>活跃</td></tr>
+<tr><td style="text-align:right;">6</td><td><a href="https://github.com/deepseek-ai/deepseek-harness" target="_blank" rel="noopener noreferrer">deepseek-ai/deepseek-harness</a></td><td style="text-align:right;">286,111</td><td>编码 Agent</td><td>易</td><td>活跃</td></tr>
+<tr><td style="text-align:right;">7</td><td><a href="https://github.com/NousResearch/hermes-agent" target="_blank" rel="noopener noreferrer">NousResearch/hermes-agent</a></td><td style="text-align:right;">265,675</td><td>通用自主 Agent</td><td>易</td><td>活跃</td></tr>
+<tr><td style="text-align:right;">8</td><td><a href="https://github.com/anomalyco/opencode" target="_blank" rel="noopener noreferrer">anomalyco/opencode</a></td><td style="text-align:right;">228,818</td><td>编码 Agent</td><td>易</td><td>活跃</td></tr>
+<tr><td style="text-align:right;">9</td><td><a href="https://github.com/n8n-io/n8n" target="_blank" rel="noopener noreferrer">n8n-io/n8n</a></td><td style="text-align:right;">211,913</td><td>低代码平台 / 工作流</td><td>易</td><td>活跃</td></tr>
+<tr><td style="text-align:right;">10</td><td><a href="https://github.com/Significant-Gravitas/AutoGPT" target="_blank" rel="noopener noreferrer">Significant-Gravitas/AutoGPT</a></td><td style="text-align:right;">188,155</td><td>通用自主 Agent</td><td>中</td><td>活跃</td></tr>
+<tr><td style="text-align:right;">11</td><td><a href="https://github.com/langgenius/dify" target="_blank" rel="noopener noreferrer">langgenius/dify</a></td><td style="text-align:right;">161,747</td><td>低代码平台 / 工作流</td><td>易</td><td>活跃</td></tr>
+<tr><td style="text-align:right;">12</td><td><a href="https://github.com/langflow-ai/langflow" target="_blank" rel="noopener noreferrer">langflow-ai/langflow</a></td><td style="text-align:right;">156,881</td><td>低代码平台 / 工作流</td><td>易</td><td>活跃</td></tr>
+</tbody>
+</table>
+<p>其余分布：</p>
+<table>
+<thead>
+<tr><th>维度</th><th>分布</th></tr>
+</thead>
+<tbody>
+<tr><td>语言</td><td>Python 71 · TypeScript 41 · JavaScript 5 · Jupyter Notebook 5 · Go 4 · Rust 3 · - 3 · Shell 3 · C# 1 · MDX 1</td></tr>
+<tr><td>门槛</td><td>易 60 · 中 63 · 难 14</td></tr>
+<tr><td>创建年份</td><td>2019 年 2 · 2021 年 1 · 2022 年 5 · 2023 年 35 · 2024 年 35 · 2025 年 46 · 2026 年 13</td></tr>
+</tbody>
+</table>
+<p>语言这一行有个反直觉的地方：Python 项目最多（71 个），但编码 Agent 的头部几乎全在 TypeScript / Rust——终端 TUI、沙箱、权限这些工程部件需要的是分发与进程控制，不是训练生态。Python 主导的是训练、评测和研究侧。</p>
+<p>另外，59 个项目（43%）创建于 2025–2026 年。<strong>这个赛道一年半就换了一茬</strong>，所以选型时「最近一次提交」比「星数」更能说明它还活着。</p>
+<h2 id="doc-26-4"><a class="hlink" href="#doc-26-4" title="本节链接">#</a>4. 六条判断</h2>
+<h3>判断一：入口从「自己搭」变成「装完直接用」</h3>
+<p>星标前八里有六个是成品 Agent / Harness（rea、OpenClaw、ECC、DeepSeek Harness、Hermes、OpenCode），传统框架 LangChain 排到第 16。这不是说框架没用了，而是<strong>默认入口变了</strong>：如果目标是把事做完，先装一个成品；如果目标是做成产品，再回到框架层。</p>
+<h3>判断二：技能包成了独立的一层</h3>
+<p>4 个技能包合计 78.2 万星（占全榜 9.2%），mattpocock/skills 与 obra/superpowers 都在 32 万以上，比绝大多数框架高。它们不写代码，写的是「Agent 该怎么干活」的纪律：先对齐意图、按 SDLC 走完、每步留证据。实践里更常见的做法是<strong>挑一两个混用</strong>而不是全装——技能太多会挤占上下文，还会互相抢命令名。</p>
+<h3>判断三：框架没有消失，而是下沉成「被组合的零件」</h3>
+<p>LangGraph 用「图 + 状态」把长流程、人审、断点续跑讲清楚，因此被大量产品当作状态机内核；Dify / Coze 这类平台则把框架包进可视化层。选型问题已经从「选哪个框架」变成「<strong>哪一层自己写、哪一层买</strong>」。</p>
+<h3>判断四：「接线层」补齐了，它决定能不能上生产</h3>
+<p>MCP 9 个项目 37.4 万星、记忆层 7 个 26.6 万星、评测 6 个 10.7 万星；A2A 补上了 MCP 没管的另一半——Agent 之间怎么发现彼此、怎么委派任务。这一层做不出 Demo 效果，但少了它，前面装的东西都只能停在演示阶段。</p>
+<h3>判断五：训练层出现，Agentic RL 从论文走进仓库</h3>
+<p>verl、slime、prime-rl、ART、OpenEnv 五个项目组成新赛道。研究重心明显从「怎么调提示词」挪到「怎么造可验证的环境和 verifier」。对工程团队的实际含义是：<strong>跑通的流程可以考虑固化成小模型</strong>，把每次推理的钱省下来——但前提是先把评测基线做出来（见第 5 节「上线前评测」）。</p>
+<h3>判断六：星数通胀与许可证风险并存</h3>
+<p>前 20 名占 52.8% 星，中位数只有 31,543；32 个项目带非标准许可；6 个已归档、4 个沉寂。三条合一：<strong>星标是传播指标，不是可用性指标</strong>。选型时先过三关——许可证、维护状态、有没有可复现的评测。</p>
+<h2 id="doc-26-5"><a class="hlink" href="#doc-26-5" title="本节链接">#</a>5. 按场景选型：八张组合牌</h2>
+<p>不要把「赛道第一」当成「我的第一」。下面按真实场景给组合：一列是<strong>先装哪个</strong>（当天能跑起来的），一列是<strong>再加什么</strong>（跑通之后补的能力），最后一列是最容易踩的坑。</p>
+<table>
+<thead>
+<tr><th>场景</th><th>先装一个</th><th>再加两个</th><th>注意什么</th></tr>
+</thead>
+<tbody>
+<tr><td>个人终端提效</td><td>DeepSeek Harness 或 OpenCode（装完能跑）</td><td>cc-switch（多 CLI 统一入口）+ 低门槛技能包</td><td>别一上来装五套；先记录一个真实任务的步数、token 和失败点</td></tr>
+<tr><td>IDE 内编码</td><td>Cline / Kilo Code / Continue（VS Code 内审批每步）</td><td>Roo-Code 的多模式提示词作参考；mini-swe-agent 读源码</td><td>插件形态依赖各家 API Key，权限范围要按仓库收紧</td></tr>
+<tr><td>团队并行编码</td><td>Orca（复用已有订阅跑多 bot）或 OpenHands（沙箱跑全流程）</td><td>claude-task-master 做任务 DAG；SWE-agent 做评测基线</td><td>并行任务必须共享同一套验证命令，否则无法比较产出</td></tr>
+<tr><td>企业内部平台</td><td>Dify（可视化 + 私有化）或 Coze Studio（插件/工作流齐全）</td><td>LangGraph 写复杂状态流转；n8n 做系统集成</td><td>平台解决搭起来，框架解决改得动；两个都要，别只买一个</td></tr>
+<tr><td>知识与研究</td><td>RAGFlow / LightRAG（检索底座）</td><td>deer-flow、GPT-Researcher（调研产出）；graphify、graphiti（关系与时效）</td><td>先定评测集再换方案，否则永远在换 embedding</td></tr>
+<tr><td>浏览器与桌面自动化</td><td>browser-use、Playwright MCP（浏览器）</td><td>midscene / UI-TARS / Agent-S（桌面与 GUI）</td><td>登录态、验证码、页面改版是最常见的稳定性来源</td></tr>
+<tr><td>上线前评测与观测</td><td>Langfuse（追踪）或 promptfoo（CI 断言）</td><td>DeepEval、inspect_ai（可审计评测）；AgentOps 做回归</td><td>评测要能进 CI；只看榜单分数会把配置差异当模型差异</td></tr>
+<tr><td>数据不出内网</td><td>OpenHands / Cline 自托管 + 本地模型</td><td>vLLM 或 SGLang 起模型服务；Continue 接自有网关</td><td>先确认许可证：AGPL、Sustainable Use、闭源分发这几种要单独过法务</td></tr>
+</tbody>
+</table>
+<p><strong>三条不要</strong>：</p>
+<ol>
+<li><strong>不要因为星数高就选它</strong>——先看它是否归档、许可证是否能过法务、issue 区最近三个月是否还在回。</li>
+<li><strong>不要一开始就上多 Agent</strong>——榜单里 6 个多智能体项目合计 24.8 万星，但「通信即复杂度」；单 Agent 能解决的，加协作只会把失败点转移到调度层（DOC 17 铁律 6）。</li>
+<li><strong>不要拿别人的 Benchmark 当自己的结论</strong>——同一模型换一套工具和提示，SWE-bench 分数可以差出十几个点；用自己的任务集复测，哪怕只有 20 条。</li>
+</ol>
+<h2 id="doc-26-6"><a class="hlink" href="#doc-26-6" title="本节链接">#</a>6. 全量清单（可搜索 / 筛选 / 排序）</h2>
+<p>下面是本章的全量数据。<strong>搜索</strong>匹配仓库名、中文定位、适合人群、点评和 GitHub topics，空格分词表示「都要命中」；<strong>赛道</strong>只看某一类；<strong>语言 / 门槛</strong>按元数据过滤；<strong>只看活跃</strong>把 45 天内无提交的项目挡掉；<strong>排序</strong>只影响组内顺序。筛完后赛道标题右侧的项目数与星标会按当前可见项目重算。</p>
+<div class="ls" id="agent-landscape">
+<div class="ls-bar">
+<input type="search" id="ls-q" placeholder="搜索：仓库名 / 中文定位 / 适合人群 / 标签（空格分词）" aria-label="搜索项目" autocomplete="off">
+<select id="ls-lang" aria-label="语言"><option value="">全部语言</option><option value="Python">Python（71）</option><option value="TypeScript">TypeScript（41）</option><option value="JavaScript">JavaScript（5）</option><option value="Jupyter Notebook">Jupyter Notebook（5）</option><option value="Go">Go（4）</option><option value="Rust">Rust（3）</option><option value="-">-（3）</option><option value="Shell">Shell（3）</option><option value="C#">C#（1）</option><option value="MDX">MDX（1）</option></select>
+<select id="ls-diff" aria-label="门槛"><option value="">全部门槛</option><option value="易">易 · 装完能跑</option><option value="中">中 · 要改代码</option><option value="难">难 · 要懂架构</option></select>
+<select id="ls-sort" aria-label="排序"><option value="stars">按星数排序</option><option value="upd">按最近更新</option></select>
+<button type="button" class="ls-btn" id="ls-act" aria-pressed="false">只看活跃（45 天）</button>
+<button type="button" class="ls-btn" id="ls-reset">重置</button>
+</div>
+<div class="ls-chips" role="group" aria-label="按赛道筛选">
+<button type="button" class="ls-chip on" data-cat="all" aria-pressed="true">全部 <i>137</i></button>
+<button type="button" class="ls-chip" data-cat="framework" aria-pressed="false">编排框架 / SDK <i>21</i></button>
+<button type="button" class="ls-chip" data-cat="platform" aria-pressed="false">低代码平台 / 工作流 <i>7</i></button>
+<button type="button" class="ls-chip" data-cat="coding" aria-pressed="false">编码 Agent <i>21</i></button>
+<button type="button" class="ls-chip" data-cat="auto" aria-pressed="false">通用自主 Agent <i>9</i></button>
+<button type="button" class="ls-chip" data-cat="multi" aria-pressed="false">多智能体协作 <i>6</i></button>
+<button type="button" class="ls-chip" data-cat="browser" aria-pressed="false">浏览器操作 <i>6</i></button>
+<button type="button" class="ls-chip" data-cat="desktop" aria-pressed="false">桌面 / 电脑操作 <i>6</i></button>
+<button type="button" class="ls-chip" data-cat="voice" aria-pressed="false">语音 Agent <i>3</i></button>
+<button type="button" class="ls-chip" data-cat="research" aria-pressed="false">深度研究 / 检索 <i>6</i></button>
+<button type="button" class="ls-chip" data-cat="knowledge" aria-pressed="false">知识库 / RAG <i>8</i></button>
+<button type="button" class="ls-chip" data-cat="memory" aria-pressed="false">记忆层 <i>7</i></button>
+<button type="button" class="ls-chip" data-cat="protocol" aria-pressed="false">工具协议 / MCP <i>9</i></button>
+<button type="button" class="ls-chip" data-cat="skills" aria-pressed="false">技能包 / 工作流 <i>4</i></button>
+<button type="button" class="ls-chip" data-cat="eval" aria-pressed="false">Agent 可观测 / 评测 <i>6</i></button>
+<button type="button" class="ls-chip" data-cat="rl" aria-pressed="false">Agentic RL / 训练环境 <i>5</i></button>
+<button type="button" class="ls-chip" data-cat="infra" aria-pressed="false">Agent 基础设施 <i>1</i></button>
+<button type="button" class="ls-chip" data-cat="learn" aria-pressed="false">教程 / 学习资料 <i>12</i></button>
+</div>
+<p class="ls-count" id="ls-count">显示 <b>137</b> / 137 个项目 · 17 个赛道</p>
+<div class="ls-groups">
+<section class="ls-group" data-cat="framework">
+<div class="ls-gh"><h3><span class="ls-gi">01</span>编排框架 / SDK</h3><span class="ls-gsub">搭 Agent 的底层骨架</span><span class="ls-gmeta"><b class="ls-gn">21</b> 个项目 · <b class="ls-gs">100.3 万</b>星标</span></div>
+<div class="ls-grid">
+<article class="ls-card" data-cat="framework" data-lang="JavaScript" data-diff="中" data-act="1" data-stars="309604" data-upd="2026-11-23" data-name="affaan-m/ecc" data-search="affaan-m/ecc 主打性能优化的 agent harness 追求 harness 效率和可观测性的人 把 skills、记忆、安全、开发流程打包成一套优化过的运行骨架；概念多，需要读文档。 ai-agents anthropic claude claude-code developer-tools llm javascript mit 编排框架 / sdk">
+<div class="ls-ctop"><a class="ls-repo" href="https://github.com/affaan-m/ECC" target="_blank" rel="noopener noreferrer">affaan-m/ECC</a><span class="ls-stars" title="★ 309,604 · 创建 2026-01 · 最近提交 2026-11-23 · https://ecc.tools">★ 31 万</span></div>
+<p class="ls-pitch">主打性能优化的 Agent Harness</p>
+<p class="ls-aud">适合：追求 harness 效率和可观测性的人</p>
+<p class="ls-note">把 skills、记忆、安全、开发流程打包成一套优化过的运行骨架；概念多，需要读文档。</p>
+<div class="ls-meta"><span class="ls-tag">JavaScript</span><span class="ls-tag ls-d-medium">门槛 中</span><span class="ls-tag">MIT</span><span class="ls-tag ls-st-active">活跃</span></div>
+</article>
+<article class="ls-card" data-cat="framework" data-lang="Python" data-diff="中" data-act="1" data-stars="149959" data-upd="2026-11-23" data-name="langchain-ai/langchain" data-search="langchain-ai/langchain llm 应用开发的事实标准底座 需要海量第三方集成的团队 生态最大、更新最勤，代价是抽象层厚、版本变动快，别指望一行不改跑一年。 agents ai ai-agents anthropic chatgpt deepagents python mit 编排框架 / sdk">
+<div class="ls-ctop"><a class="ls-repo" href="https://github.com/langchain-ai/langchain" target="_blank" rel="noopener noreferrer">langchain-ai/langchain</a><span class="ls-stars" title="★ 149,959 · 创建 2022-10 · 最近提交 2026-11-23 · https://docs.langchain.com/langchain/">★ 15 万</span></div>
+<p class="ls-pitch">LLM 应用开发的事实标准底座</p>
+<p class="ls-aud">适合：需要海量第三方集成的团队</p>
+<p class="ls-note">生态最大、更新最勤，代价是抽象层厚、版本变动快，别指望一行不改跑一年。</p>
+<div class="ls-meta"><span class="ls-tag">Python</span><span class="ls-tag ls-d-medium">门槛 中</span><span class="ls-tag">MIT</span><span class="ls-tag ls-st-active">活跃</span></div>
+</article>
+<article class="ls-card" data-cat="framework" data-lang="Python" data-diff="中" data-act="0" data-stars="61965" data-upd="2026-11-12" data-name="microsoft/autogen" data-search="microsoft/autogen 多 agent 对话协作的元老 做多角色协作、研究型实验 v0.4 起重写为事件驱动内核（actor 模型）；仓库已归档，开发并入 microsoft/agent-framework。 agentic agentic-agi agents ai autogen autogen-ecosystem python cc-by-4.0 编排框架 / sdk">
+<div class="ls-ctop"><a class="ls-repo" href="https://github.com/microsoft/autogen" target="_blank" rel="noopener noreferrer">microsoft/autogen</a><span class="ls-stars" title="★ 61,965 · 创建 2023-08 · 最近提交 2026-11-12 · https://microsoft.github.io/autogen/">★ 6.2 万</span></div>
+<p class="ls-pitch">多 Agent 对话协作的元老</p>
+<p class="ls-aud">适合：做多角色协作、研究型实验</p>
+<p class="ls-note">v0.4 起重写为事件驱动内核（Actor 模型）；仓库已归档，开发并入 microsoft/agent-framework。</p>
+<div class="ls-meta"><span class="ls-tag">Python</span><span class="ls-tag ls-d-medium">门槛 中</span><span class="ls-tag">CC-BY-4.0</span><span class="ls-tag ls-st-archived">已归档</span></div>
+</article>
+<article class="ls-card" data-cat="framework" data-lang="Python" data-diff="易" data-act="1" data-stars="61202" data-upd="2026-11-23" data-name="crewaiinc/crewai" data-search="crewaiinc/crewai 角色 + 任务派活式多 agent 协作 想快速搭一个「ai 小团队」 概念最贴近人类团队分工，上手最快；复杂状态流转不如 langgraph 灵活。 agents ai ai-agents aiagentframework llms python mit 编排框架 / sdk">
+<div class="ls-ctop"><a class="ls-repo" href="https://github.com/crewAIInc/crewAI" target="_blank" rel="noopener noreferrer">crewAIInc/crewAI</a><span class="ls-stars" title="★ 61,202 · 创建 2023-10 · 最近提交 2026-11-23 · https://crewai.com">★ 6.1 万</span></div>
+<p class="ls-pitch">角色 + 任务派活式多 Agent 协作</p>
+<p class="ls-aud">适合：想快速搭一个「AI 小团队」</p>
+<p class="ls-note">概念最贴近人类团队分工，上手最快；复杂状态流转不如 LangGraph 灵活。</p>
+<div class="ls-meta"><span class="ls-tag">Python</span><span class="ls-tag ls-d-easy">门槛 易</span><span class="ls-tag">MIT</span><span class="ls-tag ls-st-active">活跃</span></div>
+</article>
+<article class="ls-card" data-cat="framework" data-lang="Python" data-diff="中" data-act="1" data-stars="52987" data-upd="2026-11-20" data-name="run-llama/llama_index" data-search="run-llama/llama_index 以数据/rag 为核心的 agent 框架 文档密集、检索密集的场景 索引与检索能力是它的看家本事，事件驱动工作流也补齐了。 agents application data fine-tuning framework llamaindex python mit 编排框架 / sdk">
+<div class="ls-ctop"><a class="ls-repo" href="https://github.com/run-llama/llama_index" target="_blank" rel="noopener noreferrer">run-llama/llama_index</a><span class="ls-stars" title="★ 52,987 · 创建 2022-11 · 最近提交 2026-11-20 · https://developers.llamaindex.ai">★ 5.3 万</span></div>
+<p class="ls-pitch">以数据/RAG 为核心的 Agent 框架</p>
+<p class="ls-aud">适合：文档密集、检索密集的场景</p>
+<p class="ls-note">索引与检索能力是它的看家本事，事件驱动工作流也补齐了。</p>
+<div class="ls-meta"><span class="ls-tag">Python</span><span class="ls-tag ls-d-medium">门槛 中</span><span class="ls-tag">MIT</span><span class="ls-tag ls-st-active">活跃</span></div>
+</article>
+<article class="ls-card" data-cat="framework" data-lang="Python" data-diff="中" data-act="1" data-stars="45310" data-upd="2026-11-23" data-name="langchain-ai/langgraph" data-search="langchain-ai/langgraph 用「图」编排有状态、可中断恢复的 agent 要做长流程/人审/断点续跑的产品 langchain 团队目前最推荐的 agent 主线，状态机思路清晰，学习曲线中偏上。 agents ai ai-agents chatgpt deepagents enterprise python mit 编排框架 / sdk">
+<div class="ls-ctop"><a class="ls-repo" href="https://github.com/langchain-ai/langgraph" target="_blank" rel="noopener noreferrer">langchain-ai/langgraph</a><span class="ls-stars" title="★ 45,310 · 创建 2023-08 · 最近提交 2026-11-23 · https://docs.langchain.com/oss/python/langgraph/">★ 4.5 万</span></div>
+<p class="ls-pitch">用「图」编排有状态、可中断恢复的 Agent</p>
+<p class="ls-aud">适合：要做长流程/人审/断点续跑的产品</p>
+<p class="ls-note">LangChain 团队目前最推荐的 Agent 主线，状态机思路清晰，学习曲线中偏上。</p>
+<div class="ls-meta"><span class="ls-tag">Python</span><span class="ls-tag ls-d-medium">门槛 中</span><span class="ls-tag">MIT</span><span class="ls-tag ls-st-active">活跃</span></div>
+</article>
+<article class="ls-card" data-cat="framework" data-lang="Python" data-diff="易" data-act="1" data-stars="43269" data-upd="2026-11-23" data-name="agno-agi/agno" data-search="agno-agi/agno 轻量高性能多模态 agent 框架 追求启动快、代码少 前身 phidata，自带记忆/知识/工具/多模态，跑分和体感都轻。 agents ai ai-agents developer-tools python python apache-2.0 编排框架 / sdk">
+<div class="ls-ctop"><a class="ls-repo" href="https://github.com/agno-agi/agno" target="_blank" rel="noopener noreferrer">agno-agi/agno</a><span class="ls-stars" title="★ 43,269 · 创建 2022-05 · 最近提交 2026-11-23 · https://docs.agno.com">★ 4.3 万</span></div>
+<p class="ls-pitch">轻量高性能多模态 Agent 框架</p>
+<p class="ls-aud">适合：追求启动快、代码少</p>
+<p class="ls-note">前身 phidata，自带记忆/知识/工具/多模态，跑分和体感都轻。</p>
+<div class="ls-meta"><span class="ls-tag">Python</span><span class="ls-tag ls-d-easy">门槛 易</span><span class="ls-tag">Apache-2.0</span><span class="ls-tag ls-st-active">活跃</span></div>
+</article>
+<article class="ls-card" data-cat="framework" data-lang="Python" data-diff="中" data-act="1" data-stars="31543" data-upd="2026-11-24" data-name="langchain-ai/deepagents" data-search="langchain-ai/deepagents langchain 的开箱即用长任务 harness 需要规划、文件访问和子 agent 的应用 内置规划、文件系统、子 agent 等长任务能力；比 langgraph 抽象更高，先确认默认行为和工具权限。 ai deepagents harness harness-engineering langchain langgraph python mit 编排框架 / sdk">
+<div class="ls-ctop"><a class="ls-repo" href="https://github.com/langchain-ai/deepagents" target="_blank" rel="noopener noreferrer">langchain-ai/deepagents</a><span class="ls-stars" title="★ 31,543 · 创建 2025-07 · 最近提交 2026-11-24 · https://docs.langchain.com/deepagents">★ 3.2 万</span></div>
+<p class="ls-pitch">LangChain 的开箱即用长任务 Harness</p>
+<p class="ls-aud">适合：需要规划、文件访问和子 Agent 的应用</p>
+<p class="ls-note">内置规划、文件系统、子 Agent 等长任务能力；比 LangGraph 抽象更高，先确认默认行为和工具权限。</p>
+<div class="ls-meta"><span class="ls-tag">Python</span><span class="ls-tag ls-d-medium">门槛 中</span><span class="ls-tag">MIT</span><span class="ls-tag ls-st-active">活跃</span></div>
+</article>
+<article class="ls-card" data-cat="framework" data-lang="Python" data-diff="易" data-act="1" data-stars="30841" data-upd="2026-11-23" data-name="openai/openai-agents-python" data-search="openai/openai-agents-python openai 官方 agents sdk 用 openai 模型、要 handoff/护栏/追踪 handoff、guardrail、tracing 三件套开箱即用，模型无关但原生适配最好。 agents ai framework harness llm openai python mit 编排框架 / sdk">
+<div class="ls-ctop"><a class="ls-repo" href="https://github.com/openai/openai-agents-python" target="_blank" rel="noopener noreferrer">openai/openai-agents-python</a><span class="ls-stars" title="★ 30,841 · 创建 2025-03 · 最近提交 2026-11-23 · https://openai.github.io/openai-agents-python/">★ 3.1 万</span></div>
+<p class="ls-pitch">OpenAI 官方 Agents SDK</p>
+<p class="ls-aud">适合：用 OpenAI 模型、要 handoff/护栏/追踪</p>
+<p class="ls-note">handoff、guardrail、tracing 三件套开箱即用，模型无关但原生适配最好。</p>
+<div class="ls-meta"><span class="ls-tag">Python</span><span class="ls-tag ls-d-easy">门槛 易</span><span class="ls-tag">MIT</span><span class="ls-tag ls-st-active">活跃</span></div>
+</article>
+<article class="ls-card" data-cat="framework" data-lang="Python" data-diff="易" data-act="1" data-stars="30501" data-upd="2026-11-23" data-name="huggingface/smolagents" data-search="huggingface/smolagents 核心代码极少的 code-agent 想读懂 agent 内部原理 官方宣称核心约千行，写代码当动作，适合拿来拆解学习。  python apache-2.0 编排框架 / sdk">
+<div class="ls-ctop"><a class="ls-repo" href="https://github.com/huggingface/smolagents" target="_blank" rel="noopener noreferrer">huggingface/smolagents</a><span class="ls-stars" title="★ 30,501 · 创建 2024-12 · 最近提交 2026-11-23 · https://huggingface.co/docs/smolagents">★ 3.1 万</span></div>
+<p class="ls-pitch">核心代码极少的 code-agent</p>
+<p class="ls-aud">适合：想读懂 Agent 内部原理</p>
+<p class="ls-note">官方宣称核心约千行，写代码当动作，适合拿来拆解学习。</p>
+<div class="ls-meta"><span class="ls-tag">Python</span><span class="ls-tag ls-d-easy">门槛 易</span><span class="ls-tag">Apache-2.0</span><span class="ls-tag ls-st-active">活跃</span></div>
+</article>
+<article class="ls-card" data-cat="framework" data-lang="TypeScript" data-diff="中" data-act="1" data-stars="29771" data-upd="2026-11-24" data-name="mastra-ai/mastra" data-search="mastra-ai/mastra typescript 原生的 agent 框架，工作流 / rag / 评测一体 用 ts 做产品的团队 gatsby 团队出品，agent + workflow + eval 装在一个包里，js 生态少见的完整方案。 agents ai chatbots evals javascript llm typescript mit+企业版 编排框架 / sdk">
+<div class="ls-ctop"><a class="ls-repo" href="https://github.com/mastra-ai/mastra" target="_blank" rel="noopener noreferrer">mastra-ai/mastra</a><span class="ls-stars" title="★ 29,771 · 创建 2024-08 · 最近提交 2026-11-24 · https://mastra.ai">★ 3 万</span></div>
+<p class="ls-pitch">TypeScript 原生的 Agent 框架，工作流 / RAG / 评测一体</p>
+<p class="ls-aud">适合：用 TS 做产品的团队</p>
+<p class="ls-note">Gatsby 团队出品，agent + workflow + eval 装在一个包里，JS 生态少见的完整方案。</p>
+<div class="ls-meta"><span class="ls-tag">TypeScript</span><span class="ls-tag ls-d-medium">门槛 中</span><span class="ls-tag">MIT+企业版</span><span class="ls-tag ls-st-active">活跃</span></div>
+</article>
+<article class="ls-card" data-cat="framework" data-lang="C#" data-diff="中" data-act="1" data-stars="28794" data-upd="2026-11-23" data-name="microsoft/semantic-kernel" data-search="microsoft/semantic-kernel 微软企业级 sdk，.net / python / java 三语 .net 技术栈或企业内网落地 与 azure/ai foundry 打通最顺，纯 python 团队用它会觉得偏重。 ai artificial-intelligence llm openai sdk c# mit 编排框架 / sdk">
+<div class="ls-ctop"><a class="ls-repo" href="https://github.com/microsoft/semantic-kernel" target="_blank" rel="noopener noreferrer">microsoft/semantic-kernel</a><span class="ls-stars" title="★ 28,794 · 创建 2023-02 · 最近提交 2026-11-23 · https://aka.ms/semantic-kernel">★ 2.9 万</span></div>
+<p class="ls-pitch">微软企业级 SDK，.NET / Python / Java 三语</p>
+<p class="ls-aud">适合：.NET 技术栈或企业内网落地</p>
+<p class="ls-note">与 Azure/AI Foundry 打通最顺，纯 Python 团队用它会觉得偏重。</p>
+<div class="ls-meta"><span class="ls-tag">C#</span><span class="ls-tag ls-d-medium">门槛 中</span><span class="ls-tag">MIT</span><span class="ls-tag ls-st-active">活跃</span></div>
+</article>
+<article class="ls-card" data-cat="framework" data-lang="Python" data-diff="中" data-act="1" data-stars="27084" data-upd="2026-11-23" data-name="deepset-ai/haystack" data-search="deepset-ai/haystack 生产级 rag 与 agent 管道编排 企业搜索、需要严格可控的检索链 管道式设计比 langchain 更显式，调试友好，社区规模小一些。 agent-framework agentic-ai agentic-rag agents ai ai-agents python apache-2.0 编排框架 / sdk">
+<div class="ls-ctop"><a class="ls-repo" href="https://github.com/deepset-ai/haystack" target="_blank" rel="noopener noreferrer">deepset-ai/haystack</a><span class="ls-stars" title="★ 27,084 · 创建 2019-11 · 最近提交 2026-11-23 · https://haystack.deepset.ai">★ 2.7 万</span></div>
+<p class="ls-pitch">生产级 RAG 与 Agent 管道编排</p>
+<p class="ls-aud">适合：企业搜索、需要严格可控的检索链</p>
+<p class="ls-note">管道式设计比 LangChain 更显式，调试友好，社区规模小一些。</p>
+<div class="ls-meta"><span class="ls-tag">Python</span><span class="ls-tag ls-d-medium">门槛 中</span><span class="ls-tag">Apache-2.0</span><span class="ls-tag ls-st-active">活跃</span></div>
+</article>
+<article class="ls-card" data-cat="framework" data-lang="Python" data-diff="中" data-act="1" data-stars="22324" data-upd="2026-11-23" data-name="google/adk-python" data-search="google/adk-python google 的 agent development kit gemini / gcp 生态 配套 a2a 协议与部署工具链，云上落地路径完整。 agent agentic agentic-ai agents agents-sdk ai python apache-2.0 编排框架 / sdk">
+<div class="ls-ctop"><a class="ls-repo" href="https://github.com/google/adk-python" target="_blank" rel="noopener noreferrer">google/adk-python</a><span class="ls-stars" title="★ 22,324 · 创建 2025-04 · 最近提交 2026-11-23 · https://google.github.io/adk-docs/">★ 2.2 万</span></div>
+<p class="ls-pitch">Google 的 Agent Development Kit</p>
+<p class="ls-aud">适合：Gemini / GCP 生态</p>
+<p class="ls-note">配套 A2A 协议与部署工具链，云上落地路径完整。</p>
+<div class="ls-meta"><span class="ls-tag">Python</span><span class="ls-tag ls-d-medium">门槛 中</span><span class="ls-tag">Apache-2.0</span><span class="ls-tag ls-st-active">活跃</span></div>
+</article>
+<article class="ls-card" data-cat="framework" data-lang="Python" data-diff="易" data-act="1" data-stars="21351" data-upd="2026-11-23" data-name="pydantic/pydantic-ai" data-search="pydantic/pydantic-ai 类型安全的 agent 框架 重度 python 类型标注、要可维护性 pydantic 团队出品，结构化输出与依赖注入做得最扎实，工程感强。 agent-framework genai harness harness-engineering llm pydantic python mit 编排框架 / sdk">
+<div class="ls-ctop"><a class="ls-repo" href="https://github.com/pydantic/pydantic-ai" target="_blank" rel="noopener noreferrer">pydantic/pydantic-ai</a><span class="ls-stars" title="★ 21,351 · 创建 2024-06 · 最近提交 2026-11-23 · https://pydantic.dev/pydantic-ai">★ 2.1 万</span></div>
+<p class="ls-pitch">类型安全的 Agent 框架</p>
+<p class="ls-aud">适合：重度 Python 类型标注、要可维护性</p>
+<p class="ls-note">Pydantic 团队出品，结构化输出与依赖注入做得最扎实，工程感强。</p>
+<div class="ls-meta"><span class="ls-tag">Python</span><span class="ls-tag ls-d-easy">门槛 易</span><span class="ls-tag">MIT</span><span class="ls-tag ls-st-active">活跃</span></div>
+</article>
+<article class="ls-card" data-cat="framework" data-lang="Python" data-diff="中" data-act="0" data-stars="17281" data-upd="2026-03-04" data-name="qwenlm/qwen-agent" data-search="qwenlm/qwen-agent 通义千问官方的 agent 框架 用 qwen 系模型做工具调用 函数调用、代码解释器、rag、mcp 都有现成实现，和 qwen 模型配合最紧。  python apache-2.0 编排框架 / sdk">
+<div class="ls-ctop"><a class="ls-repo" href="https://github.com/QwenLM/Qwen-Agent" target="_blank" rel="noopener noreferrer">QwenLM/Qwen-Agent</a><span class="ls-stars" title="★ 17,281 · 创建 2023-09 · 最近提交 2026-03-04 · https://pypi.org/project/qwen-agent/">★ 1.7 万</span></div>
+<p class="ls-pitch">通义千问官方的 Agent 框架</p>
+<p class="ls-aud">适合：用 Qwen 系模型做工具调用</p>
+<p class="ls-note">函数调用、代码解释器、RAG、MCP 都有现成实现，和 Qwen 模型配合最紧。</p>
+<div class="ls-meta"><span class="ls-tag">Python</span><span class="ls-tag ls-d-medium">门槛 中</span><span class="ls-tag">Apache-2.0</span><span class="ls-tag ls-st-stale">沉寂</span></div>
+</article>
+<article class="ls-card" data-cat="framework" data-lang="TypeScript" data-diff="中" data-act="1" data-stars="11006" data-upd="2026-11-06" data-name="voltagent/voltagent" data-search="voltagent/voltagent 带可视化调试台的 typescript agent 平台 想要开箱就有 trace 的 ts 团队 框架 + console 一体，跑起来就能看每条执行轨迹；生态比 mastra 小一圈。 agents ai ai-agents ai-agents-framework aiagentframework chatbots typescript mit 编排框架 / sdk">
+<div class="ls-ctop"><a class="ls-repo" href="https://github.com/VoltAgent/voltagent" target="_blank" rel="noopener noreferrer">VoltAgent/voltagent</a><span class="ls-stars" title="★ 11,006 · 创建 2025-04 · 最近提交 2026-11-06 · https://voltagent.dev">★ 1.1 万</span></div>
+<p class="ls-pitch">带可视化调试台的 TypeScript Agent 平台</p>
+<p class="ls-aud">适合：想要开箱就有 trace 的 TS 团队</p>
+<p class="ls-note">框架 + Console 一体，跑起来就能看每条执行轨迹；生态比 Mastra 小一圈。</p>
+<div class="ls-meta"><span class="ls-tag">TypeScript</span><span class="ls-tag ls-d-medium">门槛 中</span><span class="ls-tag">MIT</span><span class="ls-tag ls-st-active">活跃</span></div>
+</article>
+<article class="ls-card" data-cat="framework" data-lang="TypeScript" data-diff="中" data-act="1" data-stars="9279" data-upd="2026-11-23" data-name="strands-agents/harness-sdk" data-search="strands-agents/harness-sdk aws 的 model-driven agent sdk 要在 aws 上落生产的团队 python / typescript 双语言，把「让模型自己决定调什么工具」当第一性原理；bedrock 集成是加分项。 agent-framework agentic agentic-ai agents ai ai-agents typescript apache-2.0 编排框架 / sdk">
+<div class="ls-ctop"><a class="ls-repo" href="https://github.com/strands-agents/harness-sdk" target="_blank" rel="noopener noreferrer">strands-agents/harness-sdk</a><span class="ls-stars" title="★ 9,279 · 创建 2025-05 · 最近提交 2026-11-23 · http://strandsagents.com/">★ 9,279</span></div>
+<p class="ls-pitch">AWS 的 model-driven Agent SDK</p>
+<p class="ls-aud">适合：要在 AWS 上落生产的团队</p>
+<p class="ls-note">Python / TypeScript 双语言，把「让模型自己决定调什么工具」当第一性原理；Bedrock 集成是加分项。</p>
+<div class="ls-meta"><span class="ls-tag">TypeScript</span><span class="ls-tag ls-d-medium">门槛 中</span><span class="ls-tag">Apache-2.0</span><span class="ls-tag ls-st-active">活跃</span></div>
+</article>
+<article class="ls-card" data-cat="framework" data-lang="Python" data-diff="中" data-act="1" data-stars="8635" data-upd="2026-11-23" data-name="anthropics/claude-agent-sdk-python" data-search="anthropics/claude-agent-sdk-python 把 claude code 工具循环嵌进自己的应用 要用 python 集成 claude code 能力的开发者 官方 python sdk，提供 agent loop、工具与权限控制；不是通用多模型框架，依赖 claude 生态。  python mit 编排框架 / sdk">
+<div class="ls-ctop"><a class="ls-repo" href="https://github.com/anthropics/claude-agent-sdk-python" target="_blank" rel="noopener noreferrer">anthropics/claude-agent-sdk-python</a><span class="ls-stars" title="★ 8,635 · 创建 2025-06 · 最近提交 2026-11-23">★ 8,635</span></div>
+<p class="ls-pitch">把 Claude Code 工具循环嵌进自己的应用</p>
+<p class="ls-aud">适合：要用 Python 集成 Claude Code 能力的开发者</p>
+<p class="ls-note">官方 Python SDK，提供 Agent loop、工具与权限控制；不是通用多模型框架，依赖 Claude 生态。</p>
+<div class="ls-meta"><span class="ls-tag">Python</span><span class="ls-tag ls-d-medium">门槛 中</span><span class="ls-tag">MIT</span><span class="ls-tag ls-st-active">活跃</span></div>
+</article>
+<article class="ls-card" data-cat="framework" data-lang="TypeScript" data-diff="中" data-act="1" data-stars="6040" data-upd="2026-11-24" data-name="cloudflare/agents" data-search="cloudflare/agents cloudflare 官方的 agent 运行时 sdk 在 cloudflare 生态内做部署的人 durable objects 打底，agent 天然长驻且按量计费；离开 cf 生态就没意义。 agents ai cloudflare durable-objects workflows typescript mit 编排框架 / sdk">
+<div class="ls-ctop"><a class="ls-repo" href="https://github.com/cloudflare/agents" target="_blank" rel="noopener noreferrer">cloudflare/agents</a><span class="ls-stars" title="★ 6,040 · 创建 2025-01 · 最近提交 2026-11-24 · https://developers.cloudflare.com/agents/">★ 6,040</span></div>
+<p class="ls-pitch">Cloudflare 官方的 Agent 运行时 SDK</p>
+<p class="ls-aud">适合：在 Cloudflare 生态内做部署的人</p>
+<p class="ls-note">Durable Objects 打底，Agent 天然长驻且按量计费；离开 CF 生态就没意义。</p>
+<div class="ls-meta"><span class="ls-tag">TypeScript</span><span class="ls-tag ls-d-medium">门槛 中</span><span class="ls-tag">MIT</span><span class="ls-tag ls-st-active">活跃</span></div>
+</article>
+<article class="ls-card" data-cat="framework" data-lang="Python" data-diff="易" data-act="1" data-stars="4431" data-upd="2026-11-23" data-name="modelscope/ms-agent" data-search="modelscope/ms-agent 魔搭的轻量 agent 框架 在中文模型生态里做 agent 的人 代码生成、深度研究、agentic rl 几条线都有可跑示例，和 modelscope 模型库贴得紧；文档与社区以中文为主。 agentic-insight agentic-search chat-bot code-generation deep-research memory python apache-2.0 编排框架 / sdk">
+<div class="ls-ctop"><a class="ls-repo" href="https://github.com/modelscope/ms-agent" target="_blank" rel="noopener noreferrer">modelscope/ms-agent</a><span class="ls-stars" title="★ 4,431 · 创建 2023-08 · 最近提交 2026-11-23 · https://ms-agent-en.readthedocs.io">★ 4,431</span></div>
+<p class="ls-pitch">魔搭的轻量 Agent 框架</p>
+<p class="ls-aud">适合：在中文模型生态里做 Agent 的人</p>
+<p class="ls-note">代码生成、深度研究、Agentic RL 几条线都有可跑示例，和 ModelScope 模型库贴得紧；文档与社区以中文为主。</p>
+<div class="ls-meta"><span class="ls-tag">Python</span><span class="ls-tag ls-d-easy">门槛 易</span><span class="ls-tag">Apache-2.0</span><span class="ls-tag ls-st-active">活跃</span></div>
+</article>
+</div></section>
+<section class="ls-group" data-cat="platform">
+<div class="ls-gh"><h3><span class="ls-gi">02</span>低代码平台 / 工作流</h3><span class="ls-gsub">拖拽或节点式搭建，少写代码</span><span class="ls-gmeta"><b class="ls-gn">7</b> 个项目 · <b class="ls-gs">66.4 万</b>星标</span></div>
+<div class="ls-grid">
+<article class="ls-card" data-cat="platform" data-lang="TypeScript" data-diff="易" data-act="1" data-stars="211913" data-upd="2026-11-23" data-name="n8n-io/n8n" data-search="n8n-io/n8n 节点式自动化，内建 ai agent 节点 已有系统集成多、要串业务流程 本质是自动化平台长出 agent 能力，接 400+ 服务，比纯 agent 框架更适合「干活」。 ai apis automation cli data-flow development typescript sustainable use 低代码平台 / 工作流">
+<div class="ls-ctop"><a class="ls-repo" href="https://github.com/n8n-io/n8n" target="_blank" rel="noopener noreferrer">n8n-io/n8n</a><span class="ls-stars" title="★ 211,913 · 创建 2019-06 · 最近提交 2026-11-23 · https://n8n.io">★ 21.2 万</span></div>
+<p class="ls-pitch">节点式自动化，内建 AI Agent 节点</p>
+<p class="ls-aud">适合：已有系统集成多、要串业务流程</p>
+<p class="ls-note">本质是自动化平台长出 Agent 能力，接 400+ 服务，比纯 Agent 框架更适合「干活」。</p>
+<div class="ls-meta"><span class="ls-tag">TypeScript</span><span class="ls-tag ls-d-easy">门槛 易</span><span class="ls-tag">Sustainable Use</span><span class="ls-tag ls-st-active">活跃</span></div>
+</article>
+<article class="ls-card" data-cat="platform" data-lang="Python" data-diff="易" data-act="1" data-stars="161747" data-upd="2026-11-23" data-name="langgenius/dify" data-search="langgenius/dify 可视化搭 llm 应用 + 私有化部署 团队要快速上线内部 ai 应用 目前最均衡的开源平台：工作流、知识库、agent、观测都有，中文文档友好。 agent agentic-ai agentic-framework agentic-workflow ai automation python apache-2.0+ 低代码平台 / 工作流">
+<div class="ls-ctop"><a class="ls-repo" href="https://github.com/langgenius/dify" target="_blank" rel="noopener noreferrer">langgenius/dify</a><span class="ls-stars" title="★ 161,747 · 创建 2023-04 · 最近提交 2026-11-23 · https://dify.ai">★ 16.2 万</span></div>
+<p class="ls-pitch">可视化搭 LLM 应用 + 私有化部署</p>
+<p class="ls-aud">适合：团队要快速上线内部 AI 应用</p>
+<p class="ls-note">目前最均衡的开源平台：工作流、知识库、Agent、观测都有，中文文档友好。</p>
+<div class="ls-meta"><span class="ls-tag">Python</span><span class="ls-tag ls-d-easy">门槛 易</span><span class="ls-tag">Apache-2.0+</span><span class="ls-tag ls-st-active">活跃</span></div>
+</article>
+<article class="ls-card" data-cat="platform" data-lang="Python" data-diff="易" data-act="1" data-stars="156881" data-upd="2026-11-23" data-name="langflow-ai/langflow" data-search="langflow-ai/langflow 可视化编排并一键导出 api/mcp 低代码原型转生产接口 导出即可当服务用，前端体验比 flowise 更现代。 agents chatgpt generative-ai large-language-models multiagent react-flow python mit 低代码平台 / 工作流">
+<div class="ls-ctop"><a class="ls-repo" href="https://github.com/langflow-ai/langflow" target="_blank" rel="noopener noreferrer">langflow-ai/langflow</a><span class="ls-stars" title="★ 156,881 · 创建 2023-02 · 最近提交 2026-11-23 · http://www.langflow.org">★ 15.7 万</span></div>
+<p class="ls-pitch">可视化编排并一键导出 API/MCP</p>
+<p class="ls-aud">适合：低代码原型转生产接口</p>
+<p class="ls-note">导出即可当服务用，前端体验比 Flowise 更现代。</p>
+<div class="ls-meta"><span class="ls-tag">Python</span><span class="ls-tag ls-d-easy">门槛 易</span><span class="ls-tag">MIT</span><span class="ls-tag ls-st-active">活跃</span></div>
+</article>
+<article class="ls-card" data-cat="platform" data-lang="TypeScript" data-diff="易" data-act="0" data-stars="55592" data-upd="2026-08-13" data-name="flowiseai/flowise" data-search="flowiseai/flowise 拖拽式编排 langchain 流程 非程序员快速验证想法 上手门槛最低的一档，复杂逻辑会很快撞到可视化天花板；仓库已归档。 agentic-ai agentic-workflow agents artificial-intelligence chatbot chatgpt typescript apache-2.0+ 低代码平台 / 工作流">
+<div class="ls-ctop"><a class="ls-repo" href="https://github.com/FlowiseAI/Flowise" target="_blank" rel="noopener noreferrer">FlowiseAI/Flowise</a><span class="ls-stars" title="★ 55,592 · 创建 2023-03 · 最近提交 2026-08-13 · https://flowiseai.com">★ 5.6 万</span></div>
+<p class="ls-pitch">拖拽式编排 LangChain 流程</p>
+<p class="ls-aud">适合：非程序员快速验证想法</p>
+<p class="ls-note">上手门槛最低的一档，复杂逻辑会很快撞到可视化天花板；仓库已归档。</p>
+<div class="ls-meta"><span class="ls-tag">TypeScript</span><span class="ls-tag ls-d-easy">门槛 易</span><span class="ls-tag">Apache-2.0+</span><span class="ls-tag ls-st-archived">已归档</span></div>
+</article>
+<article class="ls-card" data-cat="platform" data-lang="TypeScript" data-diff="易" data-act="1" data-stars="30194" data-upd="2026-11-23" data-name="simstudioai/sim" data-search="simstudioai/sim 协作式 agent 工作流画布 要拖拽 + 部署 + 监控一体的人 可视化编排后可直接部署并监控，比 langflow 更偏「产品态」；apache-2.0，干净。 agent-workflow agentic-workflow agents ai aiagents anthropic typescript apache-2.0 低代码平台 / 工作流">
+<div class="ls-ctop"><a class="ls-repo" href="https://github.com/simstudioai/sim" target="_blank" rel="noopener noreferrer">simstudioai/sim</a><span class="ls-stars" title="★ 30,194 · 创建 2025-01 · 最近提交 2026-11-23 · https://www.sim.ai">★ 3 万</span></div>
+<p class="ls-pitch">协作式 Agent 工作流画布</p>
+<p class="ls-aud">适合：要拖拽 + 部署 + 监控一体的人</p>
+<p class="ls-note">可视化编排后可直接部署并监控，比 Langflow 更偏「产品态」；Apache-2.0，干净。</p>
+<div class="ls-meta"><span class="ls-tag">TypeScript</span><span class="ls-tag ls-d-easy">门槛 易</span><span class="ls-tag">Apache-2.0</span><span class="ls-tag ls-st-active">活跃</span></div>
+</article>
+<article class="ls-card" data-cat="platform" data-lang="TypeScript" data-diff="易" data-act="1" data-stars="25688" data-upd="2026-11-23" data-name="activepieces/activepieces" data-search="activepieces/activepieces 开源自托管版 zapier，带 ai 能力 预算敏感、要私有部署的自动化 定位偏 ipaas，agent 只是其中一块拼图。 ai-agent ai-agent-tools ai-agents ai-agents-framework mcp mcp-server typescript mit+企业版 低代码平台 / 工作流">
+<div class="ls-ctop"><a class="ls-repo" href="https://github.com/activepieces/activepieces" target="_blank" rel="noopener noreferrer">activepieces/activepieces</a><span class="ls-stars" title="★ 25,688 · 创建 2022-12 · 最近提交 2026-11-23 · https://www.activepieces.com">★ 2.6 万</span></div>
+<p class="ls-pitch">开源自托管版 Zapier，带 AI 能力</p>
+<p class="ls-aud">适合：预算敏感、要私有部署的自动化</p>
+<p class="ls-note">定位偏 iPaaS，Agent 只是其中一块拼图。</p>
+<div class="ls-meta"><span class="ls-tag">TypeScript</span><span class="ls-tag ls-d-easy">门槛 易</span><span class="ls-tag">MIT+企业版</span><span class="ls-tag ls-st-active">活跃</span></div>
+</article>
+<article class="ls-card" data-cat="platform" data-lang="TypeScript" data-diff="中" data-act="0" data-stars="21825" data-upd="2026-07-29" data-name="coze-dev/coze-studio" data-search="coze-dev/coze-studio 字节 coze 开源版：可视化搭 agent 与应用 要自部署一套低代码 agent 平台 插件/工作流/知识库/发布渠道齐全，中文生态最完整的一档；组件多，docker 编排需要点耐心。 agent agent-platform ai-plugins chatbot chatbot-framework coze typescript apache-2.0 低代码平台 / 工作流">
+<div class="ls-ctop"><a class="ls-repo" href="https://github.com/coze-dev/coze-studio" target="_blank" rel="noopener noreferrer">coze-dev/coze-studio</a><span class="ls-stars" title="★ 21,825 · 创建 2025-06 · 最近提交 2026-07-29">★ 2.2 万</span></div>
+<p class="ls-pitch">字节 Coze 开源版：可视化搭 Agent 与应用</p>
+<p class="ls-aud">适合：要自部署一套低代码 Agent 平台</p>
+<p class="ls-note">插件/工作流/知识库/发布渠道齐全，中文生态最完整的一档；组件多，Docker 编排需要点耐心。</p>
+<div class="ls-meta"><span class="ls-tag">TypeScript</span><span class="ls-tag ls-d-medium">门槛 中</span><span class="ls-tag">Apache-2.0</span><span class="ls-tag ls-st-maintained">维护中</span></div>
+</article>
+</div></section>
+<section class="ls-group" data-cat="coding">
+<div class="ls-gh"><h3><span class="ls-gi">03</span>编码 Agent</h3><span class="ls-gsub">写代码、改仓库、跑测试</span><span class="ls-gmeta"><b class="ls-gn">21</b> 个项目 · <b class="ls-gs">222 万</b>星标</span></div>
+<div class="ls-grid">
+<article class="ls-card" data-cat="coding" data-lang="TypeScript" data-diff="难" data-act="1" data-stars="475682" data-upd="2026-11-24" data-name="morluto/rea" data-search="morluto/rea 用 agent 做逆向工程，从应用行为到原生二进制 安全研究、逆向分析人员 全榜单星标第一（47.6 万），定位很窄但热度惊人；逆向场景落地前先看合规边界。 agent-skills ai android claude-code cli cpp typescript mit 编码 agent">
+<div class="ls-ctop"><a class="ls-repo" href="https://github.com/morluto/rea" target="_blank" rel="noopener noreferrer">morluto/rea</a><span class="ls-stars" title="★ 475,682 · 创建 2026-04 · 最近提交 2026-11-24 · https://rea.tools">★ 47.6 万</span></div>
+<p class="ls-pitch">用 Agent 做逆向工程，从应用行为到原生二进制</p>
+<p class="ls-aud">适合：安全研究、逆向分析人员</p>
+<p class="ls-note">全榜单星标第一（47.6 万），定位很窄但热度惊人；逆向场景落地前先看合规边界。</p>
+<div class="ls-meta"><span class="ls-tag">TypeScript</span><span class="ls-tag ls-d-hard">门槛 难</span><span class="ls-tag">MIT</span><span class="ls-tag ls-st-active">活跃</span></div>
+</article>
+<article class="ls-card" data-cat="coding" data-lang="TypeScript" data-diff="易" data-act="1" data-stars="286111" data-upd="2026-11-22" data-name="deepseek-ai/deepseek-harness" data-search="deepseek-ai/deepseek-harness deepseek 的 agent harness：一切皆插件 想深度定制工作流的进阶用户 官方 harness，把工具、技能、记忆全部插件化；迭代很快，文档追不上代码。 ai-agents cordis dsh dsh-plugin typescript mit 编码 agent">
+<div class="ls-ctop"><a class="ls-repo" href="https://github.com/deepseek-ai/deepseek-harness" target="_blank" rel="noopener noreferrer">deepseek-ai/deepseek-harness</a><span class="ls-stars" title="★ 286,111 · 创建 2026-08 · 最近提交 2026-11-22 · https://deepseek.com/harness">★ 28.6 万</span></div>
+<p class="ls-pitch">DeepSeek 的 Agent Harness：一切皆插件</p>
+<p class="ls-aud">适合：想深度定制工作流的进阶用户</p>
+<p class="ls-note">官方 harness，把工具、技能、记忆全部插件化；迭代很快，文档追不上代码。</p>
+<div class="ls-meta"><span class="ls-tag">TypeScript</span><span class="ls-tag ls-d-easy">门槛 易</span><span class="ls-tag">MIT</span><span class="ls-tag ls-st-active">活跃</span></div>
+</article>
+<article class="ls-card" data-cat="coding" data-lang="TypeScript" data-diff="易" data-act="1" data-stars="228818" data-upd="2026-11-24" data-name="anomalyco/opencode" data-search="anomalyco/opencode 开源终端编码 agent 里最热的那个 想摆脱闭源 cli 限制的开发者 mit、模型 provider 无关，随便换；star 已超过大多数闭源对手，代价是接口变得快。  typescript mit 编码 agent">
+<div class="ls-ctop"><a class="ls-repo" href="https://github.com/anomalyco/opencode" target="_blank" rel="noopener noreferrer">anomalyco/opencode</a><span class="ls-stars" title="★ 228,818 · 创建 2025-04 · 最近提交 2026-11-24 · https://opencode.ai">★ 22.9 万</span></div>
+<p class="ls-pitch">开源终端编码 Agent 里最热的那个</p>
+<p class="ls-aud">适合：想摆脱闭源 CLI 限制的开发者</p>
+<p class="ls-note">MIT、模型 provider 无关，随便换；star 已超过大多数闭源对手，代价是接口变得快。</p>
+<div class="ls-meta"><span class="ls-tag">TypeScript</span><span class="ls-tag ls-d-easy">门槛 易</span><span class="ls-tag">MIT</span><span class="ls-tag ls-st-active">活跃</span></div>
+</article>
+<article class="ls-card" data-cat="coding" data-lang="TypeScript" data-diff="易" data-act="1" data-stars="156801" data-upd="2026-11-23" data-name="anthropics/claude-code" data-search="anthropics/claude-code 终端里的编码 agent 标杆 日常写代码、重构、跑测试 本项目仓库主要放文档与 issue，闭源分发但当前综合体验最强。  typescript 闭源分发 编码 agent">
+<div class="ls-ctop"><a class="ls-repo" href="https://github.com/anthropics/claude-code" target="_blank" rel="noopener noreferrer">anthropics/claude-code</a><span class="ls-stars" title="★ 156,801 · 创建 2025-02 · 最近提交 2026-11-23 · https://code.claude.com/docs/en/overview">★ 15.7 万</span></div>
+<p class="ls-pitch">终端里的编码 Agent 标杆</p>
+<p class="ls-aud">适合：日常写代码、重构、跑测试</p>
+<p class="ls-note">本项目仓库主要放文档与 issue，闭源分发但当前综合体验最强。</p>
+<div class="ls-meta"><span class="ls-tag">TypeScript</span><span class="ls-tag ls-d-easy">门槛 易</span><span class="ls-tag">闭源分发</span><span class="ls-tag ls-st-active">活跃</span></div>
+</article>
+<article class="ls-card" data-cat="coding" data-lang="Rust" data-diff="易" data-act="1" data-stars="156671" data-upd="2026-11-24" data-name="farion1231/cc-switch" data-search="farion1231/cc-switch 一个桌面面板统管各家终端编码 agent 同时用多个 cli agent 的人 claude code、codex、opencode、deepseek harness 的账号与会话统一入口；本身不写代码，是调度台。 ai-tools claude-code codex deepseek-harness desktop-app grok rust mit 编码 agent">
+<div class="ls-ctop"><a class="ls-repo" href="https://github.com/farion1231/cc-switch" target="_blank" rel="noopener noreferrer">farion1231/cc-switch</a><span class="ls-stars" title="★ 156,671 · 创建 2025-08 · 最近提交 2026-11-24 · https://ccswitch.io">★ 15.7 万</span></div>
+<p class="ls-pitch">一个桌面面板统管各家终端编码 Agent</p>
+<p class="ls-aud">适合：同时用多个 CLI Agent 的人</p>
+<p class="ls-note">Claude Code、Codex、OpenCode、DeepSeek Harness 的账号与会话统一入口；本身不写代码，是调度台。</p>
+<div class="ls-meta"><span class="ls-tag">Rust</span><span class="ls-tag ls-d-easy">门槛 易</span><span class="ls-tag">MIT</span><span class="ls-tag ls-st-active">活跃</span></div>
+</article>
+<article class="ls-card" data-cat="coding" data-lang="Rust" data-diff="易" data-act="1" data-stars="136236" data-upd="2026-11-23" data-name="openai/codex" data-search="openai/codex openai 官方终端编码 agent 已订阅 chatgpt 的开发者 rust 实现，沙箱与审批机制完善，与 gpt 系模型配合最紧。  rust apache-2.0 编码 agent">
+<div class="ls-ctop"><a class="ls-repo" href="https://github.com/openai/codex" target="_blank" rel="noopener noreferrer">openai/codex</a><span class="ls-stars" title="★ 136,236 · 创建 2025-04 · 最近提交 2026-11-23">★ 13.6 万</span></div>
+<p class="ls-pitch">OpenAI 官方终端编码 Agent</p>
+<p class="ls-aud">适合：已订阅 ChatGPT 的开发者</p>
+<p class="ls-note">Rust 实现，沙箱与审批机制完善，与 GPT 系模型配合最紧。</p>
+<div class="ls-meta"><span class="ls-tag">Rust</span><span class="ls-tag ls-d-easy">门槛 易</span><span class="ls-tag">Apache-2.0</span><span class="ls-tag ls-st-active">活跃</span></div>
+</article>
+<article class="ls-card" data-cat="coding" data-lang="TypeScript" data-diff="中" data-act="1" data-stars="134603" data-upd="2026-11-24" data-name="stablyai/orca" data-search="stablyai/orca 用自己的订阅跑一支编码 agent 舰队 想并行跑多个编码 agent 的团队 复用你已有的各家 cli 订阅，把任务分给一群 bot 并行干；调度强，单任务质量取决于底下用的那个 agent。 agent-ide ai-agents automation bot claude-code codex typescript mit 编码 agent">
+<div class="ls-ctop"><a class="ls-repo" href="https://github.com/stablyai/orca" target="_blank" rel="noopener noreferrer">stablyai/orca</a><span class="ls-stars" title="★ 134,603 · 创建 2026-03 · 最近提交 2026-11-24 · https://orca.dev">★ 13.5 万</span></div>
+<p class="ls-pitch">用自己的订阅跑一支编码 Agent 舰队</p>
+<p class="ls-aud">适合：想并行跑多个编码 Agent 的团队</p>
+<p class="ls-note">复用你已有的各家 CLI 订阅，把任务分给一群 bot 并行干；调度强，单任务质量取决于底下用的那个 Agent。</p>
+<div class="ls-meta"><span class="ls-tag">TypeScript</span><span class="ls-tag ls-d-medium">门槛 中</span><span class="ls-tag">MIT</span><span class="ls-tag ls-st-active">活跃</span></div>
+</article>
+<article class="ls-card" data-cat="coding" data-lang="TypeScript" data-diff="易" data-act="1" data-stars="109022" data-upd="2026-11-23" data-name="google-gemini/gemini-cli" data-search="google-gemini/gemini-cli gemini 官方终端 agent，免费额度大 想低成本上手终端 agent 百万级上下文是优势，适合读大仓库。 ai ai-agents cli gemini gemini-api mcp-client typescript apache-2.0 编码 agent">
+<div class="ls-ctop"><a class="ls-repo" href="https://github.com/google-gemini/gemini-cli" target="_blank" rel="noopener noreferrer">google-gemini/gemini-cli</a><span class="ls-stars" title="★ 109,022 · 创建 2025-04 · 最近提交 2026-11-23 · https://geminicli.com">★ 10.9 万</span></div>
+<p class="ls-pitch">Gemini 官方终端 Agent，免费额度大</p>
+<p class="ls-aud">适合：想低成本上手终端 Agent</p>
+<p class="ls-note">百万级上下文是优势，适合读大仓库。</p>
+<div class="ls-meta"><span class="ls-tag">TypeScript</span><span class="ls-tag ls-d-easy">门槛 易</span><span class="ls-tag">Apache-2.0</span><span class="ls-tag ls-st-active">活跃</span></div>
+</article>
+<article class="ls-card" data-cat="coding" data-lang="TypeScript" data-diff="难" data-act="1" data-stars="94152" data-upd="2026-11-23" data-name="openhands/openhands" data-search="openhands/openhands 能独立完成开发任务的开源软件工程 agent 想要 claude code 的开源替代 跑在沙箱里改仓库、执行命令、跑测试，swe-bench 系表现靠前的开源代表。 agent artificial-intelligence chatgpt claude-ai cli developer-tools typescript mit 编码 agent">
+<div class="ls-ctop"><a class="ls-repo" href="https://github.com/OpenHands/OpenHands" target="_blank" rel="noopener noreferrer">OpenHands/OpenHands</a><span class="ls-stars" title="★ 94,152 · 创建 2024-03 · 最近提交 2026-11-23 · https://openhands.dev">★ 9.4 万</span></div>
+<p class="ls-pitch">能独立完成开发任务的开源软件工程 Agent</p>
+<p class="ls-aud">适合：想要 Claude Code 的开源替代</p>
+<p class="ls-note">跑在沙箱里改仓库、执行命令、跑测试，SWE-bench 系表现靠前的开源代表。</p>
+<div class="ls-meta"><span class="ls-tag">TypeScript</span><span class="ls-tag ls-d-hard">门槛 难</span><span class="ls-tag">MIT</span><span class="ls-tag ls-st-active">活跃</span></div>
+</article>
+<article class="ls-card" data-cat="coding" data-lang="TypeScript" data-diff="易" data-act="1" data-stars="71847" data-upd="2026-11-23" data-name="cline/cline" data-search="cline/cline vs code 里能读文件、跑命令的自主编码 agent vs code 用户、要可视化审批每一步 插件形态渗透率高，配合各家 api key 灵活。  typescript apache-2.0 编码 agent">
+<div class="ls-ctop"><a class="ls-repo" href="https://github.com/cline/cline" target="_blank" rel="noopener noreferrer">cline/cline</a><span class="ls-stars" title="★ 71,847 · 创建 2024-07 · 最近提交 2026-11-23 · https://cline.bot">★ 7.2 万</span></div>
+<p class="ls-pitch">VS Code 里能读文件、跑命令的自主编码 Agent</p>
+<p class="ls-aud">适合：VS Code 用户、要可视化审批每一步</p>
+<p class="ls-note">插件形态渗透率高，配合各家 API Key 灵活。</p>
+<div class="ls-meta"><span class="ls-tag">TypeScript</span><span class="ls-tag ls-d-easy">门槛 易</span><span class="ls-tag">Apache-2.0</span><span class="ls-tag ls-st-active">活跃</span></div>
+</article>
+<article class="ls-card" data-cat="coding" data-lang="Rust" data-diff="中" data-act="1" data-stars="56876" data-upd="2026-11-22" data-name="aaif-goose/goose" data-search="aaif-goose/goose 本地运行、可扩展的 on-machine agent 要在自己机器上跑自动化任务 block 开源，扩展机制成熟，偏「本地自动化」而非纯编码。  rust apache-2.0 编码 agent">
+<div class="ls-ctop"><a class="ls-repo" href="https://github.com/aaif-goose/goose" target="_blank" rel="noopener noreferrer">aaif-goose/goose</a><span class="ls-stars" title="★ 56,876 · 创建 2024-08 · 最近提交 2026-11-22">★ 5.7 万</span></div>
+<p class="ls-pitch">本地运行、可扩展的 on-machine Agent</p>
+<p class="ls-aud">适合：要在自己机器上跑自动化任务</p>
+<p class="ls-note">Block 开源，扩展机制成熟，偏「本地自动化」而非纯编码。</p>
+<div class="ls-meta"><span class="ls-tag">Rust</span><span class="ls-tag ls-d-medium">门槛 中</span><span class="ls-tag">Apache-2.0</span><span class="ls-tag ls-st-active">活跃</span></div>
+</article>
+<article class="ls-card" data-cat="coding" data-lang="Python" data-diff="易" data-act="0" data-stars="54946" data-upd="2025-05-14" data-name="antonosika/gpt-engineer" data-search="antonosika/gpt-engineer 自然语言直接生成整份代码库 快速搭脚手架、理解 codegen 思路 早期明星项目，思路影响深远，如今迭代缓慢。  python mit 编码 agent">
+<div class="ls-ctop"><a class="ls-repo" href="https://github.com/AntonOsika/gpt-engineer" target="_blank" rel="noopener noreferrer">AntonOsika/gpt-engineer</a><span class="ls-stars" title="★ 54,946 · 创建 2023-04 · 最近提交 2025-05-14">★ 5.5 万</span></div>
+<p class="ls-pitch">自然语言直接生成整份代码库</p>
+<p class="ls-aud">适合：快速搭脚手架、理解 codegen 思路</p>
+<p class="ls-note">早期明星项目，思路影响深远，如今迭代缓慢。</p>
+<div class="ls-meta"><span class="ls-tag">Python</span><span class="ls-tag ls-d-easy">门槛 易</span><span class="ls-tag">MIT</span><span class="ls-tag ls-st-stale">沉寂</span></div>
+</article>
+<article class="ls-card" data-cat="coding" data-lang="Python" data-diff="易" data-act="0" data-stars="50228" data-upd="2026-05-22" data-name="aider-ai/aider" data-search="aider-ai/aider git 原生的命令行结对编程 习惯终端的资深开发者 每次改动自动提交、可回滚，模型可自由切换，稳。 anthropic chatgpt claude-3 cli command-line gemini python apache-2.0 编码 agent">
+<div class="ls-ctop"><a class="ls-repo" href="https://github.com/Aider-AI/aider" target="_blank" rel="noopener noreferrer">Aider-AI/aider</a><span class="ls-stars" title="★ 50,228 · 创建 2023-05 · 最近提交 2026-05-22 · https://aider.chat/">★ 5 万</span></div>
+<p class="ls-pitch">Git 原生的命令行结对编程</p>
+<p class="ls-aud">适合：习惯终端的资深开发者</p>
+<p class="ls-note">每次改动自动提交、可回滚，模型可自由切换，稳。</p>
+<div class="ls-meta"><span class="ls-tag">Python</span><span class="ls-tag ls-d-easy">门槛 易</span><span class="ls-tag">Apache-2.0</span><span class="ls-tag ls-st-maintained">维护中</span></div>
+</article>
+<article class="ls-card" data-cat="coding" data-lang="TypeScript" data-diff="易" data-act="1" data-stars="36543" data-upd="2026-11-23" data-name="continuedev/continue" data-search="continuedev/continue 可定制的 ide 内助手 + agent 模式 要接自有模型/内网模型 自定义模型与上下文提供方最灵活，适合企业内网。 agent ai cli developer-tools open-source typescript apache-2.0 编码 agent">
+<div class="ls-ctop"><a class="ls-repo" href="https://github.com/continuedev/continue" target="_blank" rel="noopener noreferrer">continuedev/continue</a><span class="ls-stars" title="★ 36,543 · 创建 2023-05 · 最近提交 2026-11-23 · https://continue.dev">★ 3.7 万</span></div>
+<p class="ls-pitch">可定制的 IDE 内助手 + Agent 模式</p>
+<p class="ls-aud">适合：要接自有模型/内网模型</p>
+<p class="ls-note">自定义模型与上下文提供方最灵活，适合企业内网。</p>
+<div class="ls-meta"><span class="ls-tag">TypeScript</span><span class="ls-tag ls-d-easy">门槛 易</span><span class="ls-tag">Apache-2.0</span><span class="ls-tag ls-st-active">活跃</span></div>
+</article>
+<article class="ls-card" data-cat="coding" data-lang="TypeScript" data-diff="易" data-act="1" data-stars="30903" data-upd="2026-11-24" data-name="qwenlm/qwen-code" data-search="qwenlm/qwen-code 通义千问官方的终端编码 agent 想用国内模型跑终端 agent 的团队 gemini cli 血统改造而来，qwen 模型上下文给得大方，国内网络友好。 agentic ai ai-agent ai-coding cli coding-agent typescript apache-2.0 编码 agent">
+<div class="ls-ctop"><a class="ls-repo" href="https://github.com/QwenLM/qwen-code" target="_blank" rel="noopener noreferrer">QwenLM/qwen-code</a><span class="ls-stars" title="★ 30,903 · 创建 2025-06 · 最近提交 2026-11-24 · https://qwenlm.github.io/qwen-code-docs/en/users/overview">★ 3.1 万</span></div>
+<p class="ls-pitch">通义千问官方的终端编码 Agent</p>
+<p class="ls-aud">适合：想用国内模型跑终端 Agent 的团队</p>
+<p class="ls-note">Gemini CLI 血统改造而来，Qwen 模型上下文给得大方，国内网络友好。</p>
+<div class="ls-meta"><span class="ls-tag">TypeScript</span><span class="ls-tag ls-d-easy">门槛 易</span><span class="ls-tag">Apache-2.0</span><span class="ls-tag ls-st-active">活跃</span></div>
+</article>
+<article class="ls-card" data-cat="coding" data-lang="Go" data-diff="易" data-act="1" data-stars="29176" data-upd="2026-11-24" data-name="charmbracelet/crush" data-search="charmbracelet/crush go 写的终端编码 agent，tui 手感最好 喜欢轻量单文件 tui 的人 charm 团队出品，界面延续 bubbletea 那套审美；插件生态小，胜在体验。 agentic-ai ai llms ravishing go fsl-1.1-mit 编码 agent">
+<div class="ls-ctop"><a class="ls-repo" href="https://github.com/charmbracelet/crush" target="_blank" rel="noopener noreferrer">charmbracelet/crush</a><span class="ls-stars" title="★ 29,176 · 创建 2025-05 · 最近提交 2026-11-24">★ 2.9 万</span></div>
+<p class="ls-pitch">Go 写的终端编码 Agent，TUI 手感最好</p>
+<p class="ls-aud">适合：喜欢轻量单文件 TUI 的人</p>
+<p class="ls-note">Charm 团队出品，界面延续 bubbletea 那套审美；插件生态小，胜在体验。</p>
+<div class="ls-meta"><span class="ls-tag">Go</span><span class="ls-tag ls-d-easy">门槛 易</span><span class="ls-tag">FSL-1.1-MIT</span><span class="ls-tag ls-st-active">活跃</span></div>
+</article>
+<article class="ls-card" data-cat="coding" data-lang="JavaScript" data-diff="易" data-act="0" data-stars="28531" data-upd="2026-04-28" data-name="eyaltoledano/claude-task-master" data-search="eyaltoledano/claude-task-master 塞进 cursor / claude code 的任务拆解系统 在 ide 里做长需求的人 把 prd 拆成任务 dag 再交给编码 agent 逐条执行；近半年更新放缓，注意版本兼容。 ai cursor cursor-ai cursorai lovable lovable-dev javascript noassertion 编码 agent">
+<div class="ls-ctop"><a class="ls-repo" href="https://github.com/eyaltoledano/claude-task-master" target="_blank" rel="noopener noreferrer">eyaltoledano/claude-task-master</a><span class="ls-stars" title="★ 28,531 · 创建 2025-03 · 最近提交 2026-04-28 · https://tryhamster.com">★ 2.9 万</span></div>
+<p class="ls-pitch">塞进 Cursor / Claude Code 的任务拆解系统</p>
+<p class="ls-aud">适合：在 IDE 里做长需求的人</p>
+<p class="ls-note">把 PRD 拆成任务 DAG 再交给编码 Agent 逐条执行；近半年更新放缓，注意版本兼容。</p>
+<div class="ls-meta"><span class="ls-tag">JavaScript</span><span class="ls-tag ls-d-easy">门槛 易</span><span class="ls-tag">NOASSERTION</span><span class="ls-tag ls-st-maintained">维护中</span></div>
+</article>
+<article class="ls-card" data-cat="coding" data-lang="TypeScript" data-diff="易" data-act="1" data-stars="28100" data-upd="2026-11-23" data-name="kilo-org/kilocode" data-search="kilo-org/kilocode vs code 里的一体化 agentic 工程平台 ide 党，想要编排 + 计划模式 cline 系血统加强版，带编排与计划模式；被 anaconda 收编后企业味更重。 ai ai-age ai-coding ai-developer-tools chatgpt claude typescript mit 编码 agent">
+<div class="ls-ctop"><a class="ls-repo" href="https://github.com/Kilo-Org/kilocode" target="_blank" rel="noopener noreferrer">Kilo-Org/kilocode</a><span class="ls-stars" title="★ 28,100 · 创建 2025-03 · 最近提交 2026-11-23 · https://kilo.ai/">★ 2.8 万</span></div>
+<p class="ls-pitch">VS Code 里的一体化 agentic 工程平台</p>
+<p class="ls-aud">适合：IDE 党，想要编排 + 计划模式</p>
+<p class="ls-note">Cline 系血统加强版，带编排与计划模式；被 Anaconda 收编后企业味更重。</p>
+<div class="ls-meta"><span class="ls-tag">TypeScript</span><span class="ls-tag ls-d-easy">门槛 易</span><span class="ls-tag">MIT</span><span class="ls-tag ls-st-active">活跃</span></div>
+</article>
+<article class="ls-card" data-cat="coding" data-lang="TypeScript" data-diff="易" data-act="0" data-stars="24237" data-upd="2026-05-15" data-name="roocodeinc/roo-code" data-search="roocodeinc/roo-code cline 分支，按「架构/编码/调试」切模式 喜欢角色化 prompt 的开发者 多模式设计让不同任务用不同系统提示；仓库已归档。  typescript apache-2.0 编码 agent">
+<div class="ls-ctop"><a class="ls-repo" href="https://github.com/RooCodeInc/Roo-Code" target="_blank" rel="noopener noreferrer">RooCodeInc/Roo-Code</a><span class="ls-stars" title="★ 24,237 · 创建 2024-10 · 最近提交 2026-05-15 · https://roocode.com">★ 2.4 万</span></div>
+<p class="ls-pitch">Cline 分支，按「架构/编码/调试」切模式</p>
+<p class="ls-aud">适合：喜欢角色化 prompt 的开发者</p>
+<p class="ls-note">多模式设计让不同任务用不同系统提示；仓库已归档。</p>
+<div class="ls-meta"><span class="ls-tag">TypeScript</span><span class="ls-tag ls-d-easy">门槛 易</span><span class="ls-tag">Apache-2.0</span><span class="ls-tag ls-st-archived">已归档</span></div>
+</article>
+<article class="ls-card" data-cat="coding" data-lang="Python" data-diff="难" data-act="1" data-stars="20854" data-upd="2026-11-16" data-name="swe-agent/swe-agent" data-search="swe-agent/swe-agent 学术界的软件工程 agent 基准实现 做 benchmark、发论文 agent-computer interface 概念的发源地，产品化不是它的目标。 agent agent-based-model ai cybersecurity developer-tools llm python mit 编码 agent">
+<div class="ls-ctop"><a class="ls-repo" href="https://github.com/SWE-agent/SWE-agent" target="_blank" rel="noopener noreferrer">SWE-agent/SWE-agent</a><span class="ls-stars" title="★ 20,854 · 创建 2024-04 · 最近提交 2026-11-16 · https://swe-agent.com">★ 2.1 万</span></div>
+<p class="ls-pitch">学术界的软件工程 Agent 基准实现</p>
+<p class="ls-aud">适合：做 benchmark、发论文</p>
+<p class="ls-note">Agent-Computer Interface 概念的发源地，产品化不是它的目标。</p>
+<div class="ls-meta"><span class="ls-tag">Python</span><span class="ls-tag ls-d-hard">门槛 难</span><span class="ls-tag">MIT</span><span class="ls-tag ls-st-active">活跃</span></div>
+</article>
+<article class="ls-card" data-cat="coding" data-lang="Python" data-diff="易" data-act="1" data-stars="10014" data-upd="2026-11-23" data-name="swe-agent/mini-swe-agent" data-search="swe-agent/mini-swe-agent 100 行代码的极简编码 agent 想读源码搞懂 agent 循环的人 swe-agent 团队官方推荐新用户从它上手；能跑 swe-bench，源码一个下午读完。 agent agentic-ai agentic-ai-cli ai ai-agent textual python mit 编码 agent">
+<div class="ls-ctop"><a class="ls-repo" href="https://github.com/SWE-agent/mini-swe-agent" target="_blank" rel="noopener noreferrer">SWE-agent/mini-swe-agent</a><span class="ls-stars" title="★ 10,014 · 创建 2025-06 · 最近提交 2026-11-23 · https://mini-swe-agent.com">★ 1 万</span></div>
+<p class="ls-pitch">100 行代码的极简编码 Agent</p>
+<p class="ls-aud">适合：想读源码搞懂 Agent 循环的人</p>
+<p class="ls-note">SWE-agent 团队官方推荐新用户从它上手；能跑 SWE-bench，源码一个下午读完。</p>
+<div class="ls-meta"><span class="ls-tag">Python</span><span class="ls-tag ls-d-easy">门槛 易</span><span class="ls-tag">MIT</span><span class="ls-tag ls-st-active">活跃</span></div>
+</article>
+</div></section>
+<section class="ls-group" data-cat="auto">
+<div class="ls-gh"><h3><span class="ls-gi">04</span>通用自主 Agent</h3><span class="ls-gsub">给个目标自己拆解执行</span><span class="ls-gmeta"><b class="ls-gn">9</b> 个项目 · <b class="ls-gs">104.7 万</b>星标</span></div>
+<div class="ls-grid">
+<article class="ls-card" data-cat="auto" data-lang="TypeScript" data-diff="易" data-act="1" data-stars="395121" data-upd="2026-11-24" data-name="openclaw/openclaw" data-search="openclaw/openclaw 自称「真正干活的 ai」的个人 agent 运行时 想要跨平台常驻个人 agent 的人 星标全榜第二（39.5 万）：local-first 网关 + 20 多个消息渠道；与 hermes 正面竞争，生态在快速互卷。 ai assistant crustacean molty openclaw own-your-data typescript mit 通用自主 agent">
+<div class="ls-ctop"><a class="ls-repo" href="https://github.com/openclaw/openclaw" target="_blank" rel="noopener noreferrer">openclaw/openclaw</a><span class="ls-stars" title="★ 395,121 · 创建 2025-11 · 最近提交 2026-11-24 · https://openclaw.ai">★ 39.5 万</span></div>
+<p class="ls-pitch">自称「真正干活的 AI」的个人 Agent 运行时</p>
+<p class="ls-aud">适合：想要跨平台常驻个人 Agent 的人</p>
+<p class="ls-note">星标全榜第二（39.5 万）：local-first 网关 + 20 多个消息渠道；与 Hermes 正面竞争，生态在快速互卷。</p>
+<div class="ls-meta"><span class="ls-tag">TypeScript</span><span class="ls-tag ls-d-easy">门槛 易</span><span class="ls-tag">MIT</span><span class="ls-tag ls-st-active">活跃</span></div>
+</article>
+<article class="ls-card" data-cat="auto" data-lang="Python" data-diff="易" data-act="1" data-stars="265675" data-upd="2026-11-24" data-name="nousresearch/hermes-agent" data-search="nousresearch/hermes-agent 会自己长技能、跨会话记住你的自主 agent 想让 agent 常驻终端或 im 里长期干活 自主沉淀并迭代 skills、持久记忆、子 agent 与 cron 定时；热度第一，但开放 issue 积压很多。 ai-agent hermes-agent llm nous-research skills python mit 通用自主 agent">
+<div class="ls-ctop"><a class="ls-repo" href="https://github.com/NousResearch/hermes-agent" target="_blank" rel="noopener noreferrer">NousResearch/hermes-agent</a><span class="ls-stars" title="★ 265,675 · 创建 2025-07 · 最近提交 2026-11-24 · https://hermes-agent.nousresearch.com">★ 26.6 万</span></div>
+<p class="ls-pitch">会自己长技能、跨会话记住你的自主 Agent</p>
+<p class="ls-aud">适合：想让 Agent 常驻终端或 IM 里长期干活</p>
+<p class="ls-note">自主沉淀并迭代 skills、持久记忆、子 Agent 与 cron 定时；热度第一，但开放 issue 积压很多。</p>
+<div class="ls-meta"><span class="ls-tag">Python</span><span class="ls-tag ls-d-easy">门槛 易</span><span class="ls-tag">MIT</span><span class="ls-tag ls-st-active">活跃</span></div>
+</article>
+<article class="ls-card" data-cat="auto" data-lang="Python" data-diff="中" data-act="1" data-stars="188155" data-upd="2026-11-23" data-name="significant-gravitas/autogpt" data-search="significant-gravitas/autogpt 引爆「自主 agent」概念的鼻祖 了解 agent 演进史、做自动化原型 已转型为 agent 构建平台，历史上星数极高但实际使用率不如当年。 agentic-ai agents ai artificial-intelligence autonomous-agents claude python polyform+mit 通用自主 agent">
+<div class="ls-ctop"><a class="ls-repo" href="https://github.com/Significant-Gravitas/AutoGPT" target="_blank" rel="noopener noreferrer">Significant-Gravitas/AutoGPT</a><span class="ls-stars" title="★ 188,155 · 创建 2023-03 · 最近提交 2026-11-23 · https://agpt.co">★ 18.8 万</span></div>
+<p class="ls-pitch">引爆「自主 Agent」概念的鼻祖</p>
+<p class="ls-aud">适合：了解 Agent 演进史、做自动化原型</p>
+<p class="ls-note">已转型为 Agent 构建平台，历史上星数极高但实际使用率不如当年。</p>
+<div class="ls-meta"><span class="ls-tag">Python</span><span class="ls-tag ls-d-medium">门槛 中</span><span class="ls-tag">Polyform+MIT</span><span class="ls-tag ls-st-active">活跃</span></div>
+</article>
+<article class="ls-card" data-cat="auto" data-lang="Python" data-diff="中" data-act="1" data-stars="59017" data-upd="2026-11-02" data-name="foundationagents/openmanus" data-search="foundationagents/openmanus 开源版通用 agent（manus 复刻） 想自建一个通用任务 agent 社区热度高、迭代快，工程完整度仍在追赶，适合折腾不适合直接交付。  python mit 通用自主 agent">
+<div class="ls-ctop"><a class="ls-repo" href="https://github.com/FoundationAgents/OpenManus" target="_blank" rel="noopener noreferrer">FoundationAgents/OpenManus</a><span class="ls-stars" title="★ 59,017 · 创建 2025-03 · 最近提交 2026-11-02 · https://openmanus.github.io/">★ 5.9 万</span></div>
+<p class="ls-pitch">开源版通用 Agent（Manus 复刻）</p>
+<p class="ls-aud">适合：想自建一个通用任务 Agent</p>
+<p class="ls-note">社区热度高、迭代快，工程完整度仍在追赶，适合折腾不适合直接交付。</p>
+<div class="ls-meta"><span class="ls-tag">Python</span><span class="ls-tag ls-d-medium">门槛 中</span><span class="ls-tag">MIT</span><span class="ls-tag ls-st-active">活跃</span></div>
+</article>
+<article class="ls-card" data-cat="auto" data-lang="Python" data-diff="易" data-act="1" data-stars="50290" data-upd="2026-11-23" data-name="hkuds/nanobot" data-search="hkuds/nanobot 轻量个人 agent，装完就能干活 想在自己机器上养个常驻小 agent 港大 hkuds 出品，主打小而全：工具、记忆、定时任务都有；工程完整度还追不上 hermes。 agent-framework ai-agent ai-agents chatbot chatops discord-bot python mit 通用自主 agent">
+<div class="ls-ctop"><a class="ls-repo" href="https://github.com/HKUDS/nanobot" target="_blank" rel="noopener noreferrer">HKUDS/nanobot</a><span class="ls-stars" title="★ 50,290 · 创建 2026-02 · 最近提交 2026-11-23 · https://nanobot.wiki">★ 5 万</span></div>
+<p class="ls-pitch">轻量个人 Agent，装完就能干活</p>
+<p class="ls-aud">适合：想在自己机器上养个常驻小 Agent</p>
+<p class="ls-note">港大 HKUDS 出品，主打小而全：工具、记忆、定时任务都有；工程完整度还追不上 Hermes。</p>
+<div class="ls-meta"><span class="ls-tag">Python</span><span class="ls-tag ls-d-easy">门槛 易</span><span class="ls-tag">MIT</span><span class="ls-tag ls-st-active">活跃</span></div>
+</article>
+<article class="ls-card" data-cat="auto" data-lang="TypeScript" data-diff="易" data-act="0" data-stars="36268" data-upd="2025-04-29" data-name="reworkd/agentgpt" data-search="reworkd/agentgpt 浏览器里配置目标、自动拆解执行 演示与入门体验 老牌教学型项目；仓库已归档停更，仅作教学参考。 agent agentgpt agents agi ai ai-agents typescript gpl-3.0 通用自主 agent">
+<div class="ls-ctop"><a class="ls-repo" href="https://github.com/reworkd/AgentGPT" target="_blank" rel="noopener noreferrer">reworkd/AgentGPT</a><span class="ls-stars" title="★ 36,268 · 创建 2023-04 · 最近提交 2025-04-29 · https://agentgpt.reworkd.ai">★ 3.6 万</span></div>
+<p class="ls-pitch">浏览器里配置目标、自动拆解执行</p>
+<p class="ls-aud">适合：演示与入门体验</p>
+<p class="ls-note">老牌教学型项目；仓库已归档停更，仅作教学参考。</p>
+<div class="ls-meta"><span class="ls-tag">TypeScript</span><span class="ls-tag ls-d-easy">门槛 易</span><span class="ls-tag">GPL-3.0</span><span class="ls-tag ls-st-archived">已归档</span></div>
+</article>
+<article class="ls-card" data-cat="auto" data-lang="Python" data-diff="中" data-act="1" data-stars="27691" data-upd="2026-11-17" data-name="fosowl/agenticseek" data-search="fosowl/agenticseek 完全本地跑的 manus 平替 不想让数据出本机的人 全本地模型方案，隐私优先；上限取决于你本地模型，别拿它和云端旗舰比效果。 agentic-ai agents ai autonomous-agents deepseek-r1 llm python gpl-3.0 通用自主 agent">
+<div class="ls-ctop"><a class="ls-repo" href="https://github.com/Fosowl/agenticSeek" target="_blank" rel="noopener noreferrer">Fosowl/agenticSeek</a><span class="ls-stars" title="★ 27,691 · 创建 2025-02 · 最近提交 2026-11-17 · http://agenticseek.tech">★ 2.8 万</span></div>
+<p class="ls-pitch">完全本地跑的 Manus 平替</p>
+<p class="ls-aud">适合：不想让数据出本机的人</p>
+<p class="ls-note">全本地模型方案，隐私优先；上限取决于你本地模型，别拿它和云端旗舰比效果。</p>
+<div class="ls-meta"><span class="ls-tag">Python</span><span class="ls-tag ls-d-medium">门槛 中</span><span class="ls-tag">GPL-3.0</span><span class="ls-tag ls-st-active">活跃</span></div>
+</article>
+<article class="ls-card" data-cat="auto" data-lang="Python" data-diff="中" data-act="1" data-stars="19961" data-upd="2026-11-22" data-name="agent0ai/agent-zero" data-search="agent0ai/agent-zero 自带 web ui / 终端 / 记忆的通用 agent 想开箱看到一个「会用电脑」的 agent 架构清晰、可玩性强，生产化需要自己做隔离与权限。 agent ai assistant autonomous linux zero python mit（自述） 通用自主 agent">
+<div class="ls-ctop"><a class="ls-repo" href="https://github.com/agent0ai/agent-zero" target="_blank" rel="noopener noreferrer">agent0ai/agent-zero</a><span class="ls-stars" title="★ 19,961 · 创建 2024-06 · 最近提交 2026-11-22 · https://agent-zero.ai">★ 2 万</span></div>
+<p class="ls-pitch">自带 Web UI / 终端 / 记忆的通用 Agent</p>
+<p class="ls-aud">适合：想开箱看到一个「会用电脑」的 Agent</p>
+<p class="ls-note">架构清晰、可玩性强，生产化需要自己做隔离与权限。</p>
+<div class="ls-meta"><span class="ls-tag">Python</span><span class="ls-tag ls-d-medium">门槛 中</span><span class="ls-tag">MIT（自述）</span><span class="ls-tag ls-st-active">活跃</span></div>
+</article>
+<article class="ls-card" data-cat="auto" data-lang="TypeScript" data-diff="中" data-act="1" data-stars="5015" data-upd="2026-11-19" data-name="openbmb/pilotdeck" data-search="openbmb/pilotdeck openbmb 的任务导向 agent 工作台 要工作区级隔离 + 记忆演化的人 以 workspace 为单位隔离上下文与记忆，定位偏生产力平台；agpl-3.0，商用注意条款。  typescript agpl-3.0 通用自主 agent">
+<div class="ls-ctop"><a class="ls-repo" href="https://github.com/OpenBMB/PilotDeck" target="_blank" rel="noopener noreferrer">OpenBMB/PilotDeck</a><span class="ls-stars" title="★ 5,015 · 创建 2026-05 · 最近提交 2026-11-19 · https://pilotdeck.openbmb.cn">★ 5,015</span></div>
+<p class="ls-pitch">OpenBMB 的任务导向 Agent 工作台</p>
+<p class="ls-aud">适合：要工作区级隔离 + 记忆演化的人</p>
+<p class="ls-note">以 WorkSpace 为单位隔离上下文与记忆，定位偏生产力平台；AGPL-3.0，商用注意条款。</p>
+<div class="ls-meta"><span class="ls-tag">TypeScript</span><span class="ls-tag ls-d-medium">门槛 中</span><span class="ls-tag">AGPL-3.0</span><span class="ls-tag ls-st-active">活跃</span></div>
+</article>
+</div></section>
+<section class="ls-group" data-cat="multi">
+<div class="ls-gh"><h3><span class="ls-gi">05</span>多智能体协作</h3><span class="ls-gsub">多个角色分工配合</span><span class="ls-gmeta"><b class="ls-gn">6</b> 个项目 · <b class="ls-gs">24.8 万</b>星标</span></div>
+<div class="ls-grid">
+<article class="ls-card" data-cat="multi" data-lang="TypeScript" data-diff="中" data-act="1" data-stars="82332" data-upd="2026-11-23" data-name="ruvnet/ruflo" data-search="ruvnet/ruflo 多 agent 蜂群编排的老牌 harness 玩多 agent 蜂群拓扑的人 自称 the original agent harness，拓扑玩法多；是编排玩具还是生产工具社区有争议，落地前自己压测。 agent-memory agent-orchestration agentic-ai agentic-workflow ai-agents autonomous-agents typescript mit 多智能体协作">
+<div class="ls-ctop"><a class="ls-repo" href="https://github.com/ruvnet/ruflo" target="_blank" rel="noopener noreferrer">ruvnet/ruflo</a><span class="ls-stars" title="★ 82,332 · 创建 2025-06 · 最近提交 2026-11-23 · https://cognitum.one/ruPro">★ 8.2 万</span></div>
+<p class="ls-pitch">多 Agent 蜂群编排的老牌 harness</p>
+<p class="ls-aud">适合：玩多 Agent 蜂群拓扑的人</p>
+<p class="ls-note">自称 the original agent harness，拓扑玩法多；是编排玩具还是生产工具社区有争议，落地前自己压测。</p>
+<div class="ls-meta"><span class="ls-tag">TypeScript</span><span class="ls-tag ls-d-medium">门槛 中</span><span class="ls-tag">MIT</span><span class="ls-tag ls-st-active">活跃</span></div>
+</article>
+<article class="ls-card" data-cat="multi" data-lang="Python" data-diff="中" data-act="0" data-stars="71432" data-upd="2026-01-21" data-name="foundationagents/metagpt" data-search="foundationagents/metagpt 一句话生成一个「软件公司」的角色分工 研究多智能体协作、原型生成 国内团队出品，sop 化协作思路影响了很多后续项目。 agent gpt llm metagpt multi-agent python mit 多智能体协作">
+<div class="ls-ctop"><a class="ls-repo" href="https://github.com/FoundationAgents/MetaGPT" target="_blank" rel="noopener noreferrer">FoundationAgents/MetaGPT</a><span class="ls-stars" title="★ 71,432 · 创建 2023-06 · 最近提交 2026-01-21 · https://atoms.dev/">★ 7.1 万</span></div>
+<p class="ls-pitch">一句话生成一个「软件公司」的角色分工</p>
+<p class="ls-aud">适合：研究多智能体协作、原型生成</p>
+<p class="ls-note">国内团队出品，SOP 化协作思路影响了很多后续项目。</p>
+<div class="ls-meta"><span class="ls-tag">Python</span><span class="ls-tag ls-d-medium">门槛 中</span><span class="ls-tag">MIT</span><span class="ls-tag ls-st-stale">沉寂</span></div>
+</article>
+<article class="ls-card" data-cat="multi" data-lang="Python" data-diff="中" data-act="1" data-stars="36503" data-upd="2026-11-23" data-name="agentscope-ai/agentscope" data-search="agentscope-ai/agentscope 阿里 modelscope 的多智能体平台 多智能体编排、分布式部署 强调消息传递与容错，中文文档友好，最初为规模化多 agent 仿真而设计。  python apache-2.0 多智能体协作">
+<div class="ls-ctop"><a class="ls-repo" href="https://github.com/agentscope-ai/agentscope" target="_blank" rel="noopener noreferrer">agentscope-ai/agentscope</a><span class="ls-stars" title="★ 36,503 · 创建 2024-01 · 最近提交 2026-11-23">★ 3.7 万</span></div>
+<p class="ls-pitch">阿里 ModelScope 的多智能体平台</p>
+<p class="ls-aud">适合：多智能体编排、分布式部署</p>
+<p class="ls-note">强调消息传递与容错，中文文档友好，最初为规模化多 Agent 仿真而设计。</p>
+<div class="ls-meta"><span class="ls-tag">Python</span><span class="ls-tag ls-d-medium">门槛 中</span><span class="ls-tag">Apache-2.0</span><span class="ls-tag ls-st-active">活跃</span></div>
+</article>
+<article class="ls-card" data-cat="multi" data-lang="Python" data-diff="难" data-act="1" data-stars="34855" data-upd="2026-11-06" data-name="openbmb/chatdev" data-search="openbmb/chatdev 虚拟软件公司多角色协作开发 研究型项目、教学演示 论文配套实现，效果依赖模型强弱，工程化程度一般。  python apache-2.0 多智能体协作">
+<div class="ls-ctop"><a class="ls-repo" href="https://github.com/OpenBMB/ChatDev" target="_blank" rel="noopener noreferrer">OpenBMB/ChatDev</a><span class="ls-stars" title="★ 34,855 · 创建 2023-08 · 最近提交 2026-11-06 · https://arxiv.org/abs/2307.07924">★ 3.5 万</span></div>
+<p class="ls-pitch">虚拟软件公司多角色协作开发</p>
+<p class="ls-aud">适合：研究型项目、教学演示</p>
+<p class="ls-note">论文配套实现，效果依赖模型强弱，工程化程度一般。</p>
+<div class="ls-meta"><span class="ls-tag">Python</span><span class="ls-tag ls-d-hard">门槛 难</span><span class="ls-tag">Apache-2.0</span><span class="ls-tag ls-st-active">活跃</span></div>
+</article>
+<article class="ls-card" data-cat="multi" data-lang="Python" data-diff="难" data-act="1" data-stars="18053" data-upd="2026-11-23" data-name="camel-ai/camel" data-search="camel-ai/camel 多智能体社会模拟与合成数据生成 科研、造 agent 训练数据 学术向，抽象度高，不适合直接做业务产品。 agent ai-societies artificial-intelligence communicative-ai cooperative-ai deep-learning python apache-2.0 多智能体协作">
+<div class="ls-ctop"><a class="ls-repo" href="https://github.com/camel-ai/camel" target="_blank" rel="noopener noreferrer">camel-ai/camel</a><span class="ls-stars" title="★ 18,053 · 创建 2023-03 · 最近提交 2026-11-23 · https://docs.camel-ai.org/">★ 1.8 万</span></div>
+<p class="ls-pitch">多智能体社会模拟与合成数据生成</p>
+<p class="ls-aud">适合：科研、造 Agent 训练数据</p>
+<p class="ls-note">学术向，抽象度高，不适合直接做业务产品。</p>
+<div class="ls-meta"><span class="ls-tag">Python</span><span class="ls-tag ls-d-hard">门槛 难</span><span class="ls-tag">Apache-2.0</span><span class="ls-tag ls-st-active">活跃</span></div>
+</article>
+<article class="ls-card" data-cat="multi" data-lang="Python" data-diff="中" data-act="1" data-stars="5084" data-upd="2026-11-23" data-name="ag2ai/ag2" data-search="ag2ai/ag2 autogen 社区分叉出来的 agentos 原来用 autogen、想留在社区版的人 微软官方转向 agent framework 后由社区接手；存量 autogen 项目迁移要看官方迁移指南。 a2a ag2 agent-framework agentic agentic-ai ai python apache-2.0 多智能体协作">
+<div class="ls-ctop"><a class="ls-repo" href="https://github.com/ag2ai/ag2" target="_blank" rel="noopener noreferrer">ag2ai/ag2</a><span class="ls-stars" title="★ 5,084 · 创建 2024-11 · 最近提交 2026-11-23 · https://ag2.ai">★ 5,084</span></div>
+<p class="ls-pitch">AutoGen 社区分叉出来的 AgentOS</p>
+<p class="ls-aud">适合：原来用 AutoGen、想留在社区版的人</p>
+<p class="ls-note">微软官方转向 Agent Framework 后由社区接手；存量 AutoGen 项目迁移要看官方迁移指南。</p>
+<div class="ls-meta"><span class="ls-tag">Python</span><span class="ls-tag ls-d-medium">门槛 中</span><span class="ls-tag">Apache-2.0</span><span class="ls-tag ls-st-active">活跃</span></div>
+</article>
+</div></section>
+<section class="ls-group" data-cat="browser">
+<div class="ls-gh"><h3><span class="ls-gi">06</span>浏览器操作</h3><span class="ls-gsub">让 Agent 自己上网</span><span class="ls-gmeta"><b class="ls-gn">6</b> 个项目 · <b class="ls-gs">23.4 万</b>星标</span></div>
+<div class="ls-grid">
+<article class="ls-card" data-cat="browser" data-lang="Python" data-diff="易" data-act="1" data-stars="121845" data-upd="2026-11-22" data-name="browser-use/browser-use" data-search="browser-use/browser-use 让 agent 像人一样操作浏览器 网页流程自动化、爬取与填表 接入成本最低的浏览器 agent 库，与 playwright 生态兼容。 ai-agents ai-tools browser-agent browser-automation browser-use cdp python mit 浏览器操作">
+<div class="ls-ctop"><a class="ls-repo" href="https://github.com/browser-use/browser-use" target="_blank" rel="noopener noreferrer">browser-use/browser-use</a><span class="ls-stars" title="★ 121,845 · 创建 2024-10 · 最近提交 2026-11-22 · https://browser-use.com">★ 12.2 万</span></div>
+<p class="ls-pitch">让 Agent 像人一样操作浏览器</p>
+<p class="ls-aud">适合：网页流程自动化、爬取与填表</p>
+<p class="ls-note">接入成本最低的浏览器 Agent 库，与 Playwright 生态兼容。</p>
+<div class="ls-meta"><span class="ls-tag">Python</span><span class="ls-tag ls-d-easy">门槛 易</span><span class="ls-tag">MIT</span><span class="ls-tag ls-st-active">活跃</span></div>
+</article>
+<article class="ls-card" data-cat="browser" data-lang="TypeScript" data-diff="易" data-act="1" data-stars="40059" data-upd="2026-11-18" data-name="microsoft/playwright-mcp" data-search="microsoft/playwright-mcp 给 agent 一套标准浏览器手脚（mcp） 已有 agent、想加浏览器能力 官方维护、稳定性好，天然适配 mcp 客户端。 mcp playwright typescript apache-2.0 浏览器操作">
+<div class="ls-ctop"><a class="ls-repo" href="https://github.com/microsoft/playwright-mcp" target="_blank" rel="noopener noreferrer">microsoft/playwright-mcp</a><span class="ls-stars" title="★ 40,059 · 创建 2025-03 · 最近提交 2026-11-18 · https://www.npmjs.com/package/@playwright/mcp">★ 4 万</span></div>
+<p class="ls-pitch">给 Agent 一套标准浏览器手脚（MCP）</p>
+<p class="ls-aud">适合：已有 Agent、想加浏览器能力</p>
+<p class="ls-note">官方维护、稳定性好，天然适配 MCP 客户端。</p>
+<div class="ls-meta"><span class="ls-tag">TypeScript</span><span class="ls-tag ls-d-easy">门槛 易</span><span class="ls-tag">Apache-2.0</span><span class="ls-tag ls-st-active">活跃</span></div>
+</article>
+<article class="ls-card" data-cat="browser" data-lang="TypeScript" data-diff="易" data-act="1" data-stars="26123" data-upd="2026-11-21" data-name="browserbase/stagehand" data-search="browserbase/stagehand 把网页变成可编程 api 的浏览器 agent 前端团队做稳定可复跑的网页自动化 在 playwright 上加自然语言动作与缓存，重复执行比纯 llm 方案稳得多。 agents ai ai-agents browser-agent browser-automation cdp typescript mit 浏览器操作">
+<div class="ls-ctop"><a class="ls-repo" href="https://github.com/browserbase/stagehand" target="_blank" rel="noopener noreferrer">browserbase/stagehand</a><span class="ls-stars" title="★ 26,123 · 创建 2024-03 · 最近提交 2026-11-21 · https://stagehand.dev">★ 2.6 万</span></div>
+<p class="ls-pitch">把网页变成可编程 API 的浏览器 Agent</p>
+<p class="ls-aud">适合：前端团队做稳定可复跑的网页自动化</p>
+<p class="ls-note">在 Playwright 上加自然语言动作与缓存，重复执行比纯 LLM 方案稳得多。</p>
+<div class="ls-meta"><span class="ls-tag">TypeScript</span><span class="ls-tag ls-d-easy">门槛 易</span><span class="ls-tag">MIT</span><span class="ls-tag ls-st-active">活跃</span></div>
+</article>
+<article class="ls-card" data-cat="browser" data-lang="Python" data-diff="中" data-act="1" data-stars="23498" data-upd="2026-11-23" data-name="skyvern-ai/skyvern" data-search="skyvern-ai/skyvern 视觉 + llm 的浏览器工作流自动化 企业 rpa 替代、批量表单流程 偏成品服务（含 ui），对页面改版鲁棒性比选择器方案好。 ai api automation browser browser-automation computer python agpl-3.0 浏览器操作">
+<div class="ls-ctop"><a class="ls-repo" href="https://github.com/Skyvern-AI/skyvern" target="_blank" rel="noopener noreferrer">Skyvern-AI/skyvern</a><span class="ls-stars" title="★ 23,498 · 创建 2024-02 · 最近提交 2026-11-23 · https://www.skyvern.com">★ 2.3 万</span></div>
+<p class="ls-pitch">视觉 + LLM 的浏览器工作流自动化</p>
+<p class="ls-aud">适合：企业 RPA 替代、批量表单流程</p>
+<p class="ls-note">偏成品服务（含 UI），对页面改版鲁棒性比选择器方案好。</p>
+<div class="ls-meta"><span class="ls-tag">Python</span><span class="ls-tag ls-d-medium">门槛 中</span><span class="ls-tag">AGPL-3.0</span><span class="ls-tag ls-st-active">活跃</span></div>
+</article>
+<article class="ls-card" data-cat="browser" data-lang="TypeScript" data-diff="易" data-act="1" data-stars="14374" data-upd="2026-11-23" data-name="nanobrowser/nanobrowser" data-search="nanobrowser/nanobrowser chrome 扩展里的多 agent 浏览器助手 不想部署服务、装了就用的场景 纯前端运行、自带 key，体验轻，能力受扩展沙箱限制。 agent ai-agents ai-tools automation browser browser-agent typescript apache-2.0 浏览器操作">
+<div class="ls-ctop"><a class="ls-repo" href="https://github.com/nanobrowser/nanobrowser" target="_blank" rel="noopener noreferrer">nanobrowser/nanobrowser</a><span class="ls-stars" title="★ 14,374 · 创建 2024-12 · 最近提交 2026-11-23 · https://nanobrowser.ai">★ 1.4 万</span></div>
+<p class="ls-pitch">Chrome 扩展里的多 Agent 浏览器助手</p>
+<p class="ls-aud">适合：不想部署服务、装了就用的场景</p>
+<p class="ls-note">纯前端运行、自带 Key，体验轻，能力受扩展沙箱限制。</p>
+<div class="ls-meta"><span class="ls-tag">TypeScript</span><span class="ls-tag ls-d-easy">门槛 易</span><span class="ls-tag">Apache-2.0</span><span class="ls-tag ls-st-active">活跃</span></div>
+</article>
+<article class="ls-card" data-cat="browser" data-lang="TypeScript" data-diff="中" data-act="1" data-stars="8003" data-upd="2026-11-23" data-name="steel-dev/steel-browser" data-search="steel-dev/steel-browser 可自托管的浏览器 api，专给 agent 用 不想把浏览器会话交给云服务的人 会话、代理、文件上传、指纹伪装都封装好，起个容器就能给 agent 调；主要成本是自己运维 chrome 集群。 ai ai-agents ai-tools browser-automation browser-use computer-use typescript apache-2.0 浏览器操作">
+<div class="ls-ctop"><a class="ls-repo" href="https://github.com/steel-dev/steel-browser" target="_blank" rel="noopener noreferrer">steel-dev/steel-browser</a><span class="ls-stars" title="★ 8,003 · 创建 2024-11 · 最近提交 2026-11-23 · https://steel.dev">★ 8,003</span></div>
+<p class="ls-pitch">可自托管的浏览器 API，专给 Agent 用</p>
+<p class="ls-aud">适合：不想把浏览器会话交给云服务的人</p>
+<p class="ls-note">会话、代理、文件上传、指纹伪装都封装好，起个容器就能给 Agent 调；主要成本是自己运维 Chrome 集群。</p>
+<div class="ls-meta"><span class="ls-tag">TypeScript</span><span class="ls-tag ls-d-medium">门槛 中</span><span class="ls-tag">Apache-2.0</span><span class="ls-tag ls-st-active">活跃</span></div>
+</article>
+</div></section>
+<section class="ls-group" data-cat="desktop">
+<div class="ls-gh"><h3><span class="ls-gi">07</span>桌面 / 电脑操作</h3><span class="ls-gsub">看屏幕、动鼠标、控本机</span><span class="ls-gmeta"><b class="ls-gn">6</b> 个项目 · <b class="ls-gs">17.3 万</b>星标</span></div>
+<div class="ls-grid">
+<article class="ls-card" data-cat="desktop" data-lang="Python" data-diff="易" data-act="1" data-stars="68949" data-upd="2026-11-23" data-name="openinterpreter/openinterpreter" data-search="openinterpreter/openinterpreter 自然语言驱动本机执行代码与操作 本地批处理、文件与数据处理 权限极大，务必在受控环境使用；项目节奏已放缓。  python apache-2.0 桌面 / 电脑操作">
+<div class="ls-ctop"><a class="ls-repo" href="https://github.com/openinterpreter/openinterpreter" target="_blank" rel="noopener noreferrer">openinterpreter/openinterpreter</a><span class="ls-stars" title="★ 68,949 · 创建 2023-07 · 最近提交 2026-11-23">★ 6.9 万</span></div>
+<p class="ls-pitch">自然语言驱动本机执行代码与操作</p>
+<p class="ls-aud">适合：本地批处理、文件与数据处理</p>
+<p class="ls-note">权限极大，务必在受控环境使用；项目节奏已放缓。</p>
+<div class="ls-meta"><span class="ls-tag">Python</span><span class="ls-tag ls-d-easy">门槛 易</span><span class="ls-tag">Apache-2.0</span><span class="ls-tag ls-st-active">活跃</span></div>
+</article>
+<article class="ls-card" data-cat="desktop" data-lang="TypeScript" data-diff="中" data-act="0" data-stars="39591" data-upd="2026-10-09" data-name="bytedance/ui-tars-desktop" data-search="bytedance/ui-tars-desktop 字节 gui agent，直接看屏幕点鼠标 桌面软件自动化、跨应用流程 纯视觉路线，不依赖 dom，桌面场景比浏览器方案更通用；仓库已归档，仅作参考。 agent agent-tars browser-use computer-use cowork gui-agent typescript apache-2.0 桌面 / 电脑操作">
+<div class="ls-ctop"><a class="ls-repo" href="https://github.com/bytedance/UI-TARS-desktop" target="_blank" rel="noopener noreferrer">bytedance/UI-TARS-desktop</a><span class="ls-stars" title="★ 39,591 · 创建 2025-01 · 最近提交 2026-10-09 · https://agent-tars.com">★ 4 万</span></div>
+<p class="ls-pitch">字节 GUI Agent，直接看屏幕点鼠标</p>
+<p class="ls-aud">适合：桌面软件自动化、跨应用流程</p>
+<p class="ls-note">纯视觉路线，不依赖 DOM，桌面场景比浏览器方案更通用；仓库已归档，仅作参考。</p>
+<div class="ls-meta"><span class="ls-tag">TypeScript</span><span class="ls-tag ls-d-medium">门槛 中</span><span class="ls-tag">Apache-2.0</span><span class="ls-tag ls-st-archived">已归档</span></div>
+</article>
+<article class="ls-card" data-cat="desktop" data-lang="Jupyter Notebook" data-diff="难" data-act="1" data-stars="25634" data-upd="2026-11-14" data-name="microsoft/omniparser" data-search="microsoft/omniparser 把屏幕截图解析成可点元素的视觉解析器 自建 gui agent、需要屏幕理解的人 纯视觉路线的基础件，通常配 vlm 一起用；它不是成品 agent，是给 agent 装眼睛。  jupyter notebook cc-by-4.0 桌面 / 电脑操作">
+<div class="ls-ctop"><a class="ls-repo" href="https://github.com/microsoft/OmniParser" target="_blank" rel="noopener noreferrer">microsoft/OmniParser</a><span class="ls-stars" title="★ 25,634 · 创建 2024-09 · 最近提交 2026-11-14">★ 2.6 万</span></div>
+<p class="ls-pitch">把屏幕截图解析成可点元素的视觉解析器</p>
+<p class="ls-aud">适合：自建 GUI Agent、需要屏幕理解的人</p>
+<p class="ls-note">纯视觉路线的基础件，通常配 VLM 一起用；它不是成品 Agent，是给 Agent 装眼睛。</p>
+<div class="ls-meta"><span class="ls-tag">Jupyter Notebook</span><span class="ls-tag ls-d-hard">门槛 难</span><span class="ls-tag">CC-BY-4.0</span><span class="ls-tag ls-st-active">活跃</span></div>
+</article>
+<article class="ls-card" data-cat="desktop" data-lang="TypeScript" data-diff="中" data-act="1" data-stars="15723" data-upd="2026-11-23" data-name="web-infra-dev/midscene" data-search="web-infra-dev/midscene 自然语言驱动的 ui 自动化 前端团队做 e2e 与 ai 自动化 国内团队出品，中文文档好，与 playwright/puppeteer 结合紧。 browser-use computer-use e2e-testing gpt-operator gui-agent javascript typescript mit 桌面 / 电脑操作">
+<div class="ls-ctop"><a class="ls-repo" href="https://github.com/web-infra-dev/midscene" target="_blank" rel="noopener noreferrer">web-infra-dev/midscene</a><span class="ls-stars" title="★ 15,723 · 创建 2024-07 · 最近提交 2026-11-23 · https://midscenejs.com">★ 1.6 万</span></div>
+<p class="ls-pitch">自然语言驱动的 UI 自动化</p>
+<p class="ls-aud">适合：前端团队做 E2E 与 AI 自动化</p>
+<p class="ls-note">国内团队出品，中文文档好，与 Playwright/Puppeteer 结合紧。</p>
+<div class="ls-meta"><span class="ls-tag">TypeScript</span><span class="ls-tag ls-d-medium">门槛 中</span><span class="ls-tag">MIT</span><span class="ls-tag ls-st-active">活跃</span></div>
+</article>
+<article class="ls-card" data-cat="desktop" data-lang="Python" data-diff="难" data-act="1" data-stars="13028" data-upd="2026-11-23" data-name="simular-ai/agent-s" data-search="simular-ai/agent-s 开源 computer-use agent 的 sota 实现 研究电脑操作 agent 上限的人 论文同源实现，benchmark 成绩在开源里属最好一档；跑通要配模型、配环境。 agent-computer-interface ai-agents computer-automation computer-use computer-use-agent cua python apache-2.0 桌面 / 电脑操作">
+<div class="ls-ctop"><a class="ls-repo" href="https://github.com/simular-ai/Agent-S" target="_blank" rel="noopener noreferrer">simular-ai/Agent-S</a><span class="ls-stars" title="★ 13,028 · 创建 2024-10 · 最近提交 2026-11-23 · https://www.simular.ai">★ 1.3 万</span></div>
+<p class="ls-pitch">开源 computer-use Agent 的 SOTA 实现</p>
+<p class="ls-aud">适合：研究电脑操作 Agent 上限的人</p>
+<p class="ls-note">论文同源实现，benchmark 成绩在开源里属最好一档；跑通要配模型、配环境。</p>
+<div class="ls-meta"><span class="ls-tag">Python</span><span class="ls-tag ls-d-hard">门槛 难</span><span class="ls-tag">Apache-2.0</span><span class="ls-tag ls-st-active">活跃</span></div>
+</article>
+<article class="ls-card" data-cat="desktop" data-lang="Python" data-diff="中" data-act="1" data-stars="10118" data-upd="2026-11-16" data-name="microsoft/magentic-ui" data-search="microsoft/magentic-ui 人机协同的「浏览器 + 本地文件」agent 研究 human-in-the-loop 的交互设计 微软研究院出品（magenticlite），强调每一步可接管、可纠正，偏研究原型而非生产工具。 agents ai ai-ux autogen browser-use computer-use-agent python mit 桌面 / 电脑操作">
+<div class="ls-ctop"><a class="ls-repo" href="https://github.com/microsoft/magentic-ui" target="_blank" rel="noopener noreferrer">microsoft/magentic-ui</a><span class="ls-stars" title="★ 10,118 · 创建 2025-05 · 最近提交 2026-11-16 · https://www.microsoft.com/en-us/research/blog/magenticlite-magenticbrain-fara1-5-an-agentic-experience-optimized-for-small-models/">★ 1 万</span></div>
+<p class="ls-pitch">人机协同的「浏览器 + 本地文件」Agent</p>
+<p class="ls-aud">适合：研究 human-in-the-loop 的交互设计</p>
+<p class="ls-note">微软研究院出品（MagenticLite），强调每一步可接管、可纠正，偏研究原型而非生产工具。</p>
+<div class="ls-meta"><span class="ls-tag">Python</span><span class="ls-tag ls-d-medium">门槛 中</span><span class="ls-tag">MIT</span><span class="ls-tag ls-st-active">活跃</span></div>
+</article>
+</div></section>
+<section class="ls-group" data-cat="voice">
+<div class="ls-gh"><h3><span class="ls-gi">08</span>语音 Agent</h3><span class="ls-gsub">能听会说的实时对话</span><span class="ls-gmeta"><b class="ls-gn">3</b> 个项目 · <b class="ls-gs">4.4 万</b>星标</span></div>
+<div class="ls-grid">
+<article class="ls-card" data-cat="voice" data-lang="Python" data-diff="中" data-act="1" data-stars="17401" data-upd="2026-11-23" data-name="pipecat-ai/pipecat" data-search="pipecat-ai/pipecat 实时语音 agent 的管线框架 做语音对话产品的人 把 stt / llm / tts 串成实时管线，延迟可控；各家模型要自己接。 ai chatbot-framework chatbots real-time voice voice-assistant python bsd-2-clause 语音 agent">
+<div class="ls-ctop"><a class="ls-repo" href="https://github.com/pipecat-ai/pipecat" target="_blank" rel="noopener noreferrer">pipecat-ai/pipecat</a><span class="ls-stars" title="★ 17,401 · 创建 2023-12 · 最近提交 2026-11-23 · https://pipecat.ai">★ 1.7 万</span></div>
+<p class="ls-pitch">实时语音 Agent 的管线框架</p>
+<p class="ls-aud">适合：做语音对话产品的人</p>
+<p class="ls-note">把 STT / LLM / TTS 串成实时管线，延迟可控；各家模型要自己接。</p>
+<div class="ls-meta"><span class="ls-tag">Python</span><span class="ls-tag ls-d-medium">门槛 中</span><span class="ls-tag">BSD-2-Clause</span><span class="ls-tag ls-st-active">活跃</span></div>
+</article>
+<article class="ls-card" data-cat="voice" data-lang="Python" data-diff="中" data-act="1" data-stars="15317" data-upd="2026-11-24" data-name="livekit/agents" data-search="livekit/agents livekit 的实时语音 agent 框架 已有 livekit 音视频链路的人 webrtc 底子扎实，打断与回声处理成熟；脱离 livekit 生态收益变小。 agents ai openai real-time video voice python apache-2.0 语音 agent">
+<div class="ls-ctop"><a class="ls-repo" href="https://github.com/livekit/agents" target="_blank" rel="noopener noreferrer">livekit/agents</a><span class="ls-stars" title="★ 15,317 · 创建 2023-10 · 最近提交 2026-11-24 · https://docs.livekit.io/agents">★ 1.5 万</span></div>
+<p class="ls-pitch">LiveKit 的实时语音 Agent 框架</p>
+<p class="ls-aud">适合：已有 LiveKit 音视频链路的人</p>
+<p class="ls-note">WebRTC 底子扎实，打断与回声处理成熟；脱离 LiveKit 生态收益变小。</p>
+<div class="ls-meta"><span class="ls-tag">Python</span><span class="ls-tag ls-d-medium">门槛 中</span><span class="ls-tag">Apache-2.0</span><span class="ls-tag ls-st-active">活跃</span></div>
+</article>
+<article class="ls-card" data-cat="voice" data-lang="Python" data-diff="难" data-act="1" data-stars="11243" data-upd="2026-11-23" data-name="ten-framework/ten-framework" data-search="ten-framework/ten-framework 实时多模态对话 agent 框架（原 ten agent） 要做低延迟语音、数字人的人 把音频流、视觉、llm、tts 编排成一张图，主打实时打断；apache-2.0 带附加条款，商用前把 license 读一遍。 ai multi-modal real-time video voice python apache-2.0 附加条款 语音 agent">
+<div class="ls-ctop"><a class="ls-repo" href="https://github.com/TEN-framework/ten-framework" target="_blank" rel="noopener noreferrer">TEN-framework/ten-framework</a><span class="ls-stars" title="★ 11,243 · 创建 2024-06 · 最近提交 2026-11-23 · https://agent.theten.ai/">★ 1.1 万</span></div>
+<p class="ls-pitch">实时多模态对话 Agent 框架（原 TEN Agent）</p>
+<p class="ls-aud">适合：要做低延迟语音、数字人的人</p>
+<p class="ls-note">把音频流、视觉、LLM、TTS 编排成一张图，主打实时打断；Apache-2.0 带附加条款，商用前把 LICENSE 读一遍。</p>
+<div class="ls-meta"><span class="ls-tag">Python</span><span class="ls-tag ls-d-hard">门槛 难</span><span class="ls-tag">Apache-2.0 附加条款</span><span class="ls-tag ls-st-active">活跃</span></div>
+</article>
+</div></section>
+<section class="ls-group" data-cat="research">
+<div class="ls-gh"><h3><span class="ls-gi">09</span>深度研究 / 检索</h3><span class="ls-gsub">自动调研并产出报告</span><span class="ls-gmeta"><b class="ls-gn">6</b> 个项目 · <b class="ls-gs">29.1 万</b>星标</span></div>
+<div class="ls-grid">
+<article class="ls-card" data-cat="research" data-lang="Python" data-diff="易" data-act="1" data-stars="114279" data-upd="2026-11-22" data-name="panniantong/agent-reach" data-search="panniantong/agent-reach 给 agent 装上「看全网」的眼睛 做舆情、调研类 agent 的人 twitter / reddit / youtube / github / b站 的读取与搜索统一接口；数据源可用性随平台政策波动。 agent-infrastructure ai-agent ai-search automation bilibili claude-code python mit 深度研究 / 检索">
+<div class="ls-ctop"><a class="ls-repo" href="https://github.com/Panniantong/Agent-Reach" target="_blank" rel="noopener noreferrer">Panniantong/Agent-Reach</a><span class="ls-stars" title="★ 114,279 · 创建 2026-02 · 最近提交 2026-11-22">★ 11.4 万</span></div>
+<p class="ls-pitch">给 Agent 装上「看全网」的眼睛</p>
+<p class="ls-aud">适合：做舆情、调研类 Agent 的人</p>
+<p class="ls-note">Twitter / Reddit / YouTube / GitHub / B站 的读取与搜索统一接口；数据源可用性随平台政策波动。</p>
+<div class="ls-meta"><span class="ls-tag">Python</span><span class="ls-tag ls-d-easy">门槛 易</span><span class="ls-tag">MIT</span><span class="ls-tag ls-st-active">活跃</span></div>
+</article>
+<article class="ls-card" data-cat="research" data-lang="Python" data-diff="中" data-act="1" data-stars="85680" data-upd="2026-11-23" data-name="bytedance/deer-flow" data-search="bytedance/deer-flow 字节 deep research 框架，带人机协同 深度研究报告流水线 可插拔搜索/爬虫/报告模块，中文场景适配较好。 agent agentic agentic-framework agentic-workflow ai ai-agents python mit 深度研究 / 检索">
+<div class="ls-ctop"><a class="ls-repo" href="https://github.com/bytedance/deer-flow" target="_blank" rel="noopener noreferrer">bytedance/deer-flow</a><span class="ls-stars" title="★ 85,680 · 创建 2025-05 · 最近提交 2026-11-23 · https://deerflow.tech">★ 8.6 万</span></div>
+<p class="ls-pitch">字节 Deep Research 框架，带人机协同</p>
+<p class="ls-aud">适合：深度研究报告流水线</p>
+<p class="ls-note">可插拔搜索/爬虫/报告模块，中文场景适配较好。</p>
+<div class="ls-meta"><span class="ls-tag">Python</span><span class="ls-tag ls-d-medium">门槛 中</span><span class="ls-tag">MIT</span><span class="ls-tag ls-st-active">活跃</span></div>
+</article>
+<article class="ls-card" data-cat="research" data-lang="Python" data-diff="中" data-act="0" data-stars="31935" data-upd="2025-09-30" data-name="stanford-oval/storm" data-search="stanford-oval/storm 像写维基百科一样生成有据长文 长报告、综述类内容生产 斯坦福出品，先做大纲再分节检索，结构感强。 agentic-rag deep-research emnlp2024 knowledge-curation large-language-models naacl python mit 深度研究 / 检索">
+<div class="ls-ctop"><a class="ls-repo" href="https://github.com/stanford-oval/storm" target="_blank" rel="noopener noreferrer">stanford-oval/storm</a><span class="ls-stars" title="★ 31,935 · 创建 2024-03 · 最近提交 2025-09-30 · http://storm.genie.stanford.edu">★ 3.2 万</span></div>
+<p class="ls-pitch">像写维基百科一样生成有据长文</p>
+<p class="ls-aud">适合：长报告、综述类内容生产</p>
+<p class="ls-note">斯坦福出品，先做大纲再分节检索，结构感强。</p>
+<div class="ls-meta"><span class="ls-tag">Python</span><span class="ls-tag ls-d-medium">门槛 中</span><span class="ls-tag">MIT</span><span class="ls-tag ls-st-stale">沉寂</span></div>
+</article>
+<article class="ls-card" data-cat="research" data-lang="Python" data-diff="易" data-act="1" data-stars="30877" data-upd="2026-11-23" data-name="assafelovic/gpt-researcher" data-search="assafelovic/gpt-researcher 自动多源检索并产出带引用的调研报告 行研、竞品、技术调研自动化 上手快、产出可用度高，深度依赖模型与搜索源质量。 agent ai automation deepresearch llms mcp python apache-2.0 深度研究 / 检索">
+<div class="ls-ctop"><a class="ls-repo" href="https://github.com/assafelovic/gpt-researcher" target="_blank" rel="noopener noreferrer">assafelovic/gpt-researcher</a><span class="ls-stars" title="★ 30,877 · 创建 2023-05 · 最近提交 2026-11-23 · https://gptr.dev">★ 3.1 万</span></div>
+<p class="ls-pitch">自动多源检索并产出带引用的调研报告</p>
+<p class="ls-aud">适合：行研、竞品、技术调研自动化</p>
+<p class="ls-note">上手快、产出可用度高，深度依赖模型与搜索源质量。</p>
+<div class="ls-meta"><span class="ls-tag">Python</span><span class="ls-tag ls-d-easy">门槛 易</span><span class="ls-tag">Apache-2.0</span><span class="ls-tag ls-st-active">活跃</span></div>
+</article>
+<article class="ls-card" data-cat="research" data-lang="Python" data-diff="难" data-act="1" data-stars="15466" data-upd="2026-10-21" data-name="microsoft/rd-agent" data-search="microsoft/rd-agent 微软的研发自动化 agent 想自动化实验 / 调参流程的人 把「提假设 - 写代码 - 跑实验 - 复盘」做成闭环，场景偏数据科学；接入成本高。 agent ai automation data-mining data-science development python mit 深度研究 / 检索">
+<div class="ls-ctop"><a class="ls-repo" href="https://github.com/microsoft/RD-Agent" target="_blank" rel="noopener noreferrer">microsoft/RD-Agent</a><span class="ls-stars" title="★ 15,466 · 创建 2024-04 · 最近提交 2026-10-21 · https://rdagent.azurewebsites.net/">★ 1.5 万</span></div>
+<p class="ls-pitch">微软的研发自动化 Agent</p>
+<p class="ls-aud">适合：想自动化实验 / 调参流程的人</p>
+<p class="ls-note">把「提假设 - 写代码 - 跑实验 - 复盘」做成闭环，场景偏数据科学；接入成本高。</p>
+<div class="ls-meta"><span class="ls-tag">Python</span><span class="ls-tag ls-d-hard">门槛 难</span><span class="ls-tag">MIT</span><span class="ls-tag ls-st-active">活跃</span></div>
+</article>
+<article class="ls-card" data-cat="research" data-lang="Python" data-diff="中" data-act="0" data-stars="12672" data-upd="2026-08-10" data-name="langchain-ai/open_deep_research" data-search="langchain-ai/open_deep_research langchain 官方的开源深度研究实现 要二次开发研究型 agent 的人 基于 langgraph，结构清晰好改；仓库已归档，仅作结构参考。  python mit 深度研究 / 检索">
+<div class="ls-ctop"><a class="ls-repo" href="https://github.com/langchain-ai/open_deep_research" target="_blank" rel="noopener noreferrer">langchain-ai/open_deep_research</a><span class="ls-stars" title="★ 12,672 · 创建 2024-11 · 最近提交 2026-08-10">★ 1.3 万</span></div>
+<p class="ls-pitch">LangChain 官方的开源深度研究实现</p>
+<p class="ls-aud">适合：要二次开发研究型 Agent 的人</p>
+<p class="ls-note">基于 LangGraph，结构清晰好改；仓库已归档，仅作结构参考。</p>
+<div class="ls-meta"><span class="ls-tag">Python</span><span class="ls-tag ls-d-medium">门槛 中</span><span class="ls-tag">MIT</span><span class="ls-tag ls-st-archived">已归档</span></div>
+</article>
+</div></section>
+<section class="ls-group" data-cat="knowledge">
+<div class="ls-gh"><h3><span class="ls-gi">10</span>知识库 / RAG</h3><span class="ls-gsub">把私域文档变成 Agent 的上下文</span><span class="ls-gmeta"><b class="ls-gn">8</b> 个项目 · <b class="ls-gs">50.3 万</b>星标</span></div>
+<div class="ls-grid">
+<article class="ls-card" data-cat="knowledge" data-lang="Python" data-diff="中" data-act="1" data-stars="152560" data-upd="2026-11-23" data-name="graphify-labs/graphify" data-search="graphify-labs/graphify 把整个代码库变成可查询的知识图谱 给 agent 建结构化代码上下文的人 代码 + 文档 + sql schema + 配置 + pdf 一起建图，查询接口面向 agent 设计；大仓库建图耗时要有心理准备。 ai-agents antigravity ast claude-code code-analysis code-search python apache-2.0 知识库 / rag">
+<div class="ls-ctop"><a class="ls-repo" href="https://github.com/Graphify-Labs/graphify" target="_blank" rel="noopener noreferrer">Graphify-Labs/graphify</a><span class="ls-stars" title="★ 152,560 · 创建 2026-04 · 最近提交 2026-11-23 · graphify.com">★ 15.3 万</span></div>
+<p class="ls-pitch">把整个代码库变成可查询的知识图谱</p>
+<p class="ls-aud">适合：给 Agent 建结构化代码上下文的人</p>
+<p class="ls-note">代码 + 文档 + SQL schema + 配置 + PDF 一起建图，查询接口面向 Agent 设计；大仓库建图耗时要有心理准备。</p>
+<div class="ls-meta"><span class="ls-tag">Python</span><span class="ls-tag ls-d-medium">门槛 中</span><span class="ls-tag">Apache-2.0</span><span class="ls-tag ls-st-active">活跃</span></div>
+</article>
+<article class="ls-card" data-cat="knowledge" data-lang="Go" data-diff="易" data-act="1" data-stars="94593" data-upd="2026-11-23" data-name="infiniflow/ragflow" data-search="infiniflow/ragflow 深度文档理解的 rag 引擎 中文文档、复杂版式解析 表格/扫描件解析是强项，自带 ui，国内落地案例多。 agent-harness agent-native-database agentic-ai agentic-retrieval agentic-search ai go apache-2.0 知识库 / rag">
+<div class="ls-ctop"><a class="ls-repo" href="https://github.com/infiniflow/ragflow" target="_blank" rel="noopener noreferrer">infiniflow/ragflow</a><span class="ls-stars" title="★ 94,593 · 创建 2023-12 · 最近提交 2026-11-23 · https://ragflow.io">★ 9.5 万</span></div>
+<p class="ls-pitch">深度文档理解的 RAG 引擎</p>
+<p class="ls-aud">适合：中文文档、复杂版式解析</p>
+<p class="ls-note">表格/扫描件解析是强项，自带 UI，国内落地案例多。</p>
+<div class="ls-meta"><span class="ls-tag">Go</span><span class="ls-tag ls-d-easy">门槛 易</span><span class="ls-tag">Apache-2.0</span><span class="ls-tag ls-st-active">活跃</span></div>
+</article>
+<article class="ls-card" data-cat="knowledge" data-lang="JavaScript" data-diff="易" data-act="1" data-stars="68551" data-upd="2026-11-21" data-name="mintplex-labs/anything-llm" data-search="mintplex-labs/anything-llm 开箱即用的私有 chatgpt + 文档库 个人/小团队自建知识助手 部署十分钟级，够用、克制，别指望复杂编排。 agent-computer agent-harness agent-orchestration agentic-ai agentic-workflow ai-agents javascript mit 知识库 / rag">
+<div class="ls-ctop"><a class="ls-repo" href="https://github.com/Mintplex-Labs/anything-llm" target="_blank" rel="noopener noreferrer">Mintplex-Labs/anything-llm</a><span class="ls-stars" title="★ 68,551 · 创建 2023-06 · 最近提交 2026-11-21 · https://anythingllm.com">★ 6.9 万</span></div>
+<p class="ls-pitch">开箱即用的私有 ChatGPT + 文档库</p>
+<p class="ls-aud">适合：个人/小团队自建知识助手</p>
+<p class="ls-note">部署十分钟级，够用、克制，别指望复杂编排。</p>
+<div class="ls-meta"><span class="ls-tag">JavaScript</span><span class="ls-tag ls-d-easy">门槛 易</span><span class="ls-tag">MIT</span><span class="ls-tag ls-st-active">活跃</span></div>
+</article>
+<article class="ls-card" data-cat="knowledge" data-lang="Python" data-diff="中" data-act="1" data-stars="40834" data-upd="2026-11-23" data-name="hkuds/lightrag" data-search="hkuds/lightrag 轻量图增强 rag 要图谱式检索但不想上重型方案 用图结构补足向量检索的关系盲区，成本比 graphrag 低。 docling genai gpt graphrag knowledge-graph large-language-models python mit 知识库 / rag">
+<div class="ls-ctop"><a class="ls-repo" href="https://github.com/HKUDS/LightRAG" target="_blank" rel="noopener noreferrer">HKUDS/LightRAG</a><span class="ls-stars" title="★ 40,834 · 创建 2024-10 · 最近提交 2026-11-23 · https://arxiv.org/abs/2410.05779">★ 4.1 万</span></div>
+<p class="ls-pitch">轻量图增强 RAG</p>
+<p class="ls-aud">适合：要图谱式检索但不想上重型方案</p>
+<p class="ls-note">用图结构补足向量检索的关系盲区，成本比 GraphRAG 低。</p>
+<div class="ls-meta"><span class="ls-tag">Python</span><span class="ls-tag ls-d-medium">门槛 中</span><span class="ls-tag">MIT</span><span class="ls-tag ls-st-active">活跃</span></div>
+</article>
+<article class="ls-card" data-cat="knowledge" data-lang="Python" data-diff="易" data-act="0" data-stars="38221" data-upd="2026-08-02" data-name="khoj-ai/khoj" data-search="khoj-ai/khoj 自托管的个人第二大脑 想自建个人知识助手 文档 / 邮件 / 网页都能进来，支持本地模型；近几个月没提交，节奏慢下来了。 agent ai assistant chat chatgpt emacs python agpl-3.0 知识库 / rag">
+<div class="ls-ctop"><a class="ls-repo" href="https://github.com/khoj-ai/khoj" target="_blank" rel="noopener noreferrer">khoj-ai/khoj</a><span class="ls-stars" title="★ 38,221 · 创建 2021-08 · 最近提交 2026-08-02 · https://khoj.dev">★ 3.8 万</span></div>
+<p class="ls-pitch">自托管的个人第二大脑</p>
+<p class="ls-aud">适合：想自建个人知识助手</p>
+<p class="ls-note">文档 / 邮件 / 网页都能进来，支持本地模型；近几个月没提交，节奏慢下来了。</p>
+<div class="ls-meta"><span class="ls-tag">Python</span><span class="ls-tag ls-d-easy">门槛 易</span><span class="ls-tag">AGPL-3.0</span><span class="ls-tag ls-st-maintained">维护中</span></div>
+</article>
+<article class="ls-card" data-cat="knowledge" data-lang="Go" data-diff="中" data-act="1" data-stars="38090" data-upd="2026-11-23" data-name="tencent/weknora" data-search="tencent/weknora 腾讯开源的文档理解与检索知识平台 要把一堆 pdf / word 变成可问答知识库的人 文档解析 → 分块 → 多路召回 → 带引证回答的完整链路，go 写的中台不是玩具；mit，但第三方组件另有条款。 agent agentic ai chatbot dsh-plugin embeddings go mit+第三方条款 知识库 / rag">
+<div class="ls-ctop"><a class="ls-repo" href="https://github.com/Tencent/WeKnora" target="_blank" rel="noopener noreferrer">Tencent/WeKnora</a><span class="ls-stars" title="★ 38,090 · 创建 2025-07 · 最近提交 2026-11-23 · https://weknora.weixin.qq.com">★ 3.8 万</span></div>
+<p class="ls-pitch">腾讯开源的文档理解与检索知识平台</p>
+<p class="ls-aud">适合：要把一堆 PDF / Word 变成可问答知识库的人</p>
+<p class="ls-note">文档解析 → 分块 → 多路召回 → 带引证回答的完整链路，Go 写的中台不是玩具；MIT，但第三方组件另有条款。</p>
+<div class="ls-meta"><span class="ls-tag">Go</span><span class="ls-tag ls-d-medium">门槛 中</span><span class="ls-tag">MIT+第三方条款</span><span class="ls-tag ls-st-active">活跃</span></div>
+</article>
+<article class="ls-card" data-cat="knowledge" data-lang="Python" data-diff="中" data-act="1" data-stars="36727" data-upd="2026-11-23" data-name="microsoft/graphrag" data-search="microsoft/graphrag 知识图谱式 rag（graphrag） 全局性问题、跨文档关系推理 建图成本高（token 消耗大），适合高价值语料。 gpt gpt-4 gpt4 graphrag llm llms python mit 知识库 / rag">
+<div class="ls-ctop"><a class="ls-repo" href="https://github.com/microsoft/graphrag" target="_blank" rel="noopener noreferrer">microsoft/graphrag</a><span class="ls-stars" title="★ 36,727 · 创建 2024-03 · 最近提交 2026-11-23 · https://microsoft.github.io/graphrag/">★ 3.7 万</span></div>
+<p class="ls-pitch">知识图谱式 RAG（GraphRAG）</p>
+<p class="ls-aud">适合：全局性问题、跨文档关系推理</p>
+<p class="ls-note">建图成本高（token 消耗大），适合高价值语料。</p>
+<div class="ls-meta"><span class="ls-tag">Python</span><span class="ls-tag ls-d-medium">门槛 中</span><span class="ls-tag">MIT</span><span class="ls-tag ls-st-active">活跃</span></div>
+</article>
+<article class="ls-card" data-cat="knowledge" data-lang="Python" data-diff="中" data-act="1" data-stars="33516" data-upd="2026-11-24" data-name="onyx-dot-app/onyx" data-search="onyx-dot-app/onyx 企业级知识问答平台（原 danswer） 企业内网知识库 + 问答 连接器多、权限体系完整，适合内部部署；部署组件偏重。 ai ai-chat chatgpt chatui enterprise-search gen-ai python mit+企业版 知识库 / rag">
+<div class="ls-ctop"><a class="ls-repo" href="https://github.com/onyx-dot-app/onyx" target="_blank" rel="noopener noreferrer">onyx-dot-app/onyx</a><span class="ls-stars" title="★ 33,516 · 创建 2023-04 · 最近提交 2026-11-24 · https://onyx.app">★ 3.4 万</span></div>
+<p class="ls-pitch">企业级知识问答平台（原 Danswer）</p>
+<p class="ls-aud">适合：企业内网知识库 + 问答</p>
+<p class="ls-note">连接器多、权限体系完整，适合内部部署；部署组件偏重。</p>
+<div class="ls-meta"><span class="ls-tag">Python</span><span class="ls-tag ls-d-medium">门槛 中</span><span class="ls-tag">MIT+企业版</span><span class="ls-tag ls-st-active">活跃</span></div>
+</article>
+</div></section>
+<section class="ls-group" data-cat="memory">
+<div class="ls-gh"><h3><span class="ls-gi">11</span>记忆层</h3><span class="ls-gsub">跨会话记住人和事</span><span class="ls-gmeta"><b class="ls-gn">7</b> 个项目 · <b class="ls-gs">26.6 万</b>星标</span></div>
+<div class="ls-grid">
+<article class="ls-card" data-cat="memory" data-lang="Python" data-diff="易" data-act="1" data-stars="69378" data-upd="2026-11-23" data-name="mem0ai/mem0" data-search="mem0ai/mem0 给 agent 外挂长期记忆层 多轮个性化、跨会话记忆 托管与自托管都支持，是记忆层里落地最广的一个。 agentic-memory agentic-memory-system agents ai ai-agents chatgpt python apache-2.0 记忆层">
+<div class="ls-ctop"><a class="ls-repo" href="https://github.com/mem0ai/mem0" target="_blank" rel="noopener noreferrer">mem0ai/mem0</a><span class="ls-stars" title="★ 69,378 · 创建 2023-06 · 最近提交 2026-11-23 · https://mem0.ai">★ 6.9 万</span></div>
+<p class="ls-pitch">给 Agent 外挂长期记忆层</p>
+<p class="ls-aud">适合：多轮个性化、跨会话记忆</p>
+<p class="ls-note">托管与自托管都支持，是记忆层里落地最广的一个。</p>
+<div class="ls-meta"><span class="ls-tag">Python</span><span class="ls-tag ls-d-easy">门槛 易</span><span class="ls-tag">Apache-2.0</span><span class="ls-tag ls-st-active">活跃</span></div>
+</article>
+<article class="ls-card" data-cat="memory" data-lang="Python" data-diff="中" data-act="1" data-stars="60676" data-upd="2026-11-23" data-name="mempalace/mempalace" data-search="mempalace/mempalace 自称基准成绩最好的开源记忆系统 对记忆质量有量化要求的人 拿 benchmark 说话、提供多种后端；「best-benchmarked」是自评，建议自己复现再信。 ai chromadb llm mcp memory python python mit 记忆层">
+<div class="ls-ctop"><a class="ls-repo" href="https://github.com/MemPalace/mempalace" target="_blank" rel="noopener noreferrer">MemPalace/mempalace</a><span class="ls-stars" title="★ 60,676 · 创建 2026-04 · 最近提交 2026-11-23 · http://mempalaceofficial.com/">★ 6.1 万</span></div>
+<p class="ls-pitch">自称基准成绩最好的开源记忆系统</p>
+<p class="ls-aud">适合：对记忆质量有量化要求的人</p>
+<p class="ls-note">拿 benchmark 说话、提供多种后端；「best-benchmarked」是自评，建议自己复现再信。</p>
+<div class="ls-meta"><span class="ls-tag">Python</span><span class="ls-tag ls-d-medium">门槛 中</span><span class="ls-tag">MIT</span><span class="ls-tag ls-st-active">活跃</span></div>
+</article>
+<article class="ls-card" data-cat="memory" data-lang="Python" data-diff="中" data-act="1" data-stars="33528" data-upd="2026-11-23" data-name="topoteretes/cognee" data-search="topoteretes/cognee 把文档变成 agent 的图谱记忆 需要长程记忆 + 知识图谱的人 etl 式建图，记忆可查可改；偏工程化，配置项不少。 agent-memory agent-skills ai ai-agents ai-memory cognitive-architecture python apache-2.0 记忆层">
+<div class="ls-ctop"><a class="ls-repo" href="https://github.com/topoteretes/cognee" target="_blank" rel="noopener noreferrer">topoteretes/cognee</a><span class="ls-stars" title="★ 33,528 · 创建 2023-08 · 最近提交 2026-11-23 · https://www.cognee.ai">★ 3.4 万</span></div>
+<p class="ls-pitch">把文档变成 Agent 的图谱记忆</p>
+<p class="ls-aud">适合：需要长程记忆 + 知识图谱的人</p>
+<p class="ls-note">ETL 式建图，记忆可查可改；偏工程化，配置项不少。</p>
+<div class="ls-meta"><span class="ls-tag">Python</span><span class="ls-tag ls-d-medium">门槛 中</span><span class="ls-tag">Apache-2.0</span><span class="ls-tag ls-st-active">活跃</span></div>
+</article>
+<article class="ls-card" data-cat="memory" data-lang="Python" data-diff="中" data-act="1" data-stars="33039" data-upd="2026-11-24" data-name="getzep/graphiti" data-search="getzep/graphiti 给 agent 建带时间轴的实时知识图谱 需要「谁在什么时候改了什么」的记忆 zep 的记忆引擎：实体关系 + 时间有效性，能回答「这条现在还有效吗」，而不只是「说过什么」；graphiti 是引擎，zep 是托管服务。 agents graph llms rag python apache-2.0 记忆层">
+<div class="ls-ctop"><a class="ls-repo" href="https://github.com/getzep/graphiti" target="_blank" rel="noopener noreferrer">getzep/graphiti</a><span class="ls-stars" title="★ 33,039 · 创建 2024-08 · 最近提交 2026-11-24 · https://help.getzep.com/graphiti">★ 3.3 万</span></div>
+<p class="ls-pitch">给 Agent 建带时间轴的实时知识图谱</p>
+<p class="ls-aud">适合：需要「谁在什么时候改了什么」的记忆</p>
+<p class="ls-note">Zep 的记忆引擎：实体关系 + 时间有效性，能回答「这条现在还有效吗」，而不只是「说过什么」；Graphiti 是引擎，Zep 是托管服务。</p>
+<div class="ls-meta"><span class="ls-tag">Python</span><span class="ls-tag ls-d-medium">门槛 中</span><span class="ls-tag">Apache-2.0</span><span class="ls-tag ls-st-active">活跃</span></div>
+</article>
+<article class="ls-card" data-cat="memory" data-lang="TypeScript" data-diff="易" data-act="1" data-stars="31701" data-upd="2026-11-24" data-name="supermemoryai/supermemory" data-search="supermemoryai/supermemory 高速记忆 / 上下文引擎，带托管 api 要现成记忆 api 的产品团队 以服务形态提供，接入省事；自托管版本比 saas 弱。 agent-memory ai-memory cloudflare-kv cloudflare-pages cloudflare-workers drizzle-orm typescript mit 记忆层">
+<div class="ls-ctop"><a class="ls-repo" href="https://github.com/supermemoryai/supermemory" target="_blank" rel="noopener noreferrer">supermemoryai/supermemory</a><span class="ls-stars" title="★ 31,701 · 创建 2024-02 · 最近提交 2026-11-24 · https://supermemory.ai/docs">★ 3.2 万</span></div>
+<p class="ls-pitch">高速记忆 / 上下文引擎，带托管 API</p>
+<p class="ls-aud">适合：要现成记忆 API 的产品团队</p>
+<p class="ls-note">以服务形态提供，接入省事；自托管版本比 SaaS 弱。</p>
+<div class="ls-meta"><span class="ls-tag">TypeScript</span><span class="ls-tag ls-d-easy">门槛 易</span><span class="ls-tag">MIT</span><span class="ls-tag ls-st-active">活跃</span></div>
+</article>
+<article class="ls-card" data-cat="memory" data-lang="-" data-diff="中" data-act="1" data-stars="25520" data-upd="2026-10-18" data-name="letta-ai/letta" data-search="letta-ai/letta 有状态 agent 服务，自管理记忆（原 memgpt） 需要长期人格与记忆的 agent 把记忆当操作系统管，思路漂亮，资源开销偏高。 ai ai-agents llm llm-agent - apache-2.0 记忆层">
+<div class="ls-ctop"><a class="ls-repo" href="https://github.com/letta-ai/letta" target="_blank" rel="noopener noreferrer">letta-ai/letta</a><span class="ls-stars" title="★ 25,520 · 创建 2023-10 · 最近提交 2026-10-18 · https://docs.letta.com/">★ 2.6 万</span></div>
+<p class="ls-pitch">有状态 Agent 服务，自管理记忆（原 MemGPT）</p>
+<p class="ls-aud">适合：需要长期人格与记忆的 Agent</p>
+<p class="ls-note">把记忆当操作系统管，思路漂亮，资源开销偏高。</p>
+<div class="ls-meta"><span class="ls-tag">-</span><span class="ls-tag ls-d-medium">门槛 中</span><span class="ls-tag">Apache-2.0</span><span class="ls-tag ls-st-active">活跃</span></div>
+</article>
+<article class="ls-card" data-cat="memory" data-lang="TypeScript" data-diff="中" data-act="1" data-stars="12489" data-upd="2026-11-23" data-name="memtensor/memos" data-search="memtensor/memos 给 agent 用的「记忆操作系统」 想在记忆层做研究或定制的人 上海交大团队，记忆调度与生命周期管理做得细；偏学术，落地要自己接。 agent agentic-ai ai ai-agents chatgpt claude typescript apache-2.0 记忆层">
+<div class="ls-ctop"><a class="ls-repo" href="https://github.com/MemTensor/MemOS" target="_blank" rel="noopener noreferrer">MemTensor/MemOS</a><span class="ls-stars" title="★ 12,489 · 创建 2025-07 · 最近提交 2026-11-23 · https://memos.openmem.net">★ 1.2 万</span></div>
+<p class="ls-pitch">给 Agent 用的「记忆操作系统」</p>
+<p class="ls-aud">适合：想在记忆层做研究或定制的人</p>
+<p class="ls-note">上海交大团队，记忆调度与生命周期管理做得细；偏学术，落地要自己接。</p>
+<div class="ls-meta"><span class="ls-tag">TypeScript</span><span class="ls-tag ls-d-medium">门槛 中</span><span class="ls-tag">Apache-2.0</span><span class="ls-tag ls-st-active">活跃</span></div>
+</article>
+</div></section>
+<section class="ls-group" data-cat="protocol">
+<div class="ls-gh"><h3><span class="ls-gi">12</span>工具协议 / MCP</h3><span class="ls-gsub">给 Agent 装手脚的标准接口</span><span class="ls-gmeta"><b class="ls-gn">9</b> 个项目 · <b class="ls-gs">37.4 万</b>星标</span></div>
+<div class="ls-grid">
+<article class="ls-card" data-cat="protocol" data-lang="TypeScript" data-diff="中" data-act="1" data-stars="92190" data-upd="2026-11-19" data-name="modelcontextprotocol/servers" data-search="modelcontextprotocol/servers mcp 官方参考服务器合集 要给 agent 接工具、接数据源 mcp 已成事实标准，这里是官方示范实现与最佳实践来源。  typescript 见仓库 工具协议 / mcp">
+<div class="ls-ctop"><a class="ls-repo" href="https://github.com/modelcontextprotocol/servers" target="_blank" rel="noopener noreferrer">modelcontextprotocol/servers</a><span class="ls-stars" title="★ 92,190 · 创建 2024-11 · 最近提交 2026-11-19 · https://modelcontextprotocol.io">★ 9.2 万</span></div>
+<p class="ls-pitch">MCP 官方参考服务器合集</p>
+<p class="ls-aud">适合：要给 Agent 接工具、接数据源</p>
+<p class="ls-note">MCP 已成事实标准，这里是官方示范实现与最佳实践来源。</p>
+<div class="ls-meta"><span class="ls-tag">TypeScript</span><span class="ls-tag ls-d-medium">门槛 中</span><span class="ls-tag">见仓库</span><span class="ls-tag ls-st-active">活跃</span></div>
+</article>
+<article class="ls-card" data-cat="protocol" data-lang="TypeScript" data-diff="易" data-act="1" data-stars="65351" data-upd="2026-11-23" data-name="upstash/context7" data-search="upstash/context7 给 agent 喂最新文档的 mcp 服务 受不了模型知识过期的人 按库名拉版本化文档，接进 cursor / claude code 就能用；索引依赖第三方托管。 llm mcp mcp-server vibe-coding typescript mit 工具协议 / mcp">
+<div class="ls-ctop"><a class="ls-repo" href="https://github.com/upstash/context7" target="_blank" rel="noopener noreferrer">upstash/context7</a><span class="ls-stars" title="★ 65,351 · 创建 2025-03 · 最近提交 2026-11-23 · https://context7.com">★ 6.5 万</span></div>
+<p class="ls-pitch">给 Agent 喂最新文档的 MCP 服务</p>
+<p class="ls-aud">适合：受不了模型知识过期的人</p>
+<p class="ls-note">按库名拉版本化文档，接进 Cursor / Claude Code 就能用；索引依赖第三方托管。</p>
+<div class="ls-meta"><span class="ls-tag">TypeScript</span><span class="ls-tag ls-d-easy">门槛 易</span><span class="ls-tag">MIT</span><span class="ls-tag ls-st-active">活跃</span></div>
+</article>
+<article class="ls-card" data-cat="protocol" data-lang="TypeScript" data-diff="易" data-act="1" data-stars="59036" data-upd="2026-11-23" data-name="chromedevtools/chrome-devtools-mcp" data-search="chromedevtools/chrome-devtools-mcp 让 agent 直接操控 chrome devtools 要让 agent 查性能、网络、控制台的人 官方维护，比纯 dom 操作多一层运行时视角，调前端问题很顺手。 browser chrome chrome-devtools debugging devtools mcp typescript apache-2.0 工具协议 / mcp">
+<div class="ls-ctop"><a class="ls-repo" href="https://github.com/ChromeDevTools/chrome-devtools-mcp" target="_blank" rel="noopener noreferrer">ChromeDevTools/chrome-devtools-mcp</a><span class="ls-stars" title="★ 59,036 · 创建 2025-09 · 最近提交 2026-11-23 · https://developer.chrome.com/docs/devtools/agents">★ 5.9 万</span></div>
+<p class="ls-pitch">让 Agent 直接操控 Chrome DevTools</p>
+<p class="ls-aud">适合：要让 Agent 查性能、网络、控制台的人</p>
+<p class="ls-note">官方维护，比纯 DOM 操作多一层运行时视角，调前端问题很顺手。</p>
+<div class="ls-meta"><span class="ls-tag">TypeScript</span><span class="ls-tag ls-d-easy">门槛 易</span><span class="ls-tag">Apache-2.0</span><span class="ls-tag ls-st-active">活跃</span></div>
+</article>
+<article class="ls-card" data-cat="protocol" data-lang="Go" data-diff="易" data-act="1" data-stars="34697" data-upd="2026-11-21" data-name="github/github-mcp-server" data-search="github/github-mcp-server github 官方 mcp server 让 agent 管 issue / pr / 代码搜索 官方出品，权限跟着 token 走；github enterprise 要额外配置。 github mcp mcp-server go mit 工具协议 / mcp">
+<div class="ls-ctop"><a class="ls-repo" href="https://github.com/github/github-mcp-server" target="_blank" rel="noopener noreferrer">github/github-mcp-server</a><span class="ls-stars" title="★ 34,697 · 创建 2025-03 · 最近提交 2026-11-21">★ 3.5 万</span></div>
+<p class="ls-pitch">GitHub 官方 MCP Server</p>
+<p class="ls-aud">适合：让 Agent 管 issue / PR / 代码搜索</p>
+<p class="ls-note">官方出品，权限跟着 token 走；GitHub Enterprise 要额外配置。</p>
+<div class="ls-meta"><span class="ls-tag">Go</span><span class="ls-tag ls-d-easy">门槛 易</span><span class="ls-tag">MIT</span><span class="ls-tag ls-st-active">活跃</span></div>
+</article>
+<article class="ls-card" data-cat="protocol" data-lang="TypeScript" data-diff="易" data-act="1" data-stars="31271" data-upd="2026-11-24" data-name="composiohq/composio" data-search="composiohq/composio 1000+ 工具集成的 agent 工具中台 想让 agent 接通 saas 生态的人 托管工具市场 + 鉴权托管，省掉自己接 oauth；代价是依赖其云端服务。 agentic-ai agents ai ai-agents aiagents developer-tools typescript mit 工具协议 / mcp">
+<div class="ls-ctop"><a class="ls-repo" href="https://github.com/ComposioHQ/composio" target="_blank" rel="noopener noreferrer">ComposioHQ/composio</a><span class="ls-stars" title="★ 31,271 · 创建 2024-02 · 最近提交 2026-11-24 · https://docs.composio.dev">★ 3.1 万</span></div>
+<p class="ls-pitch">1000+ 工具集成的 Agent 工具中台</p>
+<p class="ls-aud">适合：想让 Agent 接通 SaaS 生态的人</p>
+<p class="ls-note">托管工具市场 + 鉴权托管，省掉自己接 OAuth；代价是依赖其云端服务。</p>
+<div class="ls-meta"><span class="ls-tag">TypeScript</span><span class="ls-tag ls-d-easy">门槛 易</span><span class="ls-tag">MIT</span><span class="ls-tag ls-st-active">活跃</span></div>
+</article>
+<article class="ls-card" data-cat="protocol" data-lang="Python" data-diff="易" data-act="1" data-stars="28715" data-upd="2026-11-23" data-name="prefecthq/fastmcp" data-search="prefecthq/fastmcp 用几行 python 写一个 mcp server 要把内部系统暴露给 agent 装饰器风格，是目前写 mcp 服务最省心的库。  python apache-2.0 工具协议 / mcp">
+<div class="ls-ctop"><a class="ls-repo" href="https://github.com/PrefectHQ/fastmcp" target="_blank" rel="noopener noreferrer">PrefectHQ/fastmcp</a><span class="ls-stars" title="★ 28,715 · 创建 2024-11 · 最近提交 2026-11-23">★ 2.9 万</span></div>
+<p class="ls-pitch">用几行 Python 写一个 MCP Server</p>
+<p class="ls-aud">适合：要把内部系统暴露给 Agent</p>
+<p class="ls-note">装饰器风格，是目前写 MCP 服务最省心的库。</p>
+<div class="ls-meta"><span class="ls-tag">Python</span><span class="ls-tag ls-d-easy">门槛 易</span><span class="ls-tag">Apache-2.0</span><span class="ls-tag ls-st-active">活跃</span></div>
+</article>
+<article class="ls-card" data-cat="protocol" data-lang="Shell" data-diff="中" data-act="1" data-stars="26652" data-upd="2026-11-20" data-name="a2aproject/a2a" data-search="a2aproject/a2a google 发起、现归 linux 基金会的 agent 间通信协议 要跨厂商、跨组织串 agent 的人 补上 mcp 没管的那一半：agent 之间怎么互相发现、怎么委派任务、怎么流式回传进度；仓库以规范为主，代码是参考实现。 a2a a2a-mcp a2a-protocol a2a-server agents generative-ai shell apache-2.0 工具协议 / mcp">
+<div class="ls-ctop"><a class="ls-repo" href="https://github.com/a2aproject/A2A" target="_blank" rel="noopener noreferrer">a2aproject/A2A</a><span class="ls-stars" title="★ 26,652 · 创建 2025-03 · 最近提交 2026-11-20 · https://a2a-protocol.org/">★ 2.7 万</span></div>
+<p class="ls-pitch">Google 发起、现归 Linux 基金会的 Agent 间通信协议</p>
+<p class="ls-aud">适合：要跨厂商、跨组织串 Agent 的人</p>
+<p class="ls-note">补上 MCP 没管的那一半：Agent 之间怎么互相发现、怎么委派任务、怎么流式回传进度；仓库以规范为主，代码是参考实现。</p>
+<div class="ls-meta"><span class="ls-tag">Shell</span><span class="ls-tag ls-d-medium">门槛 中</span><span class="ls-tag">Apache-2.0</span><span class="ls-tag ls-st-active">活跃</span></div>
+</article>
+<article class="ls-card" data-cat="protocol" data-lang="Python" data-diff="中" data-act="1" data-stars="24948" data-upd="2026-11-17" data-name="modelcontextprotocol/python-sdk" data-search="modelcontextprotocol/python-sdk 自己写 mcp server 的官方 python sdk 要把内部系统接给 agent 的人 协议本体最权威的实现，配 fastmcp 更省事；只管协议层，不含 agent 逻辑。 mcp mcp-client mcp-server python python mit 工具协议 / mcp">
+<div class="ls-ctop"><a class="ls-repo" href="https://github.com/modelcontextprotocol/python-sdk" target="_blank" rel="noopener noreferrer">modelcontextprotocol/python-sdk</a><span class="ls-stars" title="★ 24,948 · 创建 2024-09 · 最近提交 2026-11-17 · https://py.sdk.modelcontextprotocol.io/">★ 2.5 万</span></div>
+<p class="ls-pitch">自己写 MCP Server 的官方 Python SDK</p>
+<p class="ls-aud">适合：要把内部系统接给 Agent 的人</p>
+<p class="ls-note">协议本体最权威的实现，配 FastMCP 更省事；只管协议层，不含 Agent 逻辑。</p>
+<div class="ls-meta"><span class="ls-tag">Python</span><span class="ls-tag ls-d-medium">门槛 中</span><span class="ls-tag">MIT</span><span class="ls-tag ls-st-active">活跃</span></div>
+</article>
+<article class="ls-card" data-cat="protocol" data-lang="TypeScript" data-diff="中" data-act="1" data-stars="11003" data-upd="2026-11-24" data-name="mcp-use/mcp-use" data-search="mcp-use/mcp-use 全栈 mcp 框架：mcp app 和 server 一起做 要做带界面的 mcp app 的人 把 mcp server 和前端 ui 打包成一个工程，适合做可交互工具；公开案例还不多。 agent-plugins agentic-framework ai apps-sdk chatgpt claude-code typescript mit 工具协议 / mcp">
+<div class="ls-ctop"><a class="ls-repo" href="https://github.com/mcp-use/mcp-use" target="_blank" rel="noopener noreferrer">mcp-use/mcp-use</a><span class="ls-stars" title="★ 11,003 · 创建 2025-03 · 最近提交 2026-11-24 · https://manufact.com">★ 1.1 万</span></div>
+<p class="ls-pitch">全栈 MCP 框架：MCP App 和 Server 一起做</p>
+<p class="ls-aud">适合：要做带界面的 MCP App 的人</p>
+<p class="ls-note">把 MCP Server 和前端 UI 打包成一个工程，适合做可交互工具；公开案例还不多。</p>
+<div class="ls-meta"><span class="ls-tag">TypeScript</span><span class="ls-tag ls-d-medium">门槛 中</span><span class="ls-tag">MIT</span><span class="ls-tag ls-st-active">活跃</span></div>
+</article>
+</div></section>
+<section class="ls-group" data-cat="skills">
+<div class="ls-gh"><h3><span class="ls-gi">13</span>技能包 / 工作流</h3><span class="ls-gsub">把工程纪律写进提示词层，管 Agent 怎么干活</span><span class="ls-gmeta"><b class="ls-gn">4</b> 个项目 · <b class="ls-gs">78.2 万</b>星标</span></div>
+<div class="ls-grid">
+<article class="ls-card" data-cat="skills" data-lang="Shell" data-diff="易" data-act="1" data-stars="331701" data-upd="2026-11-19" data-name="mattpocock/skills" data-search="mattpocock/skills 写代码前先对齐要做成什么 需求模糊、要长期维护的项目 技能小而可组合，招牌是 /grill-me：让 agent 一次只问一个问题，把设计分支问到没有歧义再动手；作者明确反对「大框架管住流程」，控制权留在人手里。  shell mit 技能包 / 工作流">
+<div class="ls-ctop"><a class="ls-repo" href="https://github.com/mattpocock/skills" target="_blank" rel="noopener noreferrer">mattpocock/skills</a><span class="ls-stars" title="★ 331,701 · 创建 2026-02 · 最近提交 2026-11-19 · https://aihero.dev/skills">★ 33.2 万</span></div>
+<p class="ls-pitch">写代码前先对齐要做成什么</p>
+<p class="ls-aud">适合：需求模糊、要长期维护的项目</p>
+<p class="ls-note">技能小而可组合，招牌是 /grill-me：让 Agent 一次只问一个问题，把设计分支问到没有歧义再动手；作者明确反对「大框架管住流程」，控制权留在人手里。</p>
+<div class="ls-meta"><span class="ls-tag">Shell</span><span class="ls-tag ls-d-easy">门槛 易</span><span class="ls-tag">MIT</span><span class="ls-tag ls-st-active">活跃</span></div>
+</article>
+<article class="ls-card" data-cat="skills" data-lang="Shell" data-diff="易" data-act="1" data-stars="325437" data-upd="2026-11-03" data-name="obra/superpowers" data-search="obra/superpowers 给编码 agent 装一整套工程纪律 想让 agent 按固定流程交付 15 个技能串成固定顺序：头脑风暴、写计划、worktree 隔离、tdd、子 agent 执行、逐任务评审、收尾；文档写明这是强制流程，不是建议。 ai brainstorming coding obra sdlc skills subagent-driven-development superpowers shell mit 技能包 / 工作流">
+<div class="ls-ctop"><a class="ls-repo" href="https://github.com/obra/superpowers" target="_blank" rel="noopener noreferrer">obra/superpowers</a><span class="ls-stars" title="★ 325,437 · 创建 2025-10 · 最近提交 2026-11-03">★ 32.5 万</span></div>
+<p class="ls-pitch">给编码 Agent 装一整套工程纪律</p>
+<p class="ls-aud">适合：想让 Agent 按固定流程交付</p>
+<p class="ls-note">15 个技能串成固定顺序：头脑风暴、写计划、worktree 隔离、TDD、子 Agent 执行、逐任务评审、收尾；文档写明这是强制流程，不是建议。</p>
+<div class="ls-meta"><span class="ls-tag">Shell</span><span class="ls-tag ls-d-easy">门槛 易</span><span class="ls-tag">MIT</span><span class="ls-tag ls-st-active">活跃</span></div>
+</article>
+<article class="ls-card" data-cat="skills" data-lang="JavaScript" data-diff="中" data-act="1" data-stars="120072" data-upd="2026-11-24" data-name="addyosmani/agent-skills" data-search="addyosmani/agent-skills 把经典 sdlc 拆成六个命令 要上生产、要质量门的团队 从 /spec 到 /ship 覆盖定义、计划、构建、验证、评审、发布，约 25 个技能加四类评审人格；每个技能都附「借口表」，提前反驳「太简单不用测」这类话。 agent-skills antigravity claude-code codex cursor skills javascript mit 技能包 / 工作流">
+<div class="ls-ctop"><a class="ls-repo" href="https://github.com/addyosmani/agent-skills" target="_blank" rel="noopener noreferrer">addyosmani/agent-skills</a><span class="ls-stars" title="★ 120,072 · 创建 2026-02 · 最近提交 2026-11-24 · https://skills.addy.ie">★ 12 万</span></div>
+<p class="ls-pitch">把经典 SDLC 拆成六个命令</p>
+<p class="ls-aud">适合：要上生产、要质量门的团队</p>
+<p class="ls-note">从 /spec 到 /ship 覆盖定义、计划、构建、验证、评审、发布，约 25 个技能加四类评审人格；每个技能都附「借口表」，提前反驳「太简单不用测」这类话。</p>
+<div class="ls-meta"><span class="ls-tag">JavaScript</span><span class="ls-tag ls-d-medium">门槛 中</span><span class="ls-tag">MIT</span><span class="ls-tag ls-st-active">活跃</span></div>
+</article>
+<article class="ls-card" data-cat="skills" data-lang="TypeScript" data-diff="中" data-act="1" data-stars="4935" data-upd="2026-11-24" data-name="backnotprop/pstack" data-search="backnotprop/pstack 先证明它真能跑，再说做完了 难复现的 bug、数据迁移、整夜自主任务 lauren tan（cursor）的工作流镜像，上游在 cursor/plugins；/poteto-mode 挑 22 个 playbook，不设规划技能，重量压在复现、取证与多模型评审。 agent-skills agentskills ai-agents backnotprop claude-code claude-skills codex cursor opencode pstack pstack-claude skills typescript mit 技能包 / 工作流">
+<div class="ls-ctop"><a class="ls-repo" href="https://github.com/backnotprop/pstack" target="_blank" rel="noopener noreferrer">backnotprop/pstack</a><span class="ls-stars" title="★ 4,935 · 创建 2026-05 · 最近提交 2026-11-24">★ 4,935</span></div>
+<p class="ls-pitch">先证明它真能跑，再说做完了</p>
+<p class="ls-aud">适合：难复现的 bug、数据迁移、整夜自主任务</p>
+<p class="ls-note">Lauren Tan（Cursor）的工作流镜像，上游在 cursor/plugins；/poteto-mode 挑 22 个 playbook，不设规划技能，重量压在复现、取证与多模型评审。</p>
+<div class="ls-meta"><span class="ls-tag">TypeScript</span><span class="ls-tag ls-d-medium">门槛 中</span><span class="ls-tag">MIT</span><span class="ls-tag ls-st-active">活跃</span></div>
+</article>
+</div></section>
+<section class="ls-group" data-cat="eval">
+<div class="ls-gh"><h3><span class="ls-gi">14</span>Agent 可观测 / 评测</h3><span class="ls-gsub">看它在干什么、跑得好不好</span><span class="ls-gmeta"><b class="ls-gn">6</b> 个项目 · <b class="ls-gs">10.7 万</b>星标</span></div>
+<div class="ls-grid">
+<article class="ls-card" data-cat="eval" data-lang="TypeScript" data-diff="中" data-act="1" data-stars="37765" data-upd="2026-11-23" data-name="langfuse/langfuse" data-search="langfuse/langfuse agent 观测与评测的老牌平台 要给 agent 上 trace 和评测的人 自托管友好，trace / 数据集 / 评分一体；功能多，上手要花点时间。 ai-gateway analytics evaluation gateway langchain large-language-models typescript mit+企业版 agent 可观测 / 评测">
+<div class="ls-ctop"><a class="ls-repo" href="https://github.com/langfuse/langfuse" target="_blank" rel="noopener noreferrer">langfuse/langfuse</a><span class="ls-stars" title="★ 37,765 · 创建 2023-05 · 最近提交 2026-11-23 · https://langfuse.com">★ 3.8 万</span></div>
+<p class="ls-pitch">Agent 观测与评测的老牌平台</p>
+<p class="ls-aud">适合：要给 Agent 上 trace 和评测的人</p>
+<p class="ls-note">自托管友好，trace / 数据集 / 评分一体；功能多，上手要花点时间。</p>
+<div class="ls-meta"><span class="ls-tag">TypeScript</span><span class="ls-tag ls-d-medium">门槛 中</span><span class="ls-tag">MIT+企业版</span><span class="ls-tag ls-st-active">活跃</span></div>
+</article>
+<article class="ls-card" data-cat="eval" data-lang="TypeScript" data-diff="易" data-act="1" data-stars="27596" data-upd="2026-11-24" data-name="promptfoo/promptfoo" data-search="promptfoo/promptfoo 把提示词、agent、rag 的测试写成配置跑进 ci 要让评测进 ci 的团队 yaml 声明式断言 + 红队扫描，比手写脚本做回归省事；偏「测试框架」而非「观测平台」，和 langfuse 是互补关系。 ci ci-cd cicd evaluation evaluation-framework llm typescript mit agent 可观测 / 评测">
+<div class="ls-ctop"><a class="ls-repo" href="https://github.com/promptfoo/promptfoo" target="_blank" rel="noopener noreferrer">promptfoo/promptfoo</a><span class="ls-stars" title="★ 27,596 · 创建 2023-04 · 最近提交 2026-11-24 · https://promptfoo.dev">★ 2.8 万</span></div>
+<p class="ls-pitch">把提示词、Agent、RAG 的测试写成配置跑进 CI</p>
+<p class="ls-aud">适合：要让评测进 CI 的团队</p>
+<p class="ls-note">YAML 声明式断言 + 红队扫描，比手写脚本做回归省事；偏「测试框架」而非「观测平台」，和 Langfuse 是互补关系。</p>
+<div class="ls-meta"><span class="ls-tag">TypeScript</span><span class="ls-tag ls-d-easy">门槛 易</span><span class="ls-tag">MIT</span><span class="ls-tag ls-st-active">活跃</span></div>
+</article>
+<article class="ls-card" data-cat="eval" data-lang="Python" data-diff="易" data-act="1" data-stars="19611" data-upd="2026-11-24" data-name="confident-ai/deepeval" data-search="confident-ai/deepeval 给 llm / agent 写单测的评测框架 想把评测塞进 ci 的人 pytest 风格，常用指标开箱即用；复杂多轮场景得自己写 evaluator。 evaluation-framework evaluation-metrics llm-evaluation llm-evaluation-framework llm-evaluation-metrics python python apache-2.0 agent 可观测 / 评测">
+<div class="ls-ctop"><a class="ls-repo" href="https://github.com/confident-ai/deepeval" target="_blank" rel="noopener noreferrer">confident-ai/deepeval</a><span class="ls-stars" title="★ 19,611 · 创建 2023-08 · 最近提交 2026-11-24 · https://deepeval.com">★ 2 万</span></div>
+<p class="ls-pitch">给 LLM / Agent 写单测的评测框架</p>
+<p class="ls-aud">适合：想把评测塞进 CI 的人</p>
+<p class="ls-note">pytest 风格，常用指标开箱即用；复杂多轮场景得自己写 evaluator。</p>
+<div class="ls-meta"><span class="ls-tag">Python</span><span class="ls-tag ls-d-easy">门槛 易</span><span class="ls-tag">Apache-2.0</span><span class="ls-tag ls-st-active">活跃</span></div>
+</article>
+<article class="ls-card" data-cat="eval" data-lang="Python" data-diff="中" data-act="1" data-stars="12387" data-upd="2026-11-24" data-name="arize-ai/phoenix" data-search="arize-ai/phoenix arize 的观测与评测面板 做 rag / agent 调优对比的人 本地起一个就能看 trace 和实验对比；云版功能更全。 agents ai-monitoring ai-observability aiengineering anthropic datasets python elastic-2.0 agent 可观测 / 评测">
+<div class="ls-ctop"><a class="ls-repo" href="https://github.com/Arize-ai/phoenix" target="_blank" rel="noopener noreferrer">Arize-ai/phoenix</a><span class="ls-stars" title="★ 12,387 · 创建 2022-11 · 最近提交 2026-11-24 · https://arize.com/docs/phoenix">★ 1.2 万</span></div>
+<p class="ls-pitch">Arize 的观测与评测面板</p>
+<p class="ls-aud">适合：做 RAG / Agent 调优对比的人</p>
+<p class="ls-note">本地起一个就能看 trace 和实验对比；云版功能更全。</p>
+<div class="ls-meta"><span class="ls-tag">Python</span><span class="ls-tag ls-d-medium">门槛 中</span><span class="ls-tag">Elastic-2.0</span><span class="ls-tag ls-st-active">活跃</span></div>
+</article>
+<article class="ls-card" data-cat="eval" data-lang="Python" data-diff="易" data-act="0" data-stars="5972" data-upd="2026-06-25" data-name="agentops-ai/agentops" data-search="agentops-ai/agentops 几行代码接入的 agent 监控 sdk 想低成本先看到运行轨迹的人 接入最快的一档，深度不如 langfuse；近半年更新变慢。 agent agentops agents-sdk ai anthropic autogen python mit agent 可观测 / 评测">
+<div class="ls-ctop"><a class="ls-repo" href="https://github.com/AgentOps-AI/agentops" target="_blank" rel="noopener noreferrer">AgentOps-AI/agentops</a><span class="ls-stars" title="★ 5,972 · 创建 2023-08 · 最近提交 2026-06-25 · https://agentops.ai">★ 5,972</span></div>
+<p class="ls-pitch">几行代码接入的 Agent 监控 SDK</p>
+<p class="ls-aud">适合：想低成本先看到运行轨迹的人</p>
+<p class="ls-note">接入最快的一档，深度不如 Langfuse；近半年更新变慢。</p>
+<div class="ls-meta"><span class="ls-tag">Python</span><span class="ls-tag ls-d-easy">门槛 易</span><span class="ls-tag">MIT</span><span class="ls-tag ls-st-maintained">维护中</span></div>
+</article>
+<article class="ls-card" data-cat="eval" data-lang="Python" data-diff="中" data-act="1" data-stars="3321" data-upd="2026-11-24" data-name="ukgovernmentbeis/inspect_ai" data-search="ukgovernmentbeis/inspect_ai 英国 ai 安全研究所的评测框架 要做可复现、可审计评测的人 把评测写成可版本化的任务集，自带沙箱与完整日志，政府与合规场景常用；不如商业平台顺手，但结果可复现。  python mit agent 可观测 / 评测">
+<div class="ls-ctop"><a class="ls-repo" href="https://github.com/UKGovernmentBEIS/inspect_ai" target="_blank" rel="noopener noreferrer">UKGovernmentBEIS/inspect_ai</a><span class="ls-stars" title="★ 3,321 · 创建 2023-11 · 最近提交 2026-11-24 · https://inspect.aisi.org.uk/">★ 3,321</span></div>
+<p class="ls-pitch">英国 AI 安全研究所的评测框架</p>
+<p class="ls-aud">适合：要做可复现、可审计评测的人</p>
+<p class="ls-note">把评测写成可版本化的任务集，自带沙箱与完整日志，政府与合规场景常用；不如商业平台顺手，但结果可复现。</p>
+<div class="ls-meta"><span class="ls-tag">Python</span><span class="ls-tag ls-d-medium">门槛 中</span><span class="ls-tag">MIT</span><span class="ls-tag ls-st-active">活跃</span></div>
+</article>
+</div></section>
+<section class="ls-group" data-cat="rl">
+<div class="ls-gh"><h3><span class="ls-gi">15</span>Agentic RL / 训练环境</h3><span class="ls-gsub">训练 Agent 自己的策略，而不是只改提示词</span><span class="ls-gmeta"><b class="ls-gn">5</b> 个项目 · <b class="ls-gs">4.9 万</b>星标</span></div>
+<div class="ls-grid">
+<article class="ls-card" data-cat="rl" data-lang="Python" data-diff="难" data-act="1" data-stars="24325" data-upd="2026-11-23" data-name="verl-project/verl" data-search="verl-project/verl agentic rl 训练的主流底座（hybridflow） 要自己训 agent 策略的算法团队 单控制器 + 多角色并行的 rl 后训练框架，社区里绝大多数 agentic rl 复现都从它起步；门槛不在 api 而在分布式训练本身。  python apache-2.0 agentic rl / 训练环境">
+<div class="ls-ctop"><a class="ls-repo" href="https://github.com/verl-project/verl" target="_blank" rel="noopener noreferrer">verl-project/verl</a><span class="ls-stars" title="★ 24,325 · 创建 2024-10 · 最近提交 2026-11-23 · https://verl-project.github.io">★ 2.4 万</span></div>
+<p class="ls-pitch">Agentic RL 训练的主流底座（HybridFlow）</p>
+<p class="ls-aud">适合：要自己训 Agent 策略的算法团队</p>
+<p class="ls-note">单控制器 + 多角色并行的 RL 后训练框架，社区里绝大多数 Agentic RL 复现都从它起步；门槛不在 API 而在分布式训练本身。</p>
+<div class="ls-meta"><span class="ls-tag">Python</span><span class="ls-tag ls-d-hard">门槛 难</span><span class="ls-tag">Apache-2.0</span><span class="ls-tag ls-st-active">活跃</span></div>
+</article>
+<article class="ls-card" data-cat="rl" data-lang="Python" data-diff="中" data-act="1" data-stars="10868" data-upd="2026-11-19" data-name="openpipe/art" data-search="openpipe/art agent 强化训练器：把多步任务训成可训练样本 想用便宜小模型顶掉固定流程的人 grpo + 可训练的工具调用循环，主打「小模型 + rl」在窄任务上追平大模型；真正的成本在造训练数据，不在训练。 agent agentic-ai grpo llms lora qwen python apache-2.0 agentic rl / 训练环境">
+<div class="ls-ctop"><a class="ls-repo" href="https://github.com/OpenPipe/ART" target="_blank" rel="noopener noreferrer">OpenPipe/ART</a><span class="ls-stars" title="★ 10,868 · 创建 2025-03 · 最近提交 2026-11-19 · https://art.openpipe.ai">★ 1.1 万</span></div>
+<p class="ls-pitch">Agent 强化训练器：把多步任务训成可训练样本</p>
+<p class="ls-aud">适合：想用便宜小模型顶掉固定流程的人</p>
+<p class="ls-note">GRPO + 可训练的工具调用循环，主打「小模型 + RL」在窄任务上追平大模型；真正的成本在造训练数据，不在训练。</p>
+<div class="ls-meta"><span class="ls-tag">Python</span><span class="ls-tag ls-d-medium">门槛 中</span><span class="ls-tag">Apache-2.0</span><span class="ls-tag ls-st-active">活跃</span></div>
+</article>
+<article class="ls-card" data-cat="rl" data-lang="Python" data-diff="难" data-act="1" data-stars="8862" data-upd="2026-11-05" data-name="thudm/slime" data-search="thudm/slime 清华的 rl scaling 训练框架 做长轨迹 agentic rl 实验的研究者 面向超长轨迹与多轮工具调用的 rl：rollout 交给 sglang、训练交给 megatron；文档偏论文风格，得肯读代码。  python apache-2.0 agentic rl / 训练环境">
+<div class="ls-ctop"><a class="ls-repo" href="https://github.com/THUDM/slime" target="_blank" rel="noopener noreferrer">THUDM/slime</a><span class="ls-stars" title="★ 8,862 · 创建 2025-06 · 最近提交 2026-11-05 · https://thudm.github.io/slime">★ 8,862</span></div>
+<p class="ls-pitch">清华的 RL Scaling 训练框架</p>
+<p class="ls-aud">适合：做长轨迹 Agentic RL 实验的研究者</p>
+<p class="ls-note">面向超长轨迹与多轮工具调用的 RL：rollout 交给 SGLang、训练交给 Megatron；文档偏论文风格，得肯读代码。</p>
+<div class="ls-meta"><span class="ls-tag">Python</span><span class="ls-tag ls-d-hard">门槛 难</span><span class="ls-tag">Apache-2.0</span><span class="ls-tag ls-st-active">活跃</span></div>
+</article>
+<article class="ls-card" data-cat="rl" data-lang="Python" data-diff="中" data-act="1" data-stars="2883" data-upd="2026-11-23" data-name="openenv/openenv" data-search="openenv/openenv 给 rl 后训练用的环境接口标准 希望训练环境可互换的人 把环境抽象成统一的 reset/step/reward 接口，换环境不用改训练代码；非常早期，生态还没成型。  python bsd-3-clause agentic rl / 训练环境">
+<div class="ls-ctop"><a class="ls-repo" href="https://github.com/openenv/OpenEnv" target="_blank" rel="noopener noreferrer">openenv/OpenEnv</a><span class="ls-stars" title="★ 2,883 · 创建 2025-10 · 最近提交 2026-11-23 · https://huggingface.co/docs/openenv/index">★ 2,883</span></div>
+<p class="ls-pitch">给 RL 后训练用的环境接口标准</p>
+<p class="ls-aud">适合：希望训练环境可互换的人</p>
+<p class="ls-note">把环境抽象成统一的 reset/step/reward 接口，换环境不用改训练代码；非常早期，生态还没成型。</p>
+<div class="ls-meta"><span class="ls-tag">Python</span><span class="ls-tag ls-d-medium">门槛 中</span><span class="ls-tag">BSD-3-Clause</span><span class="ls-tag ls-st-active">活跃</span></div>
+</article>
+<article class="ls-card" data-cat="rl" data-lang="Python" data-diff="难" data-act="1" data-stars="2273" data-upd="2026-11-24" data-name="primeintellect-ai/prime-rl" data-search="primeintellect-ai/prime-rl 去中心化算力上的 agentic rl 训练栈 想跨机器拼算力训 agent 的人 异步 rl + 分布式 rollout，主打把闲置算力接进来一起训；运维复杂度明显高于单机方案。  python apache-2.0 agentic rl / 训练环境">
+<div class="ls-ctop"><a class="ls-repo" href="https://github.com/PrimeIntellect-ai/prime-rl" target="_blank" rel="noopener noreferrer">PrimeIntellect-ai/prime-rl</a><span class="ls-stars" title="★ 2,273 · 创建 2025-02 · 最近提交 2026-11-24">★ 2,273</span></div>
+<p class="ls-pitch">去中心化算力上的 Agentic RL 训练栈</p>
+<p class="ls-aud">适合：想跨机器拼算力训 Agent 的人</p>
+<p class="ls-note">异步 RL + 分布式 rollout，主打把闲置算力接进来一起训；运维复杂度明显高于单机方案。</p>
+<div class="ls-meta"><span class="ls-tag">Python</span><span class="ls-tag ls-d-hard">门槛 难</span><span class="ls-tag">Apache-2.0</span><span class="ls-tag ls-st-active">活跃</span></div>
+</article>
+</div></section>
+<section class="ls-group" data-cat="infra">
+<div class="ls-gh"><h3><span class="ls-gi">16</span>Agent 基础设施</h3><span class="ls-gsub">沙箱、运行时等底座</span><span class="ls-gmeta"><b class="ls-gn">1</b> 个项目 · <b class="ls-gs">1.5 万</b>星标</span></div>
+<div class="ls-grid">
+<article class="ls-card" data-cat="infra" data-lang="Python" data-diff="中" data-act="1" data-stars="14981" data-upd="2026-11-23" data-name="e2b-dev/e2b" data-search="e2b-dev/e2b 给 agent 用的安全云沙箱 要执行 ai 生成代码的产品 firecracker 微虚机隔离，是编码类 agent 的基础设施刚需。 agent ai ai-agent ai-agents code-interpreter copilot python apache-2.0 agent 基础设施">
+<div class="ls-ctop"><a class="ls-repo" href="https://github.com/e2b-dev/E2B" target="_blank" rel="noopener noreferrer">e2b-dev/E2B</a><span class="ls-stars" title="★ 14,981 · 创建 2023-03 · 最近提交 2026-11-23 · https://docs.e2b.dev/?utm_source=github&amp;utm_medium=referral&amp;utm_campaign=repo_website&amp;utm_content=e2b">★ 1.5 万</span></div>
+<p class="ls-pitch">给 Agent 用的安全云沙箱</p>
+<p class="ls-aud">适合：要执行 AI 生成代码的产品</p>
+<p class="ls-note">Firecracker 微虚机隔离，是编码类 Agent 的基础设施刚需。</p>
+<div class="ls-meta"><span class="ls-tag">Python</span><span class="ls-tag ls-d-medium">门槛 中</span><span class="ls-tag">Apache-2.0</span><span class="ls-tag ls-st-active">活跃</span></div>
+</article>
+</div></section>
+<section class="ls-group" data-cat="learn">
+<div class="ls-gh"><h3><span class="ls-gi">17</span>教程 / 学习资料</h3><span class="ls-gsub">先读别人怎么做的，再决定自己动手</span><span class="ls-gmeta"><b class="ls-gn">12</b> 个项目 · <b class="ls-gs">43.9 万</b>星标</span></div>
+<div class="ls-grid">
+<article class="ls-card" data-cat="learn" data-lang="Python" data-diff="易" data-act="1" data-stars="87816" data-upd="2026-11-13" data-name="datawhalechina/hello-agents" data-search="datawhalechina/hello-agents 中文·从零构建一个智能体 想先搞懂原理再上手 《从零开始构建智能体》配套代码，从 react 循环讲到多智能体与训练，每章可跑，中文表达清楚。 agent llm rag tutorial python noassertion 教程 / 学习资料">
+<div class="ls-ctop"><a class="ls-repo" href="https://github.com/datawhalechina/hello-agents" target="_blank" rel="noopener noreferrer">datawhalechina/hello-agents</a><span class="ls-stars" title="★ 87,816 · 创建 2025-09 · 最近提交 2026-11-13 · https://hello-agents.datawhale.cc">★ 8.8 万</span></div>
+<p class="ls-pitch">中文·从零构建一个智能体</p>
+<p class="ls-aud">适合：想先搞懂原理再上手</p>
+<p class="ls-note">《从零开始构建智能体》配套代码，从 ReAct 循环讲到多智能体与训练，每章可跑，中文表达清楚。</p>
+<div class="ls-meta"><span class="ls-tag">Python</span><span class="ls-tag ls-d-easy">门槛 易</span><span class="ls-tag">NOASSERTION</span><span class="ls-tag ls-st-active">活跃</span></div>
+</article>
+<article class="ls-card" data-cat="learn" data-lang="Jupyter Notebook" data-diff="易" data-act="1" data-stars="80875" data-upd="2026-11-17" data-name="microsoft/ai-agents-for-beginners" data-search="microsoft/ai-agents-for-beginners 官方 18 课，按顺序走完 想要一条不迷路的入门路径 微软的 18 课，从工具调用讲到多智能体与生产落地，每课配 notebook 和课后题，英文但能直接跑。 agentic-ai agentic-framework agentic-rag ai-agents ai-agents-framework autogen foundry foundry-local generative-ai microsoft-foundry semantic-kernel jupyter notebook mit 教程 / 学习资料">
+<div class="ls-ctop"><a class="ls-repo" href="https://github.com/microsoft/ai-agents-for-beginners" target="_blank" rel="noopener noreferrer">microsoft/ai-agents-for-beginners</a><span class="ls-stars" title="★ 80,875 · 创建 2024-11 · 最近提交 2026-11-17 · https://aka.ms/ai-agents-beginners">★ 8.1 万</span></div>
+<p class="ls-pitch">官方 18 课，按顺序走完</p>
+<p class="ls-aud">适合：想要一条不迷路的入门路径</p>
+<p class="ls-note">微软的 18 课，从工具调用讲到多智能体与生产落地，每课配 notebook 和课后题，英文但能直接跑。</p>
+<div class="ls-meta"><span class="ls-tag">Jupyter Notebook</span><span class="ls-tag ls-d-easy">门槛 易</span><span class="ls-tag">MIT</span><span class="ls-tag ls-st-active">活跃</span></div>
+</article>
+<article class="ls-card" data-cat="learn" data-lang="Python" data-diff="中" data-act="1" data-stars="80819" data-upd="2026-11-15" data-name="shareai-lab/learn-claude-code" data-search="shareai-lab/learn-claude-code 手写一个迷你 claude code 想看清 agent 循环内部 核心结论是「bash 就够了」：用很少的代码复刻 agent harness 的工具循环，读完再看真实实现不容易迷路。 agent agent-development ai-agent claude claude-code educational llm python teaching tutorial python mit 教程 / 学习资料">
+<div class="ls-ctop"><a class="ls-repo" href="https://github.com/shareAI-lab/learn-claude-code" target="_blank" rel="noopener noreferrer">shareAI-lab/learn-claude-code</a><span class="ls-stars" title="★ 80,819 · 创建 2025-06 · 最近提交 2026-11-15 · https://learn.shareai.run">★ 8.1 万</span></div>
+<p class="ls-pitch">手写一个迷你 Claude Code</p>
+<p class="ls-aud">适合：想看清 Agent 循环内部</p>
+<p class="ls-note">核心结论是「Bash 就够了」：用很少的代码复刻 agent harness 的工具循环，读完再看真实实现不容易迷路。</p>
+<div class="ls-meta"><span class="ls-tag">Python</span><span class="ls-tag ls-d-medium">门槛 中</span><span class="ls-tag">MIT</span><span class="ls-tag ls-st-active">活跃</span></div>
+</article>
+<article class="ls-card" data-cat="learn" data-lang="Python" data-diff="易" data-act="1" data-stars="58702" data-upd="2026-11-24" data-name="hesreallyhim/awesome-claude-code" data-search="hesreallyhim/awesome-claude-code claude code 生态的资源清单 已上手、想找现成配置 命令、hooks、工作流、插件按类别整理，社区提交、几乎每天更新，适合当配置灵感库而不是教程。 agent-skills agentic-code agentic-coding ai-workflow-optimization ai-workflows anthropic anthropic-claude awesome awesome-claude-code awesome-list awesome-lists awesome-resources claude claude-code coding-agent coding-agents coding-assistant coding-assistants llm python noassertion 教程 / 学习资料">
+<div class="ls-ctop"><a class="ls-repo" href="https://github.com/hesreallyhim/awesome-claude-code" target="_blank" rel="noopener noreferrer">hesreallyhim/awesome-claude-code</a><span class="ls-stars" title="★ 58,702 · 创建 2025-04 · 最近提交 2026-11-24">★ 5.9 万</span></div>
+<p class="ls-pitch">Claude Code 生态的资源清单</p>
+<p class="ls-aud">适合：已上手、想找现成配置</p>
+<p class="ls-note">命令、hooks、工作流、插件按类别整理，社区提交、几乎每天更新，适合当配置灵感库而不是教程。</p>
+<div class="ls-meta"><span class="ls-tag">Python</span><span class="ls-tag ls-d-easy">门槛 易</span><span class="ls-tag">NOASSERTION</span><span class="ls-tag ls-st-active">活跃</span></div>
+</article>
+<article class="ls-card" data-cat="learn" data-lang="Jupyter Notebook" data-diff="中" data-act="1" data-stars="42092" data-upd="2026-11-01" data-name="patchy631/ai-engineering-hub" data-search="patchy631/ai-engineering-hub 从 rag 到 agent 的实战 notebook 能读代码、想直接跑通 偏工程实现的教程合集，选题跟着新框架走（rag、多智能体、本地部署），代码完整但讲解偏简。 agents ai llms machine-learning mcp rag jupyter notebook mit 教程 / 学习资料">
+<div class="ls-ctop"><a class="ls-repo" href="https://github.com/patchy631/ai-engineering-hub" target="_blank" rel="noopener noreferrer">patchy631/ai-engineering-hub</a><span class="ls-stars" title="★ 42,092 · 创建 2024-10 · 最近提交 2026-11-01 · https://join.dailydoseofds.com">★ 4.2 万</span></div>
+<p class="ls-pitch">从 RAG 到 Agent 的实战 notebook</p>
+<p class="ls-aud">适合：能读代码、想直接跑通</p>
+<p class="ls-note">偏工程实现的教程合集，选题跟着新框架走（RAG、多智能体、本地部署），代码完整但讲解偏简。</p>
+<div class="ls-meta"><span class="ls-tag">Jupyter Notebook</span><span class="ls-tag ls-d-medium">门槛 中</span><span class="ls-tag">MIT</span><span class="ls-tag ls-st-active">活跃</span></div>
+</article>
+<article class="ls-card" data-cat="learn" data-lang="JavaScript" data-diff="易" data-act="1" data-stars="22347" data-upd="2026-11-12" data-name="liyupi/ai-guide" data-search="liyupi/ai-guide 中文 ai 工具与玩法大全 刚接触、想先玩起来 资源大全加 vibe coding 入门，覆盖工具选型、提示词与部署，图文步骤多、上手快，深度有限。 ai ai-agent artificial-intelligence chatgpt claude claude-code codex cursor deep-learning deepseek gemini generative-ai gpt llm mcp openai rag vibe-coding vibecoding vuepress javascript noassertion 教程 / 学习资料">
+<div class="ls-ctop"><a class="ls-repo" href="https://github.com/liyupi/ai-guide" target="_blank" rel="noopener noreferrer">liyupi/ai-guide</a><span class="ls-stars" title="★ 22,347 · 创建 2025-02 · 最近提交 2026-11-12 · https://ai.codefather.cn">★ 2.2 万</span></div>
+<p class="ls-pitch">中文 AI 工具与玩法大全</p>
+<p class="ls-aud">适合：刚接触、想先玩起来</p>
+<p class="ls-note">资源大全加 Vibe Coding 入门，覆盖工具选型、提示词与部署，图文步骤多、上手快，深度有限。</p>
+<div class="ls-meta"><span class="ls-tag">JavaScript</span><span class="ls-tag ls-d-easy">门槛 易</span><span class="ls-tag">NOASSERTION</span><span class="ls-tag ls-st-active">活跃</span></div>
+</article>
+<article class="ls-card" data-cat="learn" data-lang="Jupyter Notebook" data-diff="难" data-act="1" data-stars="21946" data-upd="2026-11-15" data-name="nirdiamant/agents-towards-production" data-search="nirdiamant/agents-towards-production 把 demo 推到生产要补什么 demo 能跑、上线就崩 按主题拆生产化环节：可观测、评估、记忆、部署与成本，每个主题给可跑 notebook，偏架构决策。 agent agent-framework agentic-ai agents ai-agents deployment genai generative-ai langgraph llm llms mcp mlops multi-agent-systems observability production python rag tutorials jupyter notebook noassertion 教程 / 学习资料">
+<div class="ls-ctop"><a class="ls-repo" href="https://github.com/NirDiamant/agents-towards-production" target="_blank" rel="noopener noreferrer">NirDiamant/agents-towards-production</a><span class="ls-stars" title="★ 21,946 · 创建 2025-06 · 最近提交 2026-11-15 · https://diamant-ai.com">★ 2.2 万</span></div>
+<p class="ls-pitch">把 demo 推到生产要补什么</p>
+<p class="ls-aud">适合：demo 能跑、上线就崩</p>
+<p class="ls-note">按主题拆生产化环节：可观测、评估、记忆、部署与成本，每个主题给可跑 notebook，偏架构决策。</p>
+<div class="ls-meta"><span class="ls-tag">Jupyter Notebook</span><span class="ls-tag ls-d-hard">门槛 难</span><span class="ls-tag">NOASSERTION</span><span class="ls-tag ls-st-active">活跃</span></div>
+</article>
+<article class="ls-card" data-cat="learn" data-lang="Jupyter Notebook" data-diff="易" data-act="1" data-stars="14334" data-upd="2026-11-24" data-name="datawhalechina/llm-universe" data-search="datawhalechina/llm-universe 大模型应用开发的第一门课 还没写过 llm 应用 面向小白的教程，讲清 api 调用、prompt、rag 与评估这些前置知识，是学 agent 之前的地基。 langchain rag jupyter notebook - 教程 / 学习资料">
+<div class="ls-ctop"><a class="ls-repo" href="https://github.com/datawhalechina/llm-universe" target="_blank" rel="noopener noreferrer">datawhalechina/llm-universe</a><span class="ls-stars" title="★ 14,334 · 创建 2023-10 · 最近提交 2026-11-24 · https://datawhalechina.github.io/llm-universe/">★ 1.4 万</span></div>
+<p class="ls-pitch">大模型应用开发的第一门课</p>
+<p class="ls-aud">适合：还没写过 LLM 应用</p>
+<p class="ls-note">面向小白的教程，讲清 API 调用、Prompt、RAG 与评估这些前置知识，是学 Agent 之前的地基。</p>
+<div class="ls-meta"><span class="ls-tag">Jupyter Notebook</span><span class="ls-tag ls-d-easy">门槛 易</span><span class="ls-tag">-</span><span class="ls-tag ls-st-active">活跃</span></div>
+</article>
+<article class="ls-card" data-cat="learn" data-lang="MDX" data-diff="中" data-act="1" data-stars="12236" data-upd="2026-11-05" data-name="adongwanai/agentguide" data-search="adongwanai/agentguide 中文 agent 开发的体系化路线 想要一份能按图索骥的目录 中文长文，覆盖 harness 设计、上下文工程、rag 与 mcp，观点明确，适合当主线读物配着代码看。 agentic-rl agenticrag ai-agent claude-code crewai graphrag grpo harness interview job-hunting llm rag sft tutorial mdx cc-by-4.0 教程 / 学习资料">
+<div class="ls-ctop"><a class="ls-repo" href="https://github.com/adongwanai/AgentGuide" target="_blank" rel="noopener noreferrer">adongwanai/AgentGuide</a><span class="ls-stars" title="★ 12,236 · 创建 2025-11 · 最近提交 2026-11-05 · https://adongwanai.github.io/AgentGuide/">★ 1.2 万</span></div>
+<p class="ls-pitch">中文 Agent 开发的体系化路线</p>
+<p class="ls-aud">适合：想要一份能按图索骥的目录</p>
+<p class="ls-note">中文长文，覆盖 Harness 设计、上下文工程、RAG 与 MCP，观点明确，适合当主线读物配着代码看。</p>
+<div class="ls-meta"><span class="ls-tag">MDX</span><span class="ls-tag ls-d-medium">门槛 中</span><span class="ls-tag">CC-BY-4.0</span><span class="ls-tag ls-st-active">活跃</span></div>
+</article>
+<article class="ls-card" data-cat="learn" data-lang="-" data-diff="易" data-act="1" data-stars="9103" data-upd="2026-11-21" data-name="wangrongsheng/awesome-llm-resources" data-search="wangrongsheng/awesome-llm-resources 中文 llm 资料总目录 要按方向查资料 按多模态、agent、辅助编程、训练推理分栏收资料，中文标注清楚，覆盖面最广，质量参差。 awesome-list book course large-language-models llama llm mistral openai qwen rag retrieval-augmented-generation webui - apache-2.0 教程 / 学习资料">
+<div class="ls-ctop"><a class="ls-repo" href="https://github.com/WangRongsheng/awesome-LLM-resources" target="_blank" rel="noopener noreferrer">WangRongsheng/awesome-LLM-resources</a><span class="ls-stars" title="★ 9,103 · 创建 2024-04 · 最近提交 2026-11-21">★ 9,103</span></div>
+<p class="ls-pitch">中文 LLM 资料总目录</p>
+<p class="ls-aud">适合：要按方向查资料</p>
+<p class="ls-note">按多模态、Agent、辅助编程、训练推理分栏收资料，中文标注清楚，覆盖面最广，质量参差。</p>
+<div class="ls-meta"><span class="ls-tag">-</span><span class="ls-tag ls-d-easy">门槛 易</span><span class="ls-tag">Apache-2.0</span><span class="ls-tag ls-st-active">活跃</span></div>
+</article>
+<article class="ls-card" data-cat="learn" data-lang="Python" data-diff="中" data-act="1" data-stars="5303" data-upd="2026-11-23" data-name="wethinkin/aigc-interview-book" data-search="wethinkin/aigc-interview-book aigc / agent 岗面试题集 要投简历、准备面试 按 aigc、llm、agent、具身智能分章的面试资料，题目带参考答案，也能当知识点清单反向查漏。 ai-agent aigc computer-vision deep-learning interview interview-preparation interview-questions interviews-solutions large-language-models machine-learning natural-language-processing openclaw stable-diffusion transformer python gpl-3.0 教程 / 学习资料">
+<div class="ls-ctop"><a class="ls-repo" href="https://github.com/WeThinkIn/AIGC-Interview-Book" target="_blank" rel="noopener noreferrer">WeThinkIn/AIGC-Interview-Book</a><span class="ls-stars" title="★ 5,303 · 创建 2023-10 · 最近提交 2026-11-23 · https://wethinkin.github.io/AIGC-Interview-Book/">★ 5,303</span></div>
+<p class="ls-pitch">AIGC / Agent 岗面试题集</p>
+<p class="ls-aud">适合：要投简历、准备面试</p>
+<p class="ls-note">按 AIGC、LLM、Agent、具身智能分章的面试资料，题目带参考答案，也能当知识点清单反向查漏。</p>
+<div class="ls-meta"><span class="ls-tag">Python</span><span class="ls-tag ls-d-medium">门槛 中</span><span class="ls-tag">GPL-3.0</span><span class="ls-tag ls-st-active">活跃</span></div>
+</article>
+<article class="ls-card" data-cat="learn" data-lang="-" data-diff="难" data-act="0" data-stars="3849" data-upd="2026-08-17" data-name="windy3f3f3f3f/how-claude-code-works" data-search="windy3f3f3f3f/how-claude-code-works 拆开看 claude code 怎么实现 读过教程、想懂工程细节 从架构、agent loop、上下文管理到工具系统逐层讲，中文，看完再读同类产品会快很多；更新偏慢。 ai ai-agent anthropic architecture claude claude-code coding-agent deep-dive llm source-code-analysis - mit 教程 / 学习资料">
+<div class="ls-ctop"><a class="ls-repo" href="https://github.com/Windy3f3f3f3f/how-claude-code-works" target="_blank" rel="noopener noreferrer">Windy3f3f3f3f/how-claude-code-works</a><span class="ls-stars" title="★ 3,849 · 创建 2026-03 · 最近提交 2026-08-17 · https://windy3f3f3f3f.github.io/how-claude-code-works/#/">★ 3,849</span></div>
+<p class="ls-pitch">拆开看 Claude Code 怎么实现</p>
+<p class="ls-aud">适合：读过教程、想懂工程细节</p>
+<p class="ls-note">从架构、agent loop、上下文管理到工具系统逐层讲，中文，看完再读同类产品会快很多；更新偏慢。</p>
+<div class="ls-meta"><span class="ls-tag">-</span><span class="ls-tag ls-d-hard">门槛 难</span><span class="ls-tag">MIT</span><span class="ls-tag ls-st-maintained">维护中</span></div>
+</article>
+</div></section>
+</div>
+<p class="ls-empty ls-hidden" id="ls-empty">没有匹配的项目。换个关键词，或点「重置」回到全量。</p>
+</div>
+<h2 id="doc-26-7"><a class="hlink" href="#doc-26-7" title="本节链接">#</a>7. 与本书章节的映射</h2>
+<p>读到某一章卡住时，从这张表倒查该看哪些仓库：</p>
+<table>
+<thead>
+<tr><th>本手册章节</th><th>对应赛道</th><th>建议先看的项目</th></tr>
+</thead>
+<tbody>
+<tr><td>DOC 03 AI Harness 企业落地教程</td><td>编排框架 / SDK · 技能包 · Agent 基础设施</td><td>smolagents（最小实现）、LangGraph（状态机）、E2B（沙箱）</td></tr>
+<tr><td>DOC 17 Harness 横向对比与最新实现范式</td><td>编码 Agent · 编排框架</td><td>mini-swe-agent（100 行读源码）、DeepSeek Harness、OpenCode</td></tr>
+<tr><td>DOC 18 Coze / Dify / LangChain 选型</td><td>低代码平台 · 编排框架</td><td>Dify、Coze Studio、n8n、LangGraph</td></tr>
+<tr><td>DOC 12 AI Native 研发范式</td><td>技能包 · 记忆层 · 评测</td><td>superpowers、mem0、Langfuse</td></tr>
+<tr><td>DOC 05 AI Infra 企业平台教程</td><td>Agent 基础设施 · Agentic RL</td><td>E2B、verl、slime</td></tr>
+<tr><td>DOC 13–15 岗位与面试</td><td>Agent 可观测 / 评测 · Agentic RL</td><td>promptfoo、inspect_ai、OpenEnv</td></tr>
+<tr><td>DOC 19 FastAPI × MCP × React</td><td>工具协议 / MCP</td><td>FastMCP、python-sdk、A2A</td></tr>
+<tr><td>DOC 25 最新资料与来源索引</td><td>教程 / 学习资料</td><td>hello-agents、ai-agents-for-beginners、learn-claude-code</td></tr>
+</tbody>
+</table>
+<h2 id="doc-26-8"><a class="hlink" href="#doc-26-8" title="本节链接">#</a>8. 从 30 分钟到 1 天的上手路径</h2>
+<ol>
+<li><strong>30 分钟：装并跑通一个成品。</strong>DeepSeek Harness 或 OpenCode 二选一，用一个真实的小任务（改一个 bug、补一个测试），记录步数、token、失败点各一次。目的不是学会它，而是建立「成品 Harness 已经能做什么」的基线。</li>
+<li><strong>2 小时：读最小的实现。</strong>mini-swe-agent（约 100 行）和 smolagents（核心约千行）各读一遍，重点看三件事：循环怎么退出、工具返回错误怎么进上下文、什么时候停下来问人。这一层读完，DOC 17 的八条铁律才有落点。</li>
+<li><strong>1 天：做一个对照实验。</strong>同一个任务，用「成品」和「框架」各实现一次（例如 OpenCode vs LangGraph），比较：完成率、步数、token、人工介入次数、失败可复现性。结论写成一页，参照 DOC 24 的验收格式存档。</li>
+</ol>
+<p>验收清单（做完打勾）：</p>
+<ul>
+<li>能说清你选的方案在「<strong>薄 Loop / 厚 Control Plane</strong>」里的位置；</li>
+<li>工具调用有超时、幂等和权限边界，失败会进日志而不是被模型忽略；</li>
+<li>有外部验证（编译 / 测试 / 类型检查），不是模型自评；</li>
+<li>知道崩溃后从哪里恢复（WAL 或等价机制）；</li>
+<li>评测集是你自己的 20 条任务，不是榜单分数。</li>
+</ul>
+<h2 id="doc-26-9"><a class="hlink" href="#doc-26-9" title="本节链接">#</a>9. 数据维护与更新</h2>
+<p>本章的清单不是手写 HTML，而是由脚本从数据文件生成的。数据文件：<code>docs/data/agent-landscape-2026-11-24.json</code>；生成器：<code>scripts/build_landscape.py</code>；合并器：<code>scripts/merge_landscape_data.py</code>。</p>
+<pre><code># 1. 在上游仓库刷新元数据（需要 GitHub token，未认证只有 60 次/小时）
+git clone https://github.com/xiaowang018/agent-landscape
+cd agent-landscape &amp;&amp; GITHUB_TOKEN=xxx python scripts/fetch.py
+
+# 2. 合并成快照（data.json + annotations.json + tracks.json → 单文件）
+python scripts/merge_landscape_data.py --src ../agent-landscape --date 2026-11-24
+
+# 3. 生成并写入 index.html（只替换 LANDSCAPE 标记块，可重复执行）
+python scripts/build_landscape.py --apply
+
+# 4. 校验：卡片数、锚点、导航一致性
+python scripts/build_landscape.py --check</code></pre>
+<p>更新约定：</p>
+<ol>
+<li><strong>先改数据、再改结论</strong>：星数、归档状态、赛道归属变化后，第 3、4 节的数字和判断要一起复核；</li>
+<li><strong>不要手改卡片</strong>：<code>--apply</code> 会覆盖标记块内的内容，手改会在下次生成时丢失；</li>
+<li><strong>快照命名</strong>：数据文件按抓取日期命名（<code>agent-landscape-YYYY-MM-DD.json</code>），脚本默认取字典序最后一个；换快照时同步改本章 <code>doc-source</code> 与修订记录；</li>
+<li><strong>上游署名</strong>：数据整理自 agent-landscape 项目，更新时保留其来源链接与许可证说明；</li>
+<li><strong>新增项目先补标注</strong>：上游 <code>annotations.json</code> 里缺标注的仓库会被合并脚本拒绝（避免页面少卡或字段空白），补完标注再合并。</li>
+</ol>
+<h2 id="doc-26-10"><a class="hlink" href="#doc-26-10" title="本节链接">#</a>10. 来源与免责</h2>
+<ul>
+<li>上游项目：<a href="https://github.com/xiaowang018/agent-landscape" target="_blank" rel="noopener noreferrer">xiaowang018/agent-landscape</a>；在线版：<a href="https://xiaowang018.github.io/agent-landscape/" target="_blank" rel="noopener noreferrer">xiaowang018.github.io/agent-landscape</a>；</li>
+<li>元数据：GitHub REST API（快照 2026-11-24）；中文标注与门槛：上游人工标注；</li>
+<li>本章只整理公开信息与公开元数据，各项目的版权与许可证归其原作者；标注为「见仓库」「NOASSERTION」的，请以仓库 LICENSE 文件为准；</li>
+<li>数据会过时：做采购或架构决策前，请用当日数据复核，并按 DOC 20 的上线红线逐项检查。</li>
+</ul>
+</div></section>
+<!-- LANDSCAPE:SECTION:END --></main></div><button class="backtop" id="backtop" title="回到顶部">↑</button><script>const root=document.documentElement,search=document.getElementById('searchInput'),progress=document.getElementById('progress'),backtop=document.getElementById('backtop');const saved=localStorage.getItem('manual-theme');if(saved)root.dataset.theme=saved;document.getElementById('themeBtn').onclick=()=>{const n=root.dataset.theme==='dark'?'light':'dark';root.dataset.theme=n;localStorage.setItem('manual-theme',n);};window.addEventListener('scroll',()=>{const h=document.documentElement;progress.style.width=(h.scrollTop/(h.scrollHeight-h.clientHeight)*100)+'%';backtop.style.display=h.scrollTop>500?'block':'none';});backtop.onclick=()=>window.scrollTo({top:0,behavior:'smooth'});search.addEventListener('input',()=>{const q=search.value.trim().toLowerCase();document.querySelectorAll('.doc').forEach(d=>{const hit=!q||d.innerText.toLowerCase().includes(q);d.classList.toggle('hidden',!hit);});document.querySelectorAll('.nav-link').forEach(a=>{const t=document.getElementById(a.dataset.target);a.classList.toggle('hidden',!!t&&t.classList.contains('hidden'));});});document.querySelectorAll('pre').forEach(pre=>{const b=document.createElement('button');b.className='copy-btn';b.textContent='复制';b.onclick=()=>{navigator.clipboard.writeText(pre.querySelector('code')?.innerText||pre.innerText).then(()=>{b.textContent='已复制';setTimeout(()=>b.textContent='复制',1200);});};pre.appendChild(b);});const observer=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){document.querySelectorAll('.nav-link').forEach(a=>a.classList.remove('active'));document.querySelector('.nav-link[data-target="'+e.target.id+'"]')?.classList.add('active');}}),{rootMargin:'-15% 0px -75% 0px'});document.querySelectorAll('.doc').forEach(d=>observer.observe(d));</script><!-- LANDSCAPE:JS:BEGIN -->
+<script>
+(function(){
+  var root=document.getElementById('agent-landscape');
+  if(!root) return;
+  var q=document.getElementById('ls-q'), langSel=document.getElementById('ls-lang'),
+      diffSel=document.getElementById('ls-diff'), sortSel=document.getElementById('ls-sort'),
+      actBtn=document.getElementById('ls-act'), resetBtn=document.getElementById('ls-reset'),
+      countEl=document.getElementById('ls-count'), emptyEl=document.getElementById('ls-empty'),
+      cards=[].slice.call(root.querySelectorAll('.ls-card')),
+      groups=[].slice.call(root.querySelectorAll('.ls-group')),
+      chips=[].slice.call(root.querySelectorAll('.ls-chip')),
+      curCat='all';
+
+  function fmt(n){ return n>=10000 ? (n/10000).toFixed(1).replace(/\.0$/,'')+' 万' : n.toLocaleString('en-US'); }
+  function on(){ return actBtn.getAttribute('aria-pressed')==='true'; }
+
+  function apply(){
+    var raw=q.value.trim().toLowerCase();
+    var kws=raw.split(/\s+/).filter(Boolean);
+    var lg=langSel.value, df=diffSel.value, actOnly=on(), shown=0;
+
+    cards.forEach(function(c){
+      var ok=(curCat==='all'||c.dataset.cat===curCat)
+        && (!lg||c.dataset.lang===lg)
+        && (!df||c.dataset.diff===df)
+        && (!actOnly||c.dataset.act==='1');
+      if(ok&&kws.length){
+        var hay=c.dataset.search||'';
+        ok=kws.every(function(k){ return hay.indexOf(k)>-1; });
+      }
+      c.classList.toggle('ls-hidden',!ok);
+      if(ok) shown++;
+    });
+
+    groups.forEach(function(g){
+      var grid=g.querySelector('.ls-grid');
+      var list=[].slice.call(grid.children);
+      list.sort(function(a,b){
+        return sortSel.value==='upd'
+          ? (b.dataset.upd||'').localeCompare(a.dataset.upd||'')
+          : (+b.dataset.stars)-(+a.dataset.stars);
+      });
+      list.forEach(function(el){ grid.appendChild(el); });
+      var vis=list.filter(function(el){ return !el.classList.contains('ls-hidden'); });
+      g.classList.toggle('ls-hidden',!vis.length);
+      g.querySelector('.ls-gn').textContent=vis.length;
+      var sum=vis.reduce(function(n,el){ return n+(+el.dataset.stars); },0);
+      g.querySelector('.ls-gs').textContent=fmt(sum);
+    });
+
+    emptyEl.classList.toggle('ls-hidden',shown>0);
+    countEl.innerHTML='显示 <b>'+shown+'</b> / '+cards.length+' 个项目 · '+groups.length+' 个赛道';
+  }
+
+  function reset(){
+    q.value=''; langSel.value=''; diffSel.value=''; sortSel.value='stars';
+    actBtn.setAttribute('aria-pressed','false');
+    curCat='all';
+    chips.forEach(function(c){
+      var isAll=c.dataset.cat==='all';
+      c.classList.toggle('on',isAll);
+      c.setAttribute('aria-pressed',String(isAll));
+    });
+    apply();
+  }
+
+  chips.forEach(function(ch){
+    ch.addEventListener('click',function(){
+      chips.forEach(function(x){ x.classList.remove('on'); x.setAttribute('aria-pressed','false'); });
+      ch.classList.add('on');
+      ch.setAttribute('aria-pressed','true');
+      curCat=ch.dataset.cat;
+      apply();
+    });
+  });
+  actBtn.addEventListener('click',function(){
+    actBtn.setAttribute('aria-pressed',on()?'false':'true');
+    apply();
+  });
+  resetBtn.addEventListener('click',reset);
+  q.addEventListener('input',apply);
+  q.addEventListener('keydown',function(e){
+    if(e.key==='Escape'&&q.value){ q.value=''; apply(); }
+  });
+  langSel.addEventListener('change',apply);
+  diffSel.addEventListener('change',apply);
+  sortSel.addEventListener('change',apply);
+  apply();
+})();
+</script>
+<!-- LANDSCAPE:JS:END --></body></html>
