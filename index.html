@@ -1241,6 +1241,7 @@ html[data-theme="dark"] .ls-tag.ls-d-hard,html[data-theme="dark"] .ls-tag.ls-st-
 <ul>
 <li><a href="#doc-25-1">1. 版本总览</a></li>
 <li><a href="#doc-25-2">2. 详细修订记录</a><ul>
+<li><a href="#doc-25-v112-2026-11-26">v1.12 · 2026-11-26 — 独立浏览页与交叉引用</a></li>
 <li><a href="#doc-25-v111-2026-11-26">v1.11 · 2026-11-26 — GitHub Agent 全景图与选型指南</a></li>
 <li><a href="#doc-25-v110-2026-10-20-dcs">v1.10 · 2026-10-20 — DCS 专项教程与模拟试卷</a></li>
 <li><a href="#doc-25-v19-2026-10-20-dcs">v1.9 · 2026-10-20 — 全栈集成与 DCS 运维平台架构师</a></li>
@@ -1275,7 +1276,7 @@ html[data-theme="dark"] .ls-tag.ls-d-hard,html[data-theme="dark"] .ls-tag.ls-st-
 </ul>
 </div>
 </div></details>
-<!-- LANDSCAPE:NAV:END --></aside><main class="main"><section class="hero"><h1>AI Harness / AI PDE / AI Infra<br>企业级完整学习方案</h1><p>从 AI Native 研发范式、Agent Harness、RAG、vLLM 与 Kubernetes，到 GPU 物理集群、HPN/RDMA、NVLink、HGX、NVL72、智算集群 v3.3（千卡→5000→10240 卡）、国产 GPU、千卡集群和公有云 GPU，并附大模型推理服务可靠性工程师的岗位解读与模拟面试问答，以及 Pi / Aider Harness 横向对比、可运行的薄 Loop + WAL 参考实现、两篇典型岗位面试题库（推理 SRE / AI 平台架构师）、Coze / Dify / LangChain 选型对比、FastAPI × MCP × React × AIGC 全栈集成、DCS 专项教程与 3 套模拟试卷、137 个 GitHub Agent 项目的赛道全景与选型指南（DOC 27），以及修订记录。</p><p>每个模块包含视频参考、官方资料、操作步骤、企业落地避坑和验收产物。本页面适配桌面与手机，可从浏览器直接打印为 PDF。</p><p class="updated">最近更新 2026-11-26 · v1.11：新增 DOC 27「GitHub Agent 全景图与选型指南」（137 项目 × 17 赛道，可搜索筛选）· <a href="#doc-26">查看第 27 章</a> · <a href="#doc-25">查看完整修订记录</a></p><div class="pills"><a class="pill" href="#doc-26">Agent 全景图 ×137</a><a class="pill" href="#doc-25">修订记录</a><span class="pill">36 周路线</span><span class="pill">70+ 视频入口</span><span class="pill">HPN v1.0</span><span class="pill">NVLink / HGX / NVL72</span><span class="pill">千卡与国产 GPU</span><span class="pill">智算集群 v3.3</span><span class="pill">异构算力</span><span class="pill">EP=32 + 机内 TP8</span><span class="pill">岗位与面试 ×2</span><span class="pill">AI 平台架构师</span><span class="pill">Pi / Aider 对比</span><span class="pill">Coze / Dify / LangChain</span><span class="pill">FastAPI × MCP × React</span><span class="pill">AIGC</span><span class="pill">模拟试卷</span><span class="pill">薄 Loop + WAL</span><span class="pill">AI Native</span><span class="pill">企业上线清单</span></div></section><section class="doc" id="doc-00" data-title="总览"><header class="doc-head"><div class="doc-kicker">DOC 01</div><h2>总览</h2><div class="doc-source">来源：README.md</div></header><details class="doc-toc"><summary>本篇目录</summary><div class="toc">
+<!-- LANDSCAPE:NAV:END --></aside><main class="main"><section class="hero"><h1>AI Harness / AI PDE / AI Infra<br>企业级完整学习方案</h1><p>从 AI Native 研发范式、Agent Harness、RAG、vLLM 与 Kubernetes，到 GPU 物理集群、HPN/RDMA、NVLink、HGX、NVL72、智算集群 v3.3（千卡→5000→10240 卡）、国产 GPU、千卡集群和公有云 GPU，并附大模型推理服务可靠性工程师的岗位解读与模拟面试问答，以及 Pi / Aider Harness 横向对比、可运行的薄 Loop + WAL 参考实现、两篇典型岗位面试题库（推理 SRE / AI 平台架构师）、Coze / Dify / LangChain 选型对比、FastAPI × MCP × React × AIGC 全栈集成、DCS 专项教程与 3 套模拟试卷、137 个 GitHub Agent 项目的赛道全景与选型指南（DOC 27），以及修订记录。</p><p>每个模块包含视频参考、官方资料、操作步骤、企业落地避坑和验收产物。本页面适配桌面与手机，可从浏览器直接打印为 PDF。</p><p class="updated">最近更新 2026-11-26 · v1.12：新增 Agent 全景图<a href="landscape.html">独立浏览页</a>（筛选状态写进地址栏、可直接分享）· <a href="#doc-26">查看第 27 章</a> · <a href="#doc-25">查看完整修订记录</a></p><div class="pills"><a class="pill" href="#doc-26">Agent 全景图 ×137</a><a class="pill" href="landscape.html">独立浏览页</a><a class="pill" href="#doc-25">修订记录</a><span class="pill">36 周路线</span><span class="pill">70+ 视频入口</span><span class="pill">HPN v1.0</span><span class="pill">NVLink / HGX / NVL72</span><span class="pill">千卡与国产 GPU</span><span class="pill">智算集群 v3.3</span><span class="pill">异构算力</span><span class="pill">EP=32 + 机内 TP8</span><span class="pill">岗位与面试 ×2</span><span class="pill">AI 平台架构师</span><span class="pill">Pi / Aider 对比</span><span class="pill">Coze / Dify / LangChain</span><span class="pill">FastAPI × MCP × React</span><span class="pill">AIGC</span><span class="pill">模拟试卷</span><span class="pill">薄 Loop + WAL</span><span class="pill">AI Native</span><span class="pill">企业上线清单</span></div></section><section class="doc" id="doc-00" data-title="总览"><header class="doc-head"><div class="doc-kicker">DOC 01</div><h2>总览</h2><div class="doc-source">来源：README.md</div></header><details class="doc-toc"><summary>本篇目录</summary><div class="toc">
 <ul>
 <li><a href="#doc-00-_1">这个包解决什么问题</a></li>
 <li><a href="#doc-00-pde">PDE 术语说明</a></li>
@@ -12718,6 +12719,7 @@ Retry is dangerous. Fail fast is underrated. —— TiDB 唐刘
 </tr>
 </tbody>
 </table>
+<p>这张表只挑出 11 个有代表性的画像。把镜头拉远到整个 GitHub：137 个 Agent 相关项目、17 个赛道、累计 846 万星标（快照 2026-11-24），编码 Agent 一个赛道就占了 26.2% 的星标——完整坐标见 <a href="#doc-26">DOC 27 GitHub Agent 全景图</a>，或直接打开<a href="landscape.html">独立浏览页</a>按赛道、语言、门槛筛选。</p>
 <h2 id="doc-16-5"><a class="hlink" href="#doc-16-5" title="本节链接">#</a>5. 「最新的实现方式」：八条铁律</h2>
 <h3 id="doc-16-1-agent-loop-control-plane"><a class="hlink" href="#doc-16-1-agent-loop-control-plane" title="本节链接">#</a>铁律 1 —— 薄 Agent Loop，厚 Control Plane</h3>
 <p>Loop 只做四件事；权限、沙箱、持久化、恢复、审计全部在 Loop 之外。<strong>判断标准</strong>：如果换一个模型 / 换一个 Agent Core 需要改 Control Plane，说明分层错了。</p>
@@ -13385,6 +13387,7 @@ OTel + Prometheus + Loki + Tempo（自建可观测）
 <li><strong>适用</strong>：有平台团队、有明确差异化需求、对合规和可控性要求极高。</li>
 <li><strong>代价</strong>：UI、权限、多租户、发布、评测、审计<strong>全部要自己建</strong>。没有 3–5 人以上的平台团队，不要轻易走这条路。</li>
 </ul>
+<p>平台与框架的候选项目（Dify、Coze Studio、n8n、Langflow、LangGraph 等）在同一条赛道里的排序、维护状态与上手门槛，见 <a href="#doc-26">DOC 27</a> 的「低代码平台 / 工作流」与「编排框架 / SDK」两节，或<a href="landscape.html">独立浏览页</a>。</p>
 <h2 id="doc-17-5"><a class="hlink" href="#doc-17-5" title="本节链接">#</a>5. 同一个需求，三套实现</h2>
 <p><strong>需求</strong>：企业知识库问答；当用户问题命中"退款/投诉"意图时，调用工单 API 创建工单；创建前必须人工确认。</p>
 <h3 id="doc-17-51-coze"><a class="hlink" href="#doc-17-51-coze" title="本节链接">#</a>5.1 Coze 实现</h3>
@@ -17586,6 +17589,12 @@ adversarial_set  20 条注入/越权/数据外泄
 <td>长任务 SuperAgent Harness、Sandbox、Memory、Tools、Skills、Subagents、Message Gateway</td>
 <td>研究生产级长任务 Harness 的架构拆分</td>
 </tr>
+<tr>
+<td><a href="https://xiaowang018.github.io/agent-landscape/" target="_blank" rel="noopener noreferrer">GitHub Agent 项目全景图</a>（<a href="#doc-26">DOC 27</a> / <a href="landscape.html">浏览页</a>）</td>
+<td>开源整理，快照 2026-11-24</td>
+<td>137 个 Agent 项目 / 17 条赛道的星标、语言、许可证、维护状态与上手门槛；元数据来自 GitHub REST API</td>
+<td>选型前定位赛道与候选仓库</td>
+</tr>
 </tbody>
 </table>
 <h2 id="doc-24-ai-pde"><a class="hlink" href="#doc-24-ai-pde" title="本节链接">#</a>二、AI PDE：产品设计 / 产品开发工程</h2>
@@ -18243,6 +18252,7 @@ adversarial_set  20 条注入/越权/数据外泄
 <ul>
 <li><a href="#doc-25-1">1. 版本总览</a></li>
 <li><a href="#doc-25-2">2. 详细修订记录</a><ul>
+<li><a href="#doc-25-v112-2026-11-26">v1.12 · 2026-11-26 — 独立浏览页与交叉引用</a></li>
 <li><a href="#doc-25-v111-2026-11-26">v1.11 · 2026-11-26 — GitHub Agent 全景图与选型指南</a></li>
 <li><a href="#doc-25-v110-2026-10-20-dcs">v1.10 · 2026-10-20 — DCS 专项教程与模拟试卷</a></li>
 <li><a href="#doc-25-v19-2026-10-20-dcs">v1.9 · 2026-10-20 — 全栈集成与 DCS 运维平台架构师</a></li>
@@ -18276,6 +18286,12 @@ adversarial_set  20 条注入/越权/数据外泄
 </tr>
 </thead>
 <tbody>
+<tr>
+<td><strong>v1.12</strong></td>
+<td>2026-11-26</td>
+<td><strong>新增 Agent 全景图独立浏览页 <code>landscape.html</code></strong>：与 DOC 27 共用同一份数据，支持搜索 / 赛道 / 语言 / 门槛 / 活跃度筛选与排序，筛选状态写进地址栏可直接分享，支持明暗主题；同时在 DOC 16、DOC 17、DOC 24 增加交叉引用</td>
+<td style="text-align: right;">27</td>
+</tr>
 <tr>
 <td><strong>v1.11</strong></td>
 <td>2026-11-26</td>
@@ -18351,6 +18367,37 @@ adversarial_set  20 条注入/越权/数据外泄
 </tbody>
 </table>
 <h2 id="doc-25-2"><a class="hlink" href="#doc-25-2" title="本节链接">#</a>2. 详细修订记录</h2>
+<h3 id="doc-25-v112-2026-11-26"><a class="hlink" href="#doc-25-v112-2026-11-26" title="本节链接">#</a>v1.12 · 2026-11-26 — 独立浏览页与交叉引用</h3>
+<table>
+<thead>
+<tr>
+<th>变更</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>新增独立页</td>
+<td><code>landscape.html</code>：137 个项目 / 17 个赛道，单文件、离线可用、不加载任何外部资源；与 DOC 27 共用 <code>scripts/build_landscape.py</code> 渲染，避免两份清单走样</td>
+</tr>
+<tr>
+<td>可分享筛选</td>
+<td>筛选状态写入地址栏（如 <code>#q=rust&amp;cat=coding&amp;sort=upd</code>），刷新与转发都能还原；手册页仍保持 <code>#doc-xx</code> 锚点语义，不写地址栏</td>
+</tr>
+<tr>
+<td>体验细节</td>
+<td>明暗主题（与手册共用 <code>manual-theme</code>）、<kbd>/</kbd> 聚焦搜索、<kbd>Esc</kbd> 清空、打印时隐藏筛选条</td>
+</tr>
+<tr>
+<td>交叉引用</td>
+<td>DOC 16 §4 Harness 版图、DOC 17 §4 平台组合、DOC 24 §一 来源索引均加上指向 DOC 27 / 浏览页的入口</td>
+</tr>
+<tr>
+<td>校验</td>
+<td><code>--check</code> 增加独立页校验：卡片数、是否引用外部资源、地址栏开关；两页共用一份 JS，功能测试 16 项</td>
+</tr>
+</tbody>
+</table>
 <h3 id="doc-25-v111-2026-11-26"><a class="hlink" href="#doc-25-v111-2026-11-26" title="本节链接">#</a>v1.11 · 2026-11-26 — GitHub Agent 全景图与选型指南</h3>
 <table>
 <thead>
@@ -18984,6 +19031,7 @@ adversarial_set  20 条注入/越权/数据外泄
 </ol>
 <h2 id="doc-26-6"><a class="hlink" href="#doc-26-6" title="本节链接">#</a>6. 全量清单（可搜索 / 筛选 / 排序）</h2>
 <p>下面是本章的全量数据。<strong>搜索</strong>匹配仓库名、中文定位、适合人群、点评和 GitHub topics，空格分词表示「都要命中」；<strong>赛道</strong>只看某一类；<strong>语言 / 门槛</strong>按元数据过滤；<strong>只看活跃</strong>把 45 天内无提交的项目挡掉；<strong>排序</strong>只影响组内顺序。筛完后赛道标题右侧的项目数与星标会按当前可见项目重算。</p>
+<p>这张清单也单独做成了一个页面：<a href="landscape.html" target="_blank" rel="noopener noreferrer">打开独立浏览页</a>——加载更快，筛选条件会写进地址栏，可以直接把链接发给同事。</p>
 <div class="ls" id="agent-landscape">
 <div class="ls-bar">
 <input type="search" id="ls-q" placeholder="搜索：仓库名 / 中文定位 / 适合人群 / 标签（空格分词）" aria-label="搜索项目" autocomplete="off">
@@ -20115,10 +20163,15 @@ python scripts/build_landscape.py --check</code></pre>
       diffSel=document.getElementById('ls-diff'), sortSel=document.getElementById('ls-sort'),
       actBtn=document.getElementById('ls-act'), resetBtn=document.getElementById('ls-reset'),
       countEl=document.getElementById('ls-count'), emptyEl=document.getElementById('ls-empty'),
-      cards=[].slice.call(root.querySelectorAll('.ls-card')),
-      groups=[].slice.call(root.querySelectorAll('.ls-group')),
-      chips=[].slice.call(root.querySelectorAll('.ls-chip')),
+      cards=[].slice.call(document.querySelectorAll('.ls-card')),
+      groups=[].slice.call(document.querySelectorAll('.ls-group')),
+      chips=[].slice.call(document.querySelectorAll('.ls-chip')),
       curCat='all';
+  // 只有独立浏览页（landscape.html）把筛选状态写进地址栏：
+  // 手册页的 #xxx 是章节锚点，不能被覆盖。
+  var hashMode=root.getAttribute('data-hash')==='1';
+  var loc=(typeof window!=='undefined'&&window.location)?window.location:null;
+  var hist=(typeof window!=='undefined'&&window.history)?window.history:null;
 
   function fmt(n){ return n>=10000 ? (n/10000).toFixed(1).replace(/\.0$/,'')+' 万' : n.toLocaleString('en-US'); }
   function on(){ return actBtn.getAttribute('aria-pressed')==='true'; }
@@ -20126,7 +20179,7 @@ python scripts/build_landscape.py --check</code></pre>
   function apply(){
     var raw=q.value.trim().toLowerCase();
     var kws=raw.split(/\s+/).filter(Boolean);
-    var lg=langSel.value, df=diffSel.value, actOnly=on(), shown=0;
+    var lg=langSel.value||'', df=diffSel.value||'', actOnly=on(), shown=0;
 
     cards.forEach(function(c){
       var ok=(curCat==='all'||c.dataset.cat===curCat)
@@ -20145,7 +20198,7 @@ python scripts/build_landscape.py --check</code></pre>
       var grid=g.querySelector('.ls-grid');
       var list=[].slice.call(grid.children);
       list.sort(function(a,b){
-        return sortSel.value==='upd'
+        return (sortSel.value||'stars')==='upd'
           ? (b.dataset.upd||'').localeCompare(a.dataset.upd||'')
           : (+b.dataset.stars)-(+a.dataset.stars);
       });
@@ -20159,6 +20212,46 @@ python scripts/build_landscape.py --check</code></pre>
 
     emptyEl.classList.toggle('ls-hidden',shown>0);
     countEl.innerHTML='显示 <b>'+shown+'</b> / '+cards.length+' 个项目 · '+groups.length+' 个赛道';
+    syncHash();
+  }
+
+  var hashTimer=null;
+  function syncHash(){
+    if(!hashMode||!loc||!hist||!hist.replaceState) return;
+    clearTimeout(hashTimer);
+    hashTimer=setTimeout(function(){
+      var p=new URLSearchParams();
+      if(curCat!=='all') p.set('cat',curCat);
+      if(q.value.trim()) p.set('q',q.value.trim());
+      if(langSel.value) p.set('lang',langSel.value);
+      if(diffSel.value) p.set('diff',diffSel.value);
+      if(on()) p.set('act','1');
+      var sv=sortSel.value||'stars';
+      if(sv!=='stars') p.set('sort',sv);
+      var h=p.toString();
+      try{
+        hist.replaceState(null,'', h ? '#'+h : loc.pathname+loc.search);
+      }catch(e){}
+    },250);
+  }
+
+  function readHash(){
+    if(!hashMode||!loc||!loc.hash) return;
+    var p;
+    try{ p=new URLSearchParams(loc.hash.replace(/^#/,'')); }catch(e){ return; }
+    if(p.get('q')!==null) q.value=p.get('q');
+    var lg=p.get('lang'); if(lg) langSel.value=lg;
+    var df=p.get('diff'); if(df) diffSel.value=df;
+    var st=p.get('sort'); if(st) sortSel.value=st;
+    if(p.get('act')==='1') actBtn.setAttribute('aria-pressed','true');
+    var cat=p.get('cat')||'all';
+    curCat='all';
+    chips.forEach(function(c){
+      var hit=c.dataset.cat===cat;
+      c.classList.toggle('on',hit);
+      c.setAttribute('aria-pressed',String(hit));
+      if(hit) curCat=c.dataset.cat;
+    });
   }
 
   function reset(){
@@ -20194,6 +20287,31 @@ python scripts/build_landscape.py --check</code></pre>
   langSel.addEventListener('change',apply);
   diffSel.addEventListener('change',apply);
   sortSel.addEventListener('change',apply);
+
+  // 明暗主题（与手册共用 localStorage 键）
+  var themeBtn=document.getElementById('ls-theme');
+  try{
+    var saved=localStorage.getItem('manual-theme');
+    if(saved) document.documentElement.setAttribute('data-theme',saved);
+  }catch(e){}
+  if(themeBtn){
+    themeBtn.addEventListener('click',function(){
+      var cur=document.documentElement.getAttribute('data-theme')==='dark'?'light':'dark';
+      document.documentElement.setAttribute('data-theme',cur);
+      themeBtn.textContent=cur==='dark'?'切换白天':'切换夜间';
+      try{ localStorage.setItem('manual-theme',cur); }catch(e){}
+    });
+  }
+
+  // 独立页支持 / 聚焦搜索（手册页有自己的全局快捷键，不抢）
+  if(hashMode){
+    document.addEventListener('keydown',function(e){
+      var tag=(document.activeElement&&document.activeElement.tagName)||'';
+      if(e.key==='/' && !/^(INPUT|SELECT|TEXTAREA)$/.test(tag)){ e.preventDefault(); q.focus(); q.select(); }
+    });
+  }
+
+  readHash();
   apply();
 })();
 </script>

@@ -18,6 +18,8 @@
 
 它是**附录**性质：正文给判断框架，本文给项目坐标。两者配合使用——先用正文判断「我要的是哪一类能力」，再用本文找到这类能力里值得先装、先读源码的那两三个仓库。
 
+除了手册里的章节，同一份数据还有一个**独立浏览页**：[landscape.html](../landscape.html)。它加载更快，筛选条件会写进地址栏（如 `#q=rust&cat=coding&sort=upd`），可以直接把链接发给同事；手册页里的清单则保持 `#doc-xx` 章节锚点语义。
+
 | 文档 | 回答的问题 | 什么时候看 |
 | --- | --- | --- |
 | DOC 17 Harness 横向对比 | 一个 Harness 内部该怎么设计（薄 Loop、WAL、Fail Fast、外部验证） | 决定自研或改造 Harness 时 |
@@ -223,7 +225,8 @@ verl、slime、prime-rl、ART、OpenEnv 五个项目组成新赛道。研究重�
 | --- | --- |
 | `docs/data/agent-landscape-2026-11-24.json` | 合并后的单文件快照（137 条 + 17 个赛道定义） |
 | `scripts/merge_landscape_data.py` | 合并上游 `data.json` + `annotations.json` + `tracks.json`，校验双向一致、算维护状态 |
-| `scripts/build_landscape.py` | 生成页面章节（CSS / 导航 / HTML / JS），`--apply` 写入 `index.html`，`--check` 校验 |
+| `scripts/build_landscape.py` | 生成页面章节（CSS / 导航 / HTML / JS）与独立页 `landscape.html`，`--apply` 写入，`--check` 校验 |
+| `landscape.html` | 独立浏览页：同一份数据、单文件离线可用、筛选状态写进地址栏可分享 |
 
 更新步骤：
 
@@ -236,7 +239,7 @@ cd agent-landscape && GITHUB_TOKEN=xxx python scripts/fetch.py
 cd ..
 python scripts/merge_landscape_data.py --src ../agent-landscape --date 2026-11-24
 
-# 3. 生成并写入 index.html（只替换 LANDSCAPE 标记块，可重复执行）
+# 3. 生成并写入 index.html（只替换 LANDSCAPE 标记块）与 landscape.html，可重复执行
 python scripts/build_landscape.py --apply
 
 # 4. 校验：卡片数、锚点、导航一致性

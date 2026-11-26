@@ -28,6 +28,7 @@ from collections import Counter
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 INDEX = os.path.join(ROOT, 'index.html')
+STANDALONE = os.path.join(ROOT, 'landscape.html')
 
 STATUS_LABEL = {
     'active': '活跃',
@@ -195,10 +196,15 @@ JS = r"""<!-- LANDSCAPE:JS:BEGIN -->
       diffSel=document.getElementById('ls-diff'), sortSel=document.getElementById('ls-sort'),
       actBtn=document.getElementById('ls-act'), resetBtn=document.getElementById('ls-reset'),
       countEl=document.getElementById('ls-count'), emptyEl=document.getElementById('ls-empty'),
-      cards=[].slice.call(root.querySelectorAll('.ls-card')),
-      groups=[].slice.call(root.querySelectorAll('.ls-group')),
-      chips=[].slice.call(root.querySelectorAll('.ls-chip')),
+      cards=[].slice.call(document.querySelectorAll('.ls-card')),
+      groups=[].slice.call(document.querySelectorAll('.ls-group')),
+      chips=[].slice.call(document.querySelectorAll('.ls-chip')),
       curCat='all';
+  // 只有独立浏览页（landscape.html）把筛选状态写进地址栏：
+  // 手册页的 #xxx 是章节锚点，不能被覆盖。
+  var hashMode=root.getAttribute('data-hash')==='1';
+  var loc=(typeof window!=='undefined'&&window.location)?window.location:null;
+  var hist=(typeof window!=='undefined'&&window.history)?window.history:null;
 
   function fmt(n){ return n>=10000 ? (n/10000).toFixed(1).replace(/\.0$/,'')+' 万' : n.toLocaleString('en-US'); }
   function on(){ return actBtn.getAttribute('aria-pressed')==='true'; }
@@ -206,7 +212,7 @@ JS = r"""<!-- LANDSCAPE:JS:BEGIN -->
   function apply(){
     var raw=q.value.trim().toLowerCase();
     var kws=raw.split(/\s+/).filter(Boolean);
-    var lg=langSel.value, df=diffSel.value, actOnly=on(), shown=0;
+    var lg=langSel.value||'', df=diffSel.value||'', actOnly=on(), shown=0;
 
     cards.forEach(function(c){
       var ok=(curCat==='all'||c.dataset.cat===curCat)
@@ -225,7 +231,7 @@ JS = r"""<!-- LANDSCAPE:JS:BEGIN -->
       var grid=g.querySelector('.ls-grid');
       var list=[].slice.call(grid.children);
       list.sort(function(a,b){
-        return sortSel.value==='upd'
+        return (sortSel.value||'stars')==='upd'
           ? (b.dataset.upd||'').localeCompare(a.dataset.upd||'')
           : (+b.dataset.stars)-(+a.dataset.stars);
       });
@@ -239,6 +245,46 @@ JS = r"""<!-- LANDSCAPE:JS:BEGIN -->
 
     emptyEl.classList.toggle('ls-hidden',shown>0);
     countEl.innerHTML='显示 <b>'+shown+'</b> / '+cards.length+' 个项目 · '+groups.length+' 个赛道';
+    syncHash();
+  }
+
+  var hashTimer=null;
+  function syncHash(){
+    if(!hashMode||!loc||!hist||!hist.replaceState) return;
+    clearTimeout(hashTimer);
+    hashTimer=setTimeout(function(){
+      var p=new URLSearchParams();
+      if(curCat!=='all') p.set('cat',curCat);
+      if(q.value.trim()) p.set('q',q.value.trim());
+      if(langSel.value) p.set('lang',langSel.value);
+      if(diffSel.value) p.set('diff',diffSel.value);
+      if(on()) p.set('act','1');
+      var sv=sortSel.value||'stars';
+      if(sv!=='stars') p.set('sort',sv);
+      var h=p.toString();
+      try{
+        hist.replaceState(null,'', h ? '#'+h : loc.pathname+loc.search);
+      }catch(e){}
+    },250);
+  }
+
+  function readHash(){
+    if(!hashMode||!loc||!loc.hash) return;
+    var p;
+    try{ p=new URLSearchParams(loc.hash.replace(/^#/,'')); }catch(e){ return; }
+    if(p.get('q')!==null) q.value=p.get('q');
+    var lg=p.get('lang'); if(lg) langSel.value=lg;
+    var df=p.get('diff'); if(df) diffSel.value=df;
+    var st=p.get('sort'); if(st) sortSel.value=st;
+    if(p.get('act')==='1') actBtn.setAttribute('aria-pressed','true');
+    var cat=p.get('cat')||'all';
+    curCat='all';
+    chips.forEach(function(c){
+      var hit=c.dataset.cat===cat;
+      c.classList.toggle('on',hit);
+      c.setAttribute('aria-pressed',String(hit));
+      if(hit) curCat=c.dataset.cat;
+    });
   }
 
   function reset(){
@@ -274,6 +320,31 @@ JS = r"""<!-- LANDSCAPE:JS:BEGIN -->
   langSel.addEventListener('change',apply);
   diffSel.addEventListener('change',apply);
   sortSel.addEventListener('change',apply);
+
+  // 明暗主题（与手册共用 localStorage 键）
+  var themeBtn=document.getElementById('ls-theme');
+  try{
+    var saved=localStorage.getItem('manual-theme');
+    if(saved) document.documentElement.setAttribute('data-theme',saved);
+  }catch(e){}
+  if(themeBtn){
+    themeBtn.addEventListener('click',function(){
+      var cur=document.documentElement.getAttribute('data-theme')==='dark'?'light':'dark';
+      document.documentElement.setAttribute('data-theme',cur);
+      themeBtn.textContent=cur==='dark'?'切换白天':'切换夜间';
+      try{ localStorage.setItem('manual-theme',cur); }catch(e){}
+    });
+  }
+
+  // 独立页支持 / 聚焦搜索（手册页有自己的全局快捷键，不抢）
+  if(hashMode){
+    document.addEventListener('keydown',function(e){
+      var tag=(document.activeElement&&document.activeElement.tagName)||'';
+      if(e.key==='/' && !/^(INPUT|SELECT|TEXTAREA)$/.test(tag)){ e.preventDefault(); q.focus(); q.select(); }
+    });
+  }
+
+  readHash();
   apply();
 })();
 </script>
@@ -332,6 +403,29 @@ def render_cards(data, stats):
     return '\n'.join(out)
 
 
+def render_toolbar(stats):
+    opts = ''.join('<option value="%s">%s（%d）</option>' % (esc_attr(k), esc(k), v)
+                   for k, v in stats['langs'].most_common())
+    return ('<div class="ls-bar">\n'
+            '<input type="search" id="ls-q" placeholder="搜索：仓库名 / 中文定位 / 适合人群 / 标签（空格分词）" aria-label="搜索项目" autocomplete="off">\n'
+            '<select id="ls-lang" aria-label="语言"><option value="">全部语言</option>' + opts + '</select>\n'
+            '<select id="ls-diff" aria-label="门槛"><option value="">全部门槛</option><option value="易">易 · 装完能跑</option><option value="中">中 · 要改代码</option><option value="难">难 · 要懂架构</option></select>\n'
+            '<select id="ls-sort" aria-label="排序"><option value="stars">按星数排序</option><option value="upd">按最近更新</option></select>\n'
+            '<button type="button" class="ls-btn" id="ls-act" aria-pressed="false">只看活跃（45 天）</button>\n'
+            '<button type="button" class="ls-btn" id="ls-reset">重置</button>\n'
+            '</div>')
+
+
+def render_chips(data, stats):
+    out = ['<button type="button" class="ls-chip on" data-cat="all" aria-pressed="true">全部 <i>%d</i></button>'
+           % stats['n']]
+    for t in data['tracks']:
+        cnt = len(stats['by_cat'].get(t['cat'], []))
+        out.append('<button type="button" class="ls-chip" data-cat="%s" aria-pressed="false">%s <i>%d</i></button>'
+                   % (esc_attr(t['cat']), esc(t['title']), cnt))
+    return '\n'.join(out)
+
+
 def render_section(data, stats):
     tracks = data['tracks']
     snapshot = data.get('snapshot', '')
@@ -365,11 +459,6 @@ def render_section(data, stats):
     langs = ' · '.join('%s %d' % (esc(k), v) for k, v in stats['langs'].most_common())
     created = ' · '.join('%s 年 %d' % (k, v) for k, v in sorted(stats['created'].items()))
 
-    chips = ['<button type="button" class="ls-chip on" data-cat="all" aria-pressed="true">全部 <i>%d</i></button>' % n]
-    for t in tracks:
-        cnt = len(stats['by_cat'].get(t['cat'], []))
-        chips.append('<button type="button" class="ls-chip" data-cat="%s" aria-pressed="false">%s <i>%d</i></button>'
-                     % (esc_attr(t['cat']), esc(t['title']), cnt))
 
     # 场景表
     scenarios = [
@@ -546,15 +635,9 @@ def render_section(data, stats):
 </ol>
 <h2 id="doc-26-6"><a class="hlink" href="#doc-26-6" title="本节链接">#</a>6. 全量清单（可搜索 / 筛选 / 排序）</h2>
 <p>下面是本章的全量数据。<strong>搜索</strong>匹配仓库名、中文定位、适合人群、点评和 GitHub topics，空格分词表示「都要命中」；<strong>赛道</strong>只看某一类；<strong>语言 / 门槛</strong>按元数据过滤；<strong>只看活跃</strong>把 45 天内无提交的项目挡掉；<strong>排序</strong>只影响组内顺序。筛完后赛道标题右侧的项目数与星标会按当前可见项目重算。</p>
+<p>这张清单也单独做成了一个页面：<a href="landscape.html" target="_blank" rel="noopener noreferrer">打开独立浏览页</a>——加载更快，筛选条件会写进地址栏，可以直接把链接发给同事。</p>
 <div class="ls" id="agent-landscape">
-<div class="ls-bar">
-<input type="search" id="ls-q" placeholder="搜索：仓库名 / 中文定位 / 适合人群 / 标签（空格分词）" aria-label="搜索项目" autocomplete="off">
-<select id="ls-lang" aria-label="语言"><option value="">全部语言</option>{lang_options}</select>
-<select id="ls-diff" aria-label="门槛"><option value="">全部门槛</option><option value="易">易 · 装完能跑</option><option value="中">中 · 要改代码</option><option value="难">难 · 要懂架构</option></select>
-<select id="ls-sort" aria-label="排序"><option value="stars">按星数排序</option><option value="upd">按最近更新</option></select>
-<button type="button" class="ls-btn" id="ls-act" aria-pressed="false">只看活跃（45 天）</button>
-<button type="button" class="ls-btn" id="ls-reset">重置</button>
-</div>
+{toolbar}
 <div class="ls-chips" role="group" aria-label="按赛道筛选">
 {chips}
 </div>
@@ -655,9 +738,105 @@ python scripts/build_landscape.py --check</code></pre>
         map_rows=map_rows,
         lang_options=''.join('<option value="%s">%s（%d）</option>'
                              % (esc_attr(k), esc(k), v) for k, v in stats['langs'].most_common()),
-        chips='\n'.join(chips),
+        chips=render_chips(data, stats),
+        toolbar=render_toolbar(stats),
         cards=render_cards(data, stats),
     )
+
+
+# --------------------------------------------------------------------------- #
+# standalone page (landscape.html)
+# --------------------------------------------------------------------------- #
+WIDGET_CSS = CSS.split('/* LANDSCAPE:CSS:BEGIN */', 1)[1].rsplit('/* LANDSCAPE:CSS:END */', 1)[0].strip('\n')
+JS_BODY = JS.split('<script>', 1)[1].rsplit('</script>', 1)[0].strip('\n')
+
+SHELL_CSS = r""":root{--bg:#f5f7fb;--panel:#fff;--panel2:#eef3f8;--ink:#17212b;--muted:#607080;--line:#d8e0e8;--accent:#0b5fa5;--accent2:#0b7a75;--shadow:0 14px 38px rgba(24,52,82,.09)}
+html[data-theme="dark"]{--bg:#0f141b;--panel:#151d26;--panel2:#1d2834;--ink:#e9f0f6;--muted:#9caaba;--line:#2b3948;--accent:#65b9ef;--accent2:#57d2c8;--shadow:0 18px 44px rgba(0,0,0,.35)}
+*{box-sizing:border-box} html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Segoe UI","Microsoft YaHei",system-ui,sans-serif;line-height:1.7}
+a{color:var(--accent);text-decoration:none} a:hover{text-decoration:underline}
+.wrap{max-width:1400px;margin:0 auto;padding:24px 22px 48px}
+.page-head{background:linear-gradient(135deg,color-mix(in srgb,var(--accent) 13%,var(--panel)),var(--panel));border:1px solid var(--line);border-radius:22px;padding:26px 28px;box-shadow:var(--shadow);margin-bottom:14px}
+.head-top{display:flex;gap:18px;justify-content:space-between;align-items:flex-start;flex-wrap:wrap}
+.kicker{font-size:11px;letter-spacing:.16em;color:var(--accent);font-weight:700;margin-bottom:8px}
+.page-head h1{margin:0 0 10px;font-size:clamp(22px,3vw,34px);line-height:1.25}
+.page-head h1 em{font-style:normal;color:var(--accent)}
+.lede{margin:0;max-width:840px;font-size:14px;color:var(--muted)}
+.head-actions{display:flex;gap:8px;flex-wrap:wrap}
+.head-actions a,.head-actions button{padding:7px 13px;border:1px solid var(--line);border-radius:999px;background:var(--panel);color:var(--ink);font:inherit;font-size:13px;cursor:pointer}
+.head-actions a:hover,.head-actions button:hover{border-color:var(--accent);color:var(--accent);text-decoration:none}
+.ls-toolbar{position:sticky;top:0;z-index:30;padding:10px 0 2px;background:color-mix(in srgb,var(--bg) 94%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line);margin-bottom:6px}
+.page-foot{margin-top:30px;padding-top:14px;border-top:1px solid var(--line);color:var(--muted);font-size:12.5px;display:flex;gap:10px 20px;flex-wrap:wrap;justify-content:space-between}
+@media (max-width:1000px){.wrap{padding:14px 14px 36px}.page-head{padding:20px 18px}}
+@media print{.ls-toolbar,.head-actions{display:none!important}.ls-card{break-inside:avoid}}
+"""
+
+
+def render_standalone(data, stats):
+    snapshot = data.get('snapshot', '')
+    return """<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>GitHub Agent 全景图 · {n} 个项目 × {nt} 个赛道 · 快照 {snapshot}</title>
+<meta name="description" content="GitHub 上 Agent 相关项目的赛道全景：{n} 个项目、{nt} 个赛道、累计星标 {total}（快照 {snapshot}）。支持搜索、按赛道/语言/门槛/活跃度筛选，筛选状态写进地址栏。">
+<style>
+{shell_css}
+{widget_css}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="page-head">
+<div class="head-top">
+<div>
+<div class="kicker">GitHub Agent Landscape · 数据快照 {snapshot}</div>
+<h1>Agent 项目全景图：<em>{n} 个项目 · {nt} 个赛道</em></h1>
+<p class="lede">把 GitHub 上 Agent 相关的项目按赛道摊开，用来回答「想搭一个 Agent，该从哪个仓库开始看」。搜索匹配仓库名、中文定位、适合人群、点评和 GitHub topics（空格分词表示都要命中）；筛选条件会写进地址栏，可以直接把链接发给同事。数据来自 <a href="https://xiaowang018.github.io/agent-landscape/" target="_blank" rel="noopener noreferrer">GitHub Agent 项目全景图</a>，元数据抓自 GitHub REST API，中文定位与门槛为上游人工标注。</p>
+</div>
+<div class="head-actions">
+<button type="button" id="ls-theme">切换夜间</button>
+<a href="index.html#doc-26">返回手册 DOC 27</a>
+<a href="https://github.com/xiaowang018/agent-landscape" target="_blank" rel="noopener noreferrer">上游仓库</a>
+</div>
+</div>
+<div class="ls-stats">
+<div class="ls-stat"><b>{n}</b><span>收录项目</span></div>
+<div class="ls-stat"><b>{nt}</b><span>赛道分类</span></div>
+<div class="ls-stat"><b>{total}</b><span>累计星标</span></div>
+<div class="ls-stat"><b>{n_active}</b><span>近 45 天有提交</span></div>
+</div>
+</header>
+<div class="ls-toolbar">
+{toolbar}
+<div class="ls-chips" role="group" aria-label="按赛道筛选">
+{chips}
+</div>
+<p class="ls-count" id="ls-count">显示 <b>{n}</b> / {n} 个项目 · {nt} 个赛道</p>
+</div>
+<div class="ls" id="agent-landscape" data-hash="1">
+<div class="ls-groups">
+{cards}
+</div>
+<p class="ls-empty ls-hidden" id="ls-empty">没有匹配的项目。换个关键词，或点「重置」回到全量。</p>
+</div>
+<footer class="page-foot">
+<span>数据来自 <a href="https://github.com/xiaowang018/agent-landscape" target="_blank" rel="noopener noreferrer">xiaowang018/agent-landscape</a>（GitHub REST API 快照 {snapshot}）；中文定位、门槛与点评为上游人工标注；各项目版权与许可证归其原作者。</span>
+<span>本页由 <code>scripts/build_landscape.py</code> 从 <code>docs/data/agent-landscape-{snapshot}.json</code> 生成，请勿手改。</span>
+</footer>
+</div>
+<script>
+{js_body}
+</script>
+</body>
+</html>
+""".format(
+        n=stats['n'], nt=stats['n_tracks'], total=wan(stats['total']), snapshot=snapshot,
+        n_active=stats['status'].get('active', 0),
+        shell_css=SHELL_CSS, widget_css=WIDGET_CSS, js_body=JS_BODY,
+        toolbar=render_toolbar(stats), chips=render_chips(data, stats),
+        cards=render_cards(data, stats))
 
 
 def render_nav(stats):
@@ -722,6 +901,14 @@ def check(html_text, data):
     for marker in ('LANDSCAPE:CSS', 'LANDSCAPE:NAV', 'LANDSCAPE:SECTION', 'LANDSCAPE:JS'):
         if marker + ':BEGIN' not in html_text:
             problems.append('缺少标记 %s' % marker)
+    if os.path.exists(STANDALONE):
+        page = open(STANDALONE, encoding='utf-8').read()
+        if page.count('<article class="ls-card"') != n:
+            problems.append('landscape.html 卡片数不对')
+        if '<script src' in page or '<link rel="stylesheet"' in page:
+            problems.append('landscape.html 引用了外部资源（应保持单文件离线可用）')
+        if 'data-hash="1"' not in page:
+            problems.append('landscape.html 缺少地址栏状态开关')
     return problems
 
 
@@ -776,7 +963,11 @@ def main():
             out = out.replace('\n', '\r\n')
         with open(INDEX, 'w', encoding='utf-8', newline='') as f:
             f.write(out)
+        standalone = render_standalone(data, stats)
+        with open(STANDALONE, 'w', encoding='utf-8', newline='\n') as f:
+            f.write(standalone)
         print('APPLIED ->', INDEX)
+        print('WROTE ->', STANDALONE, len(standalone), 'chars')
     else:
         print('DRY RUN（加 --apply 才会写入）')
     return 0
