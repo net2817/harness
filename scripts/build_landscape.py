@@ -327,6 +327,7 @@ JS = r"""<!-- LANDSCAPE:JS:BEGIN -->
     var saved=localStorage.getItem('manual-theme');
     if(saved) document.documentElement.setAttribute('data-theme',saved);
   }catch(e){}
+  if(themeBtn && document.documentElement.getAttribute('data-theme')==='dark') themeBtn.textContent='切换白天';
   if(themeBtn){
     themeBtn.addEventListener('click',function(){
       var cur=document.documentElement.getAttribute('data-theme')==='dark'?'light':'dark';
